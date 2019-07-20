@@ -1,0 +1,5 @@
+{
+  "clientId": "526593597118873620",
+  "scopes": ["identify", "guilds", "guilds.join"],
+  "redirectUri": "https://web.cytrus.ga/authorization/callback"
+}
