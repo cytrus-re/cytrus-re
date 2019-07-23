@@ -28,3 +28,6 @@ N/A right now
 ​
 ### Server
 [Visit](https://discord.gg/BfpMgXs)
+
+### Trello
+[Visit](https://trello.com/b/5eQYiKLQ)
