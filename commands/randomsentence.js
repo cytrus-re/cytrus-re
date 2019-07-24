@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: ['sentence'],
+  aliases: ['sentence', 'rsent'],
   guildOnly: false,
   permLevel: 'User'
 };
@@ -18,6 +18,6 @@ exports.conf = {
 exports.help = {
   name: 'randomsentence',
   category: 'General',
-  description: 'Returns a random sentence',
+  description: 'Returns a random sentence.',
   usage: 'randomsentence'
 };

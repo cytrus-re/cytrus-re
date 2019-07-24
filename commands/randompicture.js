@@ -17,7 +17,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ['randomimage', 'randompic', 'randomimg'],
+  aliases: ['randomimage', 'randompic', 'randomimg', 'ranpic'],
   guildOnly: false,
   permLevel: 'User'
 };
@@ -25,6 +25,6 @@ exports.conf = {
 exports.help = {
   name: 'randompicture',
   category: 'Fun',
-  description: 'Returns a random Picture',
+  description: 'Returns a random picture.',
   usage: 'randompicture'
 };

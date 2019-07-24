@@ -11,20 +11,20 @@ exports.run = async (client, message, args, level) => {
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send('There was an error!\n' + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['color'],
+  aliases: ['color', 'randomcolour', 'colour', 'rcol'],
   guildOnly: false,
   permLevel: 'User'
 };
 
 exports.help = {
   name: 'randomcolor',
-  category: 'Fun',
-  description: 'Returns a random HEX code',
+  category: 'Utility',
+  description: 'Returns a random HEX code.',
   usage: 'randomcolor'
 };
