@@ -18,6 +18,6 @@ exports.conf = {
 exports.help = {
   name: 'randomjoke',
   category: 'General',
-  description: 'Returns a random joke',
+  description: 'Returns a random joke.',
   usage: 'randomjoke'
 };
