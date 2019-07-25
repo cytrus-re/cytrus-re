@@ -17,7 +17,7 @@ Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms`
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ['lag'],
   guildOnly: false,
   permLevel: 'User'
 };
@@ -25,6 +25,6 @@ exports.conf = {
 exports.help = {
   name: 'ping',
   category: 'General',
-  description: 'Returns CytrusBot\'s ping',
+  description: "Returns Cytrus's ping",
   usage: 'ping'
 };
