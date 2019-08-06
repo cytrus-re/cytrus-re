@@ -13,6 +13,7 @@
     "nodemon": "nodemon cybase.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
+    "test": "(eslint lib || true) && jest"
   },
   "engines": {
     "node": "10.x"
