@@ -13,16 +13,13 @@
     "nodemon": "nodemon cybase.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
-    "test": "(eslint lib || true) && jest"
+    "test": "yarn jest"
   },
   "engines": {
     "node": "10.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Rexogamer/cytrus"
-  },
-  "author": "CelestialCrafter#6830, EnderGirlGamer#5370",
+  "repository": "github:Rexogamer/cytrus",
+  "author": "CelestialCrafter#6830, Rexowogamer#1183",
   "license": "MIT",
   "dependencies": {
     "better-sqlite-pool": "^0.2.2",
@@ -41,19 +38,14 @@
     "form-data": "^2.4.0",
     "google": "^2.1.0",
     "js-beautify": "^1.10.0",
-    "lolis.life": "^4.0.0",
     "mathjs": "^6.0.2",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
-    "nekos.life": "^2.0.4",
     "node-fetch": "^2.6.0",
-    "node-opus": "^0.3.2",
-    "node-weeb": "^1.0.0",
     "nodejs-base64": "^1.0.3",
     "numeral": "^2.0.6",
     "one-liner-joke": "^1.2.0",
-    "opusscript": "0.0.6",
     "pidusage": "^2.0.17",
     "request": "^2.88.0",
     "rhyme": "^0.0.3",
