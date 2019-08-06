@@ -63,7 +63,7 @@
   "devDependencies": {
     "eslint": "^6.0.1",
     "forever": "^1.0.0",
-    "jest": "^28.4.0",
+    "jest": "^24.8.0",
     "nodemon": "^1.18.10"
   },
   "bugs": {
