@@ -12,7 +12,7 @@
     "yarn": "yarn run cybase.js",
     "nodemon": "nodemon cybase.js",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
     "test": "yarn jest"
   },
   "engines": {
