@@ -4,9 +4,12 @@ module.exports = async client => {
   const statusList = [
     {msg: `for commands | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
     {msg: `with async/await errors | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
-    {msg: `with unhandled promise rejections | ${client.config.defaultSettings.prefix}help `, type: 'PLAYING'},
+    {msg: `with unhandled promise rejections | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
     {msg: `with linux permissions | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
-    {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'}
+    {msg: `Discord be slow | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
+    {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
+    {msg: `EDGE rambling | ${client.config.defaultSettings.prefix}help`, type: 'LISTENING'},
+    {msg: `development progress! | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'}
   ];
 
   setInterval(async () => {
@@ -16,13 +19,14 @@ module.exports = async client => {
     });
   }, 5000);
   
-  setInterval(async () => {
+ setInterval(async () => {
     request('https://web.cytrus.ga', (err, res, html) => {
       if (err) client.logger.error(err);
     });
-  }, 28000);
+}, 28000);
 
-  client.user.setStatus('idle');
+
+  client.user.setStatus('online');
 
   //Logs the Status
   client.logger.log(`Ram Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, 'ready');
@@ -39,3 +43,4 @@ module.exports = async client => {
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log('It took ' + client.startuptime + 'ms to start Cytrus');
 };
+
