@@ -18,7 +18,7 @@ This command requires level 6 (Bot Support)`);
 
           await client.bugs.delete(args[1]);
           msg.edit('Bug report deleted with the ID of ' + args[1]);
-        } else message.reply('That isn\'t a valid ReportID!');
+        } else message.reply('That isn\'t a valid report ID!');
         break;
       case 'clear':
         if (level < 6) return message.reply(`You do not have permission to use this command.
