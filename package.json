@@ -54,7 +54,7 @@
     "txtgen": "^2.2.2",
     "urban-dictionary": "^2.2.1",
     "wikipediajs": "^1.4.0",
-    "ytdl-core": "^0.29.2",
+    "ytdl-core": "^1.0.0",
     "ytdl-getinfo": "^1.1.0",
     "ytsearcher": "^1.2.2",
     "zaq": "^2.1.3",
