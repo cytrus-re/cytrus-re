@@ -31,7 +31,7 @@
     "discord.js": "^11.5.1",
     "discord.js-minesweeper": "^1.0.4",
     "ejs": "^2.6.1",
-    "enmap": "^5.0.0",
+    "enmap": "^5.2.1",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
     "ffmpeg-binaries": "^4.0.0",
