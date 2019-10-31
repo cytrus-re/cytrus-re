@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-   let log = 'RexoV1.0:\n' + 'Removed a bunch of unused/garbage commands.\n' + 'More grammar fixes (thanks Rexo and EDGE!)\n' + 'Coming soon: ???';
+   let log = embed: { color: 0xFFFFFF, title: "**V1.1.0**", fields: [{ name: "Grammar", value: "More grammar fixes." }, { name: "Minor improvements", value: "Mostly code stuff." }] }
    message.channel.send(log);
   } catch (err) {
    message.channel.send('There was an error!\n' + err).catch();
