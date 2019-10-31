@@ -16,11 +16,12 @@
 		"max-nested-callbacks": ["error", {"max": 4}],
 		"max-statements-per-line": ["error", {"max": 1}],
 		"no-empty-function": "error",
-		"quotes": ["error", "single"],
+		"quotes": ["error", "double"],
     "no-invalid-regexp": "error",
     "no-unexpected-multiline": "warn",
     "no-new-func": "warn",
     "no-new-wrappers": "warn",
-    "no-unused-expressions": "error"
+    "no-unused-expressions": "error",
+    "no-unreachable-code": "error"
 	}
 }
