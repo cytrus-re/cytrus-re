@@ -1,6 +1,6 @@
 {
   "name": "cytrus-re",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A multipurpose bot to handle all your needs.",
   "main": "cybase.js",
   "scripts": {
@@ -12,8 +12,7 @@
     "yarn": "yarn run cybase.js",
     "nodemon": "nodemon cybase.js",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
-    "test": "jest"
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "10.x"
