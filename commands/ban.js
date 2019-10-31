@@ -24,10 +24,10 @@ exports.run = async (client, message, args, level) => {
          message.reply('I was unable to ban the user!');
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
-      message.reply('You didn\'t mention the user to ban!');
+      message.reply("You didn't mention the user you want to ban!");
     }
   } catch (err) {
     message.channel.send('There was an error!\n' + err +'').catch();
