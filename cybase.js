@@ -54,6 +54,7 @@ for (let i = 0; i <= 1500; i++)
 //Import files
 client.logger = require('./modules/Logger');
 client.config = require('./cnf');
+client.error = require('./modules/errors');
 require('./modules/commands')(client);
 require('./modules/events')(client);
 require('./modules/_functions')(client);
