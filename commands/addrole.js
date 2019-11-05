@@ -34,7 +34,7 @@ exports.run = async (client, message, args, level) => {
       }
     } else message.reply('You didn\'t mention the user to add the role to!');
   } catch (err) {
-    message.channel.send('There was an error!\n' + err.stack).catch();
+    message.channel.send(client.errors.genericError + err.stack).catch();
   }
 };
 
