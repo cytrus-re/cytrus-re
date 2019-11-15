@@ -26,7 +26,7 @@ exports.run = async (client, message, args, level) => {
 
                       message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
                     }
-                  }).catch('There was an error!');
+                  }).catch(client.errors.genericError);
                 } else message.reply('I can\'t find that role!');
               } else message.reply('That user isn\'t in this guild!');
           } else message.reply('You don\'t have the Manage Roles permission!');
