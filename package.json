@@ -62,7 +62,7 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "forever": "^1.0.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/Rexogamer/cytrus/issues"
