@@ -1,1 +1,3 @@
-genericError: "There was an error!"
+module.exports = (client) => {
+  genericError: "There was an error!"
+};
