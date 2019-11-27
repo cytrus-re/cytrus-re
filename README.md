@@ -21,7 +21,8 @@ PREBOOT='/*JavaScript Code*/'
 N/A right now
 ​
 ### Invite
-N/A right now
+Currently the bot is very buggy and crashes often, so until most crashes are fixed, the bot is private.
+However, you can run it yourself if you'd like.
 ​
 ### Client ID
 N/A right now
