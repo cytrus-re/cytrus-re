@@ -7,7 +7,7 @@ const webhook = new Discord.WebhookClient(process.env.LOG_WEBHOOK_ID, process.en
 const cytrus = zaq.as('Cytrus');
 
 exports.log = (content, type = 'log') => {
-  const timestamp = '${moment().format('YYYY/MM/DD HH:mm:ss')}';
+  const timestamp = '${moment().format(`YYYY/MM/DD HH:mm:ss`)}';
   switch (type) {
     case 'log':
       return cytrus.info(content);
