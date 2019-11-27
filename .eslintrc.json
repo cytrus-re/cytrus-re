@@ -21,6 +21,7 @@
         "no-unexpected-multiline": "warn",
         "no-new-func": "warn",
         "no-new-wrappers": "warn",
+	"no-unreachable": "error"
         "no-unused-expressions": "error",
   }
 }
