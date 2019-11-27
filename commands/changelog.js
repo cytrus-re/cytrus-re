@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-   let log =  { color: 0xFFFFFF, title: "**V1.1.0**", fields: [{ name: "Grammar", value: "More grammar fixes." }, { name: "Minor improvements", value: "Mostly code stuff." }] }
+   let log =  { color: 0xFFFFFF, title: "**V1.1.1**", fields: [{ name: "Grammar", value: "More grammar fixes." }, { name: "Minor improvements", value: "Mostly code stuff." }, {name:"Bug fixes", value: "Fixed a few crashes."}] }
    message.channel.send(log);
   } catch (err) {
    message.channel.send('There was an error!\n' + err).catch();
