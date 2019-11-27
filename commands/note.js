@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       case 'remove':
         if (!args[1]) return message.reply('You need to input the NoteID');
         if (client.notes.has(args[1])) {
-          if (client.notes.get(args[1]).author !== message.author.id) message.reply('You dont own this note!');
+          if (client.notes.get(args[1]).author !== message.author.id) message.reply("You don't own this note!");
           else {
             msg = await message.channel.send('Deleting note...');
 
@@ -31,7 +31,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       case 'view':
         if (!args[1]) return message.reply('You need to input the NoteID');
         if (client.notes.has(args[1])) {
-          if (client.notes.get(args[1]).author !== message.author.id) message.reply('You dont own this note!');
+          if (client.notes.get(args[1]).author !== message.author.id) message.reply("You don't own this note!");
           else message.channel.send('•' + '*' + client.notes.get(args[1]).id + '*\n' + client.notes.get(args[1]).txt + '\n\n');
         } else message.reply('That is not a valid NoteID!');
         break;
