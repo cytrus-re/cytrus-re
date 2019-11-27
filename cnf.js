@@ -111,7 +111,7 @@ const config = {
       level: 10,
       name: 'Bot Manager',
 
-      check: (message) => config.admins.includes(message.author.id)
+      check: (message) => config.managers.includes(message.author.id)
     },
 
     { level: 11,
