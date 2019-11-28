@@ -1,7 +1,13 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
    
-   message.channel.send({embed:  { author: { name: client.user.username, icon_url: client.user.avatarURL}, color: 0x1167b1, title: "**V1.1.1**", fields: [{ name: "Grammar", value: "More grammar fixes."} , { name: "Minor improvements", value: "Mostly code stuff." }], footer: {text: "By DestroyedEDGE#9573, Rexowogamer#1183, CelestialCrafter#7255, and Midou (notsoonline)#9637"
+   message.channel.send({embed:  
+                 { author: { name: client.user.username, icon_url: client.user.avatarURL}, 
+                  color: 0x1167b1,
+                  title: "**V1.1.1**",
+                  fields: [{ name: "Grammar", value: "More grammar fixes."} ,
+                           { name: "Minor improvements", value: "Mostly code stuff." }],
+                  footer: {text: "By DestroyedEDGE#9573, Rexowogamer#1183, CelestialCrafter#7255, and Midou (notsoonline)#9637"
     } }});
   } catch (err) {
    message.channel.send('There was an error!\n' + err).catch();
