@@ -21,8 +21,7 @@ PREBOOT='/*JavaScript Code*/'
 N/A right now
 ​
 ### Invite
-Currently the bot is very buggy and crashes often, so until most crashes are fixed, the bot is private.
-However, you can run it yourself if you'd like.
+https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot
 ​
 ### Client ID
 N/A right now
