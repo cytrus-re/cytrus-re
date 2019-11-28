@@ -18,7 +18,7 @@
     "node": "10.x"
   },
   "repository": "github:Rexogamer/cytrus",
-  "author": "CelestialCrafter#6830, Rexowogamer#1183",
+  "author": "CelestialCrafter#7255, Rexowogamer#1183",
   "license": "MIT",
   "dependencies": {
     "better-sqlite-pool": "^0.2.2",
