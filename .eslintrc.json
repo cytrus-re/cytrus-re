@@ -22,6 +22,6 @@
     "no-new-func": "warn",
     "no-new-wrappers": "warn",
     "no-unused-expressions": "error",
-    "no-unreachable-code": "error"
+    "no-unreachable": "error"
 	}
 }
