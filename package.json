@@ -29,7 +29,7 @@
     "cryptr": "^5.0.0",
     "discord.js": "^11.5.1",
     "discord.js-minesweeper": "^1.0.4",
-    "ejs": "^2.7.3",
+    "ejs": "^3.0.1",
     "enmap": "^5.2.3",
     "express": "^4.16.4",
     "express-session": "^1.17.0",
