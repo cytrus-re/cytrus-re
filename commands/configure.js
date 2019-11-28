@@ -46,7 +46,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     } else {
       let embed = new Discord.RichEmbed()
       .setTitle('Server Settings')
-      .setColor('#eeeeee');
+      .setColor('0x1167b1');
       Object.keys(client.getSettings(message.guild.id)).forEach((setting) => embed = embed.addField(setting, settings[setting]));
 
       await message.channel.send(embed);
