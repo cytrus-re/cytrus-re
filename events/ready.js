@@ -39,7 +39,7 @@ module.exports = async client => {
   //Starts the web server/API
   require('../modules/web')(client);
 
-  client.logger.log('Cytrus V' + require('../package').version + ' | https://github.com/CelestialCrafter/cytrus');
+  client.logger.log('Cytrus V' + require('../package').version + ' | https://github.com/Rexogamer/cytrus-re');
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log('It took ' + client.startuptime + 'ms to start Cytrus');
 };
