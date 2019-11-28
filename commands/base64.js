@@ -13,11 +13,11 @@ exports.run = async (client, message, args, level) => {
         message.channel.send(base64decode(args.slice(1).join(' ')));
         break;
       default:
-        return message.reply('You need to choose to Encode or Decode the string!');
+        return message.reply('You need to choose to encode or decode the string!');
         break;
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
@@ -31,6 +31,6 @@ exports.conf = {
 exports.help = {
   name: 'base64',
   category: 'General',
-  description: 'Encodes or Decodes a Base64 string',
+  description: 'Encodes or decodes a base64 string.',
   usage: 'base64 <encode/decode> <string>'
 };
