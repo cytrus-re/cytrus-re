@@ -1,5 +1,10 @@
-# Cytrus
+# Cytrus-RE
+[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/596304951718838275.svg)](https://discord.gg/BfpMgXs)  
+
 A multipurpose Discord bot that covers all your needs.
+
+## Invite
+https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot
 
 ## How to set up
 Create a .env file in the directory Cytrus is installed in.  
@@ -16,18 +21,9 @@ PREBOOT='/*JavaScript Code*/'
 ```
 > Start the cybase.js file  
 
-## Links
+## Info
 ### API
 N/A right now
 ​
-### Invite
-https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot
-​
 ### Client ID
 596304769333592078
-​
-### Server
-[Visit](https://discord.gg/BfpMgXs)
-
-### Trello
-[Visit](https://trello.com/b/5eQYiKLQ)
