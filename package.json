@@ -27,7 +27,7 @@
     "chalk": "^2.4.2",
     "cleverbot.io": "^1.0.4",
     "cryptr": "^5.0.0",
-    "discord.js": "^11.5.1",
+    "discord.js": "github:discordjs/discord.js",
     "discord.js-minesweeper": "^1.0.4",
     "ejs": "^3.0.1",
     "enmap": "^5.2.3",
