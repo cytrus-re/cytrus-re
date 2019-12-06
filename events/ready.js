@@ -9,7 +9,8 @@ module.exports = async client => {
     {msg: `Discord be slow | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
     {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
     {msg: `EDGE rambling | ${client.config.defaultSettings.prefix}help`, type: 'LISTENING'},
-    {msg: `development progress! | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'}
+    {msg: `development progress! | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
+    {msg: `Need help? Support server: ${client.config.links.supportServer} | Find the source code on Github: ${client.config.links.github}`, type: "CUSTOM-STATUS"}
   ];
 
   setInterval(async () => {
