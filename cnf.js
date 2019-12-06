@@ -10,6 +10,11 @@ const config = {
   'blacklisted': ['251213730577252354', '439183092037713930'],
   'globalBan': [],
   'token': 'NTI2n0-t.r_e-a1-t0-k_e.n_d0.nt-chang3',
+  
+  "links" : {
+    "github": "https://github.com/rexogamer/cytrus-re",
+    "supportServer": "https://discord.gg/BfpMgXs"
+  },
 
   'defaultSettings' : {
     'prefix': 'cyre.',
