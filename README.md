@@ -19,7 +19,7 @@ CLEVERBOT_API_KEY='`YourCleverBot.ioAPIKey'
 CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
-> Start the cybase.js file  
+> Start the cybase.js file 
 
 ## Info
 ### API
@@ -27,3 +27,6 @@ N/A right now
 ​
 ### Client ID
 596304769333592078
+
+## Contributing
+Please read [the wiki](https://github.com/Rexogamer/cytrus-re/wiki) before contirbuting.
