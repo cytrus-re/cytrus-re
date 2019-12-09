@@ -1,52 +1,52 @@
 const config = {
-  'owners': ['395990735934980097', '634532598668066816'],
-  'managers': ['437698252381487104', '339903300994596884'],
-  'admins': [],
-  'devs': [],
-  'mods': [],
-  'support': [],
-  'helpers': [],
+  "owners": ["395990735934980097", "634532598668066816"],
+  "managers": ["437698252381487104", "339903300994596884"],
+  "admins": [],
+  "devs": [],
+  "mods": [],
+  "support": [],
+  "helpers": [],
 
-  'blacklisted': ['251213730577252354', '439183092037713930'],
-  'globalBan': [],
-  'token': 'NTI2n0-t.r_e-a1-t0-k_e.n_d0.nt-chang3',
+  "blacklisted": [],
+  "globalBan": [],
+  "token": "NTI2n0-t.r_e-a1-t0-k_e.n_d0.nt-chang3",
   
   "links" : {
     "github": "https://github.com/rexogamer/cytrus-re",
     "supportServer": "https://discord.gg/BfpMgXs"
   },
 
-  'defaultSettings' : {
-    'prefix': 'cyre.',
-    'modLogChannel': 'log',
-    'modRole': 'Moderator',
-    'adminRole': 'Administrator',
-    'muteRole': 'CytrusReMute',
-    'noPermissionNotice': 'true',
-    'welcomeChannel': 'general',
-    'welcomeMessage': 'Welcome to the server {{ping}}!',
-    'welcomeEnabled': 'true',
-    'logMessageUpdates': 'true',
-    'logEmojiUpdates': 'true',
-    'logMemberUpdates': 'true',
-    'starboardChannel': 'starboard'
+  "defaultSettings" : {
+    "prefix": "cyre.",
+    "modLogChannel": "log",
+    "modRole": "Moderator",
+    "adminRole": "Administrator",
+    "muteRole": "CyReMute",
+    "noPermissionNotice": "true",
+    "welcomeChannel": "welcome",
+    "welcomeMessage": `Welcome to the server {{ping}}!`,
+    "welcomeEnabled": "true",
+    "logMessageUpdates": "true",
+    "logEmojiUpdates": "true",
+    "logMemberUpdates": "true",
+    "starboardChannel": "starboard"
   },
 
   permLevels: [
     { level: 0,
-      name: 'Blacklisted',
+      name: "Blacklisted",
 
       check: () => true
     },
 
     { level: 1,
-      name: 'User',
+      name: "User",
 
       check: (message) => !config.blacklisted.includes(message.author.id) || !config.globalBan.includes(message.author.id)
     },
 
     { level: 2,
-      name: 'Moderator',
+      name: "Moderator",
 
       check: (message) => {
         try {
@@ -59,7 +59,7 @@ const config = {
     },
 
     { level: 3,
-      name: 'Administrator',
+      name: "Administrator",
 
       check: (message) => {
         try {
@@ -72,55 +72,55 @@ const config = {
     },
 
     { level: 4,
-      name: 'Server Owner',
+      name: "Server Owner",
 
       check: (message) => message.channel.type === 'text' ? (message.guild.ownerID === message.author.id ? true : false) : false
     },
 
     {
       level: 5,
-      name: 'Bot Helper',
+      name: "Bot Helper",
 
       check: (message) => config.helpers.includes(message.author.id)
     },
 
     {
       level: 6,
-      name: 'Bot Support',
+      name: "Bot Support",
 
       check: (message) => config.support.includes(message.author.id)
     },
 
     {
       level: 7,
-      name: 'Bot Moderator',
+      name: "Bot Moderator",
 
       check: (message) => config.mods.includes(message.author.id)
     },
 
     {
       level: 8,
-      name: 'Bot Dev',
+      name: "Bot Dev",
 
       check: (message) => config.devs.includes(message.author.id)
     },
 
     {
       level: 9,
-      name: 'Bot Admin',
+      name: "Bot Admin",
 
       check: (message) => config.admins.includes(message.author.id)
     },
 
     {
       level: 10,
-      name: 'Bot Manager',
+      name: "Bot Manager",
 
       check: (message) => config.managers.includes(message.author.id)
     },
 
     { level: 11,
-      name: 'Bot Owner',
+      name: "Bot Owner",
 
       check: (message) => config.owners.includes(message.author.id)
     }
