@@ -9,19 +9,19 @@ exports.run = async (client, message, args, level) => {
       const member = message.guild.member(user);
       if (member) {
         member.ban(args.slice(1).join(' ')).then(() => {
-          message.reply('Successfully banned ${user.tag}!');
+          message.reply("Successfully banned ${user.tag}!");
 
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.RichEmbed()
-            .setTitle('User Ban')
-            .setColor('#eeeeee')
-            .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(' ')}\nModerator: ${message.author.username}`);
+            .setTitle("User Banned")
+            .setColor("#eeeeee")
+            .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);
 
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
           }
         }).catch(err => {
-         message.reply('I was unable to ban the user!');
+         message.reply("I was unable to ban the user!");
         });
       } else {
         message.reply("That user isn't in this guild!");
@@ -30,20 +30,20 @@ exports.run = async (client, message, args, level) => {
       message.reply("You didn't mention the user you want to ban!");
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err +'').catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['b'],
+  aliases: ["b"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'ban',
-  category: 'Moderation',
-  description: 'Bans the specified user.',
-  usage: 'ban @<user> [reason]'
+  name: "ban",
+  category: "Moderation",
+  description: "Bans the specified user.",
+  usage: "ban @<user> [reason]"
 };
