@@ -10,20 +10,20 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
                   footer: {text: "By DestroyedEDGE#9573, Rexowogamer#1183, CelestialCrafter#7255, and Midou (notsoonline)#9637"
     } }});
   } catch (err) {
-   message.channel.send('There was an error!\n' + err).catch();
+   message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['changes', 'updates'],
+  aliases: ["changes", "updates"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'changelog',
-  category: 'Utility',
-  description: 'Returns the latest changelog for Cytrus.',
-  usage: 'changelog'
+  name: "changelog",
+  category: "Utility",
+  description: "Returns the latest changelog for Cytrus-RE.",
+  usage: "changelog"
 };
