@@ -21,7 +21,7 @@
   "author": "CelestialCrafter#7255, Rexowogamer#1183",
   "license": "MIT",
   "dependencies": {
-    "better-sqlite-pool": "^0.2.2",
+    "better-sqlite-pool": "^0.2.3",
     "better-sqlite3": "^5.4.0",
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
