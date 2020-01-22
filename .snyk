@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -39,3 +39,23 @@ patch:
         patched: '2019-07-03T23:27:34.436Z'
     - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-03T23:27:34.436Z'
+  'npm:hoek:20180212':
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > hawk > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > hawk > boom > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > request > hawk > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+    - ffmpeg-binaries > decompress-tarxz > lzma-native > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-01-22T08:09:34.747Z'
+  'npm:lodash:20180130':
+    - google > cheerio > lodash:
+        patched: '2020-01-22T08:09:34.747Z'
