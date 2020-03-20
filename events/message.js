@@ -12,7 +12,7 @@ module.exports = async (client, message) => {
 
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`My prefix on this guild is \`${settings.prefix}\``);
+    return message.send(`My prefix on this guild is \`${settings.prefix}\``);
   }
   
   if (message.guild) {
@@ -48,9 +48,9 @@ module.exports = async (client, message) => {
   if (!message.guild && cmd.conf.guildOnly) return message.reply('You need to be in a Guild to use this command!');
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
-    if (settings.noPermissionNotice === 'true') return message.channel.send(`You dont have permission to use this command!
-Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name})
-This command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf.permLevel})!`);
+    if (settings.noPermissionNotice === 'true') return message.channel.send(`You don't have permission to use this command!
+Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name}),
+but this command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf.permLevel})!`);
     else return;
   }
 
@@ -61,7 +61,7 @@ This command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf
     message.flags.push(args.shift().slice(1));
   }
 
-  if (!cmd.conf.enabled) return message.reply('This command is not enabled!');
+  if (!cmd.conf.enabled) return message.reply("This command is not enabled!");
    
   try {
     cmd.run(client, message, args, level);
@@ -69,6 +69,6 @@ This command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf
     client.uses.ensure(cmd.help.name, 1);
     client.uses.inc(cmd.help.name);
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
