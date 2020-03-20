@@ -2,7 +2,7 @@ const request = require('request');
 
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.reply('You need to give something to search!');
+    if (!args[0]) return message.reply("You need to give something to search!");
     
     request({
       'url': 'https://api.github.com/search/repositories?q=' + encodeURIComponent(args.join(' ')),
@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
       },
       'json': true
     }, async (req, res, json) => {
-      if (!json.items[0]) return message.reply('I couldn\'t find anything for that!');
+      if (!json.items[0]) return message.send("I couldn't find any results!");
       
       let output = '';
       let i = 1;
@@ -27,7 +27,7 @@ exports.run = async (client, message, args, level) => {
       });
       
       let reponum = await client.awaitReply(message, `Please choose the repository you want.${output}`);
-      if (isNaN(reponum)) return message.reply('That\'s not a number!');
+      if (isNaN(reponum)) return message.send("That's not a number!");
       
       let repo = json.items[reponum - 1];
       
@@ -51,23 +51,23 @@ exports.run = async (client, message, args, level) => {
           },
           fields: [
             {
-              title: 'License',
-              text: json.license ? json.license.name : 'No License',
+              title: "License",
+              text: json.license ? json.license.name : "No license",
               inline: true
             },
             {
-              title: 'Open Issues',
+              title: "Open Issues",
               text: json.open_issues_count,
               inline: true
             },
             {
-              title: 'Language',
-              text: json.language || 'Not Specified',
+              title: "Language",
+              text: json.language || "Not specified",
               inline: true
             },
             {
-              title: 'Homepage',
-              text: json.homepage || 'None',
+              title: "Homepage",
+              text: json.homepage || "None",
               inline: true
             }
           ]
@@ -76,7 +76,7 @@ exports.run = async (client, message, args, level) => {
       });
     });
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
@@ -84,12 +84,12 @@ exports.conf = {
   enabled: true,
   aliases: [],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'github',
-  category: 'General',
-  description: 'Searches GitHub for your query.',
-  usage: 'github <query>'
+  name: "github",
+  category: "General",
+  description: "Searches GitHub for your query.",
+  usage: "github <query>"
 };
