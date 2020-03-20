@@ -6,26 +6,27 @@ exports.run = async (client, message, args, level) => {
     Object.keys(require('../package').dependencies).forEach((pack) => output += pack + '\n');
     
     let embed = new Discord.RichEmbed()
+    .setTtitle("Cytrus-RE's" + Object.keys(require('../package').dependencies).length + "dependencies:"
     .setColor('#363942')
     .setThumbnail(client.user.avatarURL)
     .setDescription(output)
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['modulelist', 'packagelist', 'pl', 'dl', 'ml'],
+  aliases: ["modulelist", "packagelist", "pl", "deplist", "ml"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'dependencylist',
-  category: 'System',
-  description: 'Returns a list of dependencies that Cytrus uses.',
-  usage: 'dependencylist'
+  name: "dependencylist",
+  category: "System",
+  description: "Lists the dependencies that Cytrus-RE uses.",
+  usage: "dependencylist"
 };
