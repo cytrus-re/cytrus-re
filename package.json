@@ -46,7 +46,7 @@
     "numeral": "^2.0.6",
     "one-liner-joke": "^1.2.0",
     "pidusage": "^2.0.18",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "rhyme": "^0.0.3",
     "safe-eval": "^0.4.1",
     "snyk": "^1.301.0",
