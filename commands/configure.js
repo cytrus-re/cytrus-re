@@ -19,7 +19,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       if (args[1] == 'modLogChannel' || args[1] == 'welcomeChannel') client.settings.set(message.guild.id, args.slice(2).join(' ').replace('#', '').trim(), args[1]);
       else client.settings.set(message.guild.id, args.slice(2).join(' '), args[1]);
 
-      message.reply('${args[1]} successfully edited to ${args.slice(2).join(' ')}!');
+      message.reply(`${args[1]} successfully edited to ${args.slice(2).join(' ')}!`);
     } else
 
     if (args[0] === 'del' || args[0] === 'reset') {
@@ -42,7 +42,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       if (!args[1]) return message.reply('Please specify a key to view.');
       if (!defaults[args[1]]) return message.reply(args[1] + ' does not exist in the settings');
       const isDefault = !overrides[args[1]] ? '\nThis is the default global value.' : '';
-      message.reply('The value of ${args[1]} is currently ${settings[args[1]]}${isDefault}.');
+      message.reply(`The value of ${args[1]} is currently ${settings[args[1]]}${isDefault}.`);
     } else {
       let embed = new Discord.RichEmbed()
       .setTitle('Server Settings')
