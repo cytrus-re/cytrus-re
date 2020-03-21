@@ -16,31 +16,32 @@ exports.run = async (client, message, args, level) => {
 
         const modLogChannel = settings.modLogChannel;
         if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-          let embed = new Discord.RichEmbed()
-          .setTitle('User Warn')
-          .setColor('#eeeeee')
-          .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
-
+          let embed = {
+            color: 0xeeeeee,
+            title: "User Warned",
+            description: `Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`,
+            footer: { text: `${client.config.botName}` },
+          };
           message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
         }
 
         if (client.warns.get(message.guild.id)[member.id] == 3) {
           member.ban(args.slice(1).join(' ')).then(() => {
-            message.reply(`Successfully banned ${user.tag}`);
+            message.channel.send(`Successfully banned ${user.tag}!`);
 
             client.warns.get(message.guild.id)[member.id] = 0;
           }).catch(err => {
-            message.reply('I was unable to ban the member for exeding the max amount of warns');
+            message.send(`I was unable to ban ${user.tag} for exceeding {client.config.maxWarns} warns!`);
           });
         }
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply(client.errors.userNotInGuild);
       }
     } else {
-      message.reply('You didn\'t mention the user to warn!');
+      message.reply("You didn't mention the user to warn!");
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
@@ -54,6 +55,6 @@ exports.conf = {
 exports.help = {
   name: 'warn',
   category: 'Moderation',
-  description: 'Warns a member for an optional reason',
-  usage: 'warn <user>'
+  description: 'Warns a member.',
+  usage: 'warn <user> [reason]'
 };
