@@ -4,10 +4,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     
     switch (args[0]) {
       case 'add':
-        msg = await message.channel.send('Creating report...');
+        msg = await message.channel.send("Creating report...");
         
         await client.bugs.set(message.author.id+message.id, {txt: args.slice(1).join(' '), id: message.author.id+message.id, author: message.author.id});
-        msg.edit('Bug report created with the ID of ' + message.author.id+message.id);
+        msg.edit("Bug report created with the ID of " + message.author.id+message.id);
         break;
       case 'remove':
         if (client.bugs.has(args[1])) {
@@ -28,7 +28,7 @@ This command requires level 6 (Bot Support)`);
           client.bugs.delete(report.id);
         });
         
-        message.channel.send('Cleared all bug reports.');
+        message.channel.send("Cleared all bug reports.");
         break;
       default:
           let output = '';
@@ -37,7 +37,7 @@ This command requires level 6 (Bot Support)`);
             output += '•' + '*' + report.id + '*\n' + report.txt + '\n\n';
           });
 
-          if (output == '') message.reply('There are no bug reports!');
+          if (output == '') message.reply("There are no bug reports!");
           else message.channel.send(output);
         break;
     }
@@ -50,12 +50,12 @@ exports.conf = {
   enabled: true,
   aliases: ['bugrep', 'brep', 'bugreport'],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: 'Bot Support'
 };
 
 exports.help = {
   name: 'bug',
   category: 'System',
-  description: 'Makes a bug report for you.',
+  description: "Makes a bug report for you.",
   usage: 'bug [add [text]/remove [id]]'
 };

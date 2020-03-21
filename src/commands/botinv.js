@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    client.generateInvite(['ADMINISTRATOR']).then(link => message.channel.send('Bot Invite: ' + link));
+    client.generateInvite(['ADMINISTRATOR']).then(link => message.channel.send("Bot Invite: " + link));
   } catch (err) {
     message.channel.send('There was an error!\n' + err).catch();
   }
@@ -16,6 +16,6 @@ exports.conf = {
 exports.help = {
   name: 'botinv',
   category: 'General',
-  description: 'Gives the invite link for Cytrus.',
+  description: "Gives the invite link for Cytrus.",
   usage: 'botinv'
 };

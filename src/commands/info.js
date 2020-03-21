@@ -3,9 +3,9 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
     const embed = new Discord.RichEmbed()
-    .setColor('#eeeeee')
-    .setTitle('Cytrus-RE Github')
-    .setFooter('Made by CelestialCrafter#6830 and EnderGirlGamer#5370. Rewritten by EDGE#9573, Rexowogamer#1183, and Midou#9637')
+    .setColor("#eeeeee")
+    .setTitle("Cytrus-RE")
+    .setFooter("Originally made by CelestialCrafter#6830 and EnderGirlGamer#5370. Rewritten by EDGE#9573, Rexowogamer#1183, and Midou#9637.")
     .setDescription(`Github: [Repo](https://github.com/Rexogamer/cytrus-re)
 Website: None
 API: None
@@ -21,14 +21,14 @@ Version: V1.1`);
 
 exports.conf = {
   enabled: true,
-  aliases: ['i'],
+  aliases: ["i"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'info',
-  category: 'General',
-  description: 'Returns info about Cytrus.',
-  usage: 'info'
+  name: "info",
+  category: "General",
+  description: "Returns info about Cytrus-RE.",
+  usage: "info"
 };

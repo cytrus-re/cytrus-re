@@ -32,6 +32,6 @@ exports.conf = {
 exports.help = {
   name: 'emojiimage',
   category: 'Fun',
-  description: 'Returns the image of the specified emoji',
+  description: "Returns the image of the specified emoji",
   usage: 'emojiimage <static/animated> <emoji>'
 };
