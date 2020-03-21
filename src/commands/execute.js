@@ -3,20 +3,20 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {
     const execute = (command) => {
 
-      message.channel.send('Command executed in shell!');
+      message.channel.send("Command executed in shell!");
       exec(command, (err, stdout, stderr) => {
-        message.author.send(stdout).catch('The output was too big!');
+        message.author.send(stdout).catch("The output was too big!");
         if (stderr) {
           message.author.send('```'+stderr+'```');
 
-          message.channel.send('Shell error!');
+          message.channel.send("Shell error!");
         }
       });
     }
 
     execute(args.join(' '));
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
@@ -30,6 +30,6 @@ exports.conf = {
 exports.help = {
   name: 'execute',
   category: 'System',
-  description: 'Executes a command in the shell.',
+  description: "Executes a command in the shell.",
   usage: 'execute <shell-command>'
 };

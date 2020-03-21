@@ -14,8 +14,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       title: fetched.id,
       url: fetched.url,
       thumbnail: fetched.author.avatarURL,
-      footer: 'Message created by ' + fetched.author.tag,
-      description: fetched.content || 'No Message',
+      footer: "Message created by " + fetched.author.tag,
+      description: fetched.content || "No Message",
       files: afiles
     });
     
@@ -35,6 +35,6 @@ exports.conf = {
 exports.help = {
   name: 'fetchmessage',
   category: 'General',
-  description: 'Sends the message linked to the specified message ID.',
+  description: "Sends the message linked to the specified message ID.",
   usage: 'fetchmessage <id>'
 };

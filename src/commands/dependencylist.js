@@ -3,10 +3,10 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args, level) => {
   try {
     let output = '';
-    Object.keys(require('../package').dependencies).forEach((pack) => output += pack + '\n');
+    Object.keys(require("../package").dependencies).forEach((pack) => output += pack + '\n');
     
     let embed = new Discord.RichEmbed()
-    .setTtitle("Cytrus-RE's" + Object.keys(require('../package').dependencies).length + "dependencies:"
+    .setTtitle("Cytrus-RE's" + Object.keys(require("../package").dependencies).length + "dependencies:"
     .setColor('#363942')
     .setThumbnail(client.user.avatarURL)
     .setDescription(output)

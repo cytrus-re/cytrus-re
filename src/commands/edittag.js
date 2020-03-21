@@ -1,9 +1,9 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    let msg = await message.channel.send('Editing tag...');
+    let msg = await message.channel.send("Editing tag...");
     
-    if (!args.join(' ').split('|')[0]) return message.reply('You have to name the tag!');
-    if (!args.join(' ').split('|')[1]) return message.reply('You have to supply the text for the tag!');
+    if (!args.join(' ').split('|')[0]) return message.reply("You have to name the tag!");
+    if (!args.join(' ').split('|')[1]) return message.reply("You have to supply the text for the tag!");
     
     if (!client.tags.has(message.guild.id)) client.tags.set(message.guild.id, {});
     if (!client.tags.has(message.guild.id, args.join(' ').split('|')[0])) return message.reply("That's not a tag!");
@@ -12,9 +12,9 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       text: args.join(' ').split('|')[1]
     }, args.join(' ').split('|')[0]);
     
-    msg.edit('Tag edited with the ID of ' + message.id + '!');
+    msg.edit("Tag edited with the ID of " + message.id + "!");
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
@@ -28,6 +28,6 @@ exports.conf = {
 exports.help = {
   name: 'edittag',
   category: 'General',
-  description: 'Edits a tag.',
+  description: "Edits a tag.",
   usage: 'edittag trigger|text'
 };

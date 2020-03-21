@@ -22,6 +22,6 @@ exports.conf = {
 exports.help = {
   name: 'eval',
   category: 'System',
-  description: 'Evaluates arbitrary javascript',
+  description: "Evaluates arbitrary javascript",
   usage: 'eval [code]'
 };
