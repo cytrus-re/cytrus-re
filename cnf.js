@@ -1,4 +1,5 @@
 const config = {
+  "botName": "Cytrus-RE",
   'owners': ['395990735934980097', '634532598668066816'],
   'managers': ['437698252381487104', '339903300994596884'],
   'admins': [],
@@ -29,7 +30,8 @@ const config = {
     'logMessageUpdates': 'true',
     'logEmojiUpdates': 'true',
     'logMemberUpdates': 'true',
-    'starboardChannel': 'starboard'
+    'starboardChannel': 'starboard',
+    "maxWarnsBeforeBan": 3
   },
 
   permLevels: [
