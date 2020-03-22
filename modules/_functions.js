@@ -110,7 +110,7 @@ module.exports = (client) => {
       this.type = type;
       this.settings = settings;
 
-      this.embed = new Discord.RichEmbed();
+      this.embed = new Discord.MessageEmbed();
 
       if (this.type !== 'blend') this.embed.setColor('#eeeeee');
       else this.embed.setColor('#363942');

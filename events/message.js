@@ -69,6 +69,6 @@ This command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf
     client.uses.ensure(cmd.help.name, 1);
     client.uses.inc(cmd.help.name);
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send('There was an error!\n' + err).catch();
   }
 };
