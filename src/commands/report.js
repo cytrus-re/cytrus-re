@@ -9,7 +9,7 @@ console.log("user exists!")
 let rreason = args.join(" ").slice(22);
 
 
-let reportEmbed = new Discord.RichEmbed()
+let reportEmbed = new Discord.MessageEmbed()
  .setAuthor("Cytrus-RE User Report")
  .setColor("#eeeeee")
  .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
