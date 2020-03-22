@@ -26,7 +26,7 @@
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
     "cleverbot.io": "^1.0.4",
-    "cryptr": "^5.0.0",
+    "cryptr": "^6.0.1",
     "discord.js": "^11.6.3",
     "discord.js-minesweeper": "^1.0.4",
     "ejs": "^3.0.1",
