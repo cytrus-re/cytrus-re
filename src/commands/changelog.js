@@ -7,7 +7,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
                   title: "**V1.2.0**",
                   fields: [{ name: "Grammar", value: "More grammar fixes."} ,
                            { name: "Minor improvements", value: "Fixed some bugs that caused the bot to crash, and cleaned up repo." }
-                           { name: "Major improvements", value: "Added a new command (report)"}],
+                           { name: "Major improvements", value: "Added a new command (report)" }],
                   footer: {text: "By DestroyedEDGE#8847, Rexowogamer#1183, CelestialCrafter#7255, and Midou#9637"
     } }});
   } catch (err) {
