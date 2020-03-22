@@ -1,0 +1,41 @@
+
+
+let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));    
+if(!rUser) return message.channel.send("I couldn't find the specified user!");
+console.log("user exists!") 
+let rreason = args.join(" ").slice(22);
+
+
+let reportEmbed = new Discord.RichEmbed()
+ .setAuthor("Cytrus-RE User Report")
+ .setColor("#eeeeee")
+ .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
+ .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
+ .addField("Reported in", message.channel)
+ .addField("Reported at", message.createdAt)
+ .addField("Reason for report", rreason);
+
+ let reportschannel = message.guild.channels.get("691142562253242409");
+ if(!reportschannel) return message.channel.send("I couldn't find the reports channel!");
+ console.log("channel exists!") 
+
+
+ message.delete();
+ console.log("message deleted!") 
+ reportschannel.send(reportEmbed);
+ console.log("report message sent!") 
+ 
+ exports.conf = {
+    enabled: true,
+    aliases: ['gbr', 'gbreport'],
+    guildOnly: false,
+    permLevel: 'User'
+  };
+  
+  exports.help = {
+    name: "report",
+    category: "Moderation",
+    description: "Reports a user to be put on the Cytrus-RE Global Ban List",
+    usage: "report <user> <reason>"
+  };
+  
