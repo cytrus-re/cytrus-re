@@ -1,5 +1,7 @@
-
-
+exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+  try {
+  //command code
+  
 let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));    
 if(!rUser) return message.channel.send("I couldn't find the specified user!");
 console.log("user exists!") 
@@ -24,8 +26,17 @@ let reportEmbed = new Discord.RichEmbed()
  console.log("message deleted!") 
  reportschannel.send(reportEmbed);
  console.log("report message sent!") 
- 
- exports.conf = {
+  
+//error log
+  
+  } catch (err) {
+    message.channel.send(client.errors.genericError + err).catch();
+  }
+};
+
+//permissions and aliases
+
+exports.conf = {
     enabled: true,
     aliases: ['gbr', 'gbreport'],
     guildOnly: false,
@@ -37,5 +48,4 @@ let reportEmbed = new Discord.RichEmbed()
     category: "Moderation",
     description: "Reports a user to be put on the Cytrus-RE Global Ban List",
     usage: "report <user> <reason>"
-  };
-  
+};
