@@ -18,7 +18,7 @@ let reportEmbed = new Discord.RichEmbed()
  .addField("Reported at", message.createdAt)
  .addField("Reason for report", rreason);
 
- let reportschannel = message.guild.channels.get("691142562253242409");
+ let reportschannel = client.channels.get("691142562253242409");
  if(!reportschannel) return message.channel.send("I couldn't find the reports channel!");
  console.log("channel exists!") 
 
