@@ -10,7 +10,7 @@ module.exports = (client) => {
   //Get command files
   let i = 1;
 
-  readdir(__dirname + '/../commands/', (err, files) => {
+  readdir(__dirname + '/../src/commands/', (err, files) => {
     //If there is an error, return the error
     if (err) return client.logger.error(err);
 
