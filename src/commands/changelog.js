@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
    message.channel.send({embed:  
                  { author: { name: client.user.username, icon_url: client.user.avatarURL}, 
                   color: 0x1167b1,
-                  title: "**V1.1.2**",
+                  title: "**V1.2.0**",
                   fields: [{ name: "Grammar", value: "More grammar fixes."} ,
                            { name: "Minor improvements", value: "Fixed some bugs that caused the bot to crash, and cleaned up repo." }
                            { name: "Major improvements", value: "Added a new command (report)"}],
