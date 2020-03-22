@@ -4,10 +4,11 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
    message.channel.send({embed:  
                  { author: { name: client.user.username, icon_url: client.user.avatarURL}, 
                   color: 0x1167b1,
-                  title: "**V1.1.1**",
+                  title: "**V1.2.0**",
                   fields: [{ name: "Grammar", value: "More grammar fixes."} ,
-                           { name: "Minor improvements", value: "Mostly code stuff." }],
-                  footer: {text: "By DestroyedEDGE#9573, Rexowogamer#1183, CelestialCrafter#7255, and Midou (notsoonline)#9637"
+                           { name: "Minor improvements", value: "Cleaned up some code." } ,
+                           { name: "Major changes", value: "Now compatible with Discord.js v12."}],
+                  footer: {text: "By DestroyedEDGE#8847, Rexowogamer#1183, CelestialCrafter#7255, and Midou#9637"
     } }});
   } catch (err) {
    message.channel.send(client.errors.genericError + err).catch();
