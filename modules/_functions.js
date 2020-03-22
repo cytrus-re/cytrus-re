@@ -58,7 +58,7 @@ module.exports = (client) => {
 
   client.loadCommand = (commandName) => {
     try {
-      const props = require(`../src/commands/${commandName}`);
+      const props = require(`../commands/${commandName}`);
       if (props.init) props.init(client);
 
       client.commands.set(props.help.name, props);
@@ -67,7 +67,7 @@ module.exports = (client) => {
       });
       return false;
     } catch (e) {
-      return 'Unable to load command \`${commandName}\`: ${e}';
+      return 'Unable to load command ${commandName}: ${e}';
     }
   };
 
@@ -83,8 +83,8 @@ module.exports = (client) => {
 
     client.commands.delete(command.help.name);
 
-    const mod = require.cache[require.resolve(`../src/commands/${commandName}`)];
-    delete require.cache[require.resolve(`../src/commands/${commandName}.js`)];
+    const mod = require.cache[require.resolve(`../commands/${commandName}`)];
+    delete require.cache[require.resolve(`../commands/${commandName}.js`)];
     for (let i = 0; i < mod.parent.children.length; i++) {
       if (mod.parent.children[i] === mod) {
         mod.parent.children.splice(i, 1);
