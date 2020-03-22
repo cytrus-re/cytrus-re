@@ -30,7 +30,7 @@ module.exports = (client) => {
       delete require.cache[require.resolve(`../events/${file}`)];
 
 //Log that the event is loading
-      client.logger.log(`Loading event: ${eventName}`)
+      client.logger.log('Loading event: ${eventName}')
     });
     console.log();
   });

@@ -8,7 +8,7 @@ exports.run = (client, message, args, level) => { // eslint-disable-line no-unus
   try {
     cpu(process.pid, async (err, stats) => {
       const duration = moment.duration(client.uptime).format(' D [days], H [hrs], m [mins], s [secs]');
-      const embed = new Discord.MessageEmbed()
+      const embed = new Discord.RichEmbed()
       .setTitle('Cytrus Status')
       .setDescription(`
 RAM Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB

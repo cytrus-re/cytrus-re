@@ -18,7 +18,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         i++;
       });
       
-      let page = await client.awaitReply(message, `Please choose the page you want:\n${output}`);
+      let page = await client.awaitReply(message, 'Please choose the page you want:\n${output}');
       
       if (isNaN(page)) return message.reply(page + ' is not a number!');
       
@@ -28,10 +28,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       .setFooter('Requested by ' + message.author.tag)
       .setColor('#eeeeee');
 
-      message.channel.send(embed).catch(err => message.channel.send("The definition was too big or there was another error!\n\n" + err));
+      message.channel.send(embed).catch(err => message.channel.send('The definition was too big or there was another error!\n\n' + err));
     });
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send('There was an error!\n' + err).catch();
   }
 };
 
@@ -45,6 +45,6 @@ exports.conf = {
 exports.help = {
   name: 'urbandictionary',
   category: 'General',
-  description: "Searches the Urban Dictionary for you.",
+  description: 'Searches the Urban Dictionary for you.',
   usage: 'urbandictionary <term>'
 };
