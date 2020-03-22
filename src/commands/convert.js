@@ -15,7 +15,7 @@ const convert = (degree, args, message) => {
       message.channel.send("The temperature in Celcius is " + Math.round(x) + '°C');
     }
   } else {
-    message.reply("You have to choose C or F!";
+    message.reply("You have to choose C or F!");
   }
 }
 

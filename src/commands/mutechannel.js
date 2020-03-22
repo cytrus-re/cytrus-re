@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
     
     message.channel.overwritePermissions(message.guild.id, {SEND_MESSAGES: false});
   } catch (err) {
-    message.channel.send(client.errors.genericError" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

@@ -10,7 +10,7 @@ module.exports = (client) => {
   //Get command files
   let i = 1;
 
-  readdir(__dirname + '/../commands/', (err, files) => {
+  readdir(__dirname + '/../src/commands/', (err, files) => {
     //If there is an error, return the error
     if (err) return client.logger.error(err);
 
@@ -20,7 +20,7 @@ module.exports = (client) => {
       if (!file.endsWith('.js')) return;
 
       //Make the "props" variable the file object
-      let props = require(`../commands/${file}`);
+      let props = require(`../src/commands/${file}`);
 
       //Split the file name from the file extension
       let commandName = file.split('.')[0];

@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
     .setTtitle("Cytrus-RE's" + Object.keys(require("../package").dependencies).length + "dependencies:"
     .setColor('#363942')
     .setThumbnail(client.user.avatarURL)
-    .setDescription(output)
+    .setDescription(output))
     
     message.channel.send(embed);
   } catch (err) {
