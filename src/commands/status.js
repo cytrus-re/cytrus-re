@@ -21,7 +21,7 @@ Game: ${client.user.presence.game}
 Discord.js: v${version}
 CPU Usage: ${Math.round(stats.cpu)}%
 Node.js: ${process.version}
-Dependencies: ${Object.keys(require('../package').dependencies).length}
+Dependencies: ${Object.keys(require('../../package').dependencies).length}
 Startup Time: ${client.startuptime}ms
 Voice Connections: ${client.voiceConnections.size}`)
       .setColor('#eeeeee');
