@@ -6,8 +6,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
                   color: 0x1167b1,
                   title: "**V1.2.0**",
                   fields: [{ name: "Grammar", value: "More grammar fixes."} ,
-                           { name: "Minor improvements", value: "Cleaned up some code." } ,
-                           { name: "Major changes", value: "Now compatible with Discord.js v12."}],
+
+                           { name: "Minor improvements", value: "Fixed some bugs that caused the bot to crash, and cleaned up repo." },
+                           { name: "Major improvements", value: "Added a new command (report)" }],
+
                   footer: {text: "By DestroyedEDGE#8847, Rexowogamer#1183, CelestialCrafter#7255, and Midou#9637"
     } }});
   } catch (err) {
