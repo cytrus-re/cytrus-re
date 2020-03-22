@@ -5,9 +5,6 @@ exports.run = async (client, message, args, level) => {
     const wUser = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id);
     const modLogChannel = settings.modLogChannel;
-    if(wUser.hasPermission(MANAGE_MESSAGES)) return message.reply("I can't warn that user!")
-    if(wUser.hasPermission(ADMINISTRATOR)) return message.reply("I can't warn that user!")
-    if(wUser.hasPermission(MANAGE_MEMBERS)) return message.reply("I can't warn that user!")
 
     if (wUser) {
       const member = message.guild.member(wUser);
