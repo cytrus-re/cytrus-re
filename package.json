@@ -38,7 +38,7 @@
     "google": "^2.1.0",
     "js-beautify": "^1.10.3",
     "mathjs": "^6.6.4",
-    "moment": "^2.24.0",
+    "moment": "^2.26.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.0",
