@@ -13,7 +13,7 @@ exports.conf = {
   aliases: ["git", "update"],
   guildOnly: false,
   permLevel: "Bot Moderator"
-
+}
 exports.help = {
   name: "pull",
   category: "System",
