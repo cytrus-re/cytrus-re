@@ -4,7 +4,7 @@
 A multipurpose Discord bot that covers all your needs.
 
 ## Invite
-https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot
+[**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)
 
 ## How to set up
 Create a .env file in the directory Cytrus is installed in.  
