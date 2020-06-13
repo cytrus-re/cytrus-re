@@ -82,20 +82,20 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     
     message.channel.send(minesweeper.start());
   } catch (err) {
-    message.channel.send('An error has occoured. \n Press the Eject button, remove the Game Disc, and turn off the power to the console.\n Please read the Wii Operations Manual for further instructions.' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['sweeper', 'sweep'],
+  aliases: ["sweeper", "sweep"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'minesweeper',
-  category: 'Game',
-  description: 'Returns a Minesweeper game. RULES: Do not have your spoilers AutoReveal.',
-  usage: 'minesweeper'
+  name: "minesweeper",
+  category: "Game",
+  description: "Returns a Minesweeper game. NOTE: Please disable auto-reveal for spoilers before playing.",
+  usage: "minesweeper <difficulty>"
 };
