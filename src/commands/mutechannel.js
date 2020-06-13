@@ -18,6 +18,6 @@ exports.conf = {
 exports.help = {
   name: "mutechannel",
   category: "Moderation",
-  description: 'Mutes the channel you use the command in.',
+  description: 'Mutes the channel you use the command in.",
   usage: "mutechannel"
 };

@@ -1,4 +1,4 @@
 module.exports = (client) => {
-  genericError: "An error has occoured. \n Press the Eject button, remove the Game Disc, and turn off the power to the console.\n Please read the Wii Operations Manual for further instructions.",
+  genericError: "There was an error!\n",
   userNotInGuild; "This user isn't in this guild!"
 };
