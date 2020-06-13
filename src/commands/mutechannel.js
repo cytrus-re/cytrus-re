@@ -12,7 +12,7 @@ exports.conf = {
   enabled: true,
   aliases: ["raid", "chmute", "cmute", "mutech"],
   guildOnly: true,
-  permLevel: 'Administrator'
+  permLevel: "Administrator"
 };
 
 exports.help = {
