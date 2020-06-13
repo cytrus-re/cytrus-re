@@ -82,7 +82,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     
     message.channel.send(minesweeper.start());
   } catch (err) {
-    message.channel.send('An error has occured. \n Press the Eject button, remove the Game Disc, and turn off the power to the console.\n Please read the Wii Operations Manual for further instructions.' + err).catch();
+    message.channel.send(client.errors.wiiError + err).catch();
   }
 };
 
