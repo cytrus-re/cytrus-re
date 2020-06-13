@@ -18,7 +18,6 @@ exports.conf = {
 exports.help = {
   name: "mutechannel",
   category: "Moderation",
-  description: 'Mutes the channel you use the command in.',
-  //  Who the fuck thought that was a good idea?
+  description: "Mutes the channel you use the command in.", //  Who the fuck thought that was a good idea? - Odyssey
   usage: "mutechannel"
 };
