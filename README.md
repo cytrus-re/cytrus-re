@@ -1,5 +1,5 @@
 # Cytrus-RE
-[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/596304951718838275?color=Bonk&label=Cytrus-RE%20%20Chat&logo=asd&logoColor=ad)](https://discord.gg/BfpMgXs) (ignore the fact it shows as disabled, it works)
+[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/596304951718838275?color=Bonk&label=Cytrus-RE%20%20Support%20%20Server&logo=asd&logoColor=ad)](https://discord.gg/BfpMgXs) (ignore the fact it shows as disabled, it works)
 
 A multipurpose Discord bot that covers all your needs.
 
