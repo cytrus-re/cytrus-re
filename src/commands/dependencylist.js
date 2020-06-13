@@ -27,6 +27,6 @@ exports.conf = {
 exports.help = {
   name: "dependencylist",
   category: "System",
-  description: "Lists the dependencies that Cytrus-RE uses.",
+  description: "Lists the dependencies that Cytrus-RE uses. [currently broken]",
   usage: "dependencylist"
 };

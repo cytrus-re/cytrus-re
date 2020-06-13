@@ -53,3 +53,9 @@ exports.help = {
   description: 'Returns an animation of how to google somthing',
   usage: 'google <query>'
 };
+
+
+
+/* seems like the google feature is broken, we have to update it, look at this:
+https://stackoverflow.com/questions/56856201/how-to-create-a-google-search-command-in-a-discord-bot */
+
