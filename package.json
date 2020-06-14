@@ -11,8 +11,6 @@
     "pnpm": "pnpm server start",
     "yarn": "yarn run cybase.js",
     "nodemon": "nodemon cybase.js",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "10.x"
@@ -49,7 +47,6 @@
     "request": "^2.88.2",
     "rhyme": "^0.0.3",
     "safe-eval": "^0.4.1",
-    "snyk": "^1.332.1",
     "txtgen": "^2.2.4",
     "urban-dictionary": "^2.2.1",
     "wikipediajs": "^1.4.0",
