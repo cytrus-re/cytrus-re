@@ -10,7 +10,7 @@
     "pm2": "pm2 start cybase.js",
     "pnpm": "pnpm server start",
     "yarn": "yarn run cybase.js",
-    "nodemon": "nodemon cybase.js",
+    "nodemon": "nodemon cybase.js"
   },
   "engines": {
     "node": "10.x"
