@@ -1,12 +1,12 @@
 const config = {
   "botName": "Cytrus-RE",
-  'owners': ['395990735934980097', '634532598668066816'],
-  'managers': ['437698252381487104', '339903300994596884'],
-  'admins': [],
-  'devs': [],
-  'mods': [],
-  'support': [],
-  'helpers': [],
+  "owners": ["395990735934980097", "634532598668066816", "339903300994596884"], // rexo, celestial (for some reason), edge
+  "managers": ["471785433232179210"], // midou
+  "admins": [],
+  "devs": ["315843700490240002", "429353559566319626"], // odyssey, commandblock
+  "mods": [],
+  "support": [],
+  "helpers": [],
 
   'blacklisted': ['251213730577252354', '439183092037713930'],
   'globalBan': [],
@@ -23,7 +23,7 @@ const config = {
     'modRole': 'Moderator',
     'adminRole': 'Administrator',
     'muteRole': 'CytrusReMute',
-    'noPermissionNotice': 'true',
+    'noPermissionNotice': true,
     'welcomeChannel': 'general',
     'welcomeMessage': 'Welcome to the server {{ping}}!',
     'welcomeEnabled': 'true',
