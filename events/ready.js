@@ -2,14 +2,15 @@ const request = require('request');
 
 module.exports = async client => {
   const statusList = [
-    {msg: `for commands | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
-    {msg: `with async/await errors | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
-    {msg: `with unhandled promise rejections | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
-    {msg: `with linux permissions | ${client.config.defaultSettings.prefix}help`, type: 'PLAYING'},
-    {msg: `Discord be slow | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
-    {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
-    {msg: `EDGE rambling | ${client.config.defaultSettings.prefix}help`, type: 'LISTENING'},
-    {msg: `development progress! | ${client.config.defaultSettings.prefix}help`, type: 'WATCHING'},
+    {msg: `for commands | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
+    {msg: `with async/await errors | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
+    {msg: `with unhandled promise rejections | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
+    {msg: `with linux permissions | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
+    {msg: `Discord be slow | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
+    {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
+    {msg: `to EDGE rambling | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'LISTENING'},
+    {msg: `development progress! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
+    {msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
   ];
 
   setInterval(async () => {
