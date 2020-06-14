@@ -16,9 +16,10 @@ exports.run = (client, message, args, level) => {
       });
       
       let embed = new client.Embed('normal', {
-        title: 'Cytrus-RE Help',
+        title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
-        description: output
+        description: output,
+        footer: "Check out [the website](https://cytrus-re.github.io/commands.html) for a list of commands and more!"
       });
       
       message.channel.send(embed);
@@ -71,7 +72,7 @@ exports.run = (client, message, args, level) => {
         if (!output) return message.reply('That\'s not a command, alias, or category!');
         
         let embed = new client.Embed('blend', {
-          title: 'Cytrus Help',
+          title: 'Cytrus-RE Help',
           description: output,
           thumbnail: client.user.avatarURL
         });
@@ -80,7 +81,7 @@ exports.run = (client, message, args, level) => {
       }
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err.stack).catch();
+    message.channel.send(client.errors.genericError + err.stack).catch();
   }
 };
 
