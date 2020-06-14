@@ -10,7 +10,7 @@ module.exports = async client => {
     {msg: `over ${client.guilds.size} servers | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
     {msg: `to EDGE rambling | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'LISTENING'},
     {msg: `development progress! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
-    {msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`},
+    {msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
   ];
 
   setInterval(async () => {
