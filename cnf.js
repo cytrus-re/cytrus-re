@@ -23,7 +23,7 @@ const config = {
     'modRole': 'Moderator',
     'adminRole': 'Administrator',
     'muteRole': 'CytrusReMute',
-    'noPermissionNotice': 'true',
+    'noPermissionNotice': true,
     'welcomeChannel': 'general',
     'welcomeMessage': 'Welcome to the server {{ping}}!',
     'welcomeEnabled': 'true',
