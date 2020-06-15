@@ -1,1 +1,1 @@
-worker: pm2 cybase.js
+worker: node cybase.js
