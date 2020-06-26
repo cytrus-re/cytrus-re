@@ -46,10 +46,10 @@ module.exports = async (client, message) => {
     }, 3000); // three seconds
   }
 
-  if (!message.guild && cmd.conf.guildOnly) return message.reply("you need to be in a guild to use this command!");
+  if (!message.guild && cmd.conf.guildOnly) return message.send("You need to be in a guild to use this command.");
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
-    if (settings.noPermissionNotice) return message.channel.send(`You don't have permission to use this command!
+    if (settings.noPermissionNotice) return message.channel.send(`You can't use this command!
 Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name}), but this command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf.permLevel})!`);
     else return;
   }
@@ -61,7 +61,7 @@ Your permission level is ${level} (${client.config.permLevels.find(l => l.level 
     message.flags.push(args.shift().slice(1));
   }
 
-  if (!cmd.conf.enabled && level < 8) return message.reply("this command is disabled for non-devs!");
+  if (!cmd.conf.enabled && level < 8) return message.channel.send("This command is disabled for non-devs.");
 
   try {
     cmd.run(client, message, args, level);
