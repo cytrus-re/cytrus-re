@@ -13,7 +13,7 @@ const config = {
   'token': 'process.env.BOT_TOKEN',
   
   "links" : {
-    "github": "https://github.com/rexogamer/cytrus-re",
+    "github": "https://github.com/cytrus-re/cytrus-re",
     "supportServer": "https://discord.gg/BfpMgXs"
   },
 
@@ -22,10 +22,10 @@ const config = {
     'modLogChannel': 'log',
     'modRole': 'Moderator',
     'adminRole': 'Administrator',
-    'muteRole': 'CytrusReMute',
+    'muteRole': 'Cytrus-RE Mute',
     'noPermissionNotice': true,
     'welcomeChannel': 'general',
-    'welcomeMessage': 'Welcome to the server {{ping}}!',
+    'welcomeMessage': 'Welcome to the server, {{ping}}!',
     'welcomeEnabled': 'true',
     'logMessageUpdates': 'true',
     'logEmojiUpdates': 'true',
