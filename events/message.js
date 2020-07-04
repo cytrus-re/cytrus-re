@@ -61,7 +61,7 @@ Your permission level is ${level} (${client.config.permLevels.find(l => l.level 
     message.flags.push(args.shift().slice(1));
   }
 
-  if (!cmd.conf.enabled && level < 8) return message.channel.send("This command is disabled for non-devs.");
+  if (!cmd.conf.enabled && level < 8) return message.channel.send("This command is disabled for non-devs."); //this command is disabled for non-devs
 
   try {
     cmd.run(client, message, args, level);
