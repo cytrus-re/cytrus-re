@@ -2,15 +2,12 @@
 // I don't have any rights reserved. But the MIT License is still in place.
 const Discord = require("discord.js");
 const exec = require("child_process").exec; // This will allow us to do commands in the user shell/command prompt, which is neccesary for this to work.
-exports.run = async (client, message, args, level) => {
-    //Let's declare some variables!
-    var OSCheck = exec("uname -a");
-
+exports.run = async (client, message, args, level) => {   
     try {
         await exec("uname -a");
-        message.reply("This instance of Cytrus-RE is running on a UNIX-Like OS or kernel (Linux/OSX).");    
+        message.reply("This instance of Cytrus-RE is running on a **UNIX-Like** OS or kernel (**Linux/OSX**).");    
     } catch (err) {
-        message.channel.send("This instance of Cytrus-RE is running on Windows.");
+        message.channel.send("This instance of Cytrus-RE is running on **Windows**.");
     }
     
 }
