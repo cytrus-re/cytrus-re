@@ -24,7 +24,7 @@ CLEVERBOT_API_KEY='`YourCleverBot.ioAPIKey'
 CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
-Start the cybase.js file by doing ```node cybase.js```
+Start up Cytrus-RE by doing ```node cybase.js```
 
 ## Info
 ### API
