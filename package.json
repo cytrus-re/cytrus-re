@@ -15,7 +15,7 @@
   "engines": {
     "node": "10.x"
   },
-  "repository": "github:Rexogamer/cytrus",
+  "repository": "github:Cytrus-RE/cytrus-re",
   "author": "CelestialCrafter#7255, Rexowogamer#1183",
   "license": "MIT",
   "dependencies": {
@@ -62,7 +62,7 @@
     "nodemon": "^2.0.2"
   },
   "bugs": {
-    "url": "https://github.com/Rexogamer/cytrus-re/issues"
+    "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
   },
-  "homepage": "https://github.com/Rexogamer/cytrus-re"
+  "homepage": "https://cytrus-re.github.io"
 }
