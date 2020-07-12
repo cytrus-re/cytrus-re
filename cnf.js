@@ -1,9 +1,9 @@
 const config = {
   "botName": "Cytrus-RE",
   "owners": ["395990735934980097", "634532598668066816", "339903300994596884"], // rexo, celestial (for some reason), edge
-  "managers": ["471785433232179210"], // midou
+  "managers": ["471785433232179210", "315843700490240002"], // midou, odyssey
   "admins": [],
-  "devs": ["315843700490240002", "429353559566319626"], // odyssey, commandblock
+  "devs": ["429353559566319626"], // commandblock
   "mods": [],
   "support": [],
   "helpers": [],
