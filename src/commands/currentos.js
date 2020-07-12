@@ -15,8 +15,8 @@ exports.run = async (client, message, args, level) => {
 exports.conf = {
     enabled: true,
     aliases: ["botos", "clientos"],
-    guildOnly: true,
-    permLevel: "Bot Admin"
+    guildOnly: false,
+    permLevel: "Bot Dev"
   };
   
   exports.help = {
