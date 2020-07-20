@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "eslint": "^7.5.0",
-    "forever": "^2.0.0",
+    "forever": "^3.0.0",
     "nodemon": "^2.0.2"
   },
   "bugs": {
