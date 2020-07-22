@@ -5,9 +5,9 @@ exports.run = async (client, message, args, level) => {
     const settings = client.getSettings(message.guild.id);
     const user = message.mentions.users.first();
     
-    if (!message.guild.roles.find(r => r.name == args.slice(1).join(' '))) return message.reply('That\'s not a role!');
+    if (!message.guild.roles.find(r => r.name == args.slice(1).join(' '))) return message.send("That's not a role!");
     if (user) {
-      if (message.guild.members.get(message.author.id).highestRole.name == '@everyone') message.reply('The role you are trying to add is above your highest role\'s position!');
+      if (message.guild.members.get(message.author.id).highestRole.name == '@everyone') message.send("The role you are trying to add is above your highest role's position!");
       else {
         if (Number(message.member.highestRole.position) >= Number(message.guild.roles.find(r => r.name == args.slice(1).join(' ')).position)) {
           if (message.member.hasPermission('MANAGE_ROLES')) {
@@ -27,12 +27,12 @@ exports.run = async (client, message, args, level) => {
                       message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
                     }
                   }).catch(client.errors.genericError);
-                } else message.reply('I can\'t find that role!');
-              } else message.reply('That user isn\'t in this guild!');
-          } else message.reply('You don\'t have the Manage Roles permission!');
-        } else message.reply('The role you are trying to add is above your highest role\'s position!');
+                } else message.send("I can't find that role!");
+              } else message.send("That user isn't in this guild!");
+          } else message.send("You don't have the Manage Roles permission!");
+        } else message.send("The role you are trying to add is above your highest role's position!");
       }
-    } else message.reply('You didn\'t mention the user to add the role to!');
+    } else message.send("You didn't mention the user to add the role to!");
   } catch (err) {
     message.channel.send(client.errors.genericError + err.stack).catch();
   }
@@ -40,14 +40,14 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ['arole', 'radd'],
+  aliases: ["arole", "radd"],
   guildOnly: true,
-  permLevel: 'Administrator'
+  permLevel: "Administrator"
 };
 
 exports.help = {
-  name: 'addrole',
-  category: 'Moderation',
-  description: 'Adds the specified role to the specified user.',
-  usage: 'addrole <user> <role name/id>'
+  name: "addrole",
+  category: "Moderation",
+  description: "Adds the specified role to the specified user.",
+  usage: "addrole <user> <role name/id>"
 };
