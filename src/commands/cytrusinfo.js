@@ -7,17 +7,17 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         description: app.description,
         fields: [
           {
-            title: 'ID',
+            title: "ID",
             text: app.id,
             inline: true
           },
           {
-            title: 'Public',
+            title: "Public",
             text: app.botPublic,
             inline: true
           },
           {
-            title: 'Created At',
+            title: "Created at",
             text: app.createdAt
           },
           {
@@ -36,14 +36,14 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: ['cyinf'],
+  aliases: ["cyinf", "cyreinfo", "cyreinf"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'cytrusinfo',
-  category: 'General',
-  description: 'Returns Cytrus\'s OAuth2 application',
-  usage: 'cytrusinfo'
+  name: "cytrusinfo",
+  category: "General",
+  description: "Returns Cytrus-RE's OAuth2 application.",
+  usage: "cytrusinfo"
 };
