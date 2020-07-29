@@ -18,7 +18,7 @@ exports.run = async (client, message, args, level) => {
                 plat = "Mac"
                 break;
             default:
-                plat = "another OS"
+                plat = "unknown OS"
         }
         message.channel.send(`This instance of Cytrus-RE is running on **${plat}**.`);
     } catch (err) {
