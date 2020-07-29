@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
+    var opsys = os.platform();
     const embed = new Discord.RichEmbed()
     .setColor("#eeeeee")
     .setTitle("Cytrus-RE")
@@ -11,7 +12,8 @@ Website: None
 API: None
 Support Server: [Server](https://discord.gg/BfpMgXs)
 Issues: [Github](https://github.com/Rexogamer/cytrus-re/issues)
-Version: V1.1`);
+Version: V1.3`);
+Currently running on ${opsys}
 
     message.channel.send(embed);
   } catch (err) {
