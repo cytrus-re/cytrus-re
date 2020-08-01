@@ -5,22 +5,10 @@ const os = require("os"); // Node.JS core module, required for getting the OS
 const exec = require("child_process").exec; // This will allow us to do commands in the user shell/command prompt, which is neccesary for this to work.
 exports.run = async (client, message, args, level) => {   
     try {
-        var plat;
+        var rawPlat = os.platform
         // var ver; // Added in Node 14, don't uncomment until upgrade
-        switch (new os.platform()) {
-            case "win32":
-                plat = "Windows";
-                break;
-            case "linux":
-                plat = "Linux"
-                break;
-            case "darwin"
-                plat = "Mac"
-                break;
-            default:
-                plat = "unknown OS"
-        }
-        message.channel.send(`This instance of Cytrus-RE is running on **${plat}**.`);
+        var cleanPlat = client.friendlyOS(rawPlat);
+        message.channel.send(`This instance of Cytrus-RE is running on **${cleanPlat}**.`);
     } catch (err) {
         message.channel.send(client.errors.genericError);
     }
