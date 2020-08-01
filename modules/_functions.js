@@ -1,18 +1,18 @@
 const Discord = require('discord.js');
 
 module.exports = (client) => {
-  //Return the permission level
+  // Returns the author's permission level
   client.permlevel = (message) => {
     let permlvl = 0;
 
-    //Sort the permission levels
+    // Sorts the permission levels
     const permOrder = client.config.permLevels.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
 
     while (permOrder.length) {
-      //Make the current level the first level in the array
+      // Make the current level the first level in the array
       const currentLevel = permOrder.shift();
 
-      //If the message is sent in a guild, Continue
+      // If the message is sent in a guild, continue
       if (message.guild && currentLevel.guildOnly) continue;
       if (currentLevel.check(message)) {
         permlvl = currentLevel.level;
@@ -139,6 +139,23 @@ module.exports = (client) => {
 
       return this.embed;
     }
+  };
+  
+  // This function makes the results from os.platform more readable
+  client.friendlyOS = (rawPlat) => {
+    switch (rawPlat) {
+        case "win32":
+                return = "Windows";
+                break;
+            case "linux":
+                return = "Linux"
+                break;
+            case "darwin"
+                return = "macOS"
+                break;
+            default:
+                return "an unknown OS"
+        }
   };
 
   Object.defineProperty(String.prototype, 'toPropperCase', {
