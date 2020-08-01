@@ -59,7 +59,7 @@
   "devDependencies": {
     "eslint": "^7.6.0",
     "forever": "^3.0.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.4"
   },
   "bugs": {
     "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
