@@ -6,18 +6,17 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     const embed = new Discord.RichEmbed()
     .setColor("#eeeeee")
     .setTitle("Cytrus-RE")
-    .setFooter("Originally made by CelestialCrafter#6830 and EnderGirlGamer#5370. Rewritten by EDGE#9573, Rexowogamer#1183, and Midou#9637.")
+    .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by DestroyedEDGE, Rexowogamer, Odyssey346 and Midou.")
     .setDescription(`Github: [Repo](https://github.com/Rexogamer/cytrus-re)
 Website: None
 API: None
 Support Server: [Server](https://discord.gg/BfpMgXs)
 Issues: [Github](https://github.com/Rexogamer/cytrus-re/issues)
-Version: V1.3`);
-Currently running on ${opsys}
-
+Version: V1.3
+Currently running on: ${opsys}`);
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
