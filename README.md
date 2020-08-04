@@ -1,5 +1,5 @@
 # Cytrus-RE
-[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/596304951718838275?color=Bonk&label=Cytrus-RE%20%20Support%20%20Server&logo=asd&logoColor=ad)](https://discord.gg/BfpMgXs) [![Webpage](https://img.shields.io/website?down_color=lightgrey&down_message=is%20down.&up_message=is%20up%21&url=https%3A%2F%2Fcytrus-re.github.io%2F)](https://cytrus-re.github.io)
+[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/596304951718838275?color=Bonk&label=Cytrus-RE%20%20Support%20%20Server&logo=asd&logoColor=ad)](https://discord.gg/BfpMgXs) [![Webpage](https://img.shields.io/website?down_color=lightgrey&down_message=is%20down.&up_message=is%20up%21&url=https%3A%2F%2Fcytrus-re.github.io%2F)](https://cytrus-re.github.io)[![Wiki](https://img.shields.io/badge/Wiki-information%20about%20cytrus--re-informational)]
 
 A multipurpose Discord bot that covers all your needs.
 
