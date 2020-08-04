@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
     else {
       let toban = await client.awaitReply(message, "I found " + members.length + " members on the Global Ban List. Do you want to ban them? (Reply with yes or no)");
       
-      if (['y', 'yes', 'true', 'mhm', 'yep'].includes(toban)) {
+      if (['y', 'yes', 'true', 'mhm', 'yep', 'yeah','hell yeah'].includes(toban)) {
         let banmsg = await message.channel.send("Banning members...");
         members.forEach(async (id) => {
           message.guild.members.find(member => member.id == id).ban("Detected by Cytrus Global Ban List").then(() => {
