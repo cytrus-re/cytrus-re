@@ -14,7 +14,7 @@ const config = {
   
   "links" : {
     "github": "https://github.com/cytrus-re/cytrus-re",
-    "supportServer": "https://discord.gg/BfpMgXs"
+    "supportServer": "https://discord.gg/xMyFtrJ"
   },
 
   'defaultSettings' : {
