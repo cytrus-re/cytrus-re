@@ -19,7 +19,7 @@ exports.run = (client, message, args, level) => {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
-        footer: `Check out the website (${client.config.defaultSettings.prefix}.site) for a list of commands and more!`
+        footer: `Check out the website (${client.config.defaultSettings.prefix}site) for a list of commands and more!`
       });
       
       message.channel.send(embed);
