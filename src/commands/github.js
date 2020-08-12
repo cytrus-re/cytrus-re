@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
       },
       'json': true
     }, async (req, res, json) => {
-      if (!json.items[0]) return message.send("I couldn't find any results!");
+      if (!json.items) return message.send("I couldn't find any results!");
       
       let output = '';
       let i = 1;
