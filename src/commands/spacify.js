@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    if (!args[0]) message.reply('You need to input the message to spacify!');
+    if (!args[0]) message.channel.send("You need to provide a message to spacify!");
     message.channel.send(args.join(' ').split('').join(' '));
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
@@ -8,17 +8,15 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 };
 
 exports.conf = {
-  enabled: false,
+  enabled: false, // don't touch until I guve the all clear - rexo
   aliases: ["aestheticify"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
-// Mr Ed can you pls patch this?
-
 exports.help = {
-  name: 'spacify',
-  category: 'Fun',
-  description: 'Spacifies your message',
-  usage: 'spacify <message>'
+  name: "spacify",
+  category: "Fun",
+  description: "Spacifies your message",
+  usage: "spacify <message>"
 };
