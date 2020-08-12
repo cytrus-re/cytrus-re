@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 };
 
 exports.conf = {
-  enabled: false, // don't touch until I guve the all clear - rexo
+  enabled: true,
   aliases: ["aestheticify"],
   guildOnly: false,
   permLevel: "User"
