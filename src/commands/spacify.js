@@ -8,11 +8,13 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false,
   aliases: ["aestheticify"],
   guildOnly: false,
   permLevel: 'User'
 };
+
+// Mr Ed can you pls patch this?
 
 exports.help = {
   name: 'spacify',
