@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ["aestheticify"],
   guildOnly: false,
   permLevel: 'User'
 };
