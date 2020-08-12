@@ -17,12 +17,12 @@ exports.run = async (client, message, args, level) => {
 
         
         if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-          let embed = {
+          let embed = new client.Embed('normal', {
             color: 0xeeeeee,
             title: "User Warned",
             description: `Name: ${wUser.username}\nID: ${wUser.id}\nModerator: ${message.author.username}`,
             footer: { text: `${client.config.botName}` },
-          };
+          });
           message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
           
           wUser.send(`You have been warned in ${message.guild.name}.`)
