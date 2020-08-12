@@ -43,7 +43,7 @@ const initWeb = (client) => {
   app.get('/api/invite', (req, res) => res.send({status: 200, invite: 'https://discordapp.com/oauth2/authorize?client_id=526593597118873620&scope=bot&permissions=8'}));
   app.get('/api/server', (req, res) => res.send({status: 200, server: 'https://discord.gg/VfTE9GH'}));
   app.get('/api/client_id', (req, res) => res.send({status: 200, client_id: '526593597118873620'}));
-  app.get('/api/upvote', (req, res) => res.send({status: 200, upvote: 'https://discordbotlist.com/bots/526593597118873620/upvote'}));
+  app.get('/api/upvote', (req, res) => res.send({status: 200, upvote: 'https://discordbotlist.com/bots/cytrus-re'}));
   app.get('/api/website', (req, res) => res.send({status: 200, website: 'https://www.cytrus.ga'}));
   app.get('/api/minesweeper', (req, res) => {
     let minesweeper = new Minesweeper();
