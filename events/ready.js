@@ -24,14 +24,13 @@ module.exports = async client => {
       type: statusList[index].type
     });
   }, 5000);
-  
-
-  // uncomment and update this once we get our own dashboard
- // setInterval(async () => {
- //   request('https://web.cytrus.ga', (err, res, html) => {
- //     if (err) client.logger.error(err);
- //   });
-//}, 28000);
+ 
+ 
+  setInterval(async () => {
+    request("https://cytrus-re.herokuapp.com/", (err, res, html) => {
+      if (err) client.logger.error(err);
+    });
+  }, 28000);
 
 
   client.user.setStatus('online');
