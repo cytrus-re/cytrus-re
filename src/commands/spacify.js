@@ -3,7 +3,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (!args[0]) message.reply('You need to input the message to spacify!');
     message.channel.send(args.join(' ').split('').join(' '));
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
