@@ -35,12 +35,12 @@ exports.run = (client, message, args, level) => {
           fields: [
             {
               title: "Usage",
-              text: `{command.help.usage}`,
+              text: `${command.help.usage}`,
               inline: true
             },
             {
               title: "Aliases",
-              text: `{command.help.aliases.join(" | ") || "None"}`,
+              text: `${command.help.aliases.join(" | ") || "None"}`,
               inline: true
             },
             {
