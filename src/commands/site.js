@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    message.channel.send("https://cytrus-re.github.io");
+    message.channel.send("Check it out here: **https://cytrus-re.github.io**");
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
