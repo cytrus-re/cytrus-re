@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
       },
       'json': true
     }, async (req, res, json) => {
-      if (!json.items) return message.channel.send("I couldn't find any results!");
+      if (!json.items.length) return message.channel.send("I couldn't find any results!");
       
       let output = '';
       let i = 1;
