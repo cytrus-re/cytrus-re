@@ -145,13 +145,13 @@ module.exports = (client) => {
   client.friendlyOS = (rawPlat) => {
     switch (rawPlat) {
         case "win32":
-                return: "Windows";
+                return "Windows";
                 break;
             case "linux":
-                return: "Linux"
+                return "Linux"
                 break;
             case "darwin"
-                return: "macOS"
+                return "macOS"
                 break;
             default:
                 return "an unknown OS"
