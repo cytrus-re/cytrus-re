@@ -16,7 +16,7 @@ const client = new Discord.Client({
 });
 
 //Define time of startup
-client.starttime = new Date().getTime();
+client.starttime = new Date();
 
 //Define Databases/Objects
 client.items = new Enmap({name: 'glptmitems'});
