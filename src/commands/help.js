@@ -40,7 +40,7 @@ exports.run = (client, message, args, level) => {
             },
             {
               title: "Aliases",
-              text: `${command.help.aliases.join(" | ") || "None"}`,
+              text: `${command.conf.aliases.join(" | ") || "None"}`,
               inline: true
             },
             {
