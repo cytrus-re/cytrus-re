@@ -19,8 +19,8 @@ exports.conf = {
 //what the command does
 
 exports.help = {
-  name: 'Site',
+  name: 'site',
   category: 'system',
   description: 'Send a message to this channel with a link to our (totally good) website hosted on GitHub Pages!',
-  usage: 'cyre.site'
+  usage: 'site'
 };
