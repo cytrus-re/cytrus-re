@@ -150,7 +150,7 @@ module.exports = (client) => {
             case "linux":
                 return "Linux"
                 break;
-            case "darwin"
+            case "darwin":
                 return "macOS"
                 break;
             default:
