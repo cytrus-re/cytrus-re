@@ -41,7 +41,7 @@ module.exports = async client => {
   client.logger.log(`Servers: ${client.guilds.size.toLocaleString().replace(/ /g, '')}`, 'ready');
   client.logger.log(`Channels: ${client.channels.size.toLocaleString().replace(/ /g, '')}`, 'ready');
   client.logger.log(`Running on Node ${process.version.replace(/ /g, '')}`, 'ready');
-  client.logger.log(`and using Discord.js ${require('discord.js').version.replace(/ /g, '')}`, 'ready');
+  client.logger.log(`and using Discord.js v${require('discord.js').version.replace(/ /g, '')}`, 'ready');
 
   // Starts the web server/API
   require('../modules/web')(client);
