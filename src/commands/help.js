@@ -19,7 +19,7 @@ exports.run = (client, message, args, level) => {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
-        footer: "Check out [the website](https://cytrus-re.github.io/commands.html) for a list of commands and more!"
+        footer: "Check out the website (cyre.site) for a list of commands and more!"
       });
       
       message.channel.send(embed);
@@ -31,25 +31,35 @@ exports.run = (client, message, args, level) => {
 
         let embedTiny = new client.Embed('blend', {
           title: command.help.name,
-          description: `${command.help.description}\nUsage: ${command.help.usage}\nAliases: ${command.conf.aliases.join(' | ') || 'none'}`,
+          description: `${command.help.description}`,
           fields: [
             {
-              title: 'Permission Level',
+              title: "Usage",
+              text: `{command.help.usage}`,
+              inline: true
+            },
+            {
+              title: "Aliases",
+              text: `{command.help.aliases.join(" | ") || "None"}`,
+              inline: true
+            },
+            {
+              title: "Permission Level",
               text: `${client.levelCache[command.conf.permLevel]} - ${command.conf.permLevel}`,
               inline: true
             },
             {
-              title: 'Category',
+              title: "Category",
               text: command.help.category,
               inline: true
             },
             {
-              title: 'Guild Only',
-              text: command.conf.guildOnly ? 'Yes' : 'No',
+              title: "Guild only",
+              text: command.conf.guildOnly ? "Yes" : "No",
             },
             {
-              title: 'Enabled',
-              text: command.conf.enabled ? 'Yes' : 'No',
+              title: "Enabled",
+              text: command.conf.enabled ? "Yes" : "No",
             }
           ]
         });
@@ -65,14 +75,14 @@ exports.run = (client, message, args, level) => {
           let cat = c.help.category.toLowerCase();
           if (cat == args[0].toLowerCase()) {
             if (level < client.levelCache[c.conf.permLevel]) return;
-            output += '`' + c.help.name + '` ';
+            output += '`' + c.help.name + '`, ';
           }
         });
         
-        if (!output) return message.reply('That\'s not a command, alias, or category!');
+        if (!output) return message.channel.send("That's not a command, alias, or category!");
         
         let embed = new client.Embed('blend', {
-          title: 'Cytrus-RE Help',
+          title: "Cytrus-RE Help",
           description: output,
           thumbnail: client.user.avatarURL
         });
@@ -87,14 +97,14 @@ exports.run = (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ['h'],
+  aliases: ["h"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'help',
-  category: 'System',
-  description: 'Displays all the available commands for your permission level.',
-  usage: 'help [command/alias/category]'
+  name: "help",
+  category: "System",
+  description: "Displays all the available commands for your permission level.",
+  usage: "help [command/alias/category]"
 };
