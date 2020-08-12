@@ -7,12 +7,16 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let output = '';
       let i = 1;
       
+      let embed = new Discord.RichEmbed()
+      .setTitle("Results")
+      .setDescription("Please choose the page you want.")
+      .setColor("#eeeeee")
+      
       Object.keys(res.query.pages).forEach(async (page) => {
-        output += '\n' + i + '. ' + res.query.pages[page].title;
+        await embed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
         i++;
       });
-      
-      let page = await client.awaitReply(message, `Please choose the page you want.\n${output}`);
+      let page = await client.awaitReply(message, embed);
       
       if (isNaN(page)) return message.reply(page + ' is not a number!');
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
