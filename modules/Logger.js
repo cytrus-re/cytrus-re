@@ -4,7 +4,7 @@ const beautify = require('js-beautify').js;
 const moment = require('moment');
 
 const webhook = new Discord.WebhookClient(process.env.LOG_WEBHOOK_ID, process.env.LOG_WEBHOOK_TOKEN);
-const cytrus = zaq.as('Cytrus');
+const cytrus = zaq.as('Cytrus-RE');
 
 exports.log = (content, type = 'log') => {
   const timestamp = `${moment().format('YYYY/MM/DD HH:mm:ss')}`;
