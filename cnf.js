@@ -18,7 +18,7 @@ const config = {
   },
 
   'defaultSettings' : {
-    'prefix': 'cyre.',
+    'prefix': 'c.',
     'modLogChannel': 'log',
     'modRole': 'Moderator',
     'adminRole': 'Administrator',
