@@ -48,6 +48,6 @@ module.exports = async client => {
 
   client.logger.log("Cytrus-RE V" + require("../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
   client.startuptime = new Date().getTime() - client.starttime;
-  client.logger.log("It took " + client.startuptime + 'ms to start Cytrus-RE.");
+  client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
 
