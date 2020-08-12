@@ -12,12 +12,11 @@ exports.run = async (client, message, args, level) => {
         'User-Agent': 'CelestialCrafter'
       },
       'json': true
-    }, async (req, res, json) => {
-      if (!json.items.length) return message.channel.send("I couldn't find any results!");
-      
+    }, async (req, res, json) => { 
       let output = '';
       let i = 1;
       
+      if (!json.items.length) return message.channel.send("I couldn't find any results!");
       if (json.items.length > 5) json.items.length = 5;
       
       json.items.forEach((repo) => {
