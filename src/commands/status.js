@@ -4,9 +4,8 @@ const cpu = require('pidusage');
 const { version } = require('discord.js');
 require('moment-duration-format');
 
-client.startuptime = new Date().getTime() - client.starttime;
-
 exports.run = (client, message, args, level) => { // eslint-disable-line no-unused-vars
+  client.startuptime = new Date().getTime() - client.starttime;
   try {
     cpu(process.pid, async (err, stats) => {
       const duration = moment.duration(client.uptime).format(' D [days], H [hrs], m [mins], s [secs]');
