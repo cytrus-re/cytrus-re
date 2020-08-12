@@ -16,7 +16,7 @@ exports.run = async (client, message, args, level) => {
       let output = '';
       let i = 1;
       
-      if (!json.items.length) return message.channel.send("I couldn't find any results!");
+      if (!json.items[0]) return message.channel.send("I couldn't find any results!");
       if (json.items.length > 5) json.items.length = 5;
       
       json.items.forEach((repo) => {
