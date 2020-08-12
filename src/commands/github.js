@@ -2,7 +2,7 @@ const request = require('request');
 
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.reply("You need to give something to search!");
+    if (!args[0]) return message.channel.send("You need to give me something to search for!");
     
     request({
       'url': 'https://api.github.com/search/repositories?q=' + encodeURIComponent(args.join(' ')),
@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
       },
       'json': true
     }, async (req, res, json) => {
-      if (!json.items) return message.send("I couldn't find any results!");
+      if (!json.items) return message.channel.send("I couldn't find any results!");
       
       let output = '';
       let i = 1;
@@ -27,7 +27,7 @@ exports.run = async (client, message, args, level) => {
       });
       
       let reponum = await client.awaitReply(message, `Please choose the repository you want.${output}`);
-      if (isNaN(reponum)) return message.send("That's not a number!");
+      if (isNaN(reponum)) return message.channel.send("That's not a number!");
       
       let repo = json.items[reponum - 1];
       
