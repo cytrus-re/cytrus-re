@@ -13,15 +13,14 @@ exports.run = async (client, message, args, level) => {
         if (!client.warns.get(message.guild.id)[member.id]) client.warns.get(message.guild.id)[member.id] = 0;
 
         client.warns.get(message.guild.id)[member.id] += 1;
-        message.reply(`Successfully warned ${user.tag}`);
+        message.channel.send(`Successfully warned ${wUser.tag}!`);
 
-        
         
         if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
           let embed = {
             color: 0xeeeeee,
             title: "User Warned",
-            description: `Name: ${user.username}\nID: ${wUser.id}\nModerator: ${message.author.username}`,
+            description: `Name: ${wUser.username}\nID: ${wUser.id}\nModerator: ${message.author.username}`,
             footer: { text: `${client.config.botName}` },
           };
           message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
@@ -53,12 +52,12 @@ exports.conf = {
   enabled: true,
   aliases: [],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'warn',
-  category: 'Moderation',
-  description: 'Warns a member.',
-  usage: 'warn <user> [reason]'
+  name: "warn",
+  category: "Moderation",
+  description: "Warns a member.",
+  usage: "warn <user> [reason]"
 };
