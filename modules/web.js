@@ -27,7 +27,6 @@ const initWeb = (client) => {
   app.use('/money', require('../dash/routes/money'));
   app.use('/servers', require('../dash/routes/servers'));
   app.use('/status', require('../dash/routes/status'));
-  app.use('/lyrics', require('../dash/routes/lyrics'));
   app.get('/loaderio-11fa82ac99dd408e39b6d751f6d989a7', (req, res) => res.send('loaderio-11fa82ac99dd408e39b6d751f6d989a7'));
   app.get('/commands', (req, res) => {
     if (!req.session.user || req.session.guild) res.redirect('/');
