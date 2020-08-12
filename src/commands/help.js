@@ -4,7 +4,7 @@ exports.run = (client, message, args, level) => {
       let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
 
       let currentCategory = '';
-      let output = 'Use help <command/alias/category> for details\n';
+      let output = `Use ${client.config.defaultSettings.prefix}help <command/alias/category> for details.\n`;
       let sorted = userCommands.array().sort((p, c) => p.help.category > c.help.category ? 1 :  p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1 );
       
       sorted.forEach(async c => {
@@ -19,7 +19,7 @@ exports.run = (client, message, args, level) => {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
-        footer: "Check out the website (cyre.site) for a list of commands and more!"
+        footer: `Check out the website (${client.config.defaultSettings.prefix}.site) for a list of commands and more!`
       });
       
       message.channel.send(embed);
@@ -35,7 +35,7 @@ exports.run = (client, message, args, level) => {
           fields: [
             {
               title: "Usage",
-              text: `${command.help.usage}`,
+              text: `${client.config.defaultSettings.prefix}${command.help.usage}`,
               inline: true
             },
             {
