@@ -15,7 +15,7 @@ exports.run = (client, message, args, level) => {
         }
       });
       
-      let embed = new client.Embed('normal', {
+      let embed = new Discord.MessageEmbed('normal', {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
@@ -29,7 +29,7 @@ exports.run = (client, message, args, level) => {
       if (client.commands.has(command) || client.aliases.has(command)) {
         command = client.commands.get(command) || client.aliases.get(command);
 
-        let embedTiny = new client.Embed('blend', {
+        let embedTiny = new Discord.MessageEmbed('blend', {
           title: command.help.name,
           description: `${command.help.description}`,
           fields: [
@@ -81,7 +81,7 @@ exports.run = (client, message, args, level) => {
         
         if (!output) return message.channel.send("That's not a command, alias, or category!");
         
-        let embed = new client.Embed('blend', {
+        let embed = new Discord.MessageEmbed('blend', {
           title: "Cytrus-RE Help",
           description: output,
           thumbnail: client.user.avatarURL
