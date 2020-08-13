@@ -7,7 +7,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let output = '';
       let i = 1;
       
-      let firstEmbed = new Discord.RichEmbed()
+      let firstEmbed = new Discord.MessageEmbed()
       .setTitle("Results")
       .setDescription("Please choose the page you want.")
       .setColor("#eeeeee")
@@ -20,12 +20,12 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       
       if (isNaN(page)) return message.reply(page + ' is not a number!');
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
-      let embed = new Discord.RichEmbed()
+      let pageEmbed = new Discord.MessageEmbed()
       .setTitle('Wikipedia')
       .setDescription('['+info.title+']('+info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\`')+')')
       .setColor('#eeeeee');
 
-      message.channel.send(embed);
+      message.channel.send(pageEmbed);
     });
   } catch (err) {
     message.channel.send('There was an error!\n' + err).catch();
