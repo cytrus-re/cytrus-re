@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: ["ri," "botinvite", "bi", "returninvite", "cyinv"],
+  aliases: ["ri,", "botinvite", "bi", "returninvite", "cyinv"],
   guildOnly: true,
   permLevel: "User"
 };
