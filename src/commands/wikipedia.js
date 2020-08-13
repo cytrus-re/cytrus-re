@@ -7,16 +7,16 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let output = '';
       let i = 1;
       
-      let embed = new Discord.RichEmbed()
+      let firstEmbed = new Discord.RichEmbed()
       .setTitle("Results")
       .setDescription("Please choose the page you want.")
       .setColor("#eeeeee")
       
       Object.keys(res.query.pages).forEach(async (page) => {
-        await embed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
+        await firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
         i++;
       });
-      let page = await client.awaitReply(message, embed);
+      let page = await client.awaitReply(message, firstEmbed);
       
       if (isNaN(page)) return message.reply(page + ' is not a number!');
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
@@ -40,8 +40,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'wikipedia',
-  category: 'General',
-  description: 'Searches Wikipedia for your search term',
-  usage: 'wikipedia <search term>'
+  name: "wikipedia",
+  category: "General",
+  description: "Searches Wikipedia for your search term",
+  usage: "wikipedia <search term>"
 };
