@@ -67,6 +67,7 @@ Your permission level is ${level} (${client.config.permLevels.find(l => l.level 
     cmd.run(client, message, args, level);
     client.uses.ensure(cmd.help.name, 1);
     client.uses.inc(cmd.help.name); // for metrics
+    client.logger.log(`Command used: ${command}`);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
