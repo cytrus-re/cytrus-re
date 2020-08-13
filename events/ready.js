@@ -26,13 +26,6 @@ module.exports = async client => {
   }, 5000);
  
  
-  setInterval(async () => {
-    request("https://cytrus-re.herokuapp.com/", (err, res, html) => {
-      if (err) client.logger.error(err);
-    });
-  }, 28000);
-
-
   client.user.setStatus('online');
   
   let users = client.users.cache.size;
