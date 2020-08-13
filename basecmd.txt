@@ -15,15 +15,15 @@ exports.conf = {
   enabled: true,
   aliases: [],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 
 //what the command does
 
 exports.help = {
-  name: '',
-  category: '',
-  description: '',
-  usage: ''
+  name: "",
+  category: "",
+  description: "",
+  usage: ""
 };
