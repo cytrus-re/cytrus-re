@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => {
     const user = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id); // Gets the guild's CyRE settings to check if the modlog feature is enabled (and if it is, what channel to send them to.)
     
-    if (user === message.author) message.channel.send("You can't ban yourself!");
+    if (user === message.author) message.channel.send(client.errors.cannotBanSelf);
     if (user) {
       const member = message.guild.member(user);
       if (member) {
