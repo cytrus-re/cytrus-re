@@ -13,7 +13,7 @@
     "nodemon": "nodemon cybase.js"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   },
   "repository": "github:Cytrus-RE/cytrus-re",
   "author": "CelestialCrafter#7255, Rexowogamer#1183",
