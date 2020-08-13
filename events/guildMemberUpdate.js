@@ -36,15 +36,15 @@ New User:
     modLogChannel.send(embed).catch();
   }
 
-  if (user.roles !== userNew.roles) {
+  if (user.cache.roles !== userNew.cache.roles) {
     let output = '';
     let outputNew = '';
     
-    user.roles.forEach(role => {
+    user.cache.roles.forEach(role => {
       output += '\n' + role.name;
     });
     
-    userNew.roles.forEach(role => {
+    userNew.cache.roles.forEach(role => {
       outputNew += '\n' + role.name;
     });
     
