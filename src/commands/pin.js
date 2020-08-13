@@ -1,15 +1,15 @@
 exports.run = async (client, message, args, level) => {
   try {
-    message.channel.fetchMessages({limit: 2}).then(async messages => {
+    message.channel.messages.fetch({limit: 2}).then(async messages => {
       if (!Array.from(messages.keys())[1]) return message.reply('You have to send a message.');
       let msg = messages.get(Array.from(messages.keys())[1]);
       msg.pin().catch(() => {
-        return message.reply('There was an error!');
+        return message.channel.send(client.errors.genericError);
       });
-      message.channel.send('I\'ve pinned the message!');
+      message.channel.send("I've pinned the message!");
     });
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
