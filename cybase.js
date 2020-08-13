@@ -40,16 +40,8 @@ client.levelCache = {};
 
 // Define CleverBot API
 client.cleverbot = new CleverBotAPI(process.env.CLEVERBOT_USER_KEY, process.env.CLEVERBOT_API_KEY);
-client.cleverbot.setNick('CytrusBot');
+client.cleverbot.setNick('CytrusREBot');
 
-// Generate session secret for the site
-process.env.SESSION_SECRET = '';
-for (let i = 0; i <= 1500; i++)
-  process.env.SESSION_SECRET += Math.random()
-  .toString(16)
-  .slice(2, 8)
-  .toUpperCase()
-  .slice(-6) + i;
 
 // Import files
 client.logger = require('./modules/Logger');
@@ -67,6 +59,7 @@ for (let i = 0; i < client.config.permLevels.length; i++) {
 
 // Login to Discord
 client.login(process.env.BOT_TOKEN);
+console.log("[START] Logged into Discord API");
 
 // Export the client
 module.exports = client;
