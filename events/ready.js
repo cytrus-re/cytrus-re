@@ -35,9 +35,9 @@ module.exports = async client => {
 
   client.user.setStatus('online');
   
-  let users = client.users.size;
-  let servers = client.guilds.size;
-  let channels = client.channels.size;
+  let users = client.users.cache.size;
+  let servers = client.guilds.cache.size;
+  let channels = client.channels.cache.size;
 
   //Logs the Status
   client.logger.log(`RAM usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, 'ready');
