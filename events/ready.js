@@ -37,9 +37,9 @@ module.exports = async client => {
 
   //Logs the Status
   client.logger.log(`RAM usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, 'ready');
-  client.logger.log(`Users: ${client.users.size.toLocaleString().replace(/ /g, '')}`, 'ready');
-  client.logger.log(`Servers: ${client.guilds.size.toLocaleString().replace(/ /g, '')}`, 'ready');
-  client.logger.log(`Channels: ${client.channels.size.toLocaleString().replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Users: ${client.users.size.replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Servers: ${client.guilds.size..replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Channels: ${client.channels.size.replace(/ /g, '')}`, 'ready');
   client.logger.log(`Running on Node ${process.version.replace(/ /g, '')}`, 'ready');
   client.logger.log(`and using Discord.js v${require('discord.js').version.replace(/ /g, '')}`, 'ready');
 
