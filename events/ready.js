@@ -34,12 +34,16 @@ module.exports = async client => {
 
 
   client.user.setStatus('online');
+  
+  let users = client.users.size;
+  let servers = client.guilds.size;
+  let channels = client.channels.size;
 
   //Logs the Status
   client.logger.log(`RAM usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, 'ready');
-  client.logger.log(`Users: ${client.users.size.replace(/ /g, '')}`, 'ready');
-  client.logger.log(`Servers: ${client.guilds.size.replace(/ /g, '')}`, 'ready');
-  client.logger.log(`Channels: ${client.channels.size.replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Users: ${users.replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Servers: ${servers.replace(/ /g, '')}`, 'ready');
+  client.logger.log(`Channels: ${channels.replace(/ /g, '')}`, 'ready');
   client.logger.log(`Running on Node ${process.version.replace(/ /g, '')}`, 'ready');
   client.logger.log(`and using Discord.js v${require('discord.js').version.replace(/ /g, '')}`, 'ready');
 
