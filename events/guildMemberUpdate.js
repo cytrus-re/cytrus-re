@@ -6,12 +6,12 @@ module.exports = (client, user, userNew) => {
   
   if (!settings.logMemberUpdates == true) return;
   if (!settings.modLogChannel) return;
-  if (!user.guild.channels.find(c => c.name == settings.modLogChannel)) return;
+  if (!user.guild.channels.cache.find(c => c.name == settings.modLogChannel)) return;
   
   let modLogChannel = user.guild.channels.cache.find(c => c.name == settings.modLogChannel);
   
   if (user.nickname !== userNew.nickname) {
-    embed = new Discord.RichEmbed()
+    embed = new Discord.MessageEmbed()
     .setTitle('User Nickname Update')
     .setColor('#eeeeee')
     .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
@@ -24,8 +24,8 @@ New User:
   }
   
   if (user.user.tag !== userNew.user.tag) {
-     embed = new Discord.RichEmbed()
-    .setTitle('User Full Name Update')
+     embed = new Discord.MessageEmbed()
+    .setTitle('Username Update')
     .setColor('#eeeeee')
     .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
     .setDescription(`Old User:
@@ -50,7 +50,7 @@ New User:
     
     if (output == outputNew) return;
     
-    embed = new Discord.RichEmbed()
+    embed = new Discord.MessageEmbed()
     .setTitle('User Roles Update')
     .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
     .setDescription(`
@@ -63,7 +63,7 @@ New Roles${outputNew}`)
   }
   
   if (user.user.avatarURL !== userNew.user.avatarURL) {
-    embed = new Discord.RichEmbed()
+    embed = new Discord.MessageEmbed()
     .setTitle('User Avatar Update')
     .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
     .setDescription(`
