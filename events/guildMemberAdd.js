@@ -11,12 +11,12 @@ module.exports = (client, member) => {
 
   let welcomeMessage = settings.welcomeMessage.replace('{{user}}', member.user.tag).replace('{{ping}}', '<@' + member.user.id + '>');
   
-  if (settings.welcomeMessage && member.guild.channels.find(c => c.name == settings.welcomeChannel)) {
+  if (settings.welcomeMessage && member.guild.channels.cache.find(c => c.name == settings.welcomeChannel)) {
     member.guild.channels.find(c => c.name == settings.welcomeChannel).send(welcomeMessage).catch();
   }
 
   if (client.config.globalBan.includes(member.id)) {
-    member.ban('Detected by the Cytrus global ban system').then(async () => {
+    member.ban('Detected by the Cytrus-RE global ban system').then(async () => {
       let modLogChannel = settings.modLogChannel;
         
       if (modLogChannel) {
