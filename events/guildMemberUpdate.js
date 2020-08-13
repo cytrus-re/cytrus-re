@@ -8,7 +8,7 @@ module.exports = (client, user, userNew) => {
   if (!settings.modLogChannel) return;
   if (!user.guild.channels.find(c => c.name == settings.modLogChannel)) return;
   
-  let modLogChannel = user.guild.channels.find(c => c.name == settings.modLogChannel);
+  let modLogChannel = user.guild.channels.cache.find(c => c.name == settings.modLogChannel);
   
   if (user.nickname !== userNew.nickname) {
     embed = new Discord.RichEmbed()
