@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     let embed = new client.Embed('normal', {
       title: 'Ping',
       description: `Message Trip: ${msg.createdTimestamp - message.createdTimestamp}ms
-Websocket Heartbeat: ${Math.floor(client.pings[1])}ms
+Websocket Heartbeat: ${Math.floor(client.pings[0])}ms
 Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms`
     });
 
@@ -17,9 +17,9 @@ Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms`
 
 exports.conf = {
   enabled: true,
-  aliases: ['lag'],
+  aliases: ["lag"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
