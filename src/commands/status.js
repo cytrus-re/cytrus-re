@@ -16,7 +16,7 @@ RAM Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB
 Uptime: ${duration}
 Users: ${client.users.cache.size}
 Servers: ${client.guilds.cache.size}
-Channels: ${client.channels.size.cache}
+Channels: ${client.channels.cache.size}
 Status: ${client.user.presence.status}
 Game: ${client.user.presence.game}
 Discord.js: v${version}
