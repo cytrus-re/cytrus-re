@@ -18,25 +18,25 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       });
       let page = await client.awaitReply(message, firstEmbed);
       
-      if (isNaN(page)) return message.reply(page + ' is not a number!');
+      if (isNaN(page)) return message.channel.send(page + ' is not a number!');
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
       let pageEmbed = new Discord.MessageEmbed()
-      .setTitle('Wikipedia')
-      .setDescription('['+info.title+']('+info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\`')+')')
-      .setColor('#eeeeee');
+      .setTitle("Wikipedia")
+      .setDescription('['+info.title+']('+info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')+')')
+      .setColor("#eeeeee");
 
       message.channel.send(pageEmbed);
     });
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['wiki'],
+  aliases: ["wiki"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
