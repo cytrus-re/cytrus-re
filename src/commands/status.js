@@ -9,14 +9,14 @@ exports.run = (client, message, args, level) => { // eslint-disable-line no-unus
   try {
     cpu(process.pid, async (err, stats) => {
       const duration = moment.duration(client.uptime).format(' D [days], H [hrs], m [mins], s [secs]');
-      const embed = new Discord.RichEmbed()
-      .setTitle('Cytrus Status')
+      const embed = new Discord.MessageEmbed()
+      .setTitle("Cytrus-RE Status")
       .setDescription(`
 RAM Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB
 Uptime: ${duration}
-Users: ${client.users.size}
-Servers: ${client.guilds.size.toLocaleString()}
-Channels: ${client.channels.size.toLocaleString()}
+Users: ${client.users.cache.size}
+Servers: ${client.guilds.cache.size}
+Channels: ${client.channels.size.cache}
 Status: ${client.user.presence.status}
 Game: ${client.user.presence.game}
 Discord.js: v${version}
@@ -25,25 +25,25 @@ Node.js: ${process.version}
 Dependencies: ${Object.keys(require('../../package').dependencies).length}
 Startup Time: ${client.startuptime}ms
 Voice Connections: ${client.voiceConnections.size}`)
-      .setColor('#eeeeee');
+      .setColor("#eeeeee");
 
       message.channel.send(embed);
     });
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['stats'],
+  aliases: ["stats"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'status',
-  category: 'System',
-  description: 'Reuturns the bot\'s status',
-  usage: 'status'
+  name: "status",
+  category: "System",
+  description: "Returns some info about the bot.",
+  usage: "status"
 };
