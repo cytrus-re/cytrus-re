@@ -10,26 +10,26 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         msg.edit("Note created! ID: " + noteID);
         break;
       case "remove":
-        if (!args[1]) return message.reply("You need to input the note ID");
+        if (!args[1]) return message.channel.send("You need to give me the note ID!");
         if (client.notes.has(args[1])) {
-          if (client.notes.get(args[1]).author !== message.author.id || !message.author.permLevel < 6) message.reply("You don't own this note!");
+          if (client.notes.get(args[1]).author !== message.author.id && message.author.permLevel < 6) message.channel.send("You don't own this note!");
           else {
             msg = await message.channel.send("Deleting note...");
 
             await client.notes.delete(args[1]);
             msg.edit("Note deleted. ID of deleted note: " + args[1]);
           }
-        } else message.reply("Invalid note ID.");
+        } else message.channel.send("Invalid note ID.");
         break;
       case 'clear':
         await client.notes.forEach((note)  => {
           if (note.author == message.author.id) client.notes.delete(note.id);
         });
         
-        message.channel.send('Cleared your notes!');
+        message.channel.send("Cleared your notes!");
         break;
       case 'view':
-        if (!args[1]) return message.reply('You need to input the NoteID.');
+        if (!args[1]) return message.channel.send("You need to give me the note ID!");
         if (client.notes.has(args[1])) {
           if (client.notes.get(args[1]).author !== message.author.id) message.reply("You don't own this note!");
           else message.channel.send('•' + '*' + client.notes.get(args[1]).id + '*\n' + client.notes.get(args[1]).txt + '\n\n');
