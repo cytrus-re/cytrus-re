@@ -21,20 +21,20 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['fetm', 'fetchmsg', 'fmsg'],
+  aliases: ["fetm", "fetchmsg", "fmsg"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'fetchmessage',
-  category: 'General',
+  name: "fetchmessage",
+  category: "General",
   description: "Sends the message linked to the specified message ID.",
-  usage: 'fetchmessage <id>'
+  usage: "fetchmessage <id>"
 };
