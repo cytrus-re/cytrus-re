@@ -1,12 +1,11 @@
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.reply('You need to input the text to reverse!');
+    if (!args[0]) return message.channel.send("You need to give me the text to reverse!");
     
     const str = args.join(' ');
-    let msg = await message.reply(str.split('').reverse().join(''));
-    msg.react('🔁');
+    message.channel.send(str.split('').reverse().join(''));
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
@@ -14,12 +13,12 @@ exports.conf = {
   enabled: true,
   aliases: [],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'reverse',
-  category: 'Fun',
-  description: 'Returns the string you input reversed',
-  usage: 'reverse <text>'
+  name: "reverse",
+  category: "Fun",
+  description: "Reverses any text.",
+  usage: "reverse <text>"
 };
