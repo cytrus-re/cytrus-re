@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => {
       const member = message.guild.member(user);
       if (member) {
         member.ban(args.slice(1).join(' ')).then(() => {
-          message.channel.send("Successfully banned ${user.tag}!");
+          message.channel.send(`Successfully banned ${user.tag}!`);
 
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) { // Checks if the modlog is enabled and the channel specified for it exists.
