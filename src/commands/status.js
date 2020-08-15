@@ -24,7 +24,7 @@ CPU Usage: ${Math.round(stats.cpu)}%
 Node.js: ${process.version}
 Dependencies: ${Object.keys(require('../../package').dependencies).length}
 Startup Time: ${client.startuptime}ms
-Voice Connections: ${client.voiceConnections.size}`)
+Voice Connections: ${client.voiceConnections.cache.size}`)
       .setColor("#eeeeee");
 
       message.channel.send(embed);
