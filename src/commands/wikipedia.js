@@ -1,5 +1,4 @@
-const Discord = require('discord.js');
-const wikipedia = require('wikipediajs');
+const wikipedia = require('@cytrus-re/wikipediajs');
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {

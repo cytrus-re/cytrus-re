@@ -19,6 +19,7 @@
   "author": "CelestialCrafter#7255, Rexowogamer#1183",
   "license": "MIT",
   "dependencies": {
+    "@cytrus-re/wikipediajs": "^1.4.2",
     "better-sqlite-pool": "^0.3.0",
     "better-sqlite3": "^7.1.0",
     "body-parser": "^1.19.0",
@@ -48,7 +49,6 @@
     "safe-eval": "^0.4.1",
     "txtgen": "^2.2.7",
     "urban-dictionary": "^2.2.1",
-    "wikipediajs": "^1.4.0",
     "ytdl-core": "^3.2.1",
     "ytdl-getinfo": "^1.1.0",
     "ytsearcher": "^1.2.2",
