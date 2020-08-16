@@ -148,7 +148,7 @@ module.exports = (client) => {
                 return "Windows";
                 break;
             case "linux":
-                return "GNU/Linux"
+                return "Linux"
                 break;
             case "darwin":
                 return "macOS"
