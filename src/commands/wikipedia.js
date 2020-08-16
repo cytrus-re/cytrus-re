@@ -21,8 +21,9 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       if (isNaN(page)) return message.channel.send(page + ' is not a number!');
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
       let pageEmbed = new Discord.MessageEmbed()
-      .setTitle("Wikipedia")
-      .setDescription('['+info.title+']('+info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')+')')
+      .setTitle(`${info.title} on Wikipedia`)
+      .setDescription(`${info.description}`)
+      .addField("Article link", `[Right here!](${info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')})`)
       .setColor("#eeeeee");
 
       message.channel.send(pageEmbed);
