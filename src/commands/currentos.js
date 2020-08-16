@@ -3,9 +3,9 @@
 const os = require("os"); // Node.JS core module, required for getting the OS
 exports.run = async (client, message, args, level) => {   
     try {
-        var rawPlat = os.platform;
-        // var ver; // Added in Node 14, don't uncomment until upgrade
+        var rawPlat = os.platform();
         var cleanPlat = client.friendlyOS(rawPlat);
+        // var ver; // Added in Node 14, don't uncomment until upgrade
         message.channel.send(`This instance of Cytrus-RE is running on **${cleanPlat}**.`);
     } catch (err) {
         message.channel.send(client.errors.genericError);
