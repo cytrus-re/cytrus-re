@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const types = ["Psychopath", "Depressed", "Cheerful", "Bright", "Dark", "God", "Deceiver", "Funny", "Fishy", "Cool", "Insecure", "Lonely", "Optimistic", "Brave", "Brilliant", "Dreamer", "Nurturer", "Peaceful", "Hot", "Sexy", "Perfect", "Overthinker", "Idealist"];
+const types = ["Psychopath", "Depressed", "Cheerful", "Bright", "Dark", "God", "Deceiver", "Funny", "Suspicious", "Cool", "Insecure", "Lonely", "Optimistic", "Brave", "Brilliant", "Dreamer", "Nurturer", "Peaceful", "Hot", "Sexy", "Perfect", "Overthinker", "Idealist"];
 const social = ["Loser", "The nice guy", "The cute girl", "Dank memer", "Nerd", "Kinky"];
 const relationship = ["Single", "Married", "Taken", "Forever alone"];
 const hobbies = ["Art", "Drawing", "Painting", "Singing", "Writing", "Anime", "Memes", "Minecraft", "Coding"];
@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {
     let user = message.mentions.members.first() || message.author;
 
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setTitle("Personality")
     .setThumbnail(user.avatarURL)
     .setAuthor(user.username + "'s personality")
