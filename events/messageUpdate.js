@@ -15,8 +15,8 @@ module.exports = (client, message, messageNew) => {
     .setDescription("**Message edited by**\n" + message.author.tag + "\n\n**Old Message**\n" + message.content + "\n\n**New Message**\n" + messageNew.content)
     .setColor("#eeeeee");
 
-    if (message.guild.channels.find(channel => channel.name == settings.modLogChannel)) {
-      message.guild.channels.find(channel => channel.name == settings.modLogChannel).send(embed).catch(client.logger.error);
+    if (message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel)) {
+      message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel).send(embed).catch(client.logger.error);
     }
   }
 };
