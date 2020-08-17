@@ -12,9 +12,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       .setDescription("Please choose the page you want.")
       .setColor("#eeeeee")
       
+      if (!res.query.pages) message.channel.send(client.errors.noResults);
       Object.keys(res.query.pages).forEach(async (page) => {
         await firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
-        i++;
+        return i++;
       });
       let page = await client.awaitReply(message, firstEmbed);
       
@@ -23,7 +24,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
-      .setDescription(`${infDesc.description}`)
+      .setDescription(`${infDesc.description ? infDesc.description : "This article doesn't have a description or something went wrong" }`)
       .addField("Article link", `[Right here!](${info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')})`)
       .setColor("#eeeeee");
 
