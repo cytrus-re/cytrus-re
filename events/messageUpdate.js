@@ -9,7 +9,7 @@ module.exports = (client, message, messageNew) => {
   let settings = client.getSettings(message.guild.id);
   
   if (settings.logMessageUpdates == "true") {
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setTitle("Message Edit")
     .setTimestamp(new Date())
     .setDescription("**Message edited by**\n" + message.author.tag + "\n\n**Old Message**\n" + message.content + "\n\n**New Message**\n" + messageNew.content)
