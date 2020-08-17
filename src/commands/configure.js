@@ -29,7 +29,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
       const response = await client.awaitReply(message, "Are you sure you want to reset ${args[1]} to the default value?");
 
-      if (["y", "yes", "1"].includes(response.toLowerCase())) {
+      if (["y", "yes", "confirm", "1"].includes(response.toLowerCase())) {
         client.settings.delete(message.guild.id, args[1]);
         message.reply("${args[1]} was successfully reset.");
       } else
@@ -44,7 +44,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       const isDefault = !overrides[args[1]] ? "\nThis is the default global value." : "";
       message.reply(`The value of ${args[1]} is currently ${settings[args[1]]}${isDefault}.`);
     } else {
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle("Server Settings")
       .setColor("0x1167b1");
       Object.keys(client.getSettings(message.guild.id)).forEach((setting) => embed = embed.addField(setting, settings[setting]));
