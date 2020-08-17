@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -6,25 +6,25 @@ exports.run = async (client, message, args, level) => {
     
     let embed = new Discord.RichEmbed()
     .setColor(hex)
-    .setDescription('Random HEX Code: #' + hex)
-    .setTitle('#' + hex);
+    .setDescription("Random HEX Code: #" + hex)
+    .setTitle("#" + hex);
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['color', 'randomcolour', 'colour', 'rcol'],
+  aliases: ["color", "randomcolour", "colour", "rcol"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'randomcolor',
-  category: 'Utility',
-  description: 'Returns a random HEX code.',
-  usage: 'randomcolor'
+  name: "randomcolor",
+  category: "Utility",
+  description: "Returns a random HEX code.",
+  usage: "randomcolor"
 };

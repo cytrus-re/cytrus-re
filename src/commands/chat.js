@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
     
     let msg = await message.reply("Processing message... (This may take a while!)");
     client.cleverbot.create(async (err, session) => {
-      client.cleverbot.ask(args.join(' '), async (err, response) => {
+      client.cleverbot.ask(args.join(" "), async (err, response) => {
         if (err) {
           message.channel.send(client.errors.genericError).catch();
           return msg.delete();

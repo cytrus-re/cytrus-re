@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
   //command code
@@ -39,9 +39,9 @@ let reportEmbed = new Discord.RichEmbed()
 
 exports.conf = {
     enabled: true,
-    aliases: ['gbr', 'gbreport'],
+    aliases: ["gbr", "gbreport"],
     guildOnly: false,
-    permLevel: 'User'
+    permLevel: "User"
   };
   
   exports.help = {

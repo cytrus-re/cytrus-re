@@ -16,15 +16,15 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     enabled: true,
     aliases: ["cpasta"],
     guildOnly: false,
-    permLevel: 'User'
+    permLevel: "User"
   };
   
   
   //what the command does
   
   exports.help = {
-    name: 'Copypasta',
-    category: 'Fun',
-    description: 'Send pre-defined totally 100% funny copypastas that will make everyone like you',
-    usage: 'copypasta (copypastaname)'
+    name: "Copypasta",
+    category: "Fun",
+    description: "Send pre-defined totally 100% funny copypastas that will make everyone like you",
+    usage: "copypasta (copypastaname)"
   };

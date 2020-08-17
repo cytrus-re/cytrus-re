@@ -12,7 +12,7 @@ exports.conf = {
   enabled: true,
   aliases: ["cytrusresite", "webpage", "page"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 

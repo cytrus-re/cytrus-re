@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const ms = require('ms');
+const Discord = require("discord.js");
+const ms = require("ms");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -16,37 +16,37 @@ exports.run = async (client, message, args, level) => {
             const modLogChannel = settings.modLogChannel;
             if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
               let embed = new Discord.RichEmbed()
-              .setTitle('User TempBan')
-              .setColor('#eeeeee')
-              .setDescription(`Name: ${user.username}\nID: ${user.id}\nTime: ${args.slice(1).join(' ')}\nModerator: ${message.author.username}`);
+              .setTitle("User TempBan")
+              .setColor("#eeeeee")
+              .setDescription(`Name: ${user.username}\nID: ${user.id}\nTime: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);
 
               message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
             }
             
             setTimeout(async () => {
               message.guild.unban(user.id);
-            }, ms(args.join(' ')));
+            }, ms(args.join(" ")));
           }).catch(err => {
-           message.reply('I was unable to ban the member');
+           message.reply("I was unable to ban the member");
           });
-        } else message.reply('That user isn\'t in this guild!');
-      } else message.reply('You didn\'t mention the user to ban!');
-    } else message.reply('You didin\'t specify the time to ban them for!');
+        } else message.reply("That user isn't in this guild!");
+      } else message.reply("You didn't mention the user to ban!");
+    } else message.reply("You didin't specify the time to ban them for!");
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err +'').catch();
+    message.channel.send("Their was an error!\n" + err +"").catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['tb'],
+  aliases: ["tb"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'tempban',
-  category: 'Moderation',
-  description: 'Temporarily Bans a member for an optional reason',
-  usage: 'tempban @<user> <time>'
+  name: "tempban",
+  category: "Moderation",
+  description: "Temporarily Bans a member for an optional reason",
+  usage: "tempban @<user> <time>"
 };

@@ -1,4 +1,4 @@
-const Discord = require('discord.js'); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
+const Discord = require("discord.js"); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
 
 exports.run = (client, message, args, level) => {
   try {
@@ -6,7 +6,7 @@ exports.run = (client, message, args, level) => {
     if (!args[0]) {
       let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
 
-      let currentCategory = '';
+      let currentCategory = "";
       let output = `Use ${serverPrefix}help <command/alias/category> for details.\n`;
       let sorted = userCommands.array().sort((p, c) => p.help.category > c.help.category ? 1 :  p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1 );
       
@@ -18,7 +18,7 @@ exports.run = (client, message, args, level) => {
         }
       });
       
-      let embed = new client.Embed('normal', {
+      let embed = new client.Embed("normal", {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
@@ -32,7 +32,7 @@ exports.run = (client, message, args, level) => {
       if (client.commands.has(command) || client.aliases.has(command)) {
         command = client.commands.get(command) || client.aliases.get(command);
 
-        let embedTiny = new client.Embed('blend', {
+        let embedTiny = new client.Embed("blend", {
           title: command.help.name,
           description: `${command.help.description}`,
           fields: [
@@ -69,8 +69,8 @@ exports.run = (client, message, args, level) => {
 
         message.channel.send(embedTiny);
       } else {
-        let currentCategory = '';
-        let output = '';
+        let currentCategory = "";
+        let output = "";
         let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
         
         let sorted = userCommands.array().sort((p, c) => p.help.category > c.help.category ? 1 :  p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1 );
@@ -78,13 +78,13 @@ exports.run = (client, message, args, level) => {
           let cat = c.help.category.toLowerCase();
           if (cat == args[0].toLowerCase()) {
             if (level < client.levelCache[c.conf.permLevel]) return;
-            output += '**' + c.help.name + '**, ';
+            output += "**" + c.help.name + "**, ";
           }
         });
         
         if (!output) return message.channel.send("That's not a command, alias, or category!");
         
-        let embed = new client.Embed('blend', {
+        let embed = new client.Embed("blend", {
           title: "Cytrus-RE Help",
           description: output,
           thumbnail: client.user.avatarURL

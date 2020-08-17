@@ -10,7 +10,7 @@ exports.conf = {
   enabled: true,
   aliases: ["cmds"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {

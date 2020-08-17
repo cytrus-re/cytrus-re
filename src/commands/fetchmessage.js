@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       });
     });
     
-    let embed = new client.Embed('normal', {
+    let embed = new client.Embed("normal", {
       title: fetched.id,
       url: fetched.url,
       thumbnail: fetched.author.avatarURL,

@@ -1,10 +1,10 @@
-const math = require('mathjs');
+const math = require("mathjs");
 
 exports.run = async (client, message, args, level) => {
   try {
     if (!args[0]) return message.channel.send("You need to give me an equation!");
     
-    message.channel.send("Output: " + math.evaluate(args.join(' ')));
+    message.channel.send("Output: " + math.evaluate(args.join(" ")));
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }

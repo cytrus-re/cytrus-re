@@ -1,23 +1,23 @@
-const sen = require('txtgen').sentence;
+const sen = require("txtgen").sentence;
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
     message.channel.send(sen());
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['sentence', 'rsent'],
+  aliases: ["sentence", "rsent"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'randomsentence',
-  category: 'General',
-  description: 'Returns a random sentence.',
-  usage: 'randomsentence'
+  name: "randomsentence",
+  category: "General",
+  description: "Returns a random sentence.",
+  usage: "randomsentence"
 };

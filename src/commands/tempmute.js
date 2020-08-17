@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const ms = require('ms');
+const Discord = require("discord.js");
+const ms = require("ms");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -16,8 +16,8 @@ exports.run = async (client, message, args, level) => {
             const modLogChannel = settings.modLogChannel;
             if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
               let embed = new Discord.RichEmbed()
-              .setTitle('User Tempmute')
-              .setColor('#eeeeee')
+              .setTitle("User Tempmute")
+              .setColor("#eeeeee")
               .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
 
               message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
@@ -28,37 +28,37 @@ exports.run = async (client, message, args, level) => {
                 const modLogChannel = settings.modLogChannel;
                 if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
                   let embed = new Discord.RichEmbed()
-                  .setTitle('User Unmute')
-                  .setColor('#eeeeee')
+                  .setTitle("User Unmute")
+                  .setColor("#eeeeee")
                   .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: AutoMod`);
 
                   message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
                 }
               }).catch(err => {
-                message.author.send('I was unable to ' + user.username + 'and the time to mute them!');
+                message.author.send("I was unable to " + user.username + "and the time to mute them!");
               });
             }, ms(args[0]));
           }).catch(err => {
-            message.reply('I was unable to mute the member');
+            message.reply("I was unable to mute the member");
           });
-        } else message.reply('That user isn\'t in this guild!');
-      } else message.reply('You didn\'t mention the user to mute!');
-    } else message.reply('You didn\'t specify the amount of time to mute the member or the time is invalid!');
+        } else message.reply("That user isn't in this guild!");
+      } else message.reply("You didn't mention the user to mute!");
+    } else message.reply("You didn't specify the amount of time to mute the member or the time is invalid!");
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['tm'],
+  aliases: ["tm"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'tempmute',
-  category: 'Moderation',
-  description: 'Temporarily mutes a member.',
-  usage: 'tempmute <time> @<user>'
+  name: "tempmute",
+  category: "Moderation",
+  description: "Temporarily mutes a member.",
+  usage: "tempmute <time> @<user>"
 };

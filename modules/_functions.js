@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports = (client) => {
   // Returns the author's permission level
@@ -37,7 +37,7 @@ module.exports = (client) => {
     const filter = m => m.author.id === msg.author.id;
     await msg.channel.send(question);
     try {
-      const collected = await msg.channel.awaitMessages(filter, { max: 1, time: limit, errors: ['time'] });
+      const collected = await msg.channel.awaitMessages(filter, { max: 1, time: limit, errors: ["time"] });
       return collected.first().content;
     } catch (e) {
       return false;
@@ -45,12 +45,12 @@ module.exports = (client) => {
   };
 
   client.clean = async (client, text) => {
-    if (text && text.constructor.name == 'Promise') text = await text;
-    if (typeof evaled !== 'string') text = require('util').inspect(text, {depth: 1});
+    if (text && text.constructor.name == "Promise") text = await text;
+    if (typeof evaled !== "string") text = require("util").inspect(text, {depth: 1});
 
     text = text
-    .replace(/`/g, '`' + String.fromCharCode(8203))
-    .replace(/@/g, '@' + String.fromCharCode(8203))
+    .replace(/`/g, "`" + String.fromCharCode(8203))
+    .replace(/@/g, "@" + String.fromCharCode(8203))
     .replace(process.env.BOT_TOKEN, client.config.token);
 
     return text;
@@ -67,7 +67,7 @@ module.exports = (client) => {
       });
       return false;
     } catch (e) {
-      return 'Unable to load command \`${commandName}\`: ${e}';
+      return "Unable to load command \`${commandName}\`: ${e}";
     }
   };
 
@@ -94,15 +94,15 @@ module.exports = (client) => {
     return false;
   };
 
-  client.wait = require('util').promisify(setTimeout);
+  client.wait = require("util").promisify(setTimeout);
 
   client.truncate = (str, num = 20) => {
-    if (str.length > num) return str.slice(0, num) + '...';
+    if (str.length > num) return str.slice(0, num) + "...";
     else return str;
   };
 
   client.spoilerify = (ts) => {
-    return '||' + ts.replace('||', '\\||') + '||';
+    return "||" + ts.replace("||", "\\||") + "||";
   };
 
   client.Embed = class {
@@ -112,8 +112,8 @@ module.exports = (client) => {
 
       this.embed = new Discord.MessageEmbed();
 
-      if (this.type !== 'blend') this.embed.setColor('#eeeeee');
-      else this.embed.setColor('#363942');
+      if (this.type !== "blend") this.embed.setColor("#eeeeee");
+      else this.embed.setColor("#363942");
 
       if (this.settings.title) this.embed.setTitle(this.settings.title);
       if (this.settings.url) this.embed.setURL(this.settings.url);
@@ -123,7 +123,7 @@ module.exports = (client) => {
 
       if (this.settings.fields) {
         this.settings.fields.forEach((field) => {
-          if (field == 'blank') this.embed.addBlankField();
+          if (field == "blank") this.embed.addBlankField();
           else this.embed.addField(field.title, field.text, field.inline || false);
         });
       }
@@ -158,37 +158,37 @@ module.exports = (client) => {
         }
   };
 
-  Object.defineProperty(String.prototype, 'toPropperCase', {
+  Object.defineProperty(String.prototype, "toPropperCase", {
     value: function() {
       return this.replace(/([^\W_]+[^\s-]*) */g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
     }
   });
   
-  Object.defineProperty(Array.prototype, 'average', {
+  Object.defineProperty(Array.prototype, "average", {
     value: function() {
       return this.reduce((a, b) => a + b, 0) / this.length;
     }
   });
 
-  Object.defineProperty(Array.prototype, 'random', {
+  Object.defineProperty(Array.prototype, "random", {
     value: function() {
       return this[Math.floor(Math.random() * this.length + 1) - 1];
     }
   });
 
 
-  process.on('uncaughtException', (err) => {
+  process.on("uncaughtException", (err) => {
     client.logger.error(err.stack);
     client.destroy();
     process.exit(1);
   });
 
-  process.on('unhandledRejection', (err) => {
+  process.on("unhandledRejection", (err) => {
     client.logger.error(err);
     console.log(err.stack);
   });
 
-  process.on('exit', () => {
+  process.on("exit", () => {
     client.destroy();
     client = null;
   });

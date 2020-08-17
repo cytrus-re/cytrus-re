@@ -1,4 +1,4 @@
-const Discord = require('discord.js'); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
+const Discord = require("discord.js"); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        member.ban(args.slice(1).join(' ')).then(() => {
+        member.ban(args.slice(1).join(" ")).then(() => {
           message.channel.send(`Successfully banned ${user.tag}!`);
 
           const modLogChannel = settings.modLogChannel;

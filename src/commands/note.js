@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       case "add":
         msg = await message.channel.send("Creating note...");
         let noteID = message.author.id + message.id;
-        await client.notes.set(noteID, {txt: args.slice(1).join(' '), id: noteID, author: message.author.id});
+        await client.notes.set(noteID, {txt: args.slice(1).join(" "), id: noteID, author: message.author.id});
         msg.edit("Note created! ID: " + noteID);
         break;
       case "remove":
@@ -21,59 +21,59 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
           }
         } else message.channel.send("Invalid note ID.");
         break;
-      case 'clear':
+      case "clear":
         await client.notes.forEach((note)  => {
           if (note.author == message.author.id) client.notes.delete(note.id);
         });
         
         message.channel.send("Cleared your notes!");
         break;
-      case 'view':
+      case "view":
         if (!args[1]) return message.channel.send("You need to give me the note ID!");
         if (client.notes.has(args[1])) {
           if (client.notes.get(args[1]).author !== message.author.id) message.reply("You don't own this note!");
-          else message.channel.send('•' + '*' + client.notes.get(args[1]).id + '*\n' + client.notes.get(args[1]).txt + '\n\n');
-        } else message.reply('That is not a valid NoteID!');
+          else message.channel.send("•" + "*" + client.notes.get(args[1]).id + "*\n" + client.notes.get(args[1]).txt + "\n\n");
+        } else message.reply("That is not a valid NoteID!");
         break;
-      case 'edit':
-        if (!args[1]) return message.reply('You need to input the NoteID.');
-        if (!args[2]) return message.reply('You need to input the Note Text');
+      case "edit":
+        if (!args[1]) return message.reply("You need to input the NoteID.");
+        if (!args[2]) return message.reply("You need to input the Note Text");
         if (client.notes.has(args[1])) {
           if (client.notes.get(args[1]).author !== message.author.id) message.reply("You don't own this note!");
           else {
-            msg = await message.channel.send('Editing note...');
+            msg = await message.channel.send("Editing note...");
 
-            await client.notes.set(args[1], {txt: args.slice(2).join(' '), id: args[1], author: message.author.id});
-            msg.edit('Note edited with the ID of ' + args[1]);
+            await client.notes.set(args[1], {txt: args.slice(2).join(" "), id: args[1], author: message.author.id});
+            msg.edit("Note edited with the ID of " + args[1]);
           }
-        } else message.reply('Invalid NoteID.');
+        } else message.reply("Invalid NoteID.");
         break;
       default:
-          let output = '';
+          let output = "";
 
           await client.notes.forEach((note)  => {
-            if (note.author == message.author.id) output += '•' + '*' + note.id + '*\n' + note.txt + '\n\n';
+            if (note.author == message.author.id) output += "•" + "*" + note.id + "*\n" + note.txt + "\n\n";
           });
 
-          if (output == '') message.reply('You have no notes!');
+          if (output == "") message.reply("You have no notes!");
           else message.channel.send(output);
         break;
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['notes'],
+  aliases: ["notes"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'note',
-  category: 'General',
-  description: 'Generates a note',
-  usage: 'note [clear/add [text]/remove [id]/view [id]]'
+  name: "note",
+  category: "General",
+  description: "Generates a note",
+  usage: "note [clear/add [text]/remove [id]/view [id]]"
 };

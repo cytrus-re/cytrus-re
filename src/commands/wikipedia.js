@@ -1,10 +1,10 @@
-const Discord = require('discord.js');
-const wikipedia = require('@cytrus-re/wikipediajs');
+const Discord = require("discord.js");
+const wikipedia = require("@cytrus-re/wikipediajs");
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    wikipedia.search(args.join(' ')).then(async (res) => {
-      let output = '';
+    wikipedia.search(args.join(" ")).then(async (res) => {
+      let output = "";
       let i = 1;
       
       let firstEmbed = new Discord.MessageEmbed()
@@ -26,7 +26,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
       .setDescription(`${infDesc.description ? infDesc.description : "This article doesn't have a description or something went wrong" }`)
-      .addField("Article link", `[Right here!](${info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')})`)
+      .addField("Article link", `[Right here!](${info.fullurl.replace("(", "\\(").replace(")", "\\)").replace("`", "\\`")})`)
       .setColor("#eeeeee");
 
       message.channel.send(pageEmbed);

@@ -1,7 +1,7 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    client.fetchApplication('@me').then(app => {
-      let embed = new client.Embed('blend', {
+    client.fetchApplication("@me").then(app => {
+      let embed = new client.Embed("blend", {
         title: app.name,
         thumbnail: app.iconURL,
         description: app.description,
@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
             text: app.createdAt
           },
           {
-            title: 'Owner',
+            title: "Owner",
             text: app.owner.tag
           }
         ]

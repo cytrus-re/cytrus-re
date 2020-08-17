@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports = (client, message, messageNew) => {
   if (message.author.bot) return;
@@ -8,12 +8,12 @@ module.exports = (client, message, messageNew) => {
   
   let settings = client.getSettings(message.guild.id);
   
-  if (settings.logMessageUpdates == 'true') {
+  if (settings.logMessageUpdates == "true") {
     let embed = new Discord.RichEmbed()
-    .setTitle('Message Edit')
+    .setTitle("Message Edit")
     .setTimestamp(new Date())
-    .setDescription('**Message edited by**\n' + message.author.tag + '\n\n**Old Message**\n' + message.content + '\n\n**New Message**\n' + messageNew.content)
-    .setColor('#eeeeee');
+    .setDescription("**Message edited by**\n" + message.author.tag + "\n\n**Old Message**\n" + message.content + "\n\n**New Message**\n" + messageNew.content)
+    .setColor("#eeeeee");
 
     if (message.guild.channels.find(channel => channel.name == settings.modLogChannel)) {
       message.guild.channels.find(channel => channel.name == settings.modLogChannel).send(embed).catch(client.logger.error);

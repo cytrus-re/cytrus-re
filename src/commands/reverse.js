@@ -2,8 +2,8 @@ exports.run = async (client, message, args, level) => {
   try {
     if (!args[0]) return message.channel.send("You need to give me the text to reverse!");
     
-    const str = args.join(' ');
-    message.channel.send(str.split('').reverse().join(''));
+    const str = args.join(" ");
+    message.channel.send(str.split("").reverse().join(""));
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }

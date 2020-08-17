@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const cooled = new Discord.Collection();
 
 module.exports = async (client, message) => {
@@ -21,7 +21,7 @@ module.exports = async (client, message) => {
       Object.keys(client.tags.get(message.guild.id)).forEach(tagid => {
         let tag = client.tags.get(message.guild.id)[tagid];
         
-        if (message.content.toLowerCase() == tag.name.toLowerCase()) message.channel.send(tag.text.replace('@user', '<@' + message.author.id + '>'));
+        if (message.content.toLowerCase() == tag.name.toLowerCase()) message.channel.send(tag.text.replace("@user", "<@" + message.author.id + ">"));
       });
     }
   }
@@ -38,7 +38,7 @@ module.exports = async (client, message) => {
   if (!client.commands.has(command) && !client.aliases.has(command)) return;
 
   // cooldown stuff
-  if (cooled.get(message.author.id)) return message.react('⏳');
+  if (cooled.get(message.author.id)) return message.react("⏳");
   if (client.permlevel(message) < 6) {
     cooled.set(message.author.id, true);
     setTimeout(async () => {
@@ -57,7 +57,7 @@ Your permission level is ${level} (${client.config.permLevels.find(l => l.level 
   message.author.permLevel = level;
 
   message.flags = [];
-  while (args[0] && args[0][0] === '-') {
+  while (args[0] && args[0][0] === "-") {
     message.flags.push(args.shift().slice(1));
   }
 

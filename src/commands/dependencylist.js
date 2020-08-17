@@ -1,9 +1,9 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
-    let output = '';
-    Object.keys(require("../../package").dependencies).forEach((pack) => output += pack + '\n');
+    let output = "";
+    Object.keys(require("../../package").dependencies).forEach((pack) => output += pack + "\n");
     
     let embed = new Discord.RichEmbed()
     .setTtitle("Cytrus-RE's" + Object.keys(require("../package").dependencies).length + "dependencies:"

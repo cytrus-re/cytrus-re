@@ -1,6 +1,6 @@
 //Import modules
-const fs = require('fs');
-const util = require('util');
+const fs = require("fs");
+const util = require("util");
 
 //Define variables
 const promisify = util.promisify;
@@ -10,20 +10,20 @@ module.exports = (client) => {
   //Get command files
   let i = 1;
 
-  readdir(__dirname + '/../src/commands/', (err, files) => {
+  readdir(__dirname + "/../src/commands/", (err, files) => {
     //If there is an error, return the error
     if (err) return client.logger.error(err);
 
     //For each file in the file array run this function
     files.forEach((file) => {
       //If the file extension (.py, .js, .md) is not js, ignore it
-      if (!file.endsWith('.js')) return;
+      if (!file.endsWith(".js")) return;
 
       //Make the "props" variable the file object
       let props = require(`../src/commands/${file}`);
 
       //Split the file name from the file extension
-      let commandName = file.split('.')[0];
+      let commandName = file.split(".")[0];
 
       //Log that the command is loading
       client.logger.log(`Loading command: ${commandName}. Command ${i}`);

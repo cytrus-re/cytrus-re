@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -8,42 +8,42 @@ exports.run = async (client, message, args, level) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        member.kick(args.slice(1).join(' ')).then(() => {
+        member.kick(args.slice(1).join(" ")).then(() => {
           message.reply(`Successfully kicked ${user.tag}`);
 
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.RichEmbed()
-            .setTitle('User Ban')
-            .setColor('#eeeeee')
-            .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(' ')}\nModerator: ${message.author.username}`);
+            .setTitle("User Ban")
+            .setColor("#eeeeee")
+            .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);
 
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);        
           }
         }).catch(err => {
-          message.reply('I wasn\'t able to kick the member');
+          message.reply("I wasn't able to kick the member");
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
-      message.reply('You didn\'t mention the user to kick!');
+      message.reply("You didn't mention the user to kick!");
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['ki'],
+  aliases: ["ki"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'kick',
-  category: 'Moderation',
-  description: 'Kicks the specified member.',
-  usage: 'kick @<user> [reason]'
+  name: "kick",
+  category: "Moderation",
+  description: "Kicks the specified member.",
+  usage: "kick @<user> [reason]"
 };

@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
@@ -17,24 +17,24 @@ Owner ID: ${message.guild.ownerID}
 Name Acronym: ${message.guild.nameAcronym}
 `)
     .setThumbnail(message.guild.iconURL)
-    .setColor('#eeeeee');
+    .setColor("#eeeeee");
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['server', 'si'],
+  aliases: ["server", "si"],
   guildOnly: true,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'serverinfo',
-  category: 'Utility',
-  description: 'Returns info about the server',
-  usage: 'serverinfo'
+  name: "serverinfo",
+  category: "Utility",
+  description: "Returns info about the server",
+  usage: "serverinfo"
 };

@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -14,36 +14,36 @@ exports.run = async (client, message, args, level) => {
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.RichEmbed()
-            .setTitle('User Unmute')
-            .setColor('#eeeeee')
+            .setTitle("User Unmute")
+            .setColor("#eeeeee")
             .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
 
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
           }
         }).catch(err => {
-         message.reply('I was unable to unmute the member');
+         message.reply("I was unable to unmute the member");
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
-      message.reply('You didn\'t mention the user to unmute!');
+      message.reply("You didn't mention the user to unmute!");
     }
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send("Their was an error!\n" + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['um'],
+  aliases: ["um"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'unmute',
-  category: 'Moderation',
-  description: 'Unmutes a member.',
-  usage: 'unmute @<user>'
+  name: "unmute",
+  category: "Moderation",
+  description: "Unmutes a member.",
+  usage: "unmute @<user>"
 };

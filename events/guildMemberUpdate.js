@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports = (client, user, userNew) => {
   let embed;
@@ -37,15 +37,15 @@ New User:
   }
 
   if (user.roles.cache !== userNew.roles.cache) {
-    let output = '';
-    let outputNew = '';
+    let output = "";
+    let outputNew = "";
     
     user.roles.cache.forEach(role => {
-      output += '\n' + role.name;
+      output += "\n" + role.name;
     });
     
     userNew.roles.cache.forEach(role => {
-      outputNew += '\n' + role.name;
+      outputNew += "\n" + role.name;
     });
     
     if (output == outputNew) return;

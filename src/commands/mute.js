@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -10,9 +10,9 @@ exports.run = async (client, message, args, level) => {
       if (member) {
         if (!message.guild.roles.find(r => r.name == settings.muteRole)) {
           message.guild.createRole({
-            name: settings.muteRole || 'CytrusMute',
-            color: '#eeeeee',
-            permissions: ['READ_MESSAGES']
+            name: settings.muteRole || "CytrusMute",
+            color: "#eeeeee",
+            permissions: ["READ_MESSAGES"]
           }).catch();
         }
         
@@ -23,36 +23,36 @@ exports.run = async (client, message, args, level) => {
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.RichEmbed()
-            .setTitle('User Mute')
-            .setColor('#eeeeee')
+            .setTitle("User Mute")
+            .setColor("#eeeeee")
             .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
 
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
           }
         }).catch(err => {
-          message.reply('I wasn\'t to mute this user.\n' + err);
+          message.reply("I wasn't to mute this user.\n" + err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
-      message.reply('You didn\'t mention the user to mute!');
+      message.reply("You didn't mention the user to mute!");
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err.stack).catch();
+    message.channel.send("There was an error!\n" + err.stack).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: ['m'],
+  aliases: ["m"],
   guildOnly: true,
-  permLevel: 'Moderator'
+  permLevel: "Moderator"
 };
 
 exports.help = {
-  name: 'mute',
-  category: 'Moderation',
-  description: 'Mutes the specified user.',
-  usage: 'mute @<user>'
+  name: "mute",
+  category: "Moderation",
+  description: "Mutes the specified user.",
+  usage: "mute @<user>"
 };

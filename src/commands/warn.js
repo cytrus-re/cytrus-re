@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -17,7 +17,7 @@ exports.run = async (client, message, args, level) => {
 
         
         if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-          let embed = new client.Embed('normal', {
+          let embed = new client.Embed("normal", {
             color: 0xeeeeee,
             title: "User Warned",
             description: `Name: ${wUser.username}\nID: ${wUser.id}\nModerator: ${message.author.username}`,
@@ -29,7 +29,7 @@ exports.run = async (client, message, args, level) => {
         }
 
         if (client.warns.get(message.guild.id)[member.id] == 3) {
-          member.ban(args.slice(1).join(' ')).then(() => {
+          member.ban(args.slice(1).join(" ")).then(() => {
             message.channel.send(`Successfully banned ${wUser.tag}!`);
 
             client.warns.get(message.guild.id)[member.id] = 0;

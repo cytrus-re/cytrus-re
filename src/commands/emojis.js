@@ -8,10 +8,10 @@ exports.run = async (client, message, args, level) => {
       else notAnimated.push(emoji.toString());
     });
 
-    if (!animated[0]) animated = ['None'];
-    if (!notAnimated[0]) notAnimated = ['None'];
+    if (!animated[0]) animated = ["None"];
+    if (!notAnimated[0]) notAnimated = ["None"];
     
-    message.channel.send("Animated:\n" + animated.join(' ') + "\n\nNot Animated" + notAnimated.join(' '));
+    message.channel.send("Animated:\n" + animated.join(" ") + "\n\nNot Animated" + notAnimated.join(" "));
   } catch (err) {
     message.channel.send("There was an error!\n" + err).catch();
   }
@@ -19,14 +19,14 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ['emoji'],
+  aliases: ["emoji"],
   guildOnly: true,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'emojis',
-  category: 'General',
+  name: "emojis",
+  category: "General",
   description: "Returns all of the emojis in the server.",
-  usage: 'emojis'
+  usage: "emojis"
 };

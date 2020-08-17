@@ -1,19 +1,19 @@
-const request = require('request');
+const request = require("request");
 
 exports.run = async (client, message, args, level) => {
   try {
     if (!args[0]) return message.channel.send("You need to give me something to search for!");
     
     request({
-      'url': 'https://api.github.com/search/repositories?q=' + encodeURIComponent(args.join(' ')),
-      'headers': {
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': 'token ' + process.env.GITHUB_TOKEN,
-        'User-Agent': 'CelestialCrafter'
+      "url": "https://api.github.com/search/repositories?q=" + encodeURIComponent(args.join(" ")),
+      "headers": {
+        "Accept": "application/vnd.github.v3+json",
+        "Authorization": "token " + process.env.GITHUB_TOKEN,
+        "User-Agent": "CelestialCrafter"
       },
-      'json': true
+      "json": true
     }, async (req, res, json) => { 
-      let output = '';
+      let output = "";
       let i = 1;
       
       if (!json.items[0]) return message.channel.send("I couldn't find any results!");
@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => {
       
       json.items.forEach((repo) => {
         let title = repo.name;
-        output += '\n' + i + '. ' + title;
+        output += "\n" + i + ". " + title;
         i++;
       });
       
@@ -31,15 +31,15 @@ exports.run = async (client, message, args, level) => {
       let repo = json.items[reponum - 1];
       
       request({
-        'url': repo.url,
-        'headers': {
-          'Accept': 'application/vnd.github.v3+json',
-          'Authorization': 'token ' + process.env.GITHUB_TOKEN,
-          'User-Agent': 'CelestialCrafter'
+        "url": repo.url,
+        "headers": {
+          "Accept": "application/vnd.github.v3+json",
+          "Authorization": "token " + process.env.GITHUB_TOKEN,
+          "User-Agent": "CelestialCrafter"
         },
-        'json': true
+        "json": true
       }, (req, res, json) => {
-        let embed = new client.Embed('normal', {
+        let embed = new client.Embed("normal", {
           title: json.full_name,
           url: json.html_url,
           description: json.description,

@@ -1,21 +1,21 @@
-const google = require('google');
+const google = require("google");
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try { 
     if (!args[0]) return message.channel.send("You need to give me something to search for!");
     google.resultsPerPage = 5;
 
-    google(args.join(' '), async (err, res) => {
+    google(args.join(" "), async (err, res) => {
       
       if (err) return message.channel.send(client.errors.genericError + err);
       
       if (!res.links[0].href) return message.channel.send("I couldn't find anything for your search term!");
       
-      let output = '';
+      let output = "";
       let i = 1;
       
       res.links.forEach(async (l) => {
-        output += '\n' + i + '. ' + l.title;
+        output += "\n" + i + ". " + l.title;
         i++;
       });
       
@@ -26,7 +26,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       
       let link = res.links[pagenum];
       
-      let embed = new client.Embed('normal', {
+      let embed = new client.Embed("normal", {
         title: link.title,
         url: link.href,
         footer: link.href,
@@ -36,7 +36,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       message.channel.send(embed);
     });
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send("There was an error!\n" + err).catch();
   }
 };
 

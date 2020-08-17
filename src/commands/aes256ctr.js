@@ -1,4 +1,4 @@
-const Cryptr = require('cryptr');
+const Cryptr = require("cryptr");
 
 const encrypt = (text, key) => {
   let cryptr = new Cryptr(key);
@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (!args[0]) return message.channel.send("You need to give a key to encrypt the text with!");
     if (!args[1]) return message.channel.send("You need to give the text to encrypt!");
     
-    message.channel.send(encrypt(args.slice(1).join(' '), args[0]));
+    message.channel.send(encrypt(args.slice(1).join(" "), args[0]));
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
@@ -18,14 +18,14 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: ['encrypt'],
+  aliases: ["encrypt"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'aes256ctr',
-  category: 'General',
+  name: "aes256ctr",
+  category: "General",
   description: "Encrypts text in aes-256-ctr",
-  usage: 'aes256ctr <key> <text>'
+  usage: "aes256ctr <key> <text>"
 };

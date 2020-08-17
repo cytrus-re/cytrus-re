@@ -12,7 +12,7 @@ exports.conf = {
   enabled: true,
   aliases: ["vote"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 

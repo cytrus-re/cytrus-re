@@ -1,5 +1,5 @@
 //https://cdn.discordapp.com/emojis/id.png
-const { Attachment } = require('discord.js');
+const { Attachment } = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -7,11 +7,11 @@ exports.run = async (client, message, args, level) => {
     
     if (!id) return message.reply("You didn't input a valid emoji or it is a default Discord emote!");
     switch (args[0]) {
-      case 'animated':
-        message.channel.send(new Attachment('https://cdn.discordapp.com/emojis/' + id + '.gif'));
+      case "animated":
+        message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".gif"));
         break;
-      case 'static':
-        message.channel.send(new Attachment('https://cdn.discordapp.com/emojis/' + id + '.png'));
+      case "static":
+        message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".png"));
         break;
       default:
         message.reply("You need to say what type of emoji it is!");
@@ -24,14 +24,14 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ['emoteimage', 'ei', 'eimage', 'emojii', 'emotei'],
+  aliases: ["emoteimage", "ei", "eimage", "emojii", "emotei"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'emojiimage',
-  category: 'Fun',
+  name: "emojiimage",
+  category: "Fun",
   description: "Returns the image of the specified emoji",
-  usage: 'emojiimage <static/animated> <emoji>'
+  usage: "emojiimage <static/animated> <emoji>"
 };
