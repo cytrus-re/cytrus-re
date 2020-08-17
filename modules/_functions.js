@@ -158,7 +158,7 @@ module.exports = (client) => {
         }
   };
 
-  Object.defineProperty(String.prototype, "toPropperCase", {
+  Object.defineProperty(String.prototype, "toProperCase", {
     value: function() {
       return this.replace(/([^\W_]+[^\s-]*) */g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
     }

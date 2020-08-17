@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       let words = rl.rhyme(args.join(" "));
       
       words.forEach(word => {
-        rhymes += word.toPropperCase() + ", ";
+        rhymes += word.toProperCase() + ", ";
       });
 
       rhymes = rhymes.slice(0, -2);
@@ -26,7 +26,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       msg.edit(embed);
     });
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

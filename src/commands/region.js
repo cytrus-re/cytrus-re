@@ -3,11 +3,11 @@ exports.run = async (client, message, args, level) => {
     if (!args[0]) {
       return message.reply("You need to specify a region!");
     } else {
-      message.guild.setRegion(args[0]).catch(err => message.channel.send("There was an error!\n" + err));
+      message.guild.setRegion(args[0]).catch(err => message.channel.send(client.errors.genericError + err));
       message.channel.send("Region set!");
     }
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

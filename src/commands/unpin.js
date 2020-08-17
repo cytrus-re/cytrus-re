@@ -1,16 +1,16 @@
 exports.run = async (client, message, args, level) => {
   try {
-      if (!args[0]) return message.reply("You need to give the message ID!");
+      if (!args[0]) return message.channel.send("You need to give me a message ID!");
     
-      let msg = messages.get(args[0]);
-      if (!message.channel.fetchMessage(args[0])) message.reply("That message does not exist!");
+      let msg = message.channel.messages.get(args[0]);
+      if (!msg) message.channel.send("That message does not exist! Make sure to use this command in the same channel as the message.");
       
       msg.pin().catch(() => {
-        return message.reply("There was an error!");
+        return message.channel.send(client.errors.genericError);
       });
       message.channel.send("I've unpinned the message!");
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

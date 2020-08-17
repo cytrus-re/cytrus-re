@@ -11,7 +11,7 @@ exports.run = async (client, message, args, level) => {// eslint-disable-line no
     client.logger.log(`Reloading Command: ${args[0]}`);
     message.reply(`The command \`${args[0]}\` has been reloaded`);
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

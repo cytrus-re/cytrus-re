@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     
     msg.edit("Tag created with the ID of " + message.id + "!");
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

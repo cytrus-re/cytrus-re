@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
     if (!message.guild.channels.find(c => c.name == args[0])) return message.reply("I can't find that channel!");
     message.guild.channels.find(c => c.name == args[0]).send(str);
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

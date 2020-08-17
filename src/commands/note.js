@@ -1,11 +1,13 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
     let msg;
+    let noteID;
+    let output = "";
     
     switch (args[0]) {
       case "add":
         msg = await message.channel.send("Creating note...");
-        let noteID = message.author.id + message.id;
+        noteID = message.author.id + message.id;
         await client.notes.set(noteID, {txt: args.slice(1).join(" "), id: noteID, author: message.author.id});
         msg.edit("Note created! ID: " + noteID);
         break;
@@ -49,8 +51,6 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         } else message.reply("Invalid NoteID.");
         break;
       default:
-          let output = "";
-
           await client.notes.forEach((note)  => {
             if (note.author == message.author.id) output += "•" + "*" + note.id + "*\n" + note.txt + "\n\n";
           });
@@ -60,7 +60,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         break;
     }
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

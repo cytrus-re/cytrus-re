@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       message.channel.createInvite().then(invite => message.channel.send(`I've succesfuly created the invite!\nCode: ${invite.code}`));
     } else message.reply("You don't have the Create Invite permission!");
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

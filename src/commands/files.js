@@ -23,7 +23,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
     execute("dir"); //replaced "ls -a" because edge runs the bot on windows
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

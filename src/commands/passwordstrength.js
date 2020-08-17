@@ -23,26 +23,26 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         },
         {
           title: "Throttled Online Attack Crack Time",
-          text: res.crack_times_display.online_throttling_100_per_hour.toPropperCase() || "Not Available"
+          text: res.crack_times_display.online_throttling_100_per_hour.toProperCase() || "Not Available"
         },
         {
           title: "Unthrottled Online Attack Crack Time",
-          text: res.crack_times_display.online_no_throttling_10_per_second.toPropperCase() || "Not Available"
+          text: res.crack_times_display.online_no_throttling_10_per_second.toProperCase() || "Not Available"
         },
         {
           title: "Offline attack, Slow hash, Many cores Crack Time",
-          text: res.crack_times_display.offline_slow_hashing_1e4_per_second.toPropperCase() || "Not Available"
+          text: res.crack_times_display.offline_slow_hashing_1e4_per_second.toProperCase() || "Not Available"
         },
         {
           title: "Offline attack, Fast hash, Many cores Crack Time",
-          text: res.crack_times_display.offline_fast_hashing_1e10_per_second.toPropperCase() || "Not Available"
+          text: res.crack_times_display.offline_fast_hashing_1e10_per_second.toProperCase() || "Not Available"
         }
       ]
     });
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

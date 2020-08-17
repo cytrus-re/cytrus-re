@@ -21,7 +21,7 @@ Name Acronym: ${message.guild.nameAcronym}
     
     message.channel.send(embed);
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

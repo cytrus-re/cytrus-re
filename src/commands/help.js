@@ -1,5 +1,3 @@
-const Discord = require("discord.js"); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
-
 exports.run = (client, message, args, level) => {
   try {
     let serverPrefix = client.getSettings(message.guild.id).prefix;

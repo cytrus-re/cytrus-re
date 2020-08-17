@@ -42,7 +42,7 @@ This command requires level 6 (Bot Support)`);
         break;
     }
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 

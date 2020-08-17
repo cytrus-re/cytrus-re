@@ -11,7 +11,7 @@ Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms`
 
     msg.edit(embed);
   } catch (err) {
-    message.channel.send("There was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
