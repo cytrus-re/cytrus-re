@@ -2,14 +2,14 @@ const google = require('google');
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try { 
-    if (!args[0]) return message.reply('You need to input somthing to search!');
+    if (!args[0]) return message.channel.send("You need to give me something to search for!");
     google.resultsPerPage = 5;
 
     google(args.join(' '), async (err, res) => {
       
-      if (err) return message.channel.send('There was an error!\n' + err);
+      if (err) return message.channel.send(client.errors.genericError + err);
       
-      if (!res.links[0].href) return message.reply('I couldent find anything for your search term!');
+      if (!res.links[0].href) return message.channel.send("I couldn't find anything for your search term!");
       
       let output = '';
       let i = 1;
@@ -20,8 +20,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       });
       
             
-      let page = await client.awaitReply(message, `Please choose the Result you want${output}`);
-      if (isNaN(page)) return message.reply('That\'s not a number!');
+      let page = await client.awaitReply(message, `Please choose the result you want:${output}`);
+      if (isNaN(page)) return message.channel.send("That's not a number!");
       let pagenum = Number(page) - 1;
       
       let link = res.links[pagenum];
@@ -41,21 +41,18 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false, // see below
   aliases: [],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
-  name: 'google',
-  category: 'General',
-  description: 'Returns an animation of how to google somthing',
-  usage: 'google <query>'
+  name: "google",
+  category: "Search",
+  description: "Searches Google for your query.",
+  usage: "google <query>"
 };
-
-
 
 /* seems like the google feature is broken, we have to update it, look at this:
 https://stackoverflow.com/questions/56856201/how-to-create-a-google-search-command-in-a-discord-bot */
-
