@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
       .setColor("#eeeeee")
       
       if (!res.query.pages) message.channel.send(client.errors.noResults);
-      if (res.query.results.length > 5) res.query.results.length = 5;
+      if (res.query.pages.length > 5) res.query.pages = 5;
       Object.keys(res.query.pages).forEach((page) => {
         firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
         i++;
