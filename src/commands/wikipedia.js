@@ -13,9 +13,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       .setColor("#eeeeee")
       
       if (!res.query.pages) message.channel.send(client.errors.noResults);
-      Object.keys(res.query.pages).forEach(async (page) => {
+      if (res.query.results.length > 5) res.query.results.length = 5;
+      Object.keys(res.query.pages).forEach((page) => {
         await firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
-        return i++;
+        i++;
       });
       let page = await client.awaitReply(message, firstEmbed);
       
