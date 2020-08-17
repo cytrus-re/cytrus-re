@@ -20,7 +20,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       
       if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
-      let infDesc = wikipedia.search(info.title, "en", { prop: "description"});
+      let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
       .setDescription(`${infDesc.description}`)
