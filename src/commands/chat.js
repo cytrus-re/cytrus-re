@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.reply("You need to say something to Cytrus!");
+    if (!args[0]) return message.reply("You need to say something to me!");
     
     let msg = await message.reply("Processing message... (This may take a while!)");
     client.cleverbot.create(async (err, session) => {
@@ -18,10 +18,10 @@ exports.run = async (client, message, args, level) => {
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false, // we don't have a cleverbot token at the moment
   aliases: ["ai", "aichat"],
   guildOnly: false,
-  permLevel: 'User'
+  permLevel: "User"
 };
 
 exports.help = {
