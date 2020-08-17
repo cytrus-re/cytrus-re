@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
         i++;
       });
       
-      let module = await client.awaitReply(message, "Please choose the package you want: ${output}");
+      let module = await client.awaitReply(message, `Please choose the package you want: ${output}`);
       if (isNaN(module)) return message.channel.send("That's not a number!");
       
       let mnum = Number(module) - 1;
