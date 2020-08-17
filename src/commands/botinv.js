@@ -1,6 +1,10 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    message.channel.send("[**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)");
+    let invEmbed = new Discord.MessageEmbed()
+    .setTitle("Invite Cytrus-RE to your server!")
+    .setDescription("[**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)")
+    .setColor("#eeeeee")
+    message.channel.send(invEmbed);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
@@ -16,6 +20,6 @@ exports.conf = {
 exports.help = {
   name: "botinv",
   category: "General",
-  description: "Gives the invite link for Cytrus.",
+  description: "Returns the invite link for Cytrus-RE.",
   usage: "botinv"
 };
