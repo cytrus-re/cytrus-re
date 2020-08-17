@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       if (!res.query.pages) message.channel.send(client.errors.noResults);
       if (res.query.results.length > 5) res.query.results.length = 5;
       Object.keys(res.query.pages).forEach((page) => {
-        await firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
+        firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
         i++;
       });
       let page = await client.awaitReply(message, firstEmbed);
