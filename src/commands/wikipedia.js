@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
       let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
-      .setDescription(`${infDesc.description ? infDesc.description : "This article doesn't have a description or something went wrong" }`)
+      .setDescription(`${infDesc.description ? infDesc.description : client.error.404ArticleDescription }`)
       .addField("Article link", `[Right here!](${info.fullurl.replace("(", "\\(").replace(")", "\\)").replace("`", "\\`")})`)
       .setColor("#eeeeee");
 
