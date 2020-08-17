@@ -3,10 +3,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     let res = await client.awaitReply(message, "Are you sure you want to destroy the client?");
     
     if (res == "yes") {
-      message.channel.send("Destroying client...");
+      message.channel.send("Shutting down...");
       client.destroy();
     }
-    else message.channel.send("Aborted.");
+    else message.channel.send("Stopped.");
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
