@@ -12,7 +12,6 @@ exports.run = async (client, message, args) => {
       .setColor("#eeeeee")
       
       if (!res.query.pages) message.channel.send(client.errors.noResults);
-      if (res.query.pages.length > 5) res.query.pages = 5;
       Object.keys(res.query.pages).forEach((page) => {
         firstEmbed.addField(res.query.pages[page].title, `Respond with ${i} for this article`); 
         i++;
@@ -24,7 +23,7 @@ exports.run = async (client, message, args) => {
       let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
-      .setDescription(`${infDesc.description ? infDesc.description : client.errors.404ArticleDescription}`)
+      .setDescription(`${infDesc.description ? infDesc.description : client.errors.noArticleDescription}`)
       .addField("Article link", `[Right here!](${info.fullurl.replace("(", "\\(").replace(")", "\\)").replace("`", "\\`")})`)
       .setColor("#eeeeee");
 
