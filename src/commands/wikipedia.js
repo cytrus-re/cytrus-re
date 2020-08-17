@@ -18,11 +18,12 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       });
       let page = await client.awaitReply(message, firstEmbed);
       
-      if (isNaN(page)) return message.channel.send(page + ' is not a number!');
+      if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
+      let infDesc = wikipedia.search(info.title, "en", { prop: "description });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
-      .setDescription(`${info.description}`)
+      .setDescription(`${infDesc.description}`)
       .addField("Article link", `[Right here!](${info.fullurl.replace('(', '\\(').replace(')', '\\)').replace('`', '\\`')})`)
       .setColor("#eeeeee");
 
@@ -42,7 +43,7 @@ exports.conf = {
 
 exports.help = {
   name: "wikipedia",
-  category: "General",
-  description: "Searches Wikipedia for your search term",
+  category: "Search",
+  description: "Searches Wikipedia for your query.",
   usage: "wikipedia <search term>"
 };
