@@ -7,7 +7,7 @@ exports.run = async (client, message, args, level) => {
     
     let embed = new Discord.RichEmbed()
     .setTtitle("Cytrus-RE's" + Object.keys(require("../package").dependencies).length + "dependencies:"
-    .setColor('#363942')
+    .setColor("#363942")
     .setThumbnail(client.user.avatarURL)
     .setDescription(output))
     
@@ -18,7 +18,7 @@ exports.run = async (client, message, args, level) => {
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false, // disabled until we know it's okay
   aliases: ["modulelist", "packagelist", "pl", "deplist", "ml"],
   guildOnly: false,
   permLevel: "User"
