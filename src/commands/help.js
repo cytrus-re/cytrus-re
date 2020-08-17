@@ -2,17 +2,18 @@ const Discord = require('discord.js'); // Not sure if we really need this, since
 
 exports.run = (client, message, args, level) => {
   try {
+    let serverPrefix = client.getSettings(message.guild.id).prefix;
     if (!args[0]) {
       let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
 
       let currentCategory = '';
-      let output = `Use ${client.config.defaultSettings.prefix}help <command/alias/category> for details.\n`;
+      let output = `Use ${serverPrefix}help <command/alias/category> for details.\n`;
       let sorted = userCommands.array().sort((p, c) => p.help.category > c.help.category ? 1 :  p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1 );
       
       sorted.forEach(async c => {
         const cat = c.help.category;
         if (currentCategory !== cat) {
-          output += `\n**${client.getSettings(message.guild.id).prefix}help ${cat.toLowerCase()}**`;
+          output += `\n**${serverPrefix}help ${cat.toLowerCase()}**`;
           currentCategory = cat;
         }
       });
@@ -21,7 +22,7 @@ exports.run = (client, message, args, level) => {
         title: "Cytrus-RE Help",
         thumbnail: client.user.avatarURL,
         description: output,
-        footer: `Check out the website (${client.config.defaultSettings.prefix}site) for a list of commands and more!`
+        footer: `Check out the website (${serverPrefix}site) for a list of commands and more!`
       });
       
       message.channel.send(embed);
@@ -37,7 +38,7 @@ exports.run = (client, message, args, level) => {
           fields: [
             {
               title: "Usage",
-              text: `${client.config.defaultSettings.prefix}${command.help.usage}`,
+              text: `${serverPrefix}${command.help.usage}`,
               inline: true
             },
             {
@@ -77,7 +78,7 @@ exports.run = (client, message, args, level) => {
           let cat = c.help.category.toLowerCase();
           if (cat == args[0].toLowerCase()) {
             if (level < client.levelCache[c.conf.permLevel]) return;
-            output += '`' + c.help.name + '`, ';
+            output += '**' + c.help.name + '**, ';
           }
         });
         
