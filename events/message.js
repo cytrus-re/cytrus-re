@@ -26,7 +26,7 @@ module.exports = async (client, message) => {
     }
   }
   
-  if (!message.content.toLowerCase().startsWith(settings.prefix.toLowerCase())) return;
+  if (!message.content.toLowerCase().startsWith(settings.prefix.toLowerCase() || client.config.defaultPrefix.toLowerCase())) return;
   
   let args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
   let command = args.shift().toLowerCase();
