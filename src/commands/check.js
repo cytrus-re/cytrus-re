@@ -10,19 +10,19 @@ exports.run = async (client, message, args, level) => {
       if (client.config.globalBan.includes(member.id)) members.push(member.id);
     });
     
-    if (!members[0]) msg.edit("The server is all clean!");
+    if (!members[0]) msg.edit("This server is all clean!");
     else {
-      let toban = await client.awaitReply(message, "I found " + members.length + " members on the Global Ban List. Do you want to ban them? (Reply with yes or no)");
+      let toban = await client.awaitReply(message, `I found ${members.length} members on the Global Ban List. Do you want to ban them? (Reply with yes or no)`);
       
-      if (['y', 'yes', 'true', 'mhm', 'yep', 'yeah','hell yeah'].includes(toban)) {
+      if (["y", "yes", "true", "mhm", "yep", "yeah", "hell yeah", "sure"].includes(toban)) {
         let banmsg = await message.channel.send("Banning members...");
         members.forEach(async (id) => {
-          message.guild.members.find(member => member.id == id).ban("Detected by Cytrus Global Ban List").then(() => {
+          message.guild.members.cache.find(member => member.id == id).ban("Detected by the Cytrus-RE Global Ban List").then(() => {
             const modLogChannel = settings.modLogChannel;
-            if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-              let embed = new Discord.RichEmbed()
-              .setTitle('User Ban')
-              .setColor('#eeeeee')
+            if (modLogChannel && message.guild.channels.cache.find(c => c.name === settings.modLogChannel)) {
+              let embed = new Discord.MessageEmbed()
+              .setTitle("User Banned")
+              .setColor("#eeeeee")
               .setDescription(`ID: ${id}\nReason: Detected by the Cytrus Global Ban List\nModerator: ${message.author.username}`);
 
               message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
@@ -36,7 +36,7 @@ exports.run = async (client, message, args, level) => {
       } else message.reply("OK! Aborting...");
     }
   } catch (err) {
-    message.channel.send('There was an error!\n' + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
@@ -44,12 +44,12 @@ exports.conf = {
   enabled: true,
   aliases: [],
   guildOnly: true,
-  permLevel: 'Administrator'
+  permLevel: "Administrator"
 };
 
 exports.help = {
-  name: 'check',
-  category: 'Moderation',
-  description: "Checks if anyone in your server is on the Cytrus Global Ban List.",
-  usage: 'check [ban]'
+  name: "check",
+  category: "Moderation",
+  description: "Checks if anyone in your server is on the Cytrus-RE Global Ban List.",
+  usage: "check [ban]"
 };
