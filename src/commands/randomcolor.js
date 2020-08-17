@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
   try {
     let hex = Math.random().toString(16).slice(2, 8).toUpperCase().slice(-6);
     
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setColor(hex)
     .setDescription("Random HEX Code: #" + hex)
     .setTitle("#" + hex);
