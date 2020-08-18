@@ -23,7 +23,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   //what the command does
   
   exports.help = {
-    name: "Copypasta",
+    name: "copypasta",
     category: "Fun",
     description: "Send pre-defined totally 100% funny copypastas that will make everyone like you",
     usage: "copypasta (copypastaname)"
