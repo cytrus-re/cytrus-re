@@ -20,7 +20,7 @@ exports.conf = {
 
 exports.help = {
   name: "site",
-  category: "system",
+  category: "System",
   description: "Returns the link to our (totally good) website hosted on GitHub Pages!",
   usage: "site"
 };
