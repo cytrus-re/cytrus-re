@@ -88,7 +88,7 @@ exports.conf = {
 
 exports.help = {
   name: "github",
-  category: "General",
+  category: "Search",
   description: "Searches GitHub for your query.",
   usage: "github <query>"
 };
