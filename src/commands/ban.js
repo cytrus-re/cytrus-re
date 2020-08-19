@@ -1,5 +1,3 @@
-const Discord = require("discord.js"); // Not sure if we really need this, since D.JS  is included in the client, but better safe than sorry.
-
 exports.run = async (client, message, args, level) => {
   try {
     const user = message.mentions.users.first();
@@ -14,12 +12,7 @@ exports.run = async (client, message, args, level) => {
 
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) { // Checks if the modlog is enabled and the channel specified for it exists.
-            let embed = new Discord.RichEmbed()
-            .setTitle("User Banned")
-            .setColor("#eeeeee")
-            .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);
-
-            message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
+            message.guild.channels.find(c => c.name === settings.modLogChannel).send({ embed: { color: "#eeeeee", title: "User Banned", description: `Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}` } });
           }
         }).catch(err => { // if banning failed for whatever reason, then:
          message.channel.send("I was unable to ban the user!");
