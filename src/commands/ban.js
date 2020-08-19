@@ -15,7 +15,8 @@ exports.run = async (client, message, args, level) => {
             message.guild.channels.find(c => c.name === settings.modLogChannel).send({ embed: { color: "#eeeeee", title: "User Banned", description: `Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}` } });
           }
         }).catch(err => { // if banning failed for whatever reason, then:
-         message.channel.send("I was unable to ban the user!");
+          message.channel.send("I was unable to ban the user!");
+          console.log(err);
         });
       } else { // if the user isn't in the guild, then:
         message.channel.send(client.errors.userNotInGuild);
