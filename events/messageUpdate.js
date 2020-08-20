@@ -9,14 +9,8 @@ module.exports = (client, message, messageNew) => {
   let settings = client.getSettings(message.guild.id);
   
   if (settings.logMessageUpdates == "true") {
-    let embed = new Discord.MessageEmbed()
-    .setTitle("Message Edit")
-    .setTimestamp(new Date())
-    .setDescription("**Message edited by**\n" + message.author.tag + "\n\n**Old Message**\n" + message.content + "\n\n**New Message**\n" + messageNew.content)
-    .setColor("#eeeeee");
-
     if (message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel)) {
-      message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel).send(embed).catch(client.logger.error);
+      message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel).send({ embed: { color: "#eeeeee", title: "Message Edited", fields: [{ name: "**Message edited by**", value: `${message.author.tag}` }, { name: "**Old message**", value: `${message.content}` }, { name: "**New message**", value: `${messageNew.content}` }] } }).catch(client.logger.error);
     }
   }
 };
