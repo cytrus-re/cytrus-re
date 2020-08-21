@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
     Object.keys(require("../../package.json").dependencies).forEach((pack) => output += pack + "\n");
     
     let embed = new Discord.MessageEmbed()
-    .setTtitle("Cytrus-RE's" + Object.keys(require("../../package.json").dependencies).length + "dependencies:"
+    .setTitle("Cytrus-RE's" + Object.keys(require("../../package.json").dependencies).length + "dependencies:")
     .setColor("#363942")
     .setThumbnail(client.user.avatarURL)
     .setDescription(output))
