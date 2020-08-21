@@ -30,7 +30,7 @@ exports.run = async (client, message, args, level) => {
       message.reply("You didn't mention the user to unmute!");
     }
   } catch (err) {
-    message.channel.send("Their was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
