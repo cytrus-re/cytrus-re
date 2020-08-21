@@ -24,10 +24,3 @@ CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
 Finally, start up Cytrus-RE by running ```node cybase.js```.
-
-## Info
-### API
-N/A right now
-​
-### Client ID
-596304769333592078
