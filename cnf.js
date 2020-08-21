@@ -8,7 +8,7 @@ const config = {
   "support": [],
   "helpers": [],
 
-  "blacklisted": ["251213730577252354", "439183092037713930"],
+  "blacklisted": [],
   "globalBan": [],
   "token": "process.env.BOT_TOKEN",
   
