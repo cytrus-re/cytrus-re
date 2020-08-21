@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         if (args[0] == "noArticleDescription")
             message.channel.send(client.errors.noArticleDescription);
     } catch (err) {
-      message.channel.send("Ok, something wrong actually happened with this command.\n" + err).catch();
+      message.channel.send("Okay, something actually went wrong with this command.\n" + err).catch();
     }
   };
   
@@ -22,7 +22,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   
   exports.conf = {
     enabled: true,
-    aliases: ["testerrmsg"],
+    aliases: ["testerrmsg", "terr"],
     guildOnly: false,
     permLevel: "Bot Dev"
   };
@@ -32,7 +32,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   
   exports.help = {
     name: "testerrormessage",
-    category: "System",
-    description: "Test out error messages if they look good or things",
+    category: "Testing",
+    description: "Test out error messages to see if they look good and stuff",
     usage: "testerrormessage (errorname)"
   };
