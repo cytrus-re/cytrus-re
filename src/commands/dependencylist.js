@@ -4,10 +4,11 @@ exports.run = async (client, message, args, level) => {
   try {
     let output = "";
     Object.keys(require("../../package.json").dependencies).forEach((pack) => output += pack + "\n");
+    let length = Object.keys(require("../../package.json").dependencies).length;
     
     let embed = new Discord.MessageEmbed()
-    .setTitle("Cytrus-RE's " + Object.keys(require("../../package.json").dependencies).length + " dependencies:")
-    .setColor("#363942")
+    .setTitle(`Cytrus-RE's ${length} dependencies:`)
+    .setColor("#eeeeee")
     .setThumbnail(client.user.avatarURL)
     .setDescription(output)
     
@@ -18,7 +19,7 @@ exports.run = async (client, message, args, level) => {
 };
 
 exports.conf = {
-  enabled: false, // disabled until we know it's okay
+  enabled: true,
   aliases: ["modulelist", "packagelist", "pl", "deplist", "ml"],
   guildOnly: false,
   permLevel: "User"
@@ -27,6 +28,6 @@ exports.conf = {
 exports.help = {
   name: "dependencylist",
   category: "System",
-  description: "Lists the dependencies that Cytrus-RE uses. [currently broken]",
+  description: "Lists the dependencies that Cytrus-RE uses.",
   usage: "dependencylist"
 };
