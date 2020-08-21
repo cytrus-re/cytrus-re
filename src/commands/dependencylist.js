@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
   try {
     let output = "";
-    Object.keys(require("../../package").dependencies).forEach((pack) => output += pack + "\n");
+    Object.keys(require("../../package.json").dependencies).forEach((pack) => output += pack + "\n");
     
     let embed = new Discord.MessageEmbed()
     .setTtitle("Cytrus-RE's" + Object.keys(require("../package").dependencies).length + "dependencies:"
