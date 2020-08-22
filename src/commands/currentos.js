@@ -5,8 +5,8 @@ exports.run = async (client, message, args, level) => {
     try {
         var rawPlat = os.platform();
         var cleanPlat = client.friendlyOS(rawPlat);
-        // var ver; // Added in Node 14, don't uncomment until upgrade
-        message.channel.send(`This instance of Cytrus-RE is running on **${cleanPlat}**.`);
+        var ver = os.version();
+        message.channel.send(`This instance of Cytrus-RE is running on **${cleanPlat}** v**${ver}**.`);
     } catch (err) {
         message.channel.send(client.errors.genericError);
     }
@@ -22,6 +22,6 @@ exports.conf = {
   exports.help = {
     name: "currentos",
     category: "System",
-    description: "Checks the current operating system Cytrus-RE is running on.",
+    description: "Returns the current operating system Cytrus-RE is running on.",
     usage: "currentos"
   };
