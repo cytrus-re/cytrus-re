@@ -38,7 +38,7 @@ let reportEmbed = new Discord.RichEmbed()
 //permissions and aliases
 
 exports.conf = {
-    enabled: true,
+    enabled: false, // This needs some polish 
     aliases: ["gbr", "gbreport"],
     guildOnly: false,
     permLevel: "User"
