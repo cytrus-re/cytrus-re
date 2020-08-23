@@ -1,5 +1,3 @@
-const exec = require ("child_process");
-
 module.exports = async client => {
   const statusList = [
     {msg: `Cytrus-RE 1.3.0 | ${client.config.defaultSettings.prefix}help  | Check out our ${client.config.defaultSettings.prefix}site!`, type: "PLAYING"},
