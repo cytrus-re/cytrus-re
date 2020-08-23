@@ -1,8 +1,6 @@
 //Import modules
 const fs = require("fs");
 const util = require("util");
-const exec = require ("child_process");
-
 
 //Define variables
 const promisify = util.promisify;
