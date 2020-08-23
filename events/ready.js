@@ -1,5 +1,4 @@
 module.exports = async client => {
-  const exec = require("child_process");
   const statusList = [
     {msg: `Cytrus-RE 1.3.0 | ${client.config.defaultSettings.prefix}help  | Check out our ${client.config.defaultSettings.prefix}site!`, type: "PLAYING"},
     {msg: `for commands | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
@@ -40,17 +39,6 @@ module.exports = async client => {
   client.logger.log(`and using Discord.js v${require("discord.js").version.replace(/ /g, "")}`, "ready");
 
   client.logger.log("Cytrus-RE V" + require("../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
-  exec("git rev-parse HEAD", (error, stdout, stderr) => {
-    if (error) {
-      console.log(`Could not find current commit. Error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderror: ${stderr}`);
-      return;
-    }
-    console.log(`Current commit: ${stdout}`);
-  });
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
