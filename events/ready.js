@@ -50,7 +50,7 @@ module.exports = async client => {
       console.log(`stderror: ${stderr}`);
       return;
     }
-    console.log(`Current commit: ${stdout}`)
+    console.log(`Current commit: ${stdout}`);
   });
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
