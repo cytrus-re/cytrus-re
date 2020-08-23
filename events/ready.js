@@ -41,7 +41,7 @@ module.exports = async client => {
   client.logger.log(`and using Discord.js v${require("discord.js").version.replace(/ /g, "")}`, "ready");
 
   client.logger.log("Cytrus-RE V" + require("../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
-exec("git rev-parse HEAD", (error, stdout, stderr) => {
+  exec("git rev-parse HEAD", (error, stdout, stderr) => {
     if (error) {
       console.log(`Could not find current commit. Error: ${error.message}`);
       return;
@@ -50,8 +50,8 @@ exec("git rev-parse HEAD", (error, stdout, stderr) => {
       console.log(`stderror: ${stderr}`);
       return;
     }
-    console.log(`Current commit: ${stdout}`
-});
+    console.log(`Current commit: ${stdout}`)
+  });
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
