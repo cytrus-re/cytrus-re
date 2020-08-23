@@ -47,7 +47,7 @@ exec("git rev-parse HEAD", (error, stdout, stderr) => {
       return;
     }
     if (stderr) {
-      console.log(`stderror: ${stderr}`
+      console.log(`stderror: ${stderr}`);
       return;
     }
     console.log(`Current commit: ${stdout}`
