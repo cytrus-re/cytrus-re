@@ -1,7 +1,7 @@
 "use strict";
 
-// Check if the Node version is 10+
-if (Number(process.version.slice(1).split(".")[0]) < 10) throw new Error("Node 10 or higher is required. Re-run this with Node 10 or higher. (NOTE: Node 14 will be required soon.)");
+// Check if the Node version is 12+
+if (Number(process.version.slice(1).split(".")[0]) < 12) throw new Error("Node 12 or higher is required. Re-run this with Node 12 or higher. (NOTE: Node 14 will be required soon.)");
 if (process.env.PREBOOT) eval(process.env.PREBOOT);
 
 // Define NPM modules
