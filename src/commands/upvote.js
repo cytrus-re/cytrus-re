@@ -20,7 +20,7 @@ exports.conf = {
 
 exports.help = {
   name: "upvote",
-  category: "system",
+  category: "System",
   description: "Upvote the bot on Discord Bot List.",
   usage: "upvote"
 };
