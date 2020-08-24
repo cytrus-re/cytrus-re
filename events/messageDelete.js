@@ -5,7 +5,7 @@ module.exports = (client, message) => {
   
   let settings = client.getSettings(message.guild.id);
   if (settings.logMessageUpdates == "true") {
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setTitle("Message Delete")
     .setTimestamp(new Date())
     .setDescription("**Message created by**\n" + message.author.tag + "\n\n**Message**\n" + message.content)
