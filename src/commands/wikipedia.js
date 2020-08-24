@@ -23,7 +23,11 @@ exports.run = async (client, message, args) => {
       let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
+<<<<<<< HEAD
       .setDescription(`${infDesc.description ? infDesc.description : client.errors.noArticleDescription}`)
+=======
+      .setDescription(`${infDesc.description ? infDesc.description : client.error.404ArticleDescription }`)
+>>>>>>> parent of 331df204... Small brain
       .addField("Article link", `[Right here!](${info.fullurl.replace("(", "\\(").replace(")", "\\)").replace("`", "\\`")})`)
       .setColor("#eeeeee");
 
