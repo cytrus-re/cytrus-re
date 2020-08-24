@@ -39,23 +39,6 @@ module.exports = async client => {
   client.logger.log(`and using Discord.js v${require("discord.js").version.replace(/ /g, "")}`, "ready");
 
   client.logger.log("Cytrus-RE V" + require("../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  exec("git rev-parse HEAD", (error, stdout, stderr) => {
-    if (error) {
-      console.log(`Could not find current commit. Error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderror: ${stderr}`
-      return;
-    }
-    console.log(`Current commit: ${stdout}`)
-  });
->>>>>>> parent of dec31721... Super Smash the cytrus bot
-=======
->>>>>>> parent of a5eb5609... Attempt to show current commit hash
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
