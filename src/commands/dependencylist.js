@@ -7,13 +7,8 @@ exports.run = async (client, message, args, level) => {
     let length = Object.keys(require("../../package.json").dependencies).length;
     
     let embed = new Discord.MessageEmbed()
-<<<<<<< HEAD
     .setTitle(`Cytrus-RE's ${length} dependencies:`)
     .setColor("#eeeeee")
-=======
-    .setTitle("Cytrus-RE's" + Object.keys(require("../../package.json").dependencies).length + "dependencies:")
-    .setColor("#363942")
->>>>>>> parent of 1c70431c... maybe
     .setThumbnail(client.user.avatarURL)
     .setDescription(output)
     
