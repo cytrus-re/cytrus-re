@@ -12,8 +12,12 @@ const errors = {
 >>>>>>> parent of 7318a9d0... Update errors.js
   "userNotInGuild": "This user isn't in this guild!",
   "cannotBanSelf":  "Sorry, you can't ban yourself. (It would be funny, if it wasn't so sad.)",
+<<<<<<< HEAD
   "noResults": "I couldn't find any results for your query!",
   "noArticleDescription": "This article doesn't have a description or something went wrong."
+=======
+  "noResults": "I couldn't find any results for your query!"
+>>>>>>> parent of d51db0ce... jaiknsdiojasjsaiodjosa yes
 };
 
 module.exports = errors;
