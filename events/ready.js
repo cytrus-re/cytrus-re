@@ -49,7 +49,7 @@ module.exports = async client => {
       return;
     }
     if (stderr) {
-      console.log(`stderror: ${stderr}`);
+      console.log(`stderror: ${stderr}`
       return;
     }
     console.log(`Current commit: ${stdout}`)
