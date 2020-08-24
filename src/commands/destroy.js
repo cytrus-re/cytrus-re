@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    let res = await client.awaitReply(message, "Are you sure you want to destroy the client? (yes/no)");
+    let res = await client.awaitReply(message, "Are you sure you want to destroy the client?");
     
     if (res == "yes") {
       message.channel.send("Shutting down...");
