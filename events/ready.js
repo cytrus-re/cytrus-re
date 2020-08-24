@@ -1,5 +1,3 @@
-const exec = require ("child_process");
-
 module.exports = async client => {
   const statusList = [
     {msg: `Cytrus-RE 1.3.0 | ${client.config.defaultSettings.prefix}help  | Check out our ${client.config.defaultSettings.prefix}site!`, type: "PLAYING"},
@@ -42,6 +40,7 @@ module.exports = async client => {
 
   client.logger.log("Cytrus-RE V" + require("../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   exec("git rev-parse HEAD", (error, stdout, stderr) => {
     if (error) {
@@ -55,6 +54,8 @@ module.exports = async client => {
     console.log(`Current commit: ${stdout}`)
   });
 >>>>>>> parent of dec31721... Super Smash the cytrus bot
+=======
+>>>>>>> parent of a5eb5609... Attempt to show current commit hash
   client.startuptime = new Date().getTime() - client.starttime;
   client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
