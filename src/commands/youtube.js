@@ -6,7 +6,7 @@ const searcher = new YTSearcher(process.env.YOUTUBE_API_KEY);
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
     if (!args[0]) return message.reply("You need to give something to search!");
-    // waking up heroku
+    
     let msg = await message.channel.send("Searching YouTube...");
     
     searcher.search(args.join(" ")).then(info => {
