@@ -20,7 +20,11 @@ exports.run = async (client, message, args) => {
       
       if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
       let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
+<<<<<<< HEAD
       let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
+=======
+      let infDesc = wikipedia.search(info.title, "en", { prop: "description });
+>>>>>>> parent of 32b6af4f... rexo you idiot you didn't put a quotation mark
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
 <<<<<<< HEAD
