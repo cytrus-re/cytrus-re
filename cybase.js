@@ -63,6 +63,6 @@ console.log("[START] Logged into Discord API");
 // client.user.setStatus("idle");
 // client.user.setActivity("Loading...");
 
-
 // Export the client
 module.exports = client;
+

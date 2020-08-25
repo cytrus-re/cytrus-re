@@ -38,15 +38,15 @@ let reportEmbed = new Discord.RichEmbed()
 //permissions and aliases
 
 exports.conf = {
-    enabled: true,
-    aliases: ["gbr", "gbreport"],
-    guildOnly: false,
-    permLevel: "User"
-  };
-  
-  exports.help = {
-    name: "report",
-    category: "Moderation",
-    description: "Reports a user to be put on the Cytrus-RE Global Ban List.",
-    usage: "report <user> <reason>"
+  enabled: false, // needs some work
+  aliases: ["gbr", "gbreport"],
+  guildOnly: false,
+  permLevel: "User"
+};
+
+exports.help = {
+  name: "report",
+  category: "Moderation",
+  description: "Reports a user to be put on the Cytrus-RE Global Ban List.",
+  usage: "report <user> <reason>"
 };
