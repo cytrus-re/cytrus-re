@@ -28,12 +28,12 @@ exports.run = async (client, message, args, level) => {
               message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
             }
           }).catch(err => {
-            message.reply("Unable to ban a user with the ID of " + id);
+            message.channel.send("Unable to ban user. User ID: " + id);
           });
         });
         
         banmsg.edit("I've banned all the users on the Global Ban List!");
-      } else message.reply("OK! Aborting...");
+      } else message.channel.send("OK! Aborting...");
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
