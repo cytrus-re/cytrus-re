@@ -3,13 +3,15 @@ const copypastas = require("../data/copypastas.json")
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
     try {
-        // This code is GARBAGE. We could make it much better if we just read the copypastas from a file and caching it
+        // test if the requested pasta is in the list of available pastas
         if (copypastas.pastaslist.includes(args[0])) {
-            message.channel.send(`${copypastas.${args[0]}}\nTriggered by ${message.author}`);
+            let pasta = copypastas.${args[0]}; //if so, attach it to the copypastas variable. i.e. copypastas.testing
+            message.channel.send(`${pasta}\nTriggered by ${message.author}`); //send a message with the pasta and who triggered it.
         } else {
             message.channel.send({ embed: { color: "#ff3333", title: "What's that?", description: "I don't know that copypasta. Maybe try `interjection` or `testing` instead?" } });
+            //send error if pasta is nonexistent.        
         }
-        message.delete();
+        message.delete(); //delete the command usage.
     } catch (err) {
       message.channel.send(client.errors.genericError + err).catch();
     }
