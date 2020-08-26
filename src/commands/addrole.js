@@ -28,7 +28,7 @@ exports.run = async (client, message, args, level) => {
                     }
                   }).catch(client.errors.genericError);
                 } else message.send("I can't find that role!");
-              } else message.send("That user isn't in this guild!");
+              } else message.send(client.errors.userNotInGuild);
           } else message.send("You don't have the Manage Roles permission!");
         } else message.send("The role you are trying to add is above your highest role's position!");
       }
