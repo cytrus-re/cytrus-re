@@ -10,7 +10,7 @@ module.exports = async (client, message) => {
   if (message.guild) settings = client.getSettings(message.guild.id);
   else settings = client.config.defaultSettings;
 
-  // checks if message mentions the bot, if so reaponds with prefix
+  // checks if message mentions the bot, if so responds with prefix
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`my prefix on this guild is \`${settings.prefix}\``);
