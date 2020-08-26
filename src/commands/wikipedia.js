@@ -24,7 +24,6 @@ exports.run = async (client, message, args) => {
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)
       .setDescription(`${infDesc.description ? infDesc.description : client.errors.noArticleDescription}`)
-      .setDescription(`${infDesc.description ? infDesc.description : "This article doesn't have a description or something went wrong" }`)
       .addField("Article link", `[Right here!](${info.fullurl.replace("(", "\\(").replace(")", "\\)").replace("`", "\\`")})`)
       .setColor("#eeeeee");
 
