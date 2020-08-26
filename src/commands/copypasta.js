@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     try {
         // test if the requested pasta is in the list of available pastas
         if (copypastas.pastaslist.includes(args[0])) {
-            let pasta = copypastas.${args[0]}; //if so, attach it to the copypastas variable. i.e. copypastas.testing
+            let pasta = copypastas[args[0]]; //if so, attach it to the pasta variable. i.e. copypastas[testing]
             message.channel.send(`${pasta}\nTriggered by ${message.author}`); //send a message with the pasta and who triggered it.
         } else {
             message.channel.send({ embed: { color: "#ff3333", title: "What's that?", description: "I don't know that copypasta. Maybe try `interjection` or `testing` instead?" } });
