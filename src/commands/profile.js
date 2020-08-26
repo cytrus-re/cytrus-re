@@ -158,7 +158,7 @@ exports.run = async (client, message, args, level) => {
         bio: client.profiles.get(message.author.id + "bio"),
         hobbies: client.profiles.get(message.author.id + "hobbies")
       };
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
         .setTitle("Profile")
         .setColor("#eeeeee").setDescription(`Nickname: ${profile.nickname}
 Bio: ${profile.bio}

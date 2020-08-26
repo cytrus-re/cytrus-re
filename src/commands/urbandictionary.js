@@ -22,7 +22,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       
       if (isNaN(page)) return message.reply(page + " is not a number!");
       
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle(entries[page - 1].word)
       .setDescription("Definition:\n" + entries[page - 1].definition + "\n\nExample:\n" + entries[page - 1].example)
       .setFooter("Requested by " + message.author.tag)

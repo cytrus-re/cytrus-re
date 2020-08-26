@@ -6,7 +6,7 @@ module.exports = (client, oldemoji, newemoji) => {
     let modLogChannel = settings.modLogChannel;
 
     if (modLogChannel && newemoji.guild.channels.find(c => c.name === settings.modLogChannel)) {
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle("Emoji Update")
       .setColor("#eeeeee")
       .setDescription(`New Name: ${newemoji.name}\nOld Name: ${oldemoji.name}\nID: ${newemoji.id}`)

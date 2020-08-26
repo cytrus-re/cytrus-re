@@ -6,7 +6,7 @@ module.exports = (client, emoji) => {
     let modLogChannel = settings.modLogChannel;
 
     if (modLogChannel && emoji.guild.channels.find(c => c.name === settings.modLogChannel)) {
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle("Emoji Create")
       .setColor("#eeeeee")
       .setDescription(`Name: ${emoji.name}\nID: ${emoji.id}`)

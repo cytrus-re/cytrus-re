@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => {
 
             const modLogChannel = settings.modLogChannel;
             if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-              let embed = new Discord.RichEmbed()
+              let embed = new Discord.MessageEmbed()
               .setTitle("User TempBan")
               .setColor("#eeeeee")
               .setDescription(`Name: ${user.username}\nID: ${user.id}\nTime: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);

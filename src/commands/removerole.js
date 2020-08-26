@@ -17,7 +17,7 @@ exports.run = async (client, message, args, level) => {
 
                     const modLogChannel = settings.modLogChannel;
                     if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
-                      let embed = new Discord.RichEmbed()
+                      let embed = new Discord.MessageEmbed()
                       .setTitle("Remove Role")
                       .setColor("#eeeeee")
                       .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);

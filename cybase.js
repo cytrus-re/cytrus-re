@@ -40,16 +40,16 @@ client.levelCache = {};
 
 // Define CleverBot API
 client.cleverbot = new CleverBotAPI(process.env.CLEVERBOT_USER_KEY, process.env.CLEVERBOT_API_KEY);
-client.cleverbot.setNick("CytrusREBot");
+client.cleverbot.setNick("Cytrus-RE");
 
 
 // Import files
-client.logger = require("./modules/Logger");
-client.config = require("./cnf");
-client.errors = require("./modules/errors");
-require("./modules/commands")(client);
-require("./modules/events")(client);
-require("./modules/_functions")(client);
+client.logger = require("./src/modules/Logger");
+client.config = require("./src/cnf");
+client.errors = require("./src/modules/errors");
+require("./src/modules/commands")(client);
+require("./src/modules/events")(client);
+require("./src/modules/_functions")(client);
 
 // Cache the permissions
 for (let i = 0; i < client.config.permLevels.length; i++) {

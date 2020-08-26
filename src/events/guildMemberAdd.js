@@ -20,7 +20,7 @@ module.exports = (client, member) => {
       let modLogChannel = settings.modLogChannel;
         
       if (modLogChannel) {
-        let embed = new Discord.RichEmbed()
+        let embed = new Discord.MessageEmbed()
         .setTitle("User Ban")
         .setColor("#eeeeee")
         .setDescription(`Name: ${member.username}\nID: ${member.id}\nReason: Detected by Cytrus GlobalBanSystem`);

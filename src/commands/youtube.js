@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     searcher.search(args.join(" ")).then(info => {
       if (!info.first) return message.reply("I couldn't find anything on Youtube with your query!");
       
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle(info.first.title)
       .setDescription(info.first.url)
       .setColor("#eeeeee");

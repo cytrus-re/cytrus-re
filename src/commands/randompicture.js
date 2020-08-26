@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
   try {
     require("request")({url: "http://www.splashbase.co/api/v1/images/random?images_only=true", json: true}, (req, res, json) => {
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle("Random Picture")
       .setColor("#363942")
       .setImage(json.url);

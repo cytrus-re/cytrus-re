@@ -20,7 +20,7 @@ exports.run = async (client, message, args, level) => {
     
     let img = json.results[resp - 1];
     if (!img) return message.reply("That was not a valid choice!");
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
       .setTitle("Tenor")
       .setImage(img.media[0].gif.url)
       .setColor("#eeeeee");

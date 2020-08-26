@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {    
     let user = message.mentions.members.first() || message.member;
     
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     .setTitle(user.user.username)
     .setDescription(`ID: ${user.id}
 Name: ${user.user.username}
