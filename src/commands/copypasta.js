@@ -4,7 +4,7 @@ const copypastas = require("../data/copypastas.json")
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
     try {
         // test if the requested pasta is in the list of available pastas
-        if (copypastas.pastaslist.includes(args[0])) {
+        if (copypastas.pastalist.includes(args[0])) {
             let pasta = copypastas[args[0]]; //if so, attach it to the pasta variable. i.e. copypastas[testing]
             message.channel.send(`${pasta}\nTriggered by ${message.author}`); //send a message with the pasta and who triggered it.
         } else {
