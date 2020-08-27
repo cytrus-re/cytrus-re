@@ -1,8 +1,8 @@
 exports.run = async (client, message, args, level) => {
   try {
     if (!args[0]) return message.channel.send("You have to input the HEX code!");
-      
-    const hexcolor = "\"" + args[0] + "\""
+
+    let hexcolor = args[0].replace("#", "");
 
     message.channel.send({ embed: { color: `${hexcolor}`, title: `${hexcolor}` }});
   } catch (err) {
