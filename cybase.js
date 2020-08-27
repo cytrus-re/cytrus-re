@@ -60,8 +60,9 @@ for (let i = 0; i < client.config.permLevels.length; i++) {
 // Login to Discord
 client.login(process.env.BOT_TOKEN);
 console.log("[START] Logged into Discord API");
-// client.user.setStatus("idle");
-// client.user.setActivity("Loading...");
+// Set status to Loading
+client.user.setStatus("idle");
+client.user.setActivity("Loading...");
 
 // Export the client
 module.exports = client;
