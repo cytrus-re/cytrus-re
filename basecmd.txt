@@ -1,10 +1,8 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-  //command code
-  
-  //error log
-  
+    //  Put code here. 
   } catch (err) {
+    // This tells a user if something broke with the command, and prompts them to send the error log to a developer.
     message.channel.send(client.errors.genericError + err).catch();
   }
 };
@@ -12,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 //permissions and aliases
 
 exports.conf = {
-  enabled: true,
+  enabled: true, 
   aliases: [],
   guildOnly: false,
   permLevel: "User"
@@ -22,8 +20,8 @@ exports.conf = {
 //what the command does
 
 exports.help = {
-  name: "",
-  category: "",
-  description: "",
-  usage: ""
+  name: "", // Name of the command
+  category: "", // What category this command goes to. If the category doesn't exist, Cytrus-RE will make a category.
+  description: "", // Description of your command. For example, "copypasta" would have the description "Sends copypastas to current channel".
+  usage: "" // How you use the command. For example, "copypasta" would be used as "c.copypasta <name of the copypasta>.
 };
