@@ -1,13 +1,13 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, Discord, level) => { // eslint-disable-line no-unused-vars
   try {
-    let pingEmbed = new client.RichEmbed()
+    let pingEmbed = new Discord.RichEmbed()
       .setColor(colors.default)
       .setFooter('PING')
       .addField(`${message.author.id}`, 'Hello world!')
 
     let msg = await message.channel.send(pingEmbed)
 
-    let embed = new client.RichEmbed()
+    let embed = new Discord.RichEmbed()
       .setColor(colors.default)
       .setFooter('PONG',
         'https://cdn.discordapp.com/avatars/492871769485475840/6164d0068b8e76e497af9b0e1746f671.png?size=2048')
@@ -35,6 +35,6 @@ exports.conf = {
 exports.help = {
   name: "ping",
   category: "General",
-  description: "Returns Cytrus-RE's ping.",
+  description: "Returns Kato-Bot's ping.",
   usage: "ping"
 };
