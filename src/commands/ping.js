@@ -1,13 +1,13 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    const pingEmbed = new Discord.RichEmbed()
+    let pingEmbed = new Discord.RichEmbed()
       .setColor(colors.default)
       .setFooter('PING')
       .addField(`${message.author.id}`, 'Hello world!')
 
-    const msg = await message.channel.send(pingEmbed)
+    let msg = await message.channel.send(pingEmbed)
 
-    const embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
       .setColor(colors.default)
       .setFooter('PONG',
         'https://cdn.discordapp.com/avatars/492871769485475840/6164d0068b8e76e497af9b0e1746f671.png?size=2048')
