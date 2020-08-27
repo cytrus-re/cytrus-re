@@ -4,9 +4,9 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
     let embed = new client.Embed("normal", {
       title: "Ping",
-      description: `Message Trip: ${msg.createdTimestamp - message.createdTimestamp}ms`,
-      description: `Websocket Heartbeat: ${Math.floor(client.pings[0])}ms`,
-      description: `Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms`
+      description: `Message Trip: ${msg.createdTimestamp - message.createdTimestamp}ms`
+// Websocket Heartbeat: ${Math.floor(client.pings[0])}ms
+// Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms
     });
 
     msg.edit(embed);
