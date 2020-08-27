@@ -1,14 +1,16 @@
+const Discord = require("discord.js");
+
 exports.run = async (client, message, args, Discord, level) => { // eslint-disable-line no-unused-vars
   try {
-    let pingEmbed = new client.Embed()
+    const pingEmbed = new client.Embed()
       .setColor('#0099ff')
       .setTitle('PING')
       .setFooter('PING')
       .addField(`${message.author.id}`, 'Hello world!')
 
-    let msg = await message.channel.send(pingEmbed)
+    const msg = await message.channel.send(pingEmbed)
 
-    let embed = new client.Embed()
+    const embed = new Discord.MessageEmbed()
       .setColor('#0099ff')
       .setTitle('PONG')
       .setFooter('PONG',
