@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
 
     let hexcolor = args[0].replace("#", "");
 
-    message.channel.send({ embed: { color: `${hexcolor}`, title: `${hexcolor}` }});
+    message.channel.send({ embed: { color: `${hexcolor}`, title: `#${hexcolor}` }});
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
