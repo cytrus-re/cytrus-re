@@ -1,14 +1,16 @@
 exports.run = async (client, message, args, Discord, level) => { // eslint-disable-line no-unused-vars
   try {
     let pingEmbed = new client.Embed()
-      .setColor(colors.default)
+      .setColor('#0099ff')
+      .setTitle('PING')
       .setFooter('PING')
       .addField(`${message.author.id}`, 'Hello world!')
 
     let msg = await message.channel.send(pingEmbed)
 
     let embed = new client.Embed()
-      .setColor(colors.default)
+      .setColor('#0099ff')
+      .setTitle('PONG')
       .setFooter('PONG',
         'https://cdn.discordapp.com/avatars/492871769485475840/6164d0068b8e76e497af9b0e1746f671.png?size=2048')
 
