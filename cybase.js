@@ -11,8 +11,8 @@ const CleverBotAPI = require("cleverbot.io");
 
 // Define client
 const client = new Discord.Client({
-  disableEveryone: true,
-  disabledEvents: ["TYPING_START"]
+	disableEveryone: true,
+	disabledEvents: ["TYPING_START"]
 });
 
 // Define time of startup
@@ -53,8 +53,8 @@ require("./src/modules/_functions")(client);
 
 // Cache the permissions
 for (let i = 0; i < client.config.permLevels.length; i++) {
-  let currentlevel = client.config.permLevels[i];
-  client.levelCache[currentlevel.name] = currentlevel.level;
+	let currentlevel = client.config.permLevels[i];
+	client.levelCache[currentlevel.name] = currentlevel.level;
 }
 
 // Login to Discord
