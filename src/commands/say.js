@@ -1,5 +1,5 @@
 exports.run = async (client, message, args, level) => {
-  if (message.mentions.everyone == true) {
+  if (message.mentions.everyone) {
     message.channel.send(client.errors.cannotSayEveryone); 
     message.delete().catch();
     return; //send error and return early if the message includes mentions.
