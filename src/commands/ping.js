@@ -6,6 +6,13 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
     message.channel.send(`[🛰️] **Kato Ping**: ${msgPing}ms\n[📨] **Message Ping**: ${Math.round(client.ws.ping)}ms`);
     
+    let embed = new Discord.MessageEmbed()
+    .setTitle("**Ping**")
+    .setDescription(`[🛰️] **Kato Ping**: ${msgPing}ms
+[📨] **Message Ping**: ${Math.round(client.ws.ping)}ms`)
+    .setColor("#00ff00");
+    
+    message.channel.send(embed);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
