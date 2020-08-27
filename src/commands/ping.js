@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    const botPing = Math.floor(this.client.ws.ping);
+    const botPing = Math.floor(client.ws.ping);
     const msgPing = Math.floor(Date.now() - message.createdTimestamp);
 
     message.channel.send(`[🛰️] Kato Ping: ${botPing}ms\n[📨] Messages Ping: ${msgPing}ms`);
