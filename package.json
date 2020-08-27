@@ -16,7 +16,7 @@
     "node": "14.x"
   },
   "repository": "github:Cytrus-RE/cytrus-re",
-  "author": "CelestialCrafter#7255, Rexowogamer#1183",
+  "author": "CelestialCrafter, Rexowogamer, Odyssey346 and Commandblock6417"
   "license": "MIT",
   "dependencies": {
     "@cytrus-re/wikipediajs": "^1.4.6",
