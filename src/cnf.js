@@ -1,7 +1,7 @@
 const config = {
-  "botName": "Cytrus-RE",
-  "owners": ["395990735934980097", "634532598668066816", "339903300994596884"], // rexo, celestial (for some reason), edge
-  "managers": ["471785433232179210", "315843700490240002", "429353559566319626"], // midou, odyssey, commandblock
+  "botName": "Kato-Bot",
+  "owners": ["360498353462575115"], // rexo, celestial (for some reason), edge
+  "managers": [], // midou, odyssey, commandblock
   "admins": [],
   "devs": [],
   "mods": [],
@@ -18,11 +18,11 @@ const config = {
   },
 
   "defaultSettings" : {
-    "prefix": "c.",
+    "prefix": "k!",
     "modLogChannel": "log",
     "modRole": "Moderator",
     "adminRole": "Administrator",
-    "muteRole": "Cytrus-RE Mute",
+    "muteRole": "Kato-Bot Mute",
     "noPermissionNotice": true,
     "welcomeChannel": "general",
     "welcomeMessage": "Welcome to the server, {{ping}}!",
