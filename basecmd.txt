@@ -13,7 +13,7 @@ exports.conf = {
   enabled: true, // If your command is broken, set it to 'false' to disable it. Set it to 'true' if it works and doesn't need any more polish.
   aliases: [], // Alternate name for the command. For example, "copypasta"'s alias is "cpasta".
   guildOnly: false, // If it should be only for one guild. I don't actually know what guild it's talking about, and how it works. Leave it on false.
-  permLevel: "User" // If the command is only for a moderator, then you'd set it as for moderator. You can check https://github.com/Cytrus-RE/cytrus-re/blob/master/src/cnf.js for   information about permission levels!
+  permLevel: "User" // If the command is only for a moderator, then you'd set it as for moderator. You can check https://github.com/Cytrus-RE/cytrus-re/blob/master/src/cnf.js for  information about permission levels!
 };
 
 
