@@ -17,7 +17,7 @@ exports.conf = {
 };
 
 
-//what the command does
+// Command help page
 
 exports.help = {
   name: "", // Name of the command
