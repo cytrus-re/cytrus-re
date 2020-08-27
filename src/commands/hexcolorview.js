@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.channel.send("You have to input the HEX code!");
+    if (!args[0]) return message.channel.send("You have to give me a hex code!");
 
     let hexcolor = args[0].replace("#", "");
 
@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ["hexview"],
+  aliases: ["hexview", "colorview", "colourview"],
   guildOnly: false,
   permLevel: "User"
 };
@@ -20,6 +20,6 @@ exports.conf = {
 exports.help = {
   name: "hexcolorview",
   category: "General",
-  description: "Sends an embed with the color of the hex value you specified",
+  description: "Returns an embed with the colour of the hex value you specified.",
   usage: "hexcolorview <value>"
 };
