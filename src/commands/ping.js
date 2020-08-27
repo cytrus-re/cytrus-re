@@ -1,17 +1,27 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    let msg = await message.channel.send("<@"+message.author.id+">");
+    const pingEmbed = new Discord.RichEmbed()
+      .setColor(colors.default)
+      .setFooter('PING')
+      .addField(`${message.author.id}`, 'Hello world!')
 
-    let embed = new client.Embed("normal", {
-      title: "Ping",
-      description: `Message Trip: ${msg.createdTimestamp - message.createdTimestamp}ms`
-// Websocket Heartbeat: ${Math.floor(client.pings[0])}ms
-// Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms
-    });
+    const msg = await message.channel.send(pingEmbed)
 
-    msg.edit(embed);
+    const embed = new Discord.RichEmbed()
+      .setColor(colors.default)
+      .setFooter('PONG',
+        'https://cdn.discordapp.com/avatars/492871769485475840/6164d0068b8e76e497af9b0e1746f671.png?size=2048')
+
+      .addField('Message Trip',
+      `${msg.createdTimestamp - message.createdTimestamp}ms`)
+      .addField('WebSocket\nHeartbeat',
+      `${Math.floor(client.pings[0])}ms`, true)
+      .addField('Average WebSocket\nHeartbeat',
+      `${Math.floor(client.pings.average())}ms`, true)
+
+    msg.edit(embed)
   } catch (err) {
-    message.channel.send(client.errors.genericError + err).catch();
+    message.channel.send('There was an error!\n' + err).catch()
   }
 };
 
