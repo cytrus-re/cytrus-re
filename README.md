@@ -7,8 +7,11 @@ A multipurpose Discord bot that covers all your needs. If it doesn't, why not he
 ## Invite the bot
 [**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)
 
+## Join the support server
+[**Click here!**](https://discord.gg/xMyFtrJ)
+
 ## How to set up
-CD into the cytrus-re folder, and then run
+ Use `cd` to navigate into the cytrus-re folder, and then run
 ```bash
 npm install
 ``` 
@@ -23,10 +26,14 @@ CLEVERBOT_API_KEY='`YourCleverBot.ioAPIKey'
 CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
+Replace the values with your personal, specific info such as the token of the bot.
+
 Finally, start up Cytrus-RE by running ```node cybase.js```.
 
+To see how to make the bot start up automatically and run without needing a terminal emulator always open, look no further than the official [**discord.js guide**](https://discordjs.guide/improving-dev-environment/pm2.html)
+
 ## Bot Information
-information about the bot incase you need to do things with it
+Useful information about the bot in case you need them:
 
 ### Client ID
 596304769333592078

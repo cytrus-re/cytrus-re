@@ -66,4 +66,3 @@ console.log("[START] Logged into Discord API");
 
 // Export the client
 module.exports = client;
-
