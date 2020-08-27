@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       });
     }
 
-    execute("dir"); //replaced "ls -a" because edge runs the bot on windows
+    execute("ls -a "); //replaced "dir" because we use Heroku hosting provided by Panos instead of michael's windows periodic hosting
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
