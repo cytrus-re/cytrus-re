@@ -2,7 +2,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {
     let msgPing = Math.floor(Date.now() - message.createdTimestamp);
 
-    message.channel.send(`[🛰️] Kato Ping: ${msgPing}ms\n[📨] Message Ping: ${Math.floor(client.pings[0])}ms`);
+    message.channel.send(`[🛰️] Kato Ping: ${msgPing}ms\n[📨] Message Ping: ${Math.floor(client.pings)}ms`);
 	
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
