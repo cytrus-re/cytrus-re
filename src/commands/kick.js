@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
+    if (user == message.author) return message.channel.send(client.errors.cannotKickSelf);
     const user = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id);
 
