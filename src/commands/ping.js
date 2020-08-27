@@ -4,8 +4,6 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {
     let msgPing = Math.floor(Date.now() - message.createdTimestamp);
 
-    message.channel.send(`[🛰️] **Kato Ping**: ${msgPing}ms\n[📨] **Message Ping**: ${Math.round(client.ws.ping)}ms`);
-    
     let embed = new Discord.MessageEmbed()
     .setTitle("**Ping**")
     .setDescription(`[🛰️] **Kato Ping**: ${msgPing}ms
