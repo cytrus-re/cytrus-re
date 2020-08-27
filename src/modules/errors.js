@@ -6,7 +6,7 @@ const errors = {
   "cannotKickSelf":  "Sorry, you can't kick yourself. (That would be kinda dumb, wouldn't it?)",
   "noResults": "I couldn't find any results for your query!",
   "noArticleDescription": "This article doesn't have a description or something went wrong.",
-  "cannotSayMention": "Sorry, you cannot mention people with say, for obvious reasons."
+  "cannotSayEveryone": "Sorry, you cannot mention everyone or here with say, for obvious reasons."
 };
 
 module.exports = errors;
