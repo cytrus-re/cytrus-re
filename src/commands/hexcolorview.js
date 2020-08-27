@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ["hexview", "color", "colour"],
+  aliases: ["hexview", "colorview", "colourview"],
   guildOnly: false,
   permLevel: "User"
 };
