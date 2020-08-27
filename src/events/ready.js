@@ -1,14 +1,14 @@
 module.exports = async client => {
   const statusList = [
-    {msg: `Cytrus-RE 1.3.0 | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "PLAYING"},
-    {msg: `for commands | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
+    {msg: `Kato Beta Test | ${client.config.defaultSettings.prefix}help`, type: "PLAYING"},
+    {msg: `for commands | ${client.config.defaultSettings.prefix}help`, type: "WATCHING"},
     //{msg: `with async/await errors | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
     //{msg: `with unhandled promise rejections | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
     //{msg: `with linux permissions | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
     //{msg: `Discord be slow | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
-    {msg: `over ${client.guilds.cache.size} servers | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
+    {msg: `over ${client.guilds.cache.size} servers | ${client.config.defaultSettings.prefix}help`, type: "WATCHING"},
     //{msg: `to EDGE rambling | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'LISTENING'},
-    {msg: `development progress! | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
+    {msg: `development progress! | ${client.config.defaultSettings.prefix}help`, type: "WATCHING"},
     //{msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
   ];
     // Why did I comment out the rest? 
