@@ -15,13 +15,13 @@ exports.run = async (client, message, args, level) => {
     //convert the rgb colours to base 16 strings
     let rHex = r.toString(16);
     let gHex = g.toString(16);
-    let bhex = b.toString(16);
+    let bHex = b.toString(16);
 
     //join the 3 hex values together
     let hexColour = rHex + gHex + bHex;
 
     //send the hex value as an embed
-    message.channel.send({ embed: { color: hexColour, title: `rgb(${r}, ${g}, ${b}) converts to \n hex #${hexColour}`}});
+    message.channel.send({ embed: { color: hexColour, title: "RGB to hex", description: `rgb(${r}, ${g}, ${b}) converts to \n hex #${hexColour}`}});
 
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
