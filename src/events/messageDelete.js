@@ -8,7 +8,8 @@ module.exports = (client, message) => {
     let embed = new Discord.MessageEmbed()
     .setTitle("Message Delete")
     .setTimestamp(new Date())
-    .setDescription("**Message created by**\n" + message.author.tag + "\n\n**Message**\n" + message.content)
+    .addField("**Message created by**", `${message.author.tag}`)
+    .addField("**Message**", `${message.content}`)
     .setColor("#eeeeee");
 
     if (message.guild.channels.cache.find(channel => channel.name == settings.modLogChannel)) {
