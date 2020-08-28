@@ -1,7 +1,7 @@
 "use strict";
 
-// Check if the Node version is 12+
-if (Number(process.version.slice(1).split(".")[0]) < 12) throw new Error("Node 12 or higher is required. Re-run this with Node 12 or higher. (NOTE: Node 14 will be required soon.)");
+// Check if the Node version is 14+
+if (Number(process.version.slice(1).split(".")[0]) < 14) throw new Error("Cytrus-RE requires Node 14 or higher. Re-run the bot with Node 14 or higher.");
 if (process.env.PREBOOT) eval(process.env.PREBOOT);
 
 // Define NPM modules
@@ -11,16 +11,14 @@ const CleverBotAPI = require("cleverbot.io");
 
 // Define client
 const client = new Discord.Client({
-  disableEveryone: true,
-  disabledEvents: ["TYPING_START"]
+	disableEveryone: true,
+	disabledEvents: ["TYPING_START"]
 });
 
 // Define time of startup
 client.starttime = new Date();
 
 // Define databases/objects
-client.items = new Enmap({name: "glptmitems"});
-client.money = new Enmap({name: "glptm"});
 client.profiles = new Enmap({name: "profiles"});
 client.logins = new Enmap({name: "logins"});
 client.spotify = new Enmap({name: "spotify"});
@@ -31,7 +29,6 @@ client.starboard = new Enmap({name: "starboardmid"});
 client.warns = new Enmap({name: "warns"});
 client.tags = new Enmap({name: "tags"});
 client.uses = new Enmap({name: "commandpop"});
-client.minecooldown = new Discord.Collection();
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.liusers = new Discord.Collection();
@@ -53,8 +50,8 @@ require("./src/modules/_functions")(client);
 
 // Cache the permissions
 for (let i = 0; i < client.config.permLevels.length; i++) {
-  let currentlevel = client.config.permLevels[i];
-  client.levelCache[currentlevel.name] = currentlevel.level;
+	let currentlevel = client.config.permLevels[i];
+	client.levelCache[currentlevel.name] = currentlevel.level;
 }
 
 // Login to Discord
@@ -66,4 +63,3 @@ console.log("[START] Logged into Discord API");
 
 // Export the client
 module.exports = client;
-
