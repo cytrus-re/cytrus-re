@@ -29,7 +29,7 @@ const Star = class {
         }
       ]
     });
-    message.guild.channels.find(c => c.name == settings.starboardChannel).send({embed: embed}).catch();
+    message.guild.channels.cache.find(c => c.name == settings.starboardChannel).send({embed: embed}).catch();
   }
 };
 
