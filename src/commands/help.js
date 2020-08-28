@@ -17,10 +17,9 @@ exports.run = (client, message, args, level) => {
       });
       
       let embed = new client.Embed("normal", {
-        title: "Cytrus-RE Help",
+        title: "Kato-Bot Help",
         thumbnail: client.user.avatarURL,
         description: output,
-        footer: `Check out the website (${serverPrefix}site) for a list of commands and more!`
       });
       
       message.channel.send(embed);
@@ -83,7 +82,7 @@ exports.run = (client, message, args, level) => {
         if (!output) return message.channel.send("That's not a command, alias, or category!");
         
         let embed = new client.Embed("blend", {
-          title: "Cytrus-RE Help",
+          title: "Kato-Bot Help",
           description: output,
           thumbnail: client.user.avatarURL
         });
