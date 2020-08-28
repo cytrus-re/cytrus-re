@@ -8,7 +8,7 @@ const Star = class {
     const settings = this.client.getSettings(message.guild.id);
     if (reaction.emoji.name !== "⭐") return;
     if (!this.client.starboard.has(message.id)) return;
-    if (!message.guild.channels.find(c => c.name == settings.starboardChannel)) return;
+    if (!message.guild.channels.cache.find(c => c.name == settings.starboardChannel)) return;
     
     if (!this.client.starboard.has(message.id)) this.client.starboard.set(message.id, 0);
     else this.client.starboard.dec(message.id);
