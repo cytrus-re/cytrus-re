@@ -34,7 +34,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ["hex2rgb"],
   guildOnly: false,
   permLevel: "User"
 };
@@ -42,6 +42,6 @@ exports.conf = {
 exports.help = {
   name: "hextorgb",
   category: "General",
-  description: "Converts HEX to RGB",
+  description: "Converts a hex color value to RGB",
   usage: "hextorgb <value>"
 };
