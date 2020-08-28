@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
       if (hexColour.length != 6 || !hexDigits.includes(hexColour[i])) {
         return message.channel.send("Incorrect format!\nHex color codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f\nEx. #739bd8 ");
       }
-
+    }
     //if all is good, send an embed with the input colour
     message.channel.send({ embed: { color: `${hexColour}`, title: `#${hexColour}` }}); //send an embed with the colour
   } catch (err) {
