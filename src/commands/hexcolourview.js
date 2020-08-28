@@ -11,7 +11,7 @@ exports.run = async (client, message, args, level) => {
     //test each digit of the given number, if it is not 6 digits long or includes a digit that is not in the hexDigits array return early and error out.
     for (i = 0; i < hexColour.length; i++) {
       if (hexColour.length != 6 || !hexDigits.includes(hexColour[i])) {
-        return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex color codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: "Ex. #7289da");
+        return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex color codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: "Example: #7289da" } });
       }
     }
     //if all is good, send an embed with the input colour
