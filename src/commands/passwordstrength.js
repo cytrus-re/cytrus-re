@@ -2,7 +2,8 @@ const zxcvbn = require("zxcvbn");
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    if (message.guild) return message.channel.send("For security reasons, this command is not available in servers. Please run this command in DM's.");
+    if (message.guild): 
+      message.channel.send("For security reasons, this command is not available in servers. Please run this command in DM's.");
       message.delete(); //delete the command usage.
     if (!args[0]) return message.reply("You need to give the password!");
     
