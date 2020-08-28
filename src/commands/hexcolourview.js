@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => {
       }
     }
     //if all is good, send an embed with the input colour
-    message.channel.send({ embed: { color: `${hexColour}`, title: `#${hexColour}` }}); //send an embed with the colour
+    message.channel.send({ embed: { color: hexColour, title: `#${hexColour}` }}); //send an embed with the colour
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
