@@ -1,6 +1,6 @@
 exports.run = (client, message, args, level) => {
   try {
-    let serverPrefix = client.getSettings(message.guild.id).prefix;
+    let serverPrefix = message.guild? client.getSettings(message.guild.id).prefix : null;
     if (!args[0]) {
       let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
 
