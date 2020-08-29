@@ -1,7 +1,7 @@
 const ud = require("urban-dictionary");
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!message.channel.nsfw) return message.channel.send("You need to be in an NSFW channel use this command!");
     

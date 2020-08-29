@@ -1,8 +1,8 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
    try {
      let output = "";
      client.uses.forEach((cmd) => output += cmd + "\n");
-     message.channel.send(output)
+     message.channel.send(output);
    } catch (err) {
      message.channel.send(client.errors.genericError + err).catch();
    }

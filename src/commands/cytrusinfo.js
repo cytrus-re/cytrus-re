@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     client.fetchApplication("@me").then(app => {
       let embed = new client.Embed("blend", {

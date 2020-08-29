@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
       let firstEmbed = new Discord.MessageEmbed()
       .setTitle("Results")
       .setDescription("Please choose the page you want.")
-      .setColor("#eeeeee")
+      .setColor("#eeeeee");
       
       if (!res.query.pages) message.channel.send(client.errors.noResults);
       Object.keys(res.query.pages).forEach((page) => {
@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
       let page = await client.awaitReply(message, firstEmbed);
       
       if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
-      let info = res.query.pages[Object.keys(res.query.pages)[page - 1]]
+      let info = res.query.pages[Object.keys(res.query.pages)[page - 1]];
       // let infDesc = wikipedia.search(info.title, "en", { prop: "description" });
       let pageEmbed = new Discord.MessageEmbed()
       .setTitle(`${info.title} on Wikipedia`)

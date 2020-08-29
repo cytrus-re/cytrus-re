@@ -67,7 +67,7 @@ module.exports = (client) => {
       });
       return false;
     } catch (e) {
-      return "Unable to load command \`${commandName}\`: ${e}";
+      return "Unable to load command `${commandName}`: ${e}";
     }
   };
 
@@ -75,7 +75,7 @@ module.exports = (client) => {
     let command;
     if (client.commands.has(commandName)) command = client.commands.get(commandName);
 
-    if (!command) return "The command \`${commandName}\` doesn't seem to exist. Try again!";
+    if (!command) return "The command `${commandName}` doesn't seem to exist. Try again!";
 
     await command.conf.aliases.forEach(alias => {
       client.aliases.delete(alias);
@@ -148,13 +148,13 @@ module.exports = (client) => {
                 return "Windows";
                 break;
             case "linux":
-                return "GNU/Linux"
+                return "GNU/Linux";
                 break;
             case "darwin":
-                return "macOS"
+                return "macOS";
                 break;
             default:
-                return "an unknown OS"
+                return "an unknown OS";
         }
   };
 

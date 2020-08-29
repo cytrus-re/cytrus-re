@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (client.liusers.has(message.author.id)) {
       client.logger.log(message.author.id + " | " + args.join(" "), "user");

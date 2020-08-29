@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const crypto = require("crypto");
 
 exports.run = async (client, message, args, level) => {
-  // eslint-disable-line no-unused-vars
+  
   try {
     if (args[0] == "create") {
       if (!message.guild) {

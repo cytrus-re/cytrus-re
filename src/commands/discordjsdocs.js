@@ -1,6 +1,6 @@
 const request = require("request");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) return message.channel.send(client.errors.noQueryGiven);
     

@@ -16,4 +16,4 @@ module.exports = (client, oldemoji, newemoji) => {
       newemoji.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
     }
   }
-}
+};

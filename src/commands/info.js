@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const os = require("os");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     var opsys = os.platform();
     var cleanOS = client.friendlyOS(opsys);

@@ -10,9 +10,9 @@ module.exports = (client, emoji) => {
       .setTitle("Emoji Create")
       .setColor("#eeeeee")
       .setDescription(`Name: ${emoji.name}\nID: ${emoji.id}`)
-      .addField("Emoji URL", emoji.url)
+      .addField("Emoji URL", emoji.url);
 
       emoji.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
     }
   }
-}
+};

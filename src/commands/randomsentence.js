@@ -1,6 +1,6 @@
 const sen = require("txtgen").sentence;
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     message.channel.send(sen());
   } catch (err) {

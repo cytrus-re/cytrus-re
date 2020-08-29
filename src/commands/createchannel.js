@@ -1,11 +1,11 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) return message.reply("You need to give me the channel name!");
     if (!args[1]) return message.reply("You need to give me the channel type!");
     
     message.channel.send("Channel created.").then(() => {
       message.guild.createChannel(args[1], args[0], []).catch((err) => {
-        message.channel.send(client.errors.genericError)
+        message.channel.send(client.errors.genericError);
       });
     });
   } catch (err) {

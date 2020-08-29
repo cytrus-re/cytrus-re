@@ -6,7 +6,7 @@ const hobbies = ["Art", "Drawing", "Painting", "Singing", "Writing", "Anime", "M
 // Are ya coding son?
 const genres = ["Nightcore", "Heavy Metal", "Alternative", "Electronic", "Classical", "Dubstep", "Jazz", "Pop", "Rap", "Country"];
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     let user = message.mentions.members.first() || message.author;
 

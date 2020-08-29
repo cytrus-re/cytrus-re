@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
   //command code
   
 let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));    
 if (!rUser) return message.channel.send("I couldn't find the specified user!");
-console.log("user exists!") 
+console.log("user exists!"); 
 let rreason = args.join(" ").slice(22);
 
 
@@ -20,13 +20,13 @@ let reportEmbed = new Discord.MessageEmbed()
 
  let reportschannel = client.channels.get("691142562253242409");
  if(!reportschannel) return message.channel.send("I couldn't find the reports channel!");
- console.log("channel exists!") 
+ console.log("channel exists!"); 
 
  message.delete();
- console.log("message deleted!") 
+ console.log("message deleted!"); 
  reportschannel.send(reportEmbed);
- console.log("report message sent!")
- message.channel.send("Report successfully sent!")
+ console.log("report message sent!");
+ message.channel.send("Report successfully sent!");
 
 //error log
   

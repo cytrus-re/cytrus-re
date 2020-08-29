@@ -17,9 +17,9 @@ const convert = (degree, args, message) => {
   } else {
     message.reply("You have to choose C or F!");
   }
-}
+};
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (args[0] == "C") {
       convert("C", args, message);

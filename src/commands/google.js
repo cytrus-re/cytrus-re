@@ -1,6 +1,6 @@
 const google = require("google");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try { 
     if (!args[0]) return message.channel.send("You need to give me something to search for!");
     google.resultsPerPage = 5;

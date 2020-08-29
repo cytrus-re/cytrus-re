@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
     let hexColour = args[0].toLowerCase().replace("#", "");
 
     //array that includes all valid hex digits
-    const hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+    const hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
 
     //test each digit of the given number, if it is not 6 digits long or includes a digit that is not in the hexDigits array return early and error out.
     for (i = 0; i < hexColour.length; i++) {

@@ -29,4 +29,4 @@ exports.help = {
   category: "Fun",
   description: "Uses AI to chat with you.",
   usage: "chat <message>"
-}
+};

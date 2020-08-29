@@ -23,7 +23,7 @@ exports.run = async (client, message, args, level) => {
           });
           message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
           
-          wUser.send(`You have been warned in ${message.guild.name}.`)
+          wUser.send(`You have been warned in ${message.guild.name}.`);
         }
 
         if (client.warns.get(message.guild.id)[member.id] == 3) {

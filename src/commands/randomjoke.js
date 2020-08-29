@@ -1,6 +1,6 @@
 const joke = require("one-liner-joke").getRandomJoke;
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     message.channel.send(joke({"exclude_tags": ["dirty", "racist", "marriage", "sex", "death"]}).body);
   } catch (err) {

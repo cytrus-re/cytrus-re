@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     let code = args.join(" ");
     code = code.replace("process.env.BOT_TOKEN", client.config.token);

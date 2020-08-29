@@ -3,7 +3,7 @@ const { YTSearcher } = require("ytsearcher");
 
 const searcher = new YTSearcher(process.env.YOUTUBE_API_KEY);
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) return message.reply("You need to give something to search!");
     

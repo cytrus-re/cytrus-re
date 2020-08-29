@@ -1,6 +1,6 @@
 const Minesweeper = require("discord.js-minesweeper");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     let minesweeper;
     switch (args[0]) {

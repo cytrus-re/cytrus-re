@@ -1,6 +1,6 @@
 const ms = require("ms");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!ms(args[0])) return message.reply("You have to give a valid time!");
     if (!args[1]) return message.reply("You have to say what to remind you about!");

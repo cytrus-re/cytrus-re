@@ -1,5 +1,5 @@
 const exec = require("child_process").exec;
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     const execute = (command) => {
 
@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
           message.channel.send("Shell error!");
         }
       });
-    }
+    };
 
     execute(args.join(" "));
   } catch (err) {

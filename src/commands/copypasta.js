@@ -1,7 +1,7 @@
 //load the file that contains all the copypastas
-const copypastas = require("../data/copypastas.json")
+const copypastas = require("../data/copypastas.json");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
     try {
         // test if the requested pasta is in the list of available pastas
         if (copypastas.pastalist.includes(args[0])) {

@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) message.channel.send("You need to provide a message to spacify!");
     message.channel.send(args.join(" ").split("").join(" "));

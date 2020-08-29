@@ -1,6 +1,6 @@
 const rhyme = require("rhyme");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) return message.reply("You need to input the word to rhyme!");
     

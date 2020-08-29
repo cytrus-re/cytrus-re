@@ -12,4 +12,4 @@ module.exports = (client, guild, user) => {
 
     guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
   }
-}
+};

@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => {
     .setTitle(`Cytrus-RE's ${length} dependencies:`)
     .setColor("#eeeeee")
     .setThumbnail(client.user.avatarURL)
-    .setDescription(output)
+    .setDescription(output);
     
     message.channel.send(embed);
   } catch (err) {

@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     let msg = await message.channel.send("Deleting tag...");
     if (!args[0]) return message.reply("You have to supply the name of the tag!");

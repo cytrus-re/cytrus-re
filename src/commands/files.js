@@ -1,6 +1,6 @@
 const exec = require("child_process").exec;
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args, level) => { 
   try {
     const execute = (command) => {
 
@@ -19,7 +19,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
           message.channel.send("Shell Error.");
         }
       });
-    }
+    };
 
     execute("ls -a "); //replaced "dir" because we use Heroku hosting provided by Panos instead of michael's windows periodic hosting
   } catch (err) {
