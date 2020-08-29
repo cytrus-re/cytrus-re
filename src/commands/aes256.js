@@ -12,21 +12,18 @@ const decrypt = (text, key) => {
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    //if <key> is not present return error that no key is given
     if (!args[1]) return message.channel.send("You need to give a key to encrypt/decrypt the text with!");
-    
-    //if <text> is not present return error that no text is given
     if (!args[2]) return message.channel.send("You need to give the text to encrypt/decrypt!"); 
     
     //take all arguments after <verb> and <key> up until the last one and join them with spaces.
     let text = args.slice(2, args.length).join(" ")
     let msg = ""
     //if <verb> is encrypt, take text and encrypt it with <key>
-    if (args[0] == encrypt) msg = encrypt(text, args[1]);
+    if (args[0] == "encrypt") msg = encrypt(text, args[1]);
     //if <verb> is decrypt, take text and decrypt it with <key>
-    else if (args[0] == decrypt) msg = decrypt(text, args[1]);
+    else if (args[0] == "decrypt") msg = decrypt(text, args[1]);
     //if <verb> is other, send error.
-    else return msg = "Invalid verb.\nVerb can either be \"encrypt\" or \"decrypt\"."
+    else return message.channel.send("Invalid verb.\nVerb can either be \"encrypt\" or \"decrypt\".")
 
     message.channel.send(msg)
 
