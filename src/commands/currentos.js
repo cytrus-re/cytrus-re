@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
         var rawPlat = os.platform();
         var cleanPlat = client.friendlyOS(rawPlat);
         var ver = os.version();
-        message.channel.send(`This instance of Cytrus-RE is running on **${cleanPlat}** v**${ver}**.`);
+        message.channel.send(`This instance of Cytrus-RE is running on ${process.env.HOSTNAME ? process.env.HOSTNAME : `**${cleanPlat}** v**${ver}**`}.`);
     } catch (err) {
         message.channel.send(client.errors.genericError);
     }
