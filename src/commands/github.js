@@ -35,7 +35,7 @@ exports.run = async (client, message, args, level) => {
         "headers": {
           "Accept": "application/vnd.github.v3+json",
           "Authorization": "token " + process.env.GITHUB_TOKEN,
-          "User-Agent": "CelestialCrafter"
+          "User-Agent": "TerrificTeaStudios-CytrusRE"
         },
         "json": true
       }, (req, res, json) => {
