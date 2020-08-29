@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
   try {
-    if (user == message.author) return message.channel.send(client.errors.cannotKickSelf);
     const user = message.mentions.users.first();
+    if (user == message.author) return message.channel.send(client.errors.cannotKickSelf);
     const settings = client.getSettings(message.guild.id);
 
     if (user) {
@@ -22,13 +22,13 @@ exports.run = async (client, message, args, level) => {
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);        
           }
         }).catch(err => {
-          message.reply("I wasn't able to kick the member");
+          message.channel.send(`I wasn't able to kick the member!\n\n${err}`);
         });
       } else {
-        message.reply("That user isn't in this guild!");
+        message.channel.send(client.errors.userNotInGuild);
       }
     } else {
-      message.reply("You didn't mention the user to kick!");
+      message.channel.send("You didn't mention the user to kick!");
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
