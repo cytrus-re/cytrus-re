@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
     
     message.channel.send("Output: " + math.evaluate(args.join(" ")));
   } catch (err) {
-    message.channel.send(client.errors.genericError + err).catch();
+    message.channel.send(client.errors.mathError + err).catch();
   }
 };
 
