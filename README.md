@@ -26,14 +26,14 @@ CLEVERBOT_API_KEY='`YourCleverBot.ioAPIKey'
 CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
-Replace the values with your personal, specific info such as the token of the bot.
+Replace the values with your personal, specific info such as the token of the bot. (If you're using a service like Glitch or Heroku, make sure to add a `HOSTNAME` variable. Make sure to write the value in TitleCase.)
 
 Finally, start up Cytrus-RE by running ```node cybase.js```.
 
 To see how to make the bot start up automatically and run without needing a terminal emulator always open, look no further than the official [**discord.js guide**](https://discordjs.guide/improving-dev-environment/pm2.html)
 
 ## Bot Information
-Useful information about the bot in case you need them:
+Useful information about the bot:
 
 ### Client ID
 596304769333592078
