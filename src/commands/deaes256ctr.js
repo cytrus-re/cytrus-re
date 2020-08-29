@@ -25,7 +25,7 @@ exports.conf = {
 
 exports.help = {
   name: "deaes256ctr",
-  category: "General",
+  category: "Utility",
   description: "Decrypts text in aes-256-ctr",
   usage: "deaes256ctr <key> <text>"
 };
