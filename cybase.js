@@ -1,3 +1,6 @@
+// Copyright 2020 Cytrus-RE Developers
+// You may use the code, but please do credit us.
+
 "use strict";
 
 // Check if the Node version is 14+
@@ -56,10 +59,10 @@ for (let i = 0; i < client.config.permLevels.length; i++) {
 
 // Login to Discord
 client.login(process.env.BOT_TOKEN);
-console.log("[START] Logged into Discord API");
+console.log("[START] Logged into Discord API!");
 // Set status to Loading
 //client.user.setStatus("idle");
 //client.user.setActivity("Loading...");
 
-// Export the client
+// Export the client (Allows other Cytrus-RE things to interact with this)
 module.exports = client;

@@ -2,11 +2,11 @@ exports.run = async (client, message, args, level) => {
   try {
     let msg = await message.channel.send("Creating tag...");
     
-    if (!args.join(" ").split("|")[0]) return message.reply("You have to name the tag!");
-    if (!args.join(" ").split("|")[1]) return message.reply("You have to supply text for the tag!");
+    if (!args.join(" ").split("|")[0]) return message.channel.send("You have to name the tag!");
+    if (!args.join(" ").split("|")[1]) return message.channel.send("You have to supply text for the tag!");
     
     if (!client.tags.has(message.guild.id)) client.tags.set(message.guild.id, {});
-    if (client.tags.has(message.guild.id, args.join(" ").split("|")[0])) return message.reply("That's already a tag!");
+    if (client.tags.has(message.guild.id, args.join(" ").split("|")[0])) return message.channel.send("Sorry, but the tag you specified already exists.");
     
     client.tags.set(message.guild.id, {
       name: args.join(" ").split("|")[0],

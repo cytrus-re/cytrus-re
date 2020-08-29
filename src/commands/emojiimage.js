@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => {
   try {
     let id = /[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/.exec(args[1]);
     
-    if (!id) return message.reply("You didn't input a valid emoji or it is a default Discord emote!");
+    if (!id) return message.channel.send("You didn't input a valid emoji or it is a default Discord emote!");
     switch (args[0]) {
       case "animated":
         message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".gif"));
@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
         message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".png"));
         break;
       default:
-        message.reply("You need to say what type of emoji it is!");
+        message.channel.send("You need to specify what type of emoji this is. (animated, static)");
         break;
     }
   } catch (err) {
