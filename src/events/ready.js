@@ -35,8 +35,8 @@ module.exports = async client => {
   client.logger.log(`Users: ${users}`, "ready");
   client.logger.log(`Servers: ${servers}`, "ready");
   client.logger.log(`Channels: ${channels}`, "ready");
-  client.logger.log(`Running on Node ${process.version.replace(/ /g, "")}`, "ready");
-  client.logger.log(`...and using Discord.js v${require("discord.js").version.replace(/ /g, "")}`, "ready");
+  client.logger.log(`Running on Node ${process.version.replace(" ", "")}`, "ready");
+  client.logger.log(`...and using Discord.js v${require("discord.js").version.replace(" ", "")}`, "ready");
 
   client.logger.log("Cytrus-RE V" + require("../../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
   client.startuptime = new Date().getTime() - client.starttime;
