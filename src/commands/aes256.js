@@ -12,6 +12,7 @@ const decrypt = (text, key) => {
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
+    if (args[0] != ("encrypt" || "decrypt")) return message.channel.send("Invalid verb.\nVerb can either be \"encrypt\" or \"decrypt\".")
     if (!args[1]) return message.channel.send("You need to give a key to encrypt/decrypt the text with!");
     if (!args[2]) return message.channel.send("You need to give the text to encrypt/decrypt!"); 
     
@@ -22,8 +23,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (args[0] == "encrypt") msg = encrypt(text, args[1]);
     //if <verb> is decrypt, take text and decrypt it with <key>
     else if (args[0] == "decrypt") msg = decrypt(text, args[1]);
-    //if <verb> is other, send error.
-    else return message.channel.send("Invalid verb.\nVerb can either be \"encrypt\" or \"decrypt\".")
+
 
     message.channel.send(msg)
 
