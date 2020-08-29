@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0]) return message.channel.send("You have to give me a hex code!");
     
@@ -9,7 +9,8 @@ exports.run = async (client, message, args, level) => {
     const hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
 
     //test each digit of the given number, if it is not 6 digits long or includes a digit that is not in the hexDigits array return early and error out.
-    for (i = 0; i < hexColour.length; i++) {
+    let i = 0;
+    for (i < hexColour.length; i++;) {
       if (hexColour.length != 6 || !hexDigits.includes(hexColour[i])) {
         return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex color codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: #7289da" } } });
       }

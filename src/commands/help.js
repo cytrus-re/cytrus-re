@@ -67,7 +67,6 @@ exports.run = (client, message, args, level) => {
 
         message.channel.send(embedTiny);
       } else {
-        let currentCategory = "";
         let output = "";
         let userCommands = client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level);
         

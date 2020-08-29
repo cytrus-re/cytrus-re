@@ -31,10 +31,10 @@ exports.run = async (client, message, args, level) => {
 
       if (["y", "yes", "confirm", "1"].includes(response.toLowerCase())) {
         client.settings.delete(message.guild.id, args[1]);
-        message.reply("${args[1]} was successfully reset.");
+        message.channel.send("${args[1]} was successfully reset.");
       } else
       if (["n", "no", "cancel", "0"].includes(response)) {
-        message.reply("Your setting for \`${args[1]}\` remains at \`${settings[args[1]]}\`.");
+        message.channel.send("Your setting for `${args[1]}` remains at `${settings[args[1]]}`.");
       }
     } else
 
