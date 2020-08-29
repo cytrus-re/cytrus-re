@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
       SEND_MESSAGES: null
     });
   } catch (err) {
-    message.channel.send("Their was an error!\n" + err).catch();
+    message.channel.send(client.error.genericError + err).catch();
   }
 };
 
