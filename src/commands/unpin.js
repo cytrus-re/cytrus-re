@@ -3,7 +3,7 @@ exports.run = async (client, message, args, level) => {
       if (!args[0]) return message.channel.send("You need to give me a message ID!");
     
       let msg = message.channel.messages.get(args[0]);
-      if (!msg) message.channel.send("That message does not exist! Make sure to use this command in the same channel as the message.");
+      if (!msg) return message.channel.send("That message does not exist! Make sure to use this command in the same channel as the message.");
       
       msg.pin().catch(() => {
         return message.channel.send(client.errors.genericError);
