@@ -41,7 +41,7 @@ exports.conf = {
 
 exports.help = {
   name: "hextorgb",
-  category: "General",
+  category: "Utility",
   description: "Converts a hex colour value to RGB.",
   usage: "hextorgb <value>"
 };

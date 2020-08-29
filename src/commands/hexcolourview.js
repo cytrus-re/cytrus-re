@@ -30,7 +30,7 @@ exports.conf = {
 
 exports.help = {
   name: "hexcolorview",
-  category: "General",
+  category: "Utility",
   description: "Returns an embed with the colour of the hex value you specified",
   usage: "hexcolorview <value>"
 };

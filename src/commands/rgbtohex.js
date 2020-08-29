@@ -37,7 +37,7 @@ exports.conf = {
 
 exports.help = {
   name: "rgbtohex",
-  category: "General",
+  category: "Utility",
   description: "Converts an RGB color value to hex",
   usage: "rgbtohex <r>, <g>, <b>"
 };
