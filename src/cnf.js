@@ -24,7 +24,7 @@ const config = {
     "adminRole": "Administrator",
     "muteRole": "Cytrus-RE Mute",
     "noPermissionNotice": true,
-    "welcomeChannel": "general",
+    "welcomeChannel": "off-topic",
     "welcomeMessage": "Welcome to the server, {{ping}}!",
     "welcomeEnabled": "true",
     "logMessageUpdates": "true",
