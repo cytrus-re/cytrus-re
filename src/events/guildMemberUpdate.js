@@ -41,11 +41,11 @@ New User:
     let outputNew = "";
     
     user.roles.cache.forEach(role => {
-      output += "\n" + role.name;
+      output += role.name + ", ";
     });
     
     userNew.roles.cache.forEach(role => {
-      outputNew += "\n" + role.name;
+      outputNew += role.name + ", ";
     });
     
     if (output == outputNew) return;
@@ -53,10 +53,8 @@ New User:
     embed = new Discord.MessageEmbed()
     .setTitle("User Roles Update")
     .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
-    .setDescription(`
-Old Roles${output}
-
-New Roles${outputNew}`)
+    .addField("Old roles", output)
+    .addField("New roles", outputNew)
     .setColor("#eeeeee");
     
     modLogChannel.send(embed).catch();
