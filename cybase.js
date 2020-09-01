@@ -10,7 +10,6 @@ if (process.env.PREBOOT) eval(process.env.PREBOOT);
 // Define NPM modules
 const Discord = require("discord.js");
 const Enmap = require("enmap");
-const CleverBotAPI = require("cleverbot.io");
 
 // Define client
 const client = new Discord.Client({
@@ -37,10 +36,6 @@ client.aliases = new Discord.Collection();
 client.liusers = new Discord.Collection();
 client.music = {};
 client.levelCache = {};
-
-// Define CleverBot API
-client.cleverbot = new CleverBotAPI(process.env.CLEVERBOT_USER_KEY, process.env.CLEVERBOT_API_KEY);
-client.cleverbot.setNick("Cytrus-RE");
 
 
 // Import files
