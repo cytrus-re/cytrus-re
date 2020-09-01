@@ -16,7 +16,7 @@ Verification Level: ${message.guild.verificationLevel}
 Owner ID: ${message.guild.ownerID}
 Name Acronym: ${message.guild.nameAcronym}
 `)
-    .setThumbnail(message.guild.iconURL)
+    .setThumbnail(message.guild.iconURL())
     .setColor("#eeeeee");
     
     message.channel.send(embed);
