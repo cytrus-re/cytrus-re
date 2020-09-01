@@ -9,7 +9,7 @@ ID: ${message.guild.id}
 Members: ${message.guild.memberCount}
 Region: ${message.guild.region}
 Name: ${message.guild.name}
-Icon URL: ${message.guild.iconURL}
+Icon URL: ${message.guild.iconURL()}
 Created At: ${message.guild.createdAt}
 MFA Level: ${message.guild.mfaLevel}
 Verification Level: ${message.guild.verificationLevel}
