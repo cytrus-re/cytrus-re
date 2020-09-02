@@ -8,12 +8,12 @@ exports.run = async (client, message, args, level) => {
     .setTitle(user.user.username)
     .setDescription(`ID: ${user.id}
 Name: ${user.user.username}
-Icon URL: ${user.user.avatarURL("png", false, 64)}
+Icon URL: ${user.user.avatarURL("jpeg", true, 256)}
 Account Created At: ${user.user.createdAt}
 Game: ${user.user.presence.game || "none"}
-Status: ${user.user.presence.status.toUpperCase()}
+Status: ${user.user.presence.status.toProperCase()}
 Full Name: ${user.user.tag}`)
-    .setThumbnail(user.user.avatarURL("png", false, 64))
+    .setThumbnail(user.user.avatarURL("jpeg", true, 256))
     .setColor("#eeeeee");
     
     message.channel.send(embed);
@@ -32,6 +32,6 @@ exports.conf = {
 exports.help = {
   name: "userinfo",
   category: "Utility",
-  description: "Returns info about the user",
-  usage: "userinfo"
+  description: "Returns info about the specified user.",
+  usage: "userinfo <mention (defaults to author)>"
 };
