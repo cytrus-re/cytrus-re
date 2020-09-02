@@ -9,14 +9,14 @@ ID: ${message.guild.id}
 Members: ${message.guild.memberCount}
 Region: ${message.guild.region}
 Name: ${message.guild.name}
-Icon URL: ${message.guild.iconURL("png", false, 64)}
+Icon URL: ${message.guild.iconURL("jpeg", true, 256)}
 Created At: ${message.guild.createdAt}
 MFA Level: ${message.guild.mfaLevel}
-Verification Level: ${message.guild.verificationLevel}
+Verification Level: ${message.guild.verificationLevel.toProperCase()}
 Owner ID: ${message.guild.ownerID}
 Name Acronym: ${message.guild.nameAcronym}
 `)    
-    .setThumbnail(message.guild.iconURL("png", false, 64))
+    .setThumbnail(message.guild.iconURL("jpeg", false, 256))
     .setColor("#eeeeee");
     
     message.channel.send(embed);
@@ -35,6 +35,6 @@ exports.conf = {
 exports.help = {
   name: "serverinfo",
   category: "Utility",
-  description: "Returns info about the server",
+  description: "Returns info about the server you're in.",
   usage: "serverinfo"
 };
