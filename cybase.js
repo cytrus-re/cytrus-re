@@ -5,20 +5,20 @@
 
 // Check if the Node version is 14+
 if (Number(process.version.slice(1).split(".")[0]) < 14) throw new Error("Cytrus-RE requires Node 14 or higher. Re-run the bot with Node 14 or higher.");
-if (process.env.PREBOOT) eval(process.env.PREBOOT);
+if (process.env.PREBOOT) eval(process.env.PREBOOT); // Execute anything in the preboot variable
 
 // Define NPM modules
-const Discord = require("discord.js");
+const Discord = require("discord.js"); // You know what this does.
 const Enmap = require("enmap");
 
 // Define client
 const client = new Discord.Client({
-	disableEveryone: true,
-	disabledEvents: ["TYPING_START"]
+	disableEveryone: true, // Disable pinging @everyone (BUT WHAT IT DOESN'T WORK!!!!!!!!!!!)
+	disabledEvents: ["TYPING_START"] //Don't show that the bot is "typing" 
 });
 
 // Define time of startup
-client.starttime = new Date();
+client.starttime = new Date(); 
 
 // Define databases/objects
 client.profiles = new Enmap({name: "profiles"});
@@ -42,11 +42,12 @@ client.levelCache = {};
 client.logger = require("./src/modules/Logger");
 client.config = require("./src/cnf");
 client.errors = require("./src/modules/errors");
-require("./src/modules/commands")(client);
-require("./src/modules/events")(client);
-require("./src/modules/_functions")(client);
+require("./src/modules/commands")(client); // Import command module
+require("./src/modules/events")(client); // Import events module
+require("./src/modules/_functions")(client); // Import functions
 
 // Cache the permissions
+// This looks weird can't we try to do somehthing about htis
 for (let i = 0; i < client.config.permLevels.length; i++) {
 	let currentlevel = client.config.permLevels[i];
 	client.levelCache[currentlevel.name] = currentlevel.level;
