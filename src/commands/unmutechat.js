@@ -5,6 +5,8 @@ exports.run = async (client, message, args, level) => {
     message.channel.overwritePermissions(message.guild.id, {
       SEND_MESSAGES: null
     });
+    
+    message.channel.send("This channel has been unmuted. You may now send messages. Admins, you can run c.raid at any time should you need to again.");
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
