@@ -22,9 +22,9 @@ exports.run = async (client, message, args, level) => {
       
       let embed = new Discord.MessageEmbed()
       .setTitle(entries[page - 1].word)
-      .addField("**Definition**", entries[page - 1].definition 
+      .addField("**Definition**", entries[page - 1].definition)
       .addField("**Example:**", entries[page - 1].example)
-      .setFooter("Requested by " + message.author.tag)
+      .setFooter(`Requested by ${message.author.tag}`)
       .setColor("#eeeeee");
 
       message.channel.send(embed).catch(err => message.channel.send("The definition was too big or there was another error!\n\n" + err));
