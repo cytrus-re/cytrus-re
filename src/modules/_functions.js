@@ -75,7 +75,7 @@ module.exports = (client) => {
     let command;
     if (client.commands.has(commandName)) command = client.commands.get(commandName);
 
-    if (!command) return "The command `${commandName}` doesn't seem to exist. Try again!";
+    if (!command) return `The command \`${commandName}\` doesn't seem to exist. Try again!`;
 
     await command.conf.aliases.forEach(alias => {
       client.aliases.delete(alias);
