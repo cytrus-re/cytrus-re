@@ -3,10 +3,8 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => { 
   try {
-    if (!message.channel.nsfw) return message.channel.send("You need to be in an NSFW channel use this command!");
-    
     ud.term(args.join(" ")).then(async (result) => {
-      if (!args[0]) return message.channel.send("You need to give me a word!");
+      if (!args[0]) return message.channel.send("You need to give me a word or phrase!");
       let output = "";
       let entries = result.entries;
       let i = 1;
@@ -24,7 +22,8 @@ exports.run = async (client, message, args, level) => {
       
       let embed = new Discord.MessageEmbed()
       .setTitle(entries[page - 1].word)
-      .setDescription("Definition:\n" + entries[page - 1].definition + "\n\nExample:\n" + entries[page - 1].example)
+      .addField("**Definition**", entries[page - 1].definition 
+      .addField("**Example:**", entries[page - 1].example)
       .setFooter("Requested by " + message.author.tag)
       .setColor("#eeeeee");
 
@@ -39,6 +38,7 @@ exports.conf = {
   enabled: true,
   aliases: ["urban", "ud"],
   guildOnly: false,
+  nsfwOnly: true,
   permLevel: "User"
 };
 
