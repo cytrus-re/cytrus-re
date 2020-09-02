@@ -1,19 +1,21 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js"); 
 
 module.exports = (client, oldemoji, newemoji) => {
-  let settings = client.getSettings(newemoji.guild.id);
-  if (settings.logEmojiUpdates == "true") {
-    let modLogChannel = settings.modLogChannel;
+  let settings = client.getSettings(newemoji.guild.id); // Get settings
+  if (settings.logEmojiUpdates == "true") { // If the "log emoji update" setting is set to true, then we should do this.
+    let modLogChannel = settings.modLogChannel; // Set the logging channel
 
     if (modLogChannel && newemoji.guild.channels.find(c => c.name === settings.modLogChannel)) {
-      let embed = new Discord.MessageEmbed()
-      .setTitle("Emoji Update")
-      .setColor("#eeeeee")
-      .setDescription(`New Name: ${newemoji.name}\nOld Name: ${oldemoji.name}\nID: ${newemoji.id}`)
-      .addField("New Emoji URL", newemoji.url)
-      .addField("Old Emoji URL", oldemoji.url);
+      let embed = new Discord.MessageEmbed() // Create embed
+      .setTitle("Emoji Update") // Set embed title
+      .setColor("#eeeeee") // Set color in HEX
+      .setDescription(`New Name: ${newemoji.name}\nOld Name: ${oldemoji.name}\nID: ${newemoji.id}`) // Description of the embed
+      .addField("New Emoji URL", newemoji.url) // URL link to the New™ Emoji® 
+      .addField("Old Emoji URL", oldemoji.url); // Url link to the old Emoji® 
 
-      newemoji.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
+      newemoji.guild.channels.find(c => c.name === settings.modLogChannel).send(embed); // And then we send all that to the logging channel.
     }
   }
 };
+
+// comments by odysssssssssssssssssssssssssssssssssssssssssssssssssssey346
