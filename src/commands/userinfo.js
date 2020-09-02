@@ -8,12 +8,12 @@ exports.run = async (client, message, args, level) => {
     .setTitle(user.user.username)
     .setDescription(`ID: ${user.id}
 Name: ${user.user.username}
-Icon URL: ${user.user.avatarURL}
+Icon URL: ${user.user.avatarURL("png", false, 64)}
 Account Created At: ${user.user.createdAt}
 Game: ${user.user.presence.game || "none"}
 Status: ${user.user.presence.status.toUpperCase()}
 Full Name: ${user.user.tag}`)
-    .setThumbnail(user.user.avatarURL)
+    .setThumbnail(user.user.avatarURL("png", false, 64))
     .setColor("#eeeeee");
     
     message.channel.send(embed);
