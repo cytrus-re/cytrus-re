@@ -1,15 +1,15 @@
 const config = {
-  "botName": "Cytrus-RE",
+  "botName": "Cytrus-RE", // Name of bot. Don't change this.
   "owners": ["395990735934980097"], // rexo has full power ahahahaha
   "managers": ["315843700490240002", "429353559566319626"], // midou, odyssey and commandblock
   "admins": [],
   "devs": ["339903300994596884", "471785433232179210"], // edge, midou
-  "mods": [],
+  "mods": [], 
   "support": [],
   "helpers": [],
 
-  "blacklisted": [],
-  "globalBan": [],
+  "blacklisted": [360498353462575115], // Blacklisted IDs
+  "globalBan": [360498353462575115],
   "token": "process.env.BOT_TOKEN",
   
   "links" : {
@@ -18,8 +18,8 @@ const config = {
   },
 
   "defaultSettings" : {
-    "prefix": "c.",
-    "modLogChannel": "log",
+    "prefix": "c.", // Default prefix
+    "modLogChannel": "log", // default logging channel
     "modRole": "Moderator",
     "adminRole": "Administrator",
     "muteRole": "Cytrus-RE Mute",
@@ -30,7 +30,7 @@ const config = {
     "logMessageUpdates": "true",
     "logEmojiUpdates": "true",
     "logMemberUpdates": "true",
-    "starboardChannel": "starboard",
+    "starboardChannel": "starboard", // Starboard channel name
     "maxWarnsBeforeBan": 3
   },
 
