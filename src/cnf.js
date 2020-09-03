@@ -2,7 +2,7 @@ const config = {
   "botName": "Cytrus-RE", // Name of bot. Don't change this.
   "owners": ["395990735934980097"], // rexo has full power ahahahaha
   "managers": ["315843700490240002", "429353559566319626"], // midou, odyssey and commandblock
-  "admins": ["390663607849058307"],
+  "admins": ["390663607849058307"], // derser
   "devs": ["339903300994596884", "471785433232179210"], // edge, midou
   "mods": [], 
   "support": [],
