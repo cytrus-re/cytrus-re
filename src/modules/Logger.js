@@ -8,7 +8,7 @@ const cytrus = zaq.as("Cytrus-RE"); // This sets the name for Cytrus-RE in the l
 
 exports.log = (content, type = "log") => {
   const timestamp = `${moment().format("YYYY/MM/DD HH:mm:ss")}`;
-  switch (type) {
+  switch (type) { 
     case "log":
       return cytrus.info(content);
       break;
