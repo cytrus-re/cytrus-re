@@ -8,8 +8,8 @@ const config = {
   "support": [],
   "helpers": [],
 
-  "blacklisted": [360498353462575115], // Blacklisted IDs
-  "globalBan": [360498353462575115],
+  "blacklisted": ["360498353462575115"], // Blacklisted IDs
+  "globalBan": ["360498353462575115"],
   "token": "process.env.BOT_TOKEN",
   
   "links" : {
