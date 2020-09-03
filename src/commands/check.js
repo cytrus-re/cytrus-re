@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
     const settings = client.getSettings(message.guild.id);
     
     let msg = await message.channel.send("Checking members...");
-    message.guild.members.forEach(async (member) => {
+    message.guild.members.cache.forEach(async (member) => {
       if (client.config.globalBan.includes(member.id)) members.push(member.id);
     });
     
