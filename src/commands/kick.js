@@ -10,16 +10,16 @@ exports.run = async (client, message, args, level) => {
       const member = message.guild.member(user);
       if (member) {
         member.kick(args.slice(1).join(" ")).then(() => {
-          message.reply(`Successfully kicked ${user.tag}`);
+          message.channel.send(`Successfully kicked ${user.tag}`);
 
           const modLogChannel = settings.modLogChannel;
-          if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
+          if (modLogChannel && message.guild.channels.cache.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.MessageEmbed()
-            .setTitle("User Ban")
+            .setTitle("User Banned")
             .setColor("#eeeeee")
             .setDescription(`Name: ${user.username}\nID: ${user.id}\nReason: ${args.slice(1).join(" ")}\nModerator: ${message.author.username}`);
 
-            message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);        
+            message.guild.channels.cache.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);        
           }
         }).catch(err => {
           message.channel.send(`I wasn't able to kick the member!\n\n${err}`);
