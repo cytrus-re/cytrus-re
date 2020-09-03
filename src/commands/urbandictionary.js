@@ -16,8 +16,9 @@ exports.run = async (client, message, args, level) => {
         i++;
       });
       
-      let page = await client.awaitReply(message, `Please choose the page you want:\n${output}`);
+      let page = await client.awaitReply(message, `Please choose the page you want, or respond with "abort" to quit:\n${output}`);
       
+      if (page.toLowercase() === "abort") return message.channel.send("Aborted.");
       if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
       
       let embed = new Discord.MessageEmbed()
