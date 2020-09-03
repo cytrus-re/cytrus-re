@@ -13,7 +13,7 @@ A multipurpose Discord bot that covers all your needs. If it doesn't, why not he
 ## How to set up
 
 WARNING:
-You are not allowed to rebrand the bot as your own creation. If we find a case of someone doing this, we'll try our hardest to take it down.
+You are not allowed to rebrand the bot as your own creation. If we find a case of someone doing this, we'll try our hardest to take it down (This makes you a Cytrus-REtard).
 You are allowed to self-host it, but your changes MUST be on GitHub.com, as a fork of Cytrus-RE AND credit must be given to the authors of Cytrus-RE. We'll also need to be able to contact you.
 
 By self-hosting Cytrus-RE, you agree to the above.
