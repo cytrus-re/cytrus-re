@@ -22,8 +22,6 @@ LOG_WEBHOOK_TOKEN='`YourLogChannelWebhookToken`'
 LOG_WEBHOOK_ID='`YourLogChannelWebhookID`'
 IPINFO_API_KEY='`YourIpinfo.ioAPIKey`'
 GITHUB_TOKEN='`YourGithubToken`'
-CLEVERBOT_API_KEY='`YourCleverBot.ioAPIKey'
-CLEVERBOT_USER_KEY='`YourCleverBot.ioUserKey`'
 PREBOOT='/*JavaScript Code*/'
 ```
 Replace the values with your personal, specific info such as the token of the bot. (If you're using a service like Glitch or Heroku, make sure to add a `HOSTNAME` variable. Make sure to write the value in TitleCase.)
