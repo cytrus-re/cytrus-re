@@ -43,6 +43,6 @@ exports.conf = {
 exports.help = {
   name: "aes256",
   category: "Utility",
-  description: "Encrypts and decrypts a message using a key into an aes256 string.\n<verb> can either be \"encrypt\" or \"decrypt\".",
-  usage: "aes256 <verb> <key> <text>"
+  description: "Encrypts and decrypts a message using a key into an aes256 string.",
+  usage: "aes256 <verb> <key> <text>\n<verb> can either be \"encrypt\" or \"decrypt\"."
 };
