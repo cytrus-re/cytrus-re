@@ -5,29 +5,23 @@ const convert = (degree, args, message) => {
     if (isNaN(args[1])) {
       message.channel.send(args[1] + " is not a number!");
     } else {
-      message.channel.send("The temperature in Farenheit is " + Math.round(x) + "°F");
+      message.channel.send(`The temperature in Farenheit is ${Math.round(x)}°F.`);
     }
   } else if (degree == "F") {
     x = (args[1] -32) * 5 / 9;
     if (isNaN(args[1])) {
       message.channel.send(args[1] + " is not a number!");
     } else {
-      message.channel.send("The temperature in Celcius is " + Math.round(x) + "°C");
+      message.channel.send(`The temperature in Celcius is ${Math.round(x)}°C.`);
     }
   } else {
     message.channel.send("You have to choose C or F!");
   }
 };
 
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args) => { 
   try {
-    if (args[0] == "C") {
-      convert("C", args, message);
-    } else if (args[0] == "F") {
-      convert("F", args, message);
-    } else {
-      message.channel.send("You have to choose C or F!");
-    }
+    convert(args[0], args, message);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
