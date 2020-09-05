@@ -11,11 +11,9 @@ const config = {
   "blacklisted": ["360498353462575115"], // Blacklisted IDs
   "globalBan": ["360498353462575115"],
   "token": "process.env.BOT_TOKEN",
-  
-  "links" : {
-    "github": "https://github.com/cytrus-re/cytrus-re",
-    "supportServer": "https://discord.gg/ymZmdaA"
-  },
+  // links
+  "github": "https://github.com/cytrus-re/cytrus-re",
+  "supportServer": "https://discord.gg/ymZmdaA,
 
   "defaultSettings" : {
     "prefix": "c.", // Default prefix
