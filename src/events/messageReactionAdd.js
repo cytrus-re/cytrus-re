@@ -8,8 +8,8 @@ const Star = class {
     const settings = this.client.getSettings(message.guild.id);
     if (reaction.emoji.name !== "⭐") return;
     if (message.guild.channels.find(c => c.name == settings.starboardChannel) == null) return;
-    if (message.author.bot) return message.channel.send("<@" + user.id + ">, You cant star bot messages!");
-    if (user.id == message.author.id) return message.reply("You cant star your own messages");
+    if (message.author.bot) return message.channel.send("You can't star bot messages!");
+    if (user.id == message.author.id) return message.channel.send("You can't star your own messages!");
     
     this.client.starboard.ensure(message.id, 0);
     this.client.starboard.inc(message.id);
@@ -22,11 +22,11 @@ const Star = class {
       fields: [
         {
           title: "Author",
-          text: "<@" + message.author.id + ">"
+          text: `<@${message.author.id}>`
         },
         {
           title: "Channel",
-          text: "<#" + message.channel.id + ">"
+          text: `<#${message.channel.id}>`
         }
       ]
     });
