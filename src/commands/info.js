@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
     .setDescription(`Github: [Repo](${client.config.github})
 Website: [Check it out](https://cytrus-re.github.io)
 Support Server: [Join](${client.config.supportServer})
-Issues: [Here](${client.conf.links.github}/issues)
+Issues: [Here](${client.conf.github}/issues)
 Version: V1.3
 Currently running on: ${cleanOS}`);
     message.channel.send(embed);
