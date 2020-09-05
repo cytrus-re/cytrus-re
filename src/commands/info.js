@@ -9,11 +9,10 @@ exports.run = async (client, message, args, level) => {
     .setColor("#eeeeee")
     .setTitle("Cytrus-RE")
     .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by DestroyedEDGE, Rexowogamer, Odyssey346 and Midou.")
-    .setDescription(`Github: [Repo](https://github.com/Rexogamer/cytrus-re)
-Website: None
-API: None
-Support Server: [Server](https://discord.gg/BfpMgXs)
-Issues: [Github](https://github.com/Rexogamer/cytrus-re/issues)
+    .setDescription(`Github: [Repo](${client.conf.links.github})
+Website: [Check it out](https://cytrus-re.github.io)
+Support Server: [Join](https://discord.gg/BfpMgXs)
+Issues: [Here](${client.conf.links.github}/issues)
 Version: V1.3
 Currently running on: ${cleanOS}`);
     message.channel.send(embed);
