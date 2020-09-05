@@ -9,8 +9,7 @@
     "forever": "forever start cybase.js",
     "pm2": "pm2 start cybase.js",
     "pnpm": "pnpm server start",
-    "yarn": "yarn run cybase.js",
-    "nodemon": "nodemon cybase.js"
+    "yarn": "yarn run cybase.js"
   },
   "engines": {
     "node": "14.x"
@@ -36,9 +35,7 @@
     "moment": "^2.27.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
-    "node-fetch": "^2.6.0",
     "nodejs-base64": "^1.0.3",
-    "numeral": "^2.0.6",
     "one-liner-joke": "^1.2.0",
     "pidusage": "^2.0.21",
     "request": "^2.88.2",
@@ -53,8 +50,7 @@
   },
   "devDependencies": {
     "depcheck": "^1.2.0",
-    "eslint": "^7.8.1",
-    "nodemon": "^2.0.4"
+    "eslint": "^7.8.1"
   },
   "bugs": {
     "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
