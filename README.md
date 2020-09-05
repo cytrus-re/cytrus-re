@@ -3,7 +3,6 @@
 
 A multipurpose Discord bot that covers all your needs. If it doesn't, why not help us by [opening an issue](https://github.com/cytrus-re/cytrus-re/issues/new) or [contributing](https://github.com/cytrus-re/cytrus-re/wiki/contributing)?
 
-
 ## Invite the bot
 [**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)
 
@@ -12,13 +11,14 @@ A multipurpose Discord bot that covers all your needs. If it doesn't, why not he
 
 ## How to set up
 
-WARNING:
+### WARNING ABOUT REBRANDING
 You are not allowed to rebrand the bot as your own creation. If we find a case of someone doing this, we'll try our hardest to take it down (this makes you a Cytrus-REEEpoff).
 You are allowed to self-host it, but your changes MUST be on GitHub.com, as a fork of Cytrus-RE AND credit must be given to the authors of Cytrus-RE. We'll also need to be able to contact you.
 
 By self-hosting Cytrus-RE, you agree to the above.
 
- Use `cd` to navigate into the cytrus-re folder, and then run
+### How-to
+Use `cd` to navigate into the Cytrus-RE folder, and then run
 ```bash
 npm install
 ``` 
@@ -35,7 +35,7 @@ Replace the values with your personal, specific info such as the token of the bo
 
 Finally, start up Cytrus-RE by running ```node cybase.js```.
 
-To see how to make the bot start up automatically and run without needing a terminal emulator always open, look no further than the official [**discord.js guide**](https://discordjs.guide/improving-dev-environment/pm2.html)
+To see how to make the bot start up automatically and run without needing a terminal emulator always open, look no further than the official [**discord.js guide**](https://discordjs.guide/improving-dev-environment/pm2.html) (not needed if you use Heroku).
 
 ## Bot Information
 Useful information about the bot:
