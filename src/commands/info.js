@@ -9,9 +9,9 @@ exports.run = async (client, message, args, level) => {
     .setColor("#eeeeee")
     .setTitle("Cytrus-RE")
     .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by DestroyedEDGE, Rexowogamer, Odyssey346 and Midou.")
-    .setDescription(`Github: [Repo](${client.config.links.github})
+    .setDescription(`Github: [Repo](${client.config.github})
 Website: [Check it out](https://cytrus-re.github.io)
-Support Server: [Join](${client.config.links.supportServer})
+Support Server: [Join](${client.config.supportServer})
 Issues: [Here](${client.conf.links.github}/issues)
 Version: V1.3
 Currently running on: ${cleanOS}`);
