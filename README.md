@@ -42,3 +42,8 @@ Useful information about the bot:
 
 ### Client ID
 596304769333592078
+
+## Donations
+If you find the bot helpful and want to support the contributors, here's how:
+- **Rexo:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://www.paypal.me/rexo1183)
+- **Odyssey:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://paypal.me/alexanderodyssey1)
