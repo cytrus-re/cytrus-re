@@ -45,5 +45,5 @@ Useful information about the bot:
 
 ## Donations
 If you find the bot helpful and want to support the contributors, here's how:
-- **Rexo:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://www.paypal.me/rexo1183) (GBP prefered)
-- **Odyssey:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://paypal.me/alexanderodyssey1) (NOK prefered)
+- **Rexo:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://www.paypal.me/rexo1183) (GBP preferred)
+- **Odyssey:** [![](https://img.shields.io/badge/donate-paypal-005EA6.svg?logo=paypal)](https://paypal.me/alexanderodyssey1) (NOK preferred)
