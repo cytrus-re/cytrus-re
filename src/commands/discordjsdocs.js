@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: true,
-  aliases: ["djs", "djsdocs"],
+  aliases: ["djs", "djsdocs", "discordjs"],
   guildOnly: false,
   permLevel: "User"
 };
