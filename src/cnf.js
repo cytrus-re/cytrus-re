@@ -13,7 +13,7 @@ const config = {
   "token": "process.env.BOT_TOKEN",
   // links
   "github": "https://github.com/cytrus-re/cytrus-re",
-  "supportServer": "https://discord.gg/ymZmdaA,
+  "supportServer": "https://discord.gg/ymZmdaA",
 
   "defaultSettings" : {
     "prefix": "c.", // Default prefix
