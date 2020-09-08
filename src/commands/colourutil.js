@@ -81,10 +81,10 @@ exports.run = async (client, message, args, level) => {
     switch (args[0]) {
       case "rgbtohex":
         
-        let hexOut = hex2rgb(args[1], args[2], args[3]);
+        let hexOut = rgb2hex(args[1]);
 
         //send the hex value as an embed
-        message.channel.send({ embed: { color: hexOut, title: "RGB to hex", description: `rgb(${r}, ${g}, ${b}) converts to \n hex #${hexOut}`}});
+        message.channel.send({ embed: { color: args[0], title: "RGB to hex", description: `rgb(${parseInt(args[1])}, ${parseInt(args[1])}, ${parseInt(args[1])}) converts to \n hex #${hexOut}`}});
         break;
 
       case "hextorgb":
