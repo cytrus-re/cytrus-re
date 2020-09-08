@@ -79,7 +79,7 @@ exports.run = async (client, message, args, level) => {
         
         if (!args[1] || !args[2] || !args[3]) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
 
-        let hexOut = rgb2hex(args[1]);
+        let hexOut = rgb2hex(args[1], args[2], args[3]);
 
         //send the hex value as an embed
         message.channel.send({ embed: { color: args[0], title: "RGB to hex", description: `rgb(${parseInt(args[1])}, ${parseInt(args[1])}, ${parseInt(args[1])}) converts to \n hex #${hexOut}`}});
@@ -89,7 +89,7 @@ exports.run = async (client, message, args, level) => {
 
         if (!args[1]) return message.channel.send("You have to give me a hex code!");
         let rgbOut = hex2rgb(args[1]);
-        
+
         //send the rgb values as an embed
         message.channel.send({ embed: { color: args[1], title: "Hex to RGB", description : `${args[1]} converts to ${rgbOut}`}});
         break;
