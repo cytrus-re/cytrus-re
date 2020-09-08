@@ -77,40 +77,51 @@ exports.run = async (client, message, args, level) => {
   try {
 
     if (!args[0] || args[0] != ("rgbtohex" || "hextorgb" || "random")) return message.channel.send("You need to provide a valid verb!\n see `help colourutil` for more information.");
-    
-    if (args[0] == "rgbtohex") {
 
-      let hexOut = hex2rgb(args[1], args[2], args[3]);
+    switch (args[0]) {
+      case "rgbtohex":
+        
+        let hexOut = hex2rgb(args[1], args[2], args[3]);
 
-      //send the hex value as an embed
-      message.channel.send({ embed: { color: hexOut, title: "RGB to hex", description: `rgb(${r}, ${g}, ${b}) converts to \n hex #${hexOut}`}}); 
+        //send the hex value as an embed
+        message.channel.send({ embed: { color: hexOut, title: "RGB to hex", description: `rgb(${r}, ${g}, ${b}) converts to \n hex #${hexOut}`}});
+        break;
 
-    } else if (args[0] == "hextorgb") {
+      case "hextorgb":
 
-      let rgbOut = hex2rgb(args[1]);
+        let rgbOut = hex2rgb(args[1]);
 
-      //send the rgb values as an embed
-      message.channel.send({ embed: { color: args[1], title: "Hex to RGB", description : `${args[1]} converts to ${rgbOut}`}});
-    } else if (args[0] == "random") {
+        //send the rgb values as an embed
+        message.channel.send({ embed: { color: args[1], title: "Hex to RGB", description : `${args[1]} converts to ${rgbOut}`}});
+        break;
 
-      let rndCol = randomColour(); //get random RGB colours
-      let rndRGB = `rgb(${rndCol[0]}, ${rndCol[1]}, ${rndCol[2]})`; //format properly
-      let rndHex = rgb2hex(rndCol[0], rndCol[1], rndCol[2]); //convert to hex
+      case "random":
 
-      message.channel.send({ embed: { color: rndCol, title: "Random Colour", description : `Your random colour is ${rndRGB}, or hex ${rndHex}`}});
+        let rndCol = randomColour(); //get random RGB colours
+        let rndRGB = `rgb(${rndCol[0]}, ${rndCol[1]}, ${rndCol[2]})`; //format properly
+        let rndHex = rgb2hex(rndCol[0], rndCol[1], rndCol[2]); //convert to hex
 
-    } else if (args[0] == "viewhex") {
+        message.channel.send({ embed: { color: rndCol, title: "Random Colour", description : `Your random colour is ${rndRGB}, or hex ${rndHex}`}});
+        break;
 
-      testhexvalidity(args[1]);
-      //if all is good, send an embed with the input colour
-      message.channel.send({ embed: { color: args[1], title: args[1] }}); 
-    } else if (args[0] == "viewrgb") {
-      testhexvalidity(args[1]);
-      let rgbViewable = hex2rgb(args[1]);
-      //if all is good, send an embed with the input colour
-      message.channel.send({ embed: { color: args[1], title: rgbViewable }}); 
-      
+      case "viewhex":
+
+        testhexvalidity(args[1]);
+        //if all is good, send an embed with the input colour
+        message.channel.send({ embed: { color: args[1], title: args[1] }});
+        break;
+
+      case "viewrgb":
+
+        let hexViewable = rgb2hex(args[1], args[2], args[3]);
+        //if all is good, send an embed with the input colour
+        message.channel.send({ embed: { color: hexViewable, title: `rgb(${parseInt(args[1])}, ${parseInt(args[2])}, ${parseInt(args[1])})` }}); 
+        break;
+
+      default:
+        return message.channel.send("You need to provide a valid verb!\n see `help colourutil` for more information.");
     }
+
   } catch (err) {
 
     message.channel.send(client.errors.genericError + err).catch();
@@ -120,7 +131,7 @@ exports.run = async (client, message, args, level) => {
  
 exports.conf = {
   enabled: true, 
-  aliases: ["cutil", "color, colorutil, colour"],
+  aliases: ["cutil", "color", "colorutil", "colour"],
   guildOnly: false,
   permLevel: "User"
 };
