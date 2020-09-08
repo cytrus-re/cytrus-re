@@ -1,10 +1,10 @@
 exports.run = async (client, message, args, level) => { 
   try {
-    if (!args[0]) return message.reply("You need to give me the channel name!");
-    if (!args[1]) return message.reply("You need to give me the channel type!");
+    if (!args[0]) return message.channel.send("You need to give me the channel name!");
+    if (!args[1]) return message.channel.send("You need to give me the channel type!");
     
     message.channel.send("Channel created.").then(() => {
-      message.guild.createChannel(args[1], args[0], []).catch((err) => {
+      message.guild.channels.create(args[0], { type: args[1] }).catch((err) => {
         message.channel.send(client.errors.genericError);
       });
     });
@@ -24,5 +24,5 @@ exports.help = {
   name: "createchannel",
   category: "Moderation",
   description: "Creates a channel in the server.",
-  usage: "createchannel <voice/text> <name>"
+  usage: "createchannel <name> <voice/text>"
 };
