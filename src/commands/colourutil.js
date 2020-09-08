@@ -2,8 +2,6 @@ exports.run = async (client, message, args, level) => {
   
   function rgb2hex(r, g, b) {
     
-    if (!r || !g || !b) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
-    
     //get the rgb colours by parsing the integers from r, g and b)
     let rInt = parseInt(r);
     let gInt = parseInt(g);
@@ -26,8 +24,6 @@ exports.run = async (client, message, args, level) => {
   }
 
   function hex2rgb(hexvalue) {
-
-    if (!args[1]) return message.channel.send("You have to give me a hex code!");
 
     //get the hex code and remove the hash, if any
     let hexColour = args[0].replace("#", "");
@@ -81,6 +77,8 @@ exports.run = async (client, message, args, level) => {
     switch (args[0]) {
       case "rgbtohex":
         
+        if (!args[1] || !args[2] || !args[3]) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
+
         let hexOut = rgb2hex(args[1]);
 
         //send the hex value as an embed
@@ -89,14 +87,14 @@ exports.run = async (client, message, args, level) => {
 
       case "hextorgb":
 
+        if (!args[1]) return message.channel.send("You have to give me a hex code!");
         let rgbOut = hex2rgb(args[1]);
-
+        
         //send the rgb values as an embed
         message.channel.send({ embed: { color: args[1], title: "Hex to RGB", description : `${args[1]} converts to ${rgbOut}`}});
         break;
 
       case "random":
-
         let rndCol = randomColour(); //get random RGB colours
         let rndRGB = `rgb(${rndCol[0]}, ${rndCol[1]}, ${rndCol[2]})`; //format properly
         let rndHex = rgb2hex(rndCol[0], rndCol[1], rndCol[2]); //convert to hex
@@ -106,6 +104,7 @@ exports.run = async (client, message, args, level) => {
 
       case "viewhex":
 
+        if (!args[1]) return message.channel.send("You have to give me a hex code!");
         testhexvalidity(args[1]);
         //if all is good, send an embed with the input colour
         message.channel.send({ embed: { color: args[1], title: args[1] }});
@@ -113,6 +112,7 @@ exports.run = async (client, message, args, level) => {
 
       case "viewrgb":
 
+        if (!args[1] || !args[2] || !args[3]) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
         let hexViewable = rgb2hex(args[1], args[2], args[3]);
         //if all is good, send an embed with the input colour
         message.channel.send({ embed: { color: hexViewable, title: `rgb(${parseInt(args[1])}, ${parseInt(args[2])}, ${parseInt(args[1])})` }}); 
