@@ -87,7 +87,7 @@ exports.run = async (client, message, args, level) => {
 
     } else if (args[0] == "hextorgb") {
 
-      let rgbOut = hex2rgb(args[1])l;
+      let rgbOut = hex2rgb(args[1]);
 
       //send the rgb values as an embed
       message.channel.send({ embed: { color: args[1], title: "Hex to RGB", description : `${args[1]} converts to ${rgbOut}`}});
