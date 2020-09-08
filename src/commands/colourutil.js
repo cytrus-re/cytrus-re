@@ -72,8 +72,6 @@ exports.run = async (client, message, args, level) => {
   }
   try {
 
-    if (!args[0] || args[0] != ("rgbtohex" || "hextorgb" || "random")) return message.channel.send("You need to provide a valid verb!\n see `help colourutil` for more information.");
-
     switch (args[0]) {
       case "rgbtohex":
         
