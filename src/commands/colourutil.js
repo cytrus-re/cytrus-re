@@ -64,7 +64,7 @@ exports.run = async (client, message, args, level) => {
     //test each digit of the given number, if it is not 6 digits long or includes a digit that is not in the hexDigits array return early and error out.
     for (i = 0; i < hex.length; i++) {
 
-      if (hex.length != 6 || !hex.includes(hex[i])) {
+      if (hex.length != 6 || !hexDigits.includes(hex[i])) {
         
         return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex colour codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: #7289da" } } });
       }
@@ -97,7 +97,7 @@ exports.run = async (client, message, args, level) => {
         let rndRGB = `rgb(${rndCol[0]}, ${rndCol[1]}, ${rndCol[2]})`; //format properly
         let rndHex = rgb2hex(rndCol[0], rndCol[1], rndCol[2]); //convert to hex
 
-        message.channel.send({ embed: { color: rndCol, title: "Random Colour", description : `Your random colour is ${rndRGB}, or hex ${rndHex}`}});
+        message.channel.send({ embed: { color: rndCol, title: "Random Colour", description : `Your random colour is ${rndRGB}, or hex #${rndHex}`}});
         break;
 
       case "viewhex":
@@ -105,15 +105,18 @@ exports.run = async (client, message, args, level) => {
         if (!args[1]) return message.channel.send("You have to give me a hex code!");
         testhexvalidity(args[1]);
         //if all is good, send an embed with the input colour
-        message.channel.send({ embed: { color: args[1], title: args[1] }});
+        message.channel.send({ embed: { color: args[1], title: `#${args[1]}` }});
         break;
 
       case "viewrgb":
 
         if (!args[1] || !args[2] || !args[3]) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
-        let hexViewable = rgb2hex(args[1], args[2], args[3]);
+        let r = parseInt(args[1]);
+        let g = parseInt(args[2]);
+        let b = parseInt(args[3]);
+        let hexViewable = rgb2hex(r, g, b);
         //if all is good, send an embed with the input colour
-        message.channel.send({ embed: { color: hexViewable, title: `rgb(${parseInt(args[1])}, ${parseInt(args[2])}, ${parseInt(args[1])})` }}); 
+        message.channel.send({ embed: { color: hexViewable, title: `rgb(${r}, ${g}, ${b})` }}); 
         break;
 
       default:
