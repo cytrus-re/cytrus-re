@@ -1,12 +1,12 @@
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args || args.length < 1) return message.reply("You must provide a command to unload!");
+    if (!args || args.length < 1) return message.channel.send("You must provide a command to unload!");
 
     let response = await client.unloadCommand(args[0]);
-    if (response) return message.reply(`Error unloading: ${response}`);
+    if (response) return message.channel.send(`Error unloading: ${response}`);
 
     client.logger.log(`Unloading Command: ${args[0]}`);
-    message.reply(`The command \`${args[0]}\` has been unloaded`);
+    message.channel.send(`The command \`${args[0]}\` has been unloaded`);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
