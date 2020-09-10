@@ -10,7 +10,7 @@
 	},
 	"rules": {
         "comma-spacing": "error",
-        "no-unused-vars": "warn",
+        "no-unused-vars": "error",
         "comma-style": "error",
         "no-console": "off",
 		"max-nested-callbacks": ["error", {"max": 4}],
