@@ -154,7 +154,7 @@ module.exports = (client) => {
                 return "macOS";
                 break;
             default:
-                return "an unknown OS";
+                return "an unknown OS. Maybe BSD?";
         }
   };
 
