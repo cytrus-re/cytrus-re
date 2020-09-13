@@ -1,13 +1,13 @@
 # Cytrus-RE
-[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/739524957255630858?color=Bonk&label=discord&logo=asd&logoColor=ad)](https://discord.gg/ymZmdaA) [![Webpage](https://img.shields.io/website?down_color=lightgrey&down_message=is%20down.&up_message=is%20up%21&url=https%3A%2F%2Fcytrus-re.github.io%2F)](https://cytrus-re.github.io) [![Wiki](https://img.shields.io/badge/Wiki-information%20about%20cytrus--re-informational)](https://github.com/Cytrus-RE/cytrus-re/wiki) ![Size](https://img.shields.io/github/repo-size/Cytrus-RE/cytrus-re?label=Cytrus-RE%20Size) [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cytrus-re/cytrus-re)
+[![Open Source Helpers](https://www.codetriage.com/rexogamer/cytrus-re/badges/users.svg)](https://www.codetriage.com/rexogamer/cytrus-re) [![Discord ](https://img.shields.io/discord/739524957255630858?color=Bonk&label=discord&logo=asd&logoColor=ad)](https://discord.gg/BTKT53N) [![Webpage](https://img.shields.io/website?down_color=lightgrey&down_message=is%20down.&up_message=is%20up%21&url=https%3A%2F%2Fcytrus-re.github.io%2F)](https://cytrus-re.github.io) [![Wiki](https://img.shields.io/badge/Wiki-information%20about%20cytrus--re-informational)](https://github.com/Cytrus-RE/cytrus-re/wiki) ![Size](https://img.shields.io/github/repo-size/Cytrus-RE/cytrus-re?label=Cytrus-RE%20Size) [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cytrus-re/cytrus-re)
 
 A multipurpose Discord bot that covers all your needs. If it doesn't, why not help us by [opening an issue](https://github.com/cytrus-re/cytrus-re/issues/new) or [contributing](https://github.com/cytrus-re/cytrus-re/wiki/contributing)?
 
 ## Invite the bot
-[**Click here!**](https://discordapp.com/api/oauth2/authorize?client_id=596304769333592078&permissions=2113404023&scope=bot)
+[**Click here!**](https://discord.com/api/oauth2/authorize?client_id=754444020956266566&permissions=2113404151&scope=bot)
 
 ## Join the support server
-[**Click here!**](https://discord.gg/xMyFtrJ)
+[**Click here!**](https://discord.gg/BTKT53N)
 
 ## Hosting the bot
 
