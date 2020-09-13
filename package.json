@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "depcheck": "^1.2.0",
-    "eslint": "^7.8.1"
+    "eslint": "^7.9.0"
   },
   "bugs": {
     "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
