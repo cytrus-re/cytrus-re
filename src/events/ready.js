@@ -10,6 +10,7 @@ module.exports = async client => {
     //{msg: `to EDGE rambling | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'LISTENING'},
     {msg: `development progress! | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
     //{msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
+    {msg: `Welcome to www.worm.com! Hacked by Chinese!`, type: 'PLAYING'}
   ];
     // Why did I comment out the rest? 
     // If we're gonna try to be a serious bot, then we need to have serious status messages. 

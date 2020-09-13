@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
                            { name: "Grammar fixes", value: "Even more grammar has been fixed!" },
                            { name: "Minor improvements", value: "Among other things, the bot is much more stable." },
                            { name: "Bug fixes", value: "A lot of bugs have been fixed!" }],
-                  footer: {text: "Made by DestroyedEDGE#7416, Rexowogamer#1183, Odyssey346#9848 and Commandblock6417#9366!"
+                  footer: {text: "Made by Rexowogamer#1183, Odyssey346#9848 and Commandblock6417#9366!"
     } }});
   } catch (err) {
    message.channel.send(client.errors.genericError + err).catch();
