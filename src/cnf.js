@@ -1,6 +1,6 @@
 const config = {
   "botName": "Cytrus-RE", // Name of bot. Don't change this.
-  // NOTE: The IDs are sorted by the comments. So, Odyssey346 is the first ID in "managers", and then comes commandblock.
+  // NOTE: The IDs are sorted by the comments. So, Commandblock is the first ID in "managers", and then comes... well, we don't have any other managers yet but yeah.
   "owners": ["395990735934980097"], // rexo has full power ahahahaha
   "managers": ["429353559566319626"], // commandblock
   "admins": ["390663607849058307"], // derser

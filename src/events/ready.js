@@ -7,14 +7,12 @@ module.exports = async client => {
     //{msg: `with linux permissions | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
     //{msg: `Discord be slow | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'WATCHING'},
     {msg: `over ${client.guilds.cache.size} servers | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
-    //{msg: `to EDGE rambling | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'LISTENING'},
     {msg: `development progress! | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`, type: "WATCHING"},
     //{msg: `with Git and learning at the same time! | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
   ];
     // Why did I comment out the rest? 
     // If we're gonna try to be a serious bot, then we need to have serious status messages. 
     // "playing with linux permissions" this comes from a kid who's too scared to use linux but ok
-    // "to EDGE rambling" if I was a normal random user I wouldn't know who EDGE was
     // "with Git" sorry what - odyssey
   setInterval(async () => {
     let index = Math.floor(Math.random() * statusList.length + 1) - 1;
