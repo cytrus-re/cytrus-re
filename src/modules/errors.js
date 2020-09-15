@@ -3,7 +3,7 @@ const errors = {
   "wiiError": "An error has occurred.\nPress the Eject button, remove the Game Disc, and turn off the power to the console.\nPlease read the Wii Operations Manual for further instructions.",
   "userNotInGuild": "This user isn't in this guild!",
   "cannotBanSelf":  "Sorry, you can't ban yourself. (It would be funny if it wasn't so sad.)",
-  "cannotKickSelf":  "Sorry, you can't kick yourself. (If you don't want to be here, just leave!)",
+  "cannotKickSelf":  "Sorry, you can't kick yourself. (If you don't want to be here, just leave.)",
   "noResults": "I couldn't find any results for your query!",
   "nsfwOnly": "You need to be in an NSFW channel to use this command!",
   "noArticleDescription": "This article doesn't have a description or something went wrong.",
