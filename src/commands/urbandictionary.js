@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => { 
   try {
+    if (!args[0]) return message.channel.send("You need to give me a word or phrase!");
     ud.term(args.join(" ")).then(async (result) => {
-      if (!args[0]) return message.channel.send("You need to give me a word or phrase!");
       let output = "";
       let entries = result.entries;
       let i = 1;
