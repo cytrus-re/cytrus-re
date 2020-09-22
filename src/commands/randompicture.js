@@ -9,6 +9,7 @@ exports.run = async (client, message, args, level) => {
       .setImage(json.url);
       
       message.channel.send(embed);
+      console.log(`Image sent: ${json.url}`);
     });
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
