@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
 		let bInt = parseInt(b);	
 
 		//if any number is larger than 0xFF, spit an error
-		if (rInt || gInt || bInt > 255 || isNaN(rInt || gInt || bInt)) {
+		if (isNaN(rInt) || isNaN(gInt) || isNaN(bInt) || rInt > 255 || gInt > 255 || bInt > 255) {
 			return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
 		}
 
@@ -38,13 +38,13 @@ exports.run = async (client, message, args, level) => {
 		let g = parseInt(hexColour.substring(2, 4), 16);
 		//and 4 and 5 for blue
 		let b = parseInt(hexColour.substring(4, 6), 16);
-		} else return;
-
-
 
 		let colourOut = `rgb(${r}, ${g}, ${b})`;
 
 		return colourOut;
+
+		} else return;
+
 	}
 
 	function randomColour() {
@@ -120,11 +120,11 @@ exports.run = async (client, message, args, level) => {
 				let rInt = parseInt(args[1]);
 				let gInt = parseInt(args[2]);
 				let bInt = parseInt(args[3]);
-				if (rInt || gInt || bInt > 255 || isNaN(rInt || gInt || bInt)) {
+				if (isNaN(rInt) || isNaN(gInt) || isNaN(bInt) || rInt > 255 || gInt > 255 || bInt > 255) {
 					return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
 				}
-				let hexViewable = rgb2hex(r, g, b);
-				message.channel.send({ embed: { color: hexViewable, title: `rgb(${r}, ${g}, ${b})` }}); 
+				let hexViewable = rgb2hex(rInt, gInt, bInt);
+				message.channel.send({ embed: { color: hexViewable, title: `rgb(${rInt}, ${gInt}, ${bInt})` }}); 
 			break;
 
 			default:
