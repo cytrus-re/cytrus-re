@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
 		let bInt = parseInt(b);	
 
 		//if any number is larger than 0xFF, spit an error
-		if (rInt > 255 || gInt > 255 || bInt > 255) {
+		if (rInt || gInt || bInt > 255 || isNaN(rInt || gInt || bInt)) {
 			return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
 		}
 
@@ -28,8 +28,8 @@ exports.run = async (client, message, args, level) => {
 		//get the hex code and remove the hash, if any
 		let hexColour = hexvalue.replace("#", "");
 
-		testhexvalidity(hexColour); //check if hex colour is valid
-
+		if (testhexvalidity(hexColour)) {
+		
 		//get the 3 values for red, green and blue by parsing hexadecimal integers from the hex array's digits...
 
 		//0 and 1 for red (the second argument of "substring(start, end)" is non-inclusive)
@@ -38,6 +38,7 @@ exports.run = async (client, message, args, level) => {
 		let g = parseInt(hexColour.substring(2, 4), 16);
 		//and 4 and 5 for blue
 		let b = parseInt(hexColour.substring(4, 6), 16);
+		} else return;
 
 
 
@@ -70,6 +71,7 @@ exports.run = async (client, message, args, level) => {
 				return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex colour codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: \"#7289da\"" } } });
 			}
 		}
+		return 1; //if all is good, exit with 1;
 	}
 	try {
 
@@ -104,18 +106,23 @@ exports.run = async (client, message, args, level) => {
 			case "viewhex":
 
 				if (!args[1]) return message.channel.send("You have to give me a hex code!\nSee `help colourutil` for more information.");
-				testhexvalidity(args[1]);
-				//if all is good, send an embed with the input colour
-				message.channel.send({ embed: { color: args[1], title: `#${args[1]}` }});
+				if (testhexvalidity(args[1])) {
+					message.channel.send({ embed: { color: args[1], title: `#${args[1]}` }});
+				} else return;
+
+				
 			break;
 
 			case "viewrgb":
 
 				if (!args[1] || !args[2] || !args[3]) return message.channel.send("You have to give me an rgb code!\nSee `help colourutil` for more information.");
 
-				let r = parseInt(args[1]);
-				let g = parseInt(args[2]);
-				let b = parseInt(args[3]);
+				let rInt = parseInt(args[1]);
+				let gInt = parseInt(args[2]);
+				let bInt = parseInt(args[3]);
+				if (rInt || gInt || bInt > 255 || isNaN(rInt || gInt || bInt)) {
+					return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
+				}
 				let hexViewable = rgb2hex(r, g, b);
 				message.channel.send({ embed: { color: hexViewable, title: `rgb(${r}, ${g}, ${b})` }}); 
 			break;
