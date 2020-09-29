@@ -1,21 +1,15 @@
-
 exports.run = async (client, message, args, level) => { 
-	const rgbError = message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
-
-	const hexError = message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex colour codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: \"#7289da\"s" } } });
 
 	function rgb2hex(r, g, b) {
 
 		//get the rgb colours by parsing the integers from r, g and b)
 		let rInt = parseInt(r);
 		let gInt = parseInt(g);
-		let bInt = parseInt(b);
-
-		if (isNaN(rInt) || isNaN(gInt) || isNaN(bInt)) return rgbError;
+		let bInt = parseInt(b);	
 
 		//if any number is larger than 0xFF, spit an error
 		if (rInt > 255 || gInt > 255 || bInt > 255) {
-			return rgbError;
+			return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "RGB color codes include **3** numbers from **0** to **255**, separated by commas and spaces", footer: { text: "Example: \"114, 137, 218\"" } } });
 		}
 
 		//convert the rgb colours to base 16 strings
@@ -32,7 +26,7 @@ exports.run = async (client, message, args, level) => {
 	function hex2rgb(hexvalue) {
 
 		//get the hex code and remove the hash, if any
-		let hexColour = args[1].replace("#", "");
+		let hexColour = hexvalue.replace("#", "");
 
 		testhexvalidity(hexColour); //check if hex colour is valid
 
@@ -64,12 +58,16 @@ exports.run = async (client, message, args, level) => {
 
 	function testhexvalidity(hex) { //tests if a hex value is valid or not
 
-		//array that includes all valid hex digits
-		const hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-		//test each digit of the given number, if it is not 6 digits long or includes a digit that is not in the hexDigits array return early and error out.
-		for (var i = 0; i < hex.length; i++) {
-			if (hex.length != 6 || !hexDigits.includes(hex[i])) {
-				return hexError
+		//if the hex number isn't 6 chars long, error out
+		if (hex.length != 6) {
+			return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex colour codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: \"#7289da\"" } } });
+		}
+
+		//test each hex digit. If any aren't 0-9 or a-f then error out.
+		let regex = /[0-9]|[a-f]/;
+		for (let i = 0; i < hex.length; i++) {
+			if (!regex.test(hex[i])) {
+				return message.channel.send({ embed: { color:"ff3333", title: "Incorrect format!", description: "Hex colour codes include **6** of the following characters:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 0, a, b, c, d, e and f", footer: { text: "Example: \"#7289da\"" } } });
 			}
 		}
 	}
@@ -119,8 +117,6 @@ exports.run = async (client, message, args, level) => {
 				let g = parseInt(args[2]);
 				let b = parseInt(args[3]);
 				let hexViewable = rgb2hex(r, g, b);
-				if (isNaN(r) || isNaN(g) || isNaN(b)) return rgbError 
-				//if all is good, send an embed with the input colour
 				message.channel.send({ embed: { color: hexViewable, title: `rgb(${r}, ${g}, ${b})` }}); 
 			break;
 
@@ -130,6 +126,7 @@ exports.run = async (client, message, args, level) => {
 	} catch (err) {
 
 		message.channel.send(client.errors.genericError + err).catch();
+
 	}
 };
 
