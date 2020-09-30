@@ -101,10 +101,6 @@ module.exports = (client) => {
     else return str;
   };
 
-  client.spoilerify = (ts) => {
-    return "||" + ts.replace("||", "\\||") + "||";
-  };
-
   client.Embed = class {
     constructor(type, settings) {
       this.type = type;
@@ -146,13 +142,10 @@ module.exports = (client) => {
     switch (rawPlat) {
         case "win32":
                 return "Windows";
-                break;
             case "linux":
                 return "GNU/Linux";
-                break;
             case "darwin":
                 return "macOS";
-                break;
             default:
                 return "an unknown OS. Maybe BSD?";
         }
