@@ -15,15 +15,15 @@
   },
   "repository": "github:Cytrus-RE/cytrus-re",
   "author": {
-    "name": "CelestialCrafter",
-    "email": "celestialcraftermc@gmail.com",
-    "url": "https://github.com/CelestialCrafter"
+    "name": "Rexogamer",
+    "email": "beartechtalks@gmail.com",
+    "url": "https://github.com/Rexogamer"
   },
   "contributors": [
     {
-      "name": "Rexowogamer",
-      "email": "beartechtalks@gmail.com",
-      "url": "https://github.com/Rexogamer"
+      "name": "CelestialCrafter",
+      "email": "celestialcraftermc@gmail.com",
+      "url": "https://github.com/CelestialCrafter"
     },
     {
       "name": "Commandblock6417",
@@ -37,7 +37,7 @@
   ],
   "maintainers": [
     {
-      "name": "Rexowogamer",
+      "name": "Rexogamer",
       "email": "beartechtalks@gmail.com",
       "url": "https://github.com/Rexogamer"
     },
