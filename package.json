@@ -44,6 +44,10 @@
     }
   ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
+  },
+  "homepage": "https://cytrus-re.github.io",
   "dependencies": {
     "@cytrus-re/wikipediajs": "^1.4.6",
     "better-sqlite-pool": "^0.3.0",
@@ -77,8 +81,23 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0"
   },
-  "bugs": {
-    "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
+  "husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "yarn lint-staged"
+		}
+	},
+  "commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
   },
-  "homepage": "https://cytrus-re.github.io"
+  "config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+  "lint-staged": {
+		"*.{js}": "eslint --fix --ext js"
+	}
 }
