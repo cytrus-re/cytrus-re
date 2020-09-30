@@ -9,10 +9,10 @@
     "forever": "forever start cybase.js",
     "pm2": "pm2 start cybase.js",
     "pnpm": "pnpm server start",
-		"lint": "eslint src tests --ext js --fix",
-		"update": "yarn upgrade-interactive --latest",
+    "lint": "eslint src tests --ext js --fix",
+    "update": "yarn upgrade-interactive --latest",
     "commit": "git-cz",
-		"cz": "git-cz"
+    "cz": "git-cz"
   },
   "engines": {
     "node": "14.x"
@@ -86,22 +86,22 @@
     "lint-staged": "^10.4.0"
   },
   "husky": {
-		"hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-			"pre-commit": "yarn lint-staged"
-		}
-	},
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint-staged"
+    }
+  },
   "commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "lint-staged": {
-		"*.{js}": "eslint --fix --ext js"
-	}
+    "*.{js}": "eslint --fix --ext js"
+  }
 }
