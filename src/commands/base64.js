@@ -1,16 +1,14 @@
-const { base64encode, base64decode } = require("nodejs-base64");
-
 exports.run = async (client, message, args) => {
   try {
     message.delete().catch();
     switch(args[0]) {
       case "encode":
         if (!args.slice(1).join(" ")) return message.reply("You need to provide the string to encode!");
-        message.channel.send(base64encode(args.slice(1).join(" ")));
+        message.channel.send(Buffer.from(args.slice(1).join(" ")).toString("base64"));
         break;
       case "decode":
         if (!args.slice(1).join(" ")) return message.reply("You need to provide the string to decode!");
-        message.channel.send(base64decode(args.slice(1).join(" ")));
+        message.channel.send(Buffer.from(args.slice(1).join(" "), "base64").toString("ascii"));
         break;
       default:
         return message.reply("You need to choose to encode or decode the string!");
