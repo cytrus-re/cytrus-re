@@ -31,7 +31,6 @@
     "moment": "^2.29.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
-    "nodejs-base64": "^1.0.3",
     "one-liner-joke": "^1.2.0",
     "pidusage": "^2.0.21",
     "request": "^2.88.2",
