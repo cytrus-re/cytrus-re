@@ -1,6 +1,6 @@
 const { base64encode, base64decode } = require("nodejs-base64");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     message.delete().catch();
     switch(args[0]) {
@@ -14,7 +14,6 @@ exports.run = async (client, message, args, level) => {
         break;
       default:
         return message.reply("You need to choose to encode or decode the string!");
-        break;
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
