@@ -14,7 +14,41 @@
     "node": "14.x"
   },
   "repository": "github:Cytrus-RE/cytrus-re",
-  "author": "CelestialCrafter, Rexowogamer, Commandblock6417 and Odyssey346",
+  "author": {
+    "name": "CelestialCrafter",
+    "email": "celestialcraftermc@gmail.com",
+    "url": "https://github.com/CelestialCrafter"
+  },
+  "contributors": [
+    {
+      "name": "Rexowogamer",
+      "email": "beartechtalks@gmail.com",
+      "url": "https://github.com/Rexogamer"
+    },
+    {
+      "name": "Commandblock6417",
+      "url": "https://github.com/CommandBlock6417"
+    },
+    {
+      "name": "Odyssey346",
+      "url": "https://github.com/Oxygemo"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Rexowogamer",
+      "email": "beartechtalks@gmail.com",
+      "url": "https://github.com/Rexogamer"
+    },
+    {
+      "name": "Commandblock6417",
+      "url": "https://github.com/CommandBlock6417"
+    },
+    {
+      "name": "Odyssey346",
+      "url": "https://github.com/Oxygemo"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "@cytrus-re/wikipediajs": "^1.4.6",
