@@ -8,7 +8,11 @@
     "node": "node cybase.js",
     "forever": "forever start cybase.js",
     "pm2": "pm2 start cybase.js",
-    "pnpm": "pnpm server start"
+    "pnpm": "pnpm server start",
+    "lint": "eslint src tests --ext js --fix",
+    "update": "yarn upgrade-interactive --latest",
+    "commit": "git-cz",
+    "cz": "git-cz"
   },
   "engines": {
     "node": "14.x"
@@ -44,6 +48,10 @@
     }
   ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
+  },
+  "homepage": "https://cytrus-re.github.io",
   "dependencies": {
     "@cytrus-re/wikipediajs": "^1.4.6",
     "better-sqlite-pool": "^0.3.0",
@@ -69,11 +77,31 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "depcheck": "^1.2.0",
-    "eslint": "^7.10.0"
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0"
   },
-  "bugs": {
-    "url": "https://github.com/Cytrus-RE/cytrus-re/issues"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint-staged"
+    }
   },
-  "homepage": "https://cytrus-re.github.io"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --fix --ext js"
+  }
 }
