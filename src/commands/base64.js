@@ -4,11 +4,11 @@ exports.run = async (client, message, args) => {
     switch(args[0]) {
       case "encode":
         if (!args.slice(1).join(" ")) return message.reply("You need to provide the string to encode!");
-        message.channel.send(Buffer.from(args.slice(1).join(" ")).toString("base64"));
+        message.channel.send(Buffer.from(args.slice(1).join(" "), "utf8").toString("base64"));
         break;
       case "decode":
         if (!args.slice(1).join(" ")) return message.reply("You need to provide the string to decode!");
-        message.channel.send(Buffer.from(args.slice(1).join(" "), "base64").toString("ascii"));
+        message.channel.send(Buffer.from(args.slice(1).join(" "), "base64").toString("utf8"));
         break;
       default:
         return message.reply("You need to choose to encode or decode the string!");
