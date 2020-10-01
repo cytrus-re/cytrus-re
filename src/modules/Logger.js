@@ -6,12 +6,11 @@ const moment = require("moment"); //nodejs moment
 const webhook = new Discord.WebhookClient(process.env.LOG_WEBHOOK_ID, process.env.LOG_WEBHOOK_TOKEN);
 const cytrus = zaq.as("Cytrus-RE"); // This sets the name for Cytrus-RE in the logs. If it were something like " Discord Bot " then it would show Discord Bot as name in log.
 
-exports.log = (content, type = "log") => {
+exports.log = (client, content, type = "log") => {
   const timestamp = `${moment().format("YYYY/MM/DD HH:mm:ss")}`;
   switch (type) { 
     case "log":
       return cytrus.info(content);
-      break;
     case "warn":
       cytrus.warn(beautify(content, { indent_size: 2, space_in_empty_paren: true }), {
         executionTime: timestamp,
@@ -19,26 +18,20 @@ exports.log = (content, type = "log") => {
       });
 
       return webhook.send("Warn:\n" + content);
-      break;
     case "error":
       return cytrus.err(content);
-      break;
     case "debug":
       return cytrus.debug(beautify(content, { indent_size: 2, space_in_empty_paren: true }));
-      break;
     case "ready":
       return cytrus.ok(beautify(content, { indent_size: 2, space_in_empty_paren: true }));
-      break;
     case "user":
       return console.log(`${timestamp} ${content}`);
-      break;
     case "time":
       return cytrus.time(beautify(content, { indent_size: 2, space_in_empty_paren: true }), {
         ms: client.ping,
         executionTime: timestamp,
         sessionId: process.pid
       });
-      break;
     default:
       throw new TypeError("Logger type must be either warn, debug, log, ready, time, divider, user or error.");
   }
