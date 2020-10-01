@@ -31,7 +31,6 @@ exports.run = async (client, message, args, level) => {
 //error log
   
   } catch (err) {
-    // oops my pc crashed and i lost all my data, and i had an antivirus!
     message.channel.send(client.errors.genericError + err).catch();
   }
 };
