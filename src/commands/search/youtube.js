@@ -34,7 +34,7 @@ exports.conf = {
 
 exports.help = {
   name: "youtube",
-  category: "General",
+  category: "Search",
   description: "Returns info about a Youtube video",
   usage: "youtube <video name>"
 };

@@ -17,6 +17,6 @@ exports.conf = {
 exports.help = {
   name: "level",
   category: "General",
-  description: "Returns your Cytrus-Re permission level.",
+  description: "Returns your Cytrus-RE permission level.",
   usage: "level"
 };

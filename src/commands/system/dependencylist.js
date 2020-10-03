@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
   try {
     let output = "";
-    Object.keys(require("../../package.json").dependencies).forEach((pack) => output += pack + "\n");
-    let length = Object.keys(require("../../package.json").dependencies).length;
+    Object.keys(require("../../../package.json").dependencies).forEach((pack) => output += pack + "\n");
+    let length = Object.keys(require("../../../package.json").dependencies).length;
     
     let embed = new Discord.MessageEmbed()
     .setTitle(`Cytrus-RE's ${length} dependencies:`)
