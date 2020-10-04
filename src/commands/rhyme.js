@@ -1,5 +1,5 @@
 const rhyme = require("rhyme");
-
+// todo: rewrite with rhymes library instead of rhyme
 exports.run = async (client, message, args, level) => { 
   try {
     if (!args[0]) return message.reply("You need to input the word to rhyme!");
