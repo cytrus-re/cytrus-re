@@ -2,6 +2,7 @@ const zaq = require("zaq");
 const Discord = require("discord.js");
 const beautify = require("js-beautify").js;
 const moment = require("moment"); //nodejs moment
+const { destroy } = require("../../cybase");
 
 const webhook = new Discord.WebhookClient(process.env.LOG_WEBHOOK_ID, process.env.LOG_WEBHOOK_TOKEN);
 const cytrus = zaq.as("Cytrus-RE"); // This sets the name for Cytrus-RE in the logs. If it were something like " Discord Bot " then it would show Discord Bot as name in log.
