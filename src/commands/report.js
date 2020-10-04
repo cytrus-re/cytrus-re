@@ -20,12 +20,12 @@ exports.run = async (client, message, args, level) => {
 
      let reportschannel = client.channels.get("691142562253242409");
      if(!reportschannel) return message.channel.send("I couldn't find the reports channel!");
-     console.log("channel exists!"); 
+     console.log("Report channel exists!"); 
 
      message.delete();
-     console.log("message deleted!"); 
+     console.log("Report message deleted!"); 
      reportschannel.send(reportEmbed);
-     console.log("report message sent!");
+     console.log("Report message sent!");
      message.channel.send("Report successfully sent!");
 
 //error log
