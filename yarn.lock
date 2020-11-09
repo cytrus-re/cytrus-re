@@ -4092,10 +4092,10 @@ tweetnacl@^1.0.3:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
 
-txtgen@^2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/txtgen/-/txtgen-2.2.7.tgz#e4027562b1b9eb78af576c19d4a444dde7b004c1"
-  integrity sha512-vV65QydO0k+xbi0lB8FIpdVhtZ5rrtA6cDmxWwwDM5NIMiuEJZfurHPkXG7Q9fMIwHMNGfoePvjgtkknB8L2kQ==
+txtgen@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/txtgen/-/txtgen-2.2.8.tgz#81e27e5a74317cbdd06f912c1c2cc7a2b6571c03"
+  integrity sha512-b3wteOTrO1RPV1f6dhYaNz2G48a6dCH+pvTBRMdtjTWSeVBBE4rFypoc+2uT0F7OFSgBlOQefDuDvp9VYqA73g==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
