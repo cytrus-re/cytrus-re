@@ -17,7 +17,8 @@ exports.conf = {
   enabled: false, // You all know why I did this.
   aliases: ["rep"],
   guildOnly: true,
-  permLevel: "Server Owner"
+  permLevel: "Server Owner",
+  archived: true
 };
 
 exports.help = {
