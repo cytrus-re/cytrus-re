@@ -1,12 +1,12 @@
 exports.run = async (client, message, args, level) => {
-  if (message.mentions.everyone) {
-    message.channel.send(client.errors.cannotPingEveryone); 
-    message.delete().catch();
-    return; //send error and return early if the message includes mentions.
-  }
   try {
     message.delete().catch();
     const mg = args.join(" ");
+    if (message.mentions.everyone) {
+      message.channel.send(client.errors.cannotPingEveryone); 
+      message.delete().catch();
+      return; //send error and return early if the message includes mentions.
+    }
     message.channel.send(mg);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
