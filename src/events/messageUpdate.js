@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-
 module.exports = (client, message, messageNew) => {
   if (message.author.bot) return; // If the message author is a bot, then don't do this. 
   if (message.pinned && !messageNew.pinned) return; // If the message was pinned, then don't do this.
