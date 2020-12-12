@@ -46,7 +46,7 @@ module.exports = async (client, message) => {
     }, 3000); // three seconds
   }
 
-  if (!message.guild && cmd.conf.guildOnly) return message.send("You need to be in a guild to use this command.");
+  if (!message.guild && cmd.conf.guildOnly) return message.channel.send("You need to be in a guild to use this command.");
   if (message.guild && !message.channel.nsfw && cmd.conf.nsfwOnly) return message.channel.send(client.errors.nsfwOnly);
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
