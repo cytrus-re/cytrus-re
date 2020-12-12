@@ -1,7 +1,18 @@
 exports.run = async (client, message, args, level) => { 
     try {
-      let errorarg = [args[0]];
-      message.channel.send(client.errors.${errorarg});
+        // This code is GARBAGE. We could make it much better if we just read the copypastas from a file and caching it
+        if (args[0] == "genericError")
+            message.channel.send(client.errors.genericError);
+        if (args[0] == "wiiError")
+            message.channel.send(client.errors.wiiError);
+        if (args[0] == "userNotInGuild")
+            message.channel.send(client.errors.userNotInGuild);
+        if (args[0] == "cannotBanSelf")
+            message.channel.send(client.errors.cannotBanSelf);
+        if (args[0] == "noResults")
+            message.channel.send(client.errors.noResults);
+        if (args[0] == "noArticleDescription")
+            message.channel.send(client.errors.noArticleDescription);
     } catch (err) {
       message.channel.send("Okay, something actually went wrong with this command.\n" + err).catch();
     }
