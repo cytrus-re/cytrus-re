@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
 exports.conf = {
   enabled: true,
   aliases: ["ri,", "botinvite", "bi", "returninvite", "cyinv"],
-  guildOnly: true,
+  guildOnly: false,
   permLevel: "User"
 };
 
