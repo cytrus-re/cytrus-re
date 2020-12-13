@@ -13,9 +13,9 @@ const config = {
   "globalBan": ["360498353462575115"],
   "token": "process.env.BOT_TOKEN",
   // LINKS:
-  "github": "https://github.com/cytrus-re/cytrus-re",
-  "supportServer": "https://discord.gg/BTKT53N",
-  "botInvite": "https://discord.com/api/oauth2/authorize?client_id=754444020956266566&permissions=2113404151&scope=bot",
+  "github": "https://terrific-tea.github.io/links/cygithub",
+  "supportServer": "https://terrific-tea.github.io/links/discord",
+  "botInvite": "https://terrific-tea.github.io/links/cyinvite",
 
   "defaultSettings" : {
     "prefix": "c.", // Default prefix
