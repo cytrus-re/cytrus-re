@@ -3,7 +3,7 @@ exports.run = async (client, message, args, level) => {
   try {
     let invEmbed = new Discord.MessageEmbed()
     .setTitle("Invite Cytrus-RE to your server!")
-    .setDescription(`[**Click here!**](https://terrific-tea.github.io/links/cyinvite)`)
+    .setDescription(`[**Click here!**](${client.config.botInvite})`)
     .setColor("#eeeeee");
     message.channel.send(invEmbed);
   } catch (err) {
