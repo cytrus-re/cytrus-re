@@ -1,7 +1,7 @@
 exports.run = async (client, message, args, level) => { 
   try {
     if (message.member.hasPermission("CREATE_INSTANT_INVITE")) {
-      message.channel.createInvite().then(invite => message.channel.send(`I've succesfuly created the invite!\nCode: ${invite.code}`));
+      message.channel.createInvite().then(invite => message.channel.send(`I've succesfuly created the invite!\nCode: https://discord.gg/${invite.code}`));
     } else message.reply("You don't have the Create Invite permission!");
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
