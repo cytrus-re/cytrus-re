@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        if (!message.guild.roles.find(r => r.name == settings.muteRole)) {
+        if (!message.guild.roles.cache.find(r => r.name == settings.muteRole)) {
           message.guild.createRole({
             name: settings.muteRole || "CytrusMute",
             color: "#eeeeee",
@@ -17,7 +17,7 @@ exports.run = async (client, message, args, level) => {
         }
         
         
-        member.addRole(message.guild.roles.find(r => r.name == settings.muteRole)).then(async () => {
+        member.addRole(message.guild.roles.cache.find(r => r.name == settings.muteRole)).then(async () => {
           message.reply(`**Successfully muted ${user.tag}**`);
 
           const modLogChannel = settings.modLogChannel;
