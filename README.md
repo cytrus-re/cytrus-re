@@ -4,7 +4,7 @@
 A multipurpose Discord bot that covers all your needs. If it doesn't, why not help us by [opening an issue](https://github.com/cytrus-re/cytrus-re/issues/new) or [contributing](https://github.com/cytrus-re/cytrus-re/wiki/contributing)?  
 
 # Note
-Cytrus-RE is being Cytrus-REwritten in TS. We're done with maintaining Celestial's code. [Please click/tap here to get to our new bot's repository!](https://github.com/Cytrus-RE/debia)
+Cytrus-RE is being Cytrus-REwritten in TS. We're done with maintaining Celestial's code. [**Please click/tap here to get to our new bot's repository!**](https://github.com/Cytrus-RE/debia)
 
 ## Invite the bot
 [**Click here!**](https://discord.com/api/oauth2/authorize?client_id=754444020956266566&permissions=2113404151&scope=bot)
@@ -15,7 +15,7 @@ Cytrus-RE is being Cytrus-REwritten in TS. We're done with maintaining Celestial
 ## Hosting the bot
 
 ### WARNING ABOUT HOSTING
-**You are NOT allowed to rebrand the bot as your own creation without the explicit permission of Rexogamer.** If we find a case of someone doing this, we'll try our hardest to take it down (this makes you a Cytrus-REEEpoff).
+**You are NOT allowed to rebrand the bot as your own creation without the explicit permission of Rexogamer.** If we find a case of someone doing this, we'll try our hardest to ***take it down*** (this makes you a Cytrus-REEEpoff).
 You are allowed to self-host it, but your changes MUST be on GitHub.com, as a fork of Cytrus-RE AND credit must be given to the authors of Cytrus-RE. We'll also need to be able to contact you.
 
 By self-hosting Cytrus-RE, you agree to the above.
