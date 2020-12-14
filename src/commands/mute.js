@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
       const member = message.guild.member(user);
       if (member) {
         if (!message.guild.roles.cache.find(r => r.name == settings.muteRole)) {
-          message.guild.createRole({
+          message.guild.roles.create({
             name: settings.muteRole || "CytrusMute",
             color: "#eeeeee",
             permissions: ["READ_MESSAGES"]
@@ -21,13 +21,13 @@ exports.run = async (client, message, args, level) => {
           message.reply(`**Successfully muted ${user.tag}**`);
 
           const modLogChannel = settings.modLogChannel;
-          if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
+          if (modLogChannel && message.guild.channels.cache.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.MessageEmbed()
             .setTitle("User Mute")
             .setColor("#eeeeee")
             .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
 
-            message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
+            message.guild.channels.cache.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
           }
         }).catch(err => {
           message.reply("I wasn't to mute this user.\n" + err);
