@@ -105,3 +105,6 @@ dist
 
 # NPM Package lock file
 package-lock.json
+
+#Bot token
+token
