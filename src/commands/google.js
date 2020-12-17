@@ -1,5 +1,6 @@
 const google = require("google");
 
+google.protocol = 'https' //this could help 
 exports.run = async (client, message, args, level) => { 
   try { 
     if (!args[0]) return message.channel.send("You need to give me something to search for!");
@@ -11,11 +12,12 @@ exports.run = async (client, message, args, level) => {
       
       if (!res.links[0].href) return message.channel.send("I couldn't find anything for your search term!");
       
+	  /*/!\work in progress/!\*/
       let output = "";
       let i = 1;
       
       res.links.forEach(async (l) => {
-        output += "\n" + i + ". " + l.title;
+        output += "\n" + i + ". " + link.title; //idk what i'm doing let's try this out ig
         i++;
       });
       
@@ -32,7 +34,7 @@ exports.run = async (client, message, args, level) => {
         footer: link.href,
         description: client.truncate(link.description, 2000)
       });
-      
+      /*/!\work in progress/!\*/
       message.channel.send(embed);
     });
   } catch (err) {
