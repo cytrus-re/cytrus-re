@@ -1,17 +1,17 @@
 exports.run = async (client, message, args) => {
     try {
       message.delete().catch();
-      var mg = args.join(" ");
+      const mg = args.join(" ");
       if (message.mentions.everyone) {
+        message.delete().catch();
         message.channel.send("Function read");
         message.channel.send(client.errors.cannotPingEveryone); 
-        message.delete().catch();
         return; //send error and return early if the message includes mentions.
       }
-      if (mg = "@everyone") {
+      if (mg = '@everyone') {
+        message.delete().catch();
         message.channel.send("Function2 read");
         message.channel.send("Nice try!");
-        message.delete().catch();
         return; 
       }
       message.channel.send("Function potentially skipped");
