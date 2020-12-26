@@ -7,13 +7,13 @@ exports.run = async (client, message, args) => {
         message.channel.send(client.errors.cannotPingEveryone); 
         message.delete().catch();
         return; //send error and return early if the message includes mentions.
-      };
+      }
       if (mg = "@everyone") {
         message.channel.send("Function2 read");
         message.channel.send("Nice try!");
         message.delete().catch();
         return; 
-      };
+      }
       message.channel.send("Function potentially skipped");
       message.channel.send(mg);
     } catch (err) {
