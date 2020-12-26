@@ -2,15 +2,13 @@ exports.run = async (client, message, args) => {
     try {
       message.delete().catch();
       const mg = args.join(" ");
-      if (mg === '@everyone', '@here') {
+      if (mg == '@everyone', '@here') {
         message.delete().catch();
         message.channel.send("Function2 read");
         message.channel.send("Nice try!");
         return; 
       }
-      else {
         message.channel.send(mg);
-      }
     } catch (err) {
       message.channel.send(client.errors.genericError + err).catch();
     }
