@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
         message.channel.send("Function2 read");
         message.channel.send("Nice try!");
         return; 
-      }
+      };
         message.channel.send(mg);
     } catch (err) {
       message.channel.send(client.errors.genericError + err).catch();
