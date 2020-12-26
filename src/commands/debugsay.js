@@ -1,7 +1,7 @@
 exports.run = async (client, message, args) => {
     try {
       message.delete().catch();
-      const mg = args.join(" ");
+      var mg = args.join(" ");
       if (message.mentions.everyone) {
         message.channel.send("Function read");
         message.channel.send(client.errors.cannotPingEveryone); 
