@@ -68,7 +68,7 @@
     "discord.js-minesweeper": "^1.0.6",
     "enmap": "^5.8.0",
     "google": "^2.1.0",
-    "js-beautify": "^1.13.0",
+    "js-beautify": "^1.13.2",
     "mathjs": "^7.3.0",
     "moment": "^2.29.0",
     "moment-duration-format": "^2.2.2",
