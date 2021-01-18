@@ -1,10 +1,10 @@
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args || args.length < 1) return message.reply("You must say what command to load!");
+    if (!args || args.length < 1) return message.channel.send("You must specify what command to load!");
 
     let response;
     response = client.loadCommand(args[0]);
-    if (response) return message.reply(`Error loading: ${response}`);
+    if (response) return message.channe.send(`Error loading: ${response}`);
 
     client.logger.log(`Loading command: ${args[0]}`);
     message.channel.send(`The command ${args[0]} has been loaded.`);
