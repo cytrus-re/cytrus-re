@@ -51,10 +51,11 @@ New User:
     if (output == outputNew) return;
     
     embed = new Discord.MessageEmbed()
-    .setTitle("User Roles Update")
-    .setFooter(`Full name: ${userNew.user.tag} | ID: ${userNew.id}`)
-    .addField("Old roles", output)
-    .addField("New roles", outputNew)
+    .setTitle("**User Roles Update**")
+    .addField("**Username**", `${userNew.user.tag}`)
+    .addField("**Old roles**", output)
+    .addField("**New roles**", outputNew)
+    .setFooter(`User ID: ${userNew.id} | Cytrus-RE`)
     .setColor("#eeeeee");
     
     modLogChannel.send(embed).catch();
