@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        member.removeRole(message.guild.roles.cache.find(r => r.name == settings.muteRole)).then(() => {
+        member.roles.remove(message.guild.roles.cache.find(r => r.name == settings.muteRole)).then(() => {
           message.channel.send(`**Successfully unmuted ${user.tag},**`);
 
           const modLogChannel = settings.modLogChannel;
