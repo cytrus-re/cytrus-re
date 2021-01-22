@@ -6,4 +6,4 @@ We currently don't really "version" our code, but the safest bet is to assume ma
 
 ## Reporting a Vulnerability
 
-Please report any vulnerabilities you find to Rexowogamer#1183 on Discord/send an email to beartechtalks@gmail.com. :)
+Please report any vulnerabilities you find to Rexowogamer#1183 on Discord or send an email to help.ttsbotsnapps@gmail.com. :)
