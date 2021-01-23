@@ -6,7 +6,7 @@ const config = {
   "admins": ["390663607849058307"], // derser
   "devs": ["315843700490240002", "486899102760697856"], //Odyssey346 & his alt
   "mods": [], 
-  "support": [],
+  "support": ["457110625110327296"],
   "helpers": [],
 
   "blacklisted": [], // Blacklisted IDs
