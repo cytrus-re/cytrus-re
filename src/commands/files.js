@@ -7,7 +7,7 @@ exports.run = async (client, message, args, level) => {
 
       message.channel.send("The files have been sent to your DMs!");
       exec(command, (err, stdout, stderr) => {
-        message.author.send("**"+stdout+"**");
+        message.author.send(`**${stdout}**\n`);
         if (err || stderr) {
           if (err) {
             message.author.send("```"+err+"```");
@@ -21,11 +21,11 @@ exports.run = async (client, message, args, level) => {
         }
       });
     };
-    if (!os.platform == "win32") {
-      execute("ls -a "); // are we anything that isn't windows? run this
+    if (os.platform == "win32") {
+      execute("dir"); // are we windows? run this
     }
     else {
-      execute("dir"); // ok, we're windows, run this
+      execute("ls -a "); // ok, we're not windows, run this
     };
 
   } catch (err) {
