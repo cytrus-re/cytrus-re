@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => {
         }
       });
     };
-    if (!os.platform == win32) {
+    if (!os.platform == "win32") {
       execute("ls -a "); // are we anything that isn't windows? run this
     }
     else {
