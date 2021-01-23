@@ -67,6 +67,8 @@
     "discord.js": "^12.5.1",
     "discord.js-minesweeper": "^1.0.6",
     "enmap": "^5.8.0",
+    "fs-extra": "^9.1.0",
+    "fs-nextra": "^0.5.1",
     "google": "^2.1.0",
     "js-beautify": "^1.13.0",
     "mathjs": "^7.3.0",

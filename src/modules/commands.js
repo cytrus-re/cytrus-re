@@ -1,5 +1,5 @@
 // Import modules
-const fs = require("fs");
+const fs = require("fs-extra");
 const util = require("util");
 
 // Define variables
