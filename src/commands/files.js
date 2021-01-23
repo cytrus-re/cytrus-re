@@ -1,4 +1,5 @@
 const exec = require("child_process").exec;
+const os = require ("os");
 
 exports.run = async (client, message, args, level) => { 
   try {
@@ -20,8 +21,13 @@ exports.run = async (client, message, args, level) => {
         }
       });
     };
+    if (!os.platform == win32) {
+      execute("ls -a "); // are we anything that isn't windows? run this
+    }
+    else {
+      execute("dir"); // ok, we're windows, run this
+    };
 
-    execute("ls -a "); //replaced "dir" because we use Heroku hosting provided by Panos instead of michael's windows periodic hosting
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
