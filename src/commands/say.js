@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => {
 
 exports.conf = {
   enabled: false, // You all know why I did this.
-  aliases: ["rep"],
+  aliases: ["rep" , "echo"],
   guildOnly: true,
   permLevel: "Server Owner",
   archived: true
