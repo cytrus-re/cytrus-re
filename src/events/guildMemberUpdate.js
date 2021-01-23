@@ -51,7 +51,7 @@ New User:
     if (output == outputNew) return;
     
     embed = new Discord.MessageEmbed()
-    .setTitle("**User Roles Update**")
+    .setTitle("__**User Roles Update**__")
     .addField("**Username**", `${userNew.user.tag}`)
     .addField("**Old roles**", output)
     .addField("**New roles**", outputNew)
