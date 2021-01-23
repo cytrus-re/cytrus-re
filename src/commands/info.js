@@ -8,9 +8,9 @@ exports.run = async (client, message, args, level) => {
     const embed = new Discord.MessageEmbed()
     .setColor("#eeeeee")
     .setTitle("Cytrus-RE")
-    .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by Commandblock, Rexowogamer, Odyssey346 and Midou.")
+    .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by Devnol, Rexogamer, Odyssey346 and Midou.")
     .setDescription(`Github: [Repo](${client.config.github})
-Website: [Check it out](https://cytrus-re.github.io)
+Website: [Check it out](${client.config.site})
 Support Server: [Join](${client.config.supportServer})
 Issues: [Right here](${client.config.github}/issues)
 Version: V1.3

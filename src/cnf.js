@@ -14,6 +14,7 @@ const config = {
   "token": "process.env.BOT_TOKEN",
   // LINKS:
   "github": "https://terrific-tea.github.io/links/cygithub",
+  "site": " https://terrific-tea.github.io/links/cyte",
   "supportServer": "https://terrific-tea.github.io/links/discord",
   "botInvite": "https://terrific-tea.github.io/links/cyinvite",
 
