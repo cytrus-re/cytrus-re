@@ -8,7 +8,7 @@ exports.run = async (client, message, args, level) => {
             let pasta = copypastas[args[0]]; //if so, attach it to the pasta variable. i.e. copypastas[testing]
             message.channel.send(`${pasta}\nTriggered by ${message.author}`); //send a message with the pasta and who triggered it.
         } else {
-            message.channel.send({ embed: { color: "#ff3333", title: "What's that?", description: `I don't know that copypasta. Maybe try one of the following instead:\n${copypastas.pastalist.join(", ")}. For example, run c.copypasta interjection to send the Interjection copypasta.` } });
+            message.channel.send({ embed: { color: "#ff3333", title: "What's that?", description: `I don't know that copypasta. Maybe try one of the following instead:\n${copypastas.pastalist.join(", ")}. \nFor example, run c.copypasta interjection to send the Interjection copypasta.` } });
             //send error if pasta is nonexistent.        
         }
         message.delete(); //delete the command usage.
