@@ -41,7 +41,6 @@ Finally, start up Cytrus-RE by running ```node cybase.js```.
 To see how to make the bot start up automatically and run without needing a terminal emulator always open, look no further than the official [**discord.js guide**](https://discordjs.guide/improving-dev-environment/pm2.html) (not needed if you use Heroku).
 
 ## Bot Information
-Useful information about the bot:
 
 ### Client ID
 754444020956266566
