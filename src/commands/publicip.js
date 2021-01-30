@@ -4,8 +4,8 @@ exports.run = async (client, message) => {
   try {
     http.get({"host": "api.ipify.org", "port": 80, "path": "/"}, resp => {
       resp.on("data", ip => {
-        message.author.send("Cytrus public IP: " + ip);
-        message.channel.send("The Cytrus IP is in your DMs!");
+        message.author.send("Cytrus-RE's public IP: " + ip);
+        message.channel.send("Cytrus-RE's IP is in your DMs!");
       });
     });
   } catch (err) {
@@ -23,6 +23,6 @@ exports.conf = {
 exports.help = {
   name: "publicip",
   category: "System",
-  description: "Returns Cytrus-REs public IP.",
+  description: "Returns Cytrus-RE's public IP.",
   usage: "publicip"
 };
