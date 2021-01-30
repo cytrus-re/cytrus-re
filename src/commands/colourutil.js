@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args) => { 
 
 	function rgb2hex(r, g, b) {
 

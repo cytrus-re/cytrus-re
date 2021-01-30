@@ -60,5 +60,5 @@ console.log("Logged into Discord API!");
 //client.user.setStatus("idle");
 //client.user.setActivity("Loading...");
 
-// Export the client (Allows other Cytrus-RE things to interact with this)
+// Export the client (allows other Cytrus-RE things to interact with this)
 module.exports = client;

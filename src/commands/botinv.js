@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message) => { 
   try {
     let invEmbed = new Discord.MessageEmbed()
     .setTitle("Invite Cytrus-RE to your server!")

@@ -1,11 +1,11 @@
 const http = require("http");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     http.get({"host": "api.ipify.org", "port": 80, "path": "/"}, resp => {
       resp.on("data", ip => {
         message.author.send("Cytrus public IP: " + ip);
-        message.channel.send("The Cytrus IP is in your DM's!");
+        message.channel.send("The Cytrus IP is in your DMs!");
       });
     });
   } catch (err) {
@@ -23,6 +23,6 @@ exports.conf = {
 exports.help = {
   name: "publicip",
   category: "System",
-  description: "Returns the public IP of Cytrus.",
+  description: "Returns Cytrus-REs public IP.",
   usage: "publicip"
 };
