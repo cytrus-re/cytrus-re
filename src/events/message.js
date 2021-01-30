@@ -50,7 +50,8 @@ module.exports = async (client, message) => {
   if (message.guild && !message.channel.nsfw && cmd.conf.nsfwOnly) return message.channel.send(client.errors.nsfwOnly);
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
-    if (settings.noPermissionNotice) return message.channel.send(`You can't use this command!
+    if (settings.noPermissionNotice === "true") {
+      let permsEmbed = return message.channel.send(`You can't use this command!
 Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name}), but this command requires level ${client.levelCache[cmd.conf.permLevel]} (${cmd.conf.permLevel})!`);
     else return;
   }
