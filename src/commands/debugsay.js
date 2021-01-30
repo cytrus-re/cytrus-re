@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   
   exports.conf = {
     enabled: true, 
-    aliases: ["rep"],
+    aliases: [],
     guildOnly: true,
     permLevel: "Server Owner",
     archived: false,
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
   
   exports.help = {
     name: "debugsay",
-    category: "testing",
+    category: "Testing",
     description: "Returns the text you provide, but a debug mode",
     usage: "debugsay <text>"
   };
