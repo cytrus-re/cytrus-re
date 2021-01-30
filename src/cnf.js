@@ -1,15 +1,15 @@
 const config = {
   "botName": "Cytrus-RE", // Name of bot. Don't change this.
-  // NOTE: The IDs are sorted by the comments. So, Commandblock is the first ID in "managers", and then comes... well, we don't have any other managers yet but yeah.
-  "owners": ["395990735934980097"], // rexo has full power ahahahaha
-  "managers": ["429353559566319626", "746149573613060176"], // commandblock & midou (yes i'm back)
-  "admins": ["390663607849058307"], // derser
-  "devs": ["315843700490240002", "486899102760697856"], //Odyssey346 & his alt
+  // NOTE: The IDs are sorted by the comments. So, Devnol is the first ID in "managers", and then comes... well, we don't have any other managers yet but yeah.
+  "owners": ["395990735934980097"], // Rexo has full power ahahahaha
+  "managers": ["429353559566319626", "746149573613060176"], // Devnol & Midou
+  "admins": ["390663607849058307"], // Derser
+  "devs": ["315843700490240002", "486899102760697856"], // Odyssey346 & his alt
   "mods": [], 
-  "support": ["457110625110327296"],
+  "support": ["457110625110327296"], // Akisblack
   "helpers": [],
 
-  "blacklisted": [], // Blacklisted IDs
+  "blacklisted": [], // Blacklisted IDs (
   "globalBan": [],
   "token": "process.env.BOT_TOKEN",
   // LINKS:
@@ -24,7 +24,7 @@ const config = {
     "modRole": "Moderator",
     "adminRole": "Administrator",
     "muteRole": "Cytrus-RE Mute",
-    "noPermissionNotice": true,
+    "noPermissionNotice": "true",
     "welcomeChannel": "off-topic",
     "welcomeMessage": "Welcome to the server, {{ping}}!",
     "welcomeEnabled": "true",
