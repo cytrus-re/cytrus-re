@@ -65,7 +65,7 @@ module.exports = async (client, message) => {
           },
         ],
         footer: {
-          text: "Does this seem wrong? Join our support server (c.support) and ask a dev for help."
+          text: "Does this seem wrong? Join our support server (c.info) and ask a dev for help."
         },
       };
       return message.channel.send({ embed: permsEmbed });
