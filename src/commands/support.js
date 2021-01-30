@@ -12,15 +12,15 @@ exports.run = async (client, message, args, level) => {
   
   exports.conf = {
     enabled: true,
-    aliases: ["rtag", "rmtag"],
+    aliases: ["supportserver"],
     guildOnly: false,
     permLevel: "Administrator"
   };
   
   exports.help = {
-    name: "removetag",
+    name: "support",
     category: "General",
-    description: "Removes the specified tag.",
-    usage: "removetag <tag>"
+    description: "Gives you a link to our Discord.",
+    usage: "support"
   };
   
