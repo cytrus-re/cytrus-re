@@ -1,5 +1,5 @@
-// Copyright 2020 Cytrus-RE Developers
-// You may use the code, but please do credit us.
+// Copyright 2019-2021 Terrific Tea Studios
+// You may use this code, but please do credit us.
 
 "use strict";
 
