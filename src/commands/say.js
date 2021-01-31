@@ -1,5 +1,6 @@
 exports.run = async (client, message, args, level) => {
   try {
+    client.startSendingErrorToLoggingChannel();
     message.delete().catch();
     const mg = args.join(" ");
     if (message.mentions.everyone) {

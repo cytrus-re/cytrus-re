@@ -22,6 +22,12 @@ module.exports = (client) => {
     return permlvl;
   };
 
+  client.startSendingErrorToLoggingChannel = async (err, author, args) =>{
+    const channel = await client.channels.fetch('805071247066660904');
+    
+    channel.send('Help!');
+  };
+
   client.getSettings = (guild) => {
     const defaults = client.config.defaultSettings || {};
     if (!guild) return defaults;
