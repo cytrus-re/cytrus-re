@@ -4347,10 +4347,10 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-urban-dictionary@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/urban-dictionary/-/urban-dictionary-2.2.1.tgz#7d8bfb7d1aafb0e291f91eb17517985f3da88b3b"
-  integrity sha512-wnR3QWRlIXAtzf/QNaCHABsksdw05og/ZCEabB+S2C9G02wfDZvSz5l5Mh/Ip/Tk7mYNO09vbUaaFxH7MGHJsg==
+urban-dictionary@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/urban-dictionary/-/urban-dictionary-3.0.0.tgz#1d19c62959d6846c5efdeea67dc9b24f1e27730b"
+  integrity sha512-euKs6avVc3mWm8Id+HhFH2MudplP8ERkz8lwkHRw98aDiMc8nXDxqoHq1qS4NNbj8yAuMkOuAduxsod/PkAuDA==
 
 uri-js@^4.2.2:
   version "4.4.0"
