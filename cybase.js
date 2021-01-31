@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Terrific Tea Studios
+// Copyright 2019-2021 Terrific Tea Studios
 // You may use this code, but please do credit us.
 
 "use strict";

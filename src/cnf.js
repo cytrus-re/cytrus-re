@@ -1,3 +1,5 @@
+const client = require("../cybase");
+
 const config = {
   "botName": "Cytrus-RE", // Name of bot. Don't change this.
   // NOTE: The IDs are sorted by the comments. So, Devnol is the first ID in "managers", and then comes... well, we don't have any other managers yet but yeah.
@@ -23,7 +25,7 @@ const config = {
     "modLogChannel": "log", // default logging channel
     "modRole": "Moderator",
     "adminRole": "Administrator",
-    "muteRole": "Cytrus-RE Mute",
+    "muteRole": client.config.botName + " Mute",
     "noPermissionNotice": "true",
     "welcomeChannel": "off-topic",
     "welcomeMessage": "Welcome to the server, {{ping}}!",
