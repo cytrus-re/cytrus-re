@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
     enabled: true,
     aliases: ["supportserver"],
     guildOnly: false,
-    permLevel: "Administrator"
+    permLevel: "User"
   };
   
   exports.help = {
@@ -23,4 +23,4 @@ exports.run = async (client, message, args, level) => {
     description: "Gives you a link to our Discord.",
     usage: "support"
   };
-  
+};

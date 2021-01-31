@@ -5,6 +5,7 @@ const errors = {
   "cannotBanSelf":  "Sorry, you can't ban yourself. (It would be funny if it wasn't so sad.)",
   "cannotKickSelf":  "Sorry, you can't kick yourself. (If you don't want to be here, just leave.)",
   "noResults": "I couldn't find any results for your query!",
+  "guildOnly": "You need to be in a server to use this command!",
   "nsfwOnly": "You need to be in an NSFW channel to use this command!",
   "noArticleDescription": "This article doesn't have a description or something went wrong.",
   "cannotPingEveryone": "Sorry, you cannot mention everyone or here with say, for obvious reasons. (If it isn't obvious, we don't want chaos.)",
