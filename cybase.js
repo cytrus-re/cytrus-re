@@ -3,7 +3,7 @@
 
 "use strict";
 
-require("dotenv").config({path:"./.env"}); // (uncomment if hosting locally)
+// require("dotenv").config({path:"./.env"}); // (uncomment if hosting locally)
 
 // Check if the Node version is 14+
 if (Number(process.version.slice(1).split(".")[0]) < 14) throw new Error("Cytrus-RE requires Node 14 or higher. Re-run the bot with Node 14 or higher.");
