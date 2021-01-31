@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
       const embed = new Discord.MessageEmbed()
       .setColor("#eeeeee")
       .setTitle("Cytrus-RE's Support Discord")
-      .setFooter("Join our server to get help, report bugs, sugge at features and more!")
+      .setFooter("Join our server to get help, report bugs, suggest features and more!")
       .setDescription(`[**Join here!**](${client.config.supportServer})`);
       message.channel.send(embed);
   } catch (err) {
