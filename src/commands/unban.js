@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const user = args[0];
     const settings = client.getSettings(message.guild.id);
@@ -19,10 +19,11 @@ exports.run = async (client, message, args, level) => {
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
           }
         }).catch(err => {
-         message.reply("I was unable to unban the member!");
+         message.channel.send("I was unable to unban the member!");
+         client.logger.console.error(err);
         });
     } else {
-      message.reply("You didn't specify the user to unban!");
+      message.channel.send("You didn't specify the user to unban!");
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();

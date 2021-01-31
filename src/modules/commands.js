@@ -26,7 +26,7 @@ module.exports = (client) => {
       let commandName = file.split(".")[0];
 
       // Log that the command is loading
-      client.logger.log(`Loading command: ${commandName}. Command ${i}`);
+      client.logger.info(`Loading command: ${commandName}. Command ${i}`);
 
       // Set the command name and the file objects
       client.commands.set(commandName, props);

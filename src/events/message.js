@@ -69,8 +69,7 @@ module.exports = async (client, message) => {
         },
       };
       return message.channel.send({ embed: permsEmbed });
-    };
-    else return;
+    }
   }
 
   message.author.permLevel = level;

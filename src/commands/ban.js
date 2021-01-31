@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const user = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id); // Gets the guild's CyRE settings to check if the modlog feature is enabled (and if it is, what channel to send them to.)

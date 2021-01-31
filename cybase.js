@@ -1,15 +1,18 @@
-// Copyright 2020 Cytrus-RE Developers
-// You may use the code, but please do credit us.
+// Copyright 2020-2021 Terrific Tea Studios
+// You may use this code, but please do credit us.
 
 "use strict";
+
+// require("dotenv").config(); // (uncomment if hosting locally)
 
 // Check if the Node version is 14+
 if (Number(process.version.slice(1).split(".")[0]) < 14) throw new Error("Cytrus-RE requires Node 14 or higher. Re-run the bot with Node 14 or higher.");
 if (process.env.PREBOOT) eval(process.env.PREBOOT); // Execute anything in the preboot variable
-
+// 
 // Define NPM modules
 const Discord = require("discord.js"); // You know what this does.
 const Enmap = require("enmap");
+const winston = require("winston");
 
 // Define client
 const client = new Discord.Client({
@@ -39,7 +42,17 @@ client.levelCache = {};
 
 
 // Import files
-client.logger = require("./src/modules/Logger");
+client.logger = winston.createLogger({
+	level: "info",
+	format: winston.format.json(),
+	defaultMeta: { service: "user-service" },
+	transports: [
+		// - Write all logs with level `error` and below to `error.log`
+		// - Send *all* logs to the console
+		new winston.transports.File({ filename: "error.log", level: "error" }),
+		new winston.transports.Console({}),
+	],
+});
 client.config = require("./src/cnf");
 client.errors = require("./src/modules/errors");
 require("./src/modules/commands")(client); // Import command module
