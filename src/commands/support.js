@@ -1,11 +1,12 @@
 const Discord = require("discord.js");
+
 exports.run = async (client, message) => { 
   try {
       const embed = new Discord.MessageEmbed()
       .setColor("#eeeeee")
       .setTitle("Cytrus-RE's Support Discord")
       .setFooter("Join our server to get help, report bugs, sugge at features and more!")
-      .setDescription("[**Join here!**](client.config.supportServer)");
+      .setDescription(`[**Join here!**](${client.config.supportServer})`);
       message.channel.send(embed);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();

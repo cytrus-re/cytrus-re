@@ -3,7 +3,7 @@
 
 "use strict";
 
-// require("dotenv").config(); // (uncomment if hosting locally)
+require("dotenv").config({path:"./.env"}); // (uncomment if hosting locally)
 
 // Check if the Node version is 14+
 if (Number(process.version.slice(1).split(".")[0]) < 14) throw new Error("Cytrus-RE requires Node 14 or higher. Re-run the bot with Node 14 or higher.");
@@ -67,6 +67,7 @@ for (let i = 0; i < client.config.permLevels.length; i++) {
 }
 
 // Login to Discord
+console.log(process.env.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN);
 console.log("Logged into Discord API!");
 // Set status to loading

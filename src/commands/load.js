@@ -4,8 +4,7 @@ exports.run = async (client, message, args) => {
 
     let response;
     response = client.loadCommand(args[0]);
-    if (response) return message.channel.send(`Error loading: ${response}`);
-
+    if (response) return message.channel.send(response);
     client.logger.info(`Loading command: ${args[0]}`);
     message.channel.send(`The command ${args[0]} has been loaded.`);
   } catch (err) {

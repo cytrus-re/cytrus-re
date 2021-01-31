@@ -27,14 +27,14 @@ npm install
 ``` 
 Create a .env file in the directory Cytrus-RE is installed in. Paste the text below into the .env file:  
 ```js
-BOT_TOKEN='`YourBotToken`'
-LOG_WEBHOOK_TOKEN='`YourLogChannelWebhookToken`'
-LOG_WEBHOOK_ID='`YourLogChannelWebhookID`'
-IPINFO_API_KEY='`YourIpinfo.ioAPIKey`'
-GITHUB_TOKEN='`YourGithubToken`'
-PREBOOT='/*JavaScript Code*/'
+BOT_TOKEN=YourBotToken
+LOG_WEBHOOK_TOKEN=YourLogChannelWebhookToken
+LOG_WEBHOOK_ID=YourLogChannelWebhookID
+IPINFO_API_KEY=YourIpinfo.ioAPIKey
+GITHUB_TOKEN=YourGithubToken
+PREBOOT='/*Javascript Code*/'
 ```
-Replace the values with your personal, specific info such as the token of the bot. (If you're using a service like Glitch or Heroku, make sure to add a `HOSTNAME` variable. Make sure to write the value in TitleCase.)
+Replace the values with your personal, specific info such as the token of the bot. Don't use any quotation marks. (If you're using a service like Glitch or Heroku, make sure to add a `HOSTNAME` variable. Make sure to write the value in TitleCase.)
 
 Finally, start up Cytrus-RE by running ```node cybase.js```.
 
