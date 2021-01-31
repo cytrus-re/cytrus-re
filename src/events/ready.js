@@ -29,15 +29,14 @@ module.exports = async client => {
   let channels = client.channels.cache.size;
 
   // logs the status
-  client.logger.log(`RAM usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, "ready");
-  client.logger.log(`Users: ${users}`, "ready");
-  client.logger.log(`Servers: ${servers}`, "ready");
-  client.logger.log(`Channels: ${channels}`, "ready");
-  client.logger.log(`Running on Node ${process.version.replace(" ", "")}`, "ready");
-  client.logger.log(`...and using Discord.js v${require("discord.js").version.replace(" ", "")}`, "ready");
+  client.logger.info(`RAM usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`, "ready");
+  client.logger.info(`Users: ${users}`, "ready");
+  client.logger.info(`Servers: ${servers}`, "ready");
+  client.logger.info(`Channels: ${channels}`, "ready");
+  client.logger.info(`Running on Node ${process.version.replace(" ", "")}`, "ready");
+  client.logger.info(`...and using Discord.js v${require("discord.js").version.replace(" ", "")}`, "ready");
 
-  client.logger.log("Cytrus-RE V" + require("../../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
+  client.logger.info("Cytrus-RE V" + require("../../package").version + " | https://github.com/Cytrus-RE/cytrus-re");
   client.startuptime = new Date().getTime() - client.starttime;
-  client.logger.log("It took " + client.startuptime + "ms to start Cytrus-RE.");
+  client.logger.info("It took " + client.startuptime + "ms to start Cytrus-RE.");
 };
-

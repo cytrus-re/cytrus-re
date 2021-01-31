@@ -83,7 +83,7 @@ module.exports = (client) => {
 
     client.commands.delete(command.help.name);
 
-    const mod = require.cache[require.resolve(`../src/commands/${commandName}`)];
+    const mod = require.cache[require.resolve(`../src/commands/${commandName}.js`)];
     delete require.cache[require.resolve(`../src/commands/${commandName}.js`)];
     for (let i = 0; i < mod.parent.children.length; i++) {
       if (mod.parent.children[i] === mod) {

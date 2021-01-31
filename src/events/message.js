@@ -69,8 +69,7 @@ module.exports = async (client, message) => {
         },
       };
       return message.channel.send({ embed: permsEmbed });
-    };
-    else return;
+    }
   }
 
   message.author.permLevel = level;
@@ -86,7 +85,7 @@ module.exports = async (client, message) => {
     cmd.run(client, message, args, level);
     client.uses.ensure(cmd.help.name, 1);
     client.uses.inc(cmd.help.name); // for metrics
-    client.logger.log(`Command used: ${command}`);
+    client.logger.info(`Command used: ${command}`);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
