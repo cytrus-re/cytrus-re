@@ -25,7 +25,7 @@ const config = {
     "modLogChannel": "log", // default logging channel
     "modRole": "Moderator",
     "adminRole": "Administrator",
-    "muteRole": client.config.botName + " Mute",
+    "muteRole": "Cytrus-RE Mute",
     "noPermissionNotice": "true",
     "welcomeChannel": "off-topic",
     "welcomeMessage": "Welcome to the server, {{ping}}!",
