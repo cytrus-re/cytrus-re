@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
     let embed = new Discord.MessageEmbed()
     .setTitle("Personality")
     .setThumbnail(guildmember.user.avatarURL({"dynamic": true, "size": 128}))
-    .setAuthor(guildmember.displayName + "'s personality")
+    .setAuthor(`${guildmember.displayName}'s personality`)
     .addField("Type", types.random())
     .addField("Social Status", social.random())
     .addField("Relationship Status", relationship.random())
