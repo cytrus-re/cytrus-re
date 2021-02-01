@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
     let embed = new Discord.MessageEmbed()
     .setTitle("Personality")
     .setThumbnail(user.avatarURL)
-    .setAuthor(`<@${user.id}'s personality`)
+    .setAuthor(`<@${user.id}>'s personality`)
     .addField("Type", types.random())
     .addField("Social Status", social.random())
     .addField("Relationship Status", relationship.random())
