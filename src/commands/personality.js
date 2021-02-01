@@ -7,12 +7,10 @@ const hobbies = ["Art", "Drawing", "Painting", "Singing", "Writing", "Anime", "M
 const genres = ["Nightcore", "Heavy Metal", "Alternative", "Electronic", "Classical", "Dubstep", "Jazz", "Pop", "Rap", "Country", "Vaporwave"];
 exports.run = async (client, message, args, level) => { 
   try {
-    let user = message.mentions.members.first() || message.author;
-
     let embed = new Discord.MessageEmbed()
     .setTitle("Personality")
     .setThumbnail(user.avatarURL)
-    .setAuthor(user.username + "'s personality")
+    .setAuthor(`<@${message.author.id}>` + "'s personality")
     .addField("Type", types.random())
     .addField("Social Status", social.random())
     .addField("Relationship Status", relationship.random())
