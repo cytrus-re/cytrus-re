@@ -7,12 +7,12 @@ const hobbies = ["Art", "Drawing", "Painting", "Singing", "Writing", "Anime", "M
 const genres = ["Nightcore", "Heavy Metal", "Alternative", "Electronic", "Classical", "Dubstep", "Jazz", "Pop", "Rap", "Country", "Vaporwave"];
 exports.run = async (client, message, args, level) => { 
   try {
-    let user = message.mentions.members.first() || message.author;
+    let guildmember = message.mentions.members.first() || message.member;
 
     let embed = new Discord.MessageEmbed()
     .setTitle("Personality")
-    .setThumbnail(user.avatarURL)
-    .setAuthor(user.username + "'s personality")
+    .setThumbnail(guildmember.user.avatarURL({"dynamic": true, "size": 128}))
+    .setAuthor(guildmember.displayName + "'s personality")
     .addField("Type", types.random())
     .addField("Social Status", social.random())
     .addField("Relationship Status", relationship.random())
