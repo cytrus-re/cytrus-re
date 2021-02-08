@@ -11,7 +11,7 @@ exports.run = async (client, message) => {
 
     let embed = new Discord.MessageEmbed()
     .setThumbnail(guildmember.user.avatarURL({"dynamic": true, "size": 128}))
-    .settitle(`${guildmember.displayName}'s personality`)
+    .setTitle(`${guildmember.displayName}'s personality`)
     .addField("Type", types.random())
     .addField("Social Status", social.random())
     .addField("Relationship Status", relationship.random())
