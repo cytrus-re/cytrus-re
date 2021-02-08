@@ -16,8 +16,7 @@ const winston = require("winston");
 
 // Define client
 const client = new Discord.Client({
-	disableEveryone: true, // Disable pinging @everyone (BUT WHAT IT DOESN'T WORK!!!!!!!!!!!)
-	disabledEvents: ["TYPING_START"] // Don't show that the bot is "typing" 
+	disabledMentions: "everyone", // Disable pinging @everyone (and @here I think)
 });
 
 // Define time of startup
