@@ -4,7 +4,6 @@ exports.run = async (client, message, args) => {
     const mg = args.join(" ");
     if (message.mentions.everyone) {
       message.channel.send(client.errors.cannotPingEveryone); 
-      message.delete().catch();
       return; //send error and return early if the message includes mentions.
     }
     message.channel.send(mg);
