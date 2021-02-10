@@ -32,7 +32,7 @@ exports.run = async (client, message, args, level) => {
 
             client.warns.get(message.guild.id)[member.id] = 0;
           }).catch(err => {
-            message.send(`I was unable to ban ${wUser.tag} for exceeding ${client.config.maxWarns} warns!`);
+            message.channel.send(`I was unable to ban ${wUser.tag} for exceeding ${client.config.maxWarns} warns!`);
           });
         }
       } else {
