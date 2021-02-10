@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     const settings = client.getSettings(message.guild.id);
     const user = message.mentions.users.first();
     
-    if (!message.guild.roles.cache.find(r => r.name == args.slice(1).join(" "))) rmessage.channel.sende.send("That's not a role!");
+    if (!message.guild.roles.cache.find(r => r.name == args.slice(1).join(" "))) return message.channel.send("That's not a role!");
     if (user) {
       if (message.guild.members.get(message.author.id).highestRole.name == "@everyone") message.channel.send("The role you are trying to add is above your highest role's position!");
       else {
