@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
               if (member) {
                 if (message.guild.roles.cache.find(r => r.name == args.slice(1).join(" "))) {
                   member.addRole(message.guild.roles.cache.find(r => r.name == args.slice(1).join(" "))).then(() => {
-                    message.reply(`Successfully gave role to ${user.tag}!`);
+                    message.channel.send(`Successfully gave role to ${user.tag}!`);
 
                     const modLogChannel = settings.modLogChannel;
                     if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {

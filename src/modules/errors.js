@@ -2,7 +2,7 @@ const errors = {
   "genericError": "❌ There was an error!\nPlease send the following to a Cytrus-RE dev (Rexowogamer#1183 or Devnol#9366) and tell them what command you used (including arguments).\n---------------------------------------------------------------------------------------------------------------------\n",
   "wiiError": "❌ An error has occurred.\nPress the Eject button, remove the Game Disc, and turn off the power to the console.\nPlease read the Wii Operations Manual for further instructions.",
   "userNotInGuild": "❌ This user isn't in this guild!",
-  "cannotBanSelf":  "❌ Sorry, you can't ban yourself. (It would be funny if it wasn't so sad.)",
+  "cannotBanSelf":  "❌ Sorry, you can't ban yourself. (It would be funny, if it weren't so sad.)",
   "cannotKickSelf":  "❌ Sorry, you can't kick yourself. (If you don't want to be here, just leave.)",
   "noResults": "❌ I couldn't find any results for your query!",
   "guildOnly": "❌ You need to be in a server to use this command!",
