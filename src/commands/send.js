@@ -4,9 +4,9 @@ exports.run = async (client, message, args, level) => {
   try {
     const hook = new Discord.WebhookClient(process.env.LOG_WEBHOOK_ID, process.env.LOG_WEBHOOK_TOKEN);
     hook.send(args.join(" "));
-    message.channel.send("Message sent to the Cytrus Log Channel!");
+    message.channel.send("Message sent to the Cytrus-RE Log Channel!");
   } catch (err) {
-    message.channel.send("Their was an error!\n" + err).catch();
+    message.channel.send(client.errors.genericError + err).catch();
   }
 };
 
