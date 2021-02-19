@@ -1,20 +1,18 @@
 //https://cdn.discordapp.com/emojis/id.png
-const { Attachment } = require("discord.js");
-
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     let id = /[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/.exec(args[1]);
     
     if (!id) return message.channel.send("You didn't input a valid emoji or it is a default Discord emote!");
     switch (args[0]) {
       case "animated":
-        message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".gif"));
+        message.channel.send({ files: ["https://cdn.discordapp.com/emojis/" + id + ".gif"]});
         break;
       case "static":
-        message.channel.send(new Attachment("https://cdn.discordapp.com/emojis/" + id + ".png"));
+        message.channel.send({ files: ["https://cdn.discordapp.com/emojis/" + id + ".png"]});
         break;
       default:
-        message.channel.send("You need to specify what type of emoji this is. (animated, static)");
+        message.channel.send("You need to specify what type of emoji this is (animated or static).");
         break;
     }
   } catch (err) {

@@ -9,7 +9,8 @@ const errors = {
   "nsfwOnly": "❌ You need to be in an NSFW channel to use this command!",
   "noArticleDescription": "❌ This article doesn't have a description or something went wrong.",
   "cannotPingEveryone": "❌ Sorry, you cannot mention everyone or here with say, for obvious reasons. (If it isn't obvious, we don't want chaos.)",
-  "mathError": "❌ Sorry, you did something wrong with your maths.\n---------------------------------------------------------------------------------------------------------------------\n"
+  "mathError": "❌ Sorry, you did something wrong with your maths.\n---------------------------------------------------------------------------------------------------------------------\n",
+  "sendfileError": "❌ Either that file doesn't exist or something went wrong.\n---------------------------------------------------------------------------------------------------------------------\n"
 };
 
 module.exports = errors;
