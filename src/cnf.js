@@ -6,7 +6,7 @@ const config = {
   "owners": ["395990735934980097"], // Rexo has full power ahahahaha
   "managers": ["429353559566319626", "746149573613060176"], // Devnol & Midou
   "admins": ["390663607849058307"], // Derser
-  "devs": ["315843700490240002", "486899102760697856"], // Odyssey346 & his alt
+  "devs": [],
   "mods": [], 
   "support": ["457110625110327296"], // Akisblack
   "helpers": [],
