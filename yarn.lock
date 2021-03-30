@@ -4581,10 +4581,10 @@ yargs@^16.1.0:
     y18n "^5.0.2"
     yargs-parser "^20.2.2"
 
-ytsearcher@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/ytsearcher/-/ytsearcher-1.2.3.tgz#4ae95081c4a0c28701db340a11012a5579e450cf"
-  integrity sha512-aKDDclajs2MhlZJfW5cYpEjycYN35CpA+QVsvtrSxFwKu9ZE5FYVMv3BkRZt3Z/yXyZBOxRTsxdnBwPHjDDQgQ==
+ytsearcher@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/ytsearcher/-/ytsearcher-1.2.4.tgz#b7a8f18ffda345181775581535b1dc7c5307d451"
+  integrity sha512-C8uR2mjpEJU8fKrqKL+S+GK4fus0aSaVdxWm33r12OCAYG7c1VkmtJBIXSFi8veFsL6UK74Uzq+w6H71iRIYuw==
 
 zxcvbn@^4.4.2:
   version "4.4.2"
