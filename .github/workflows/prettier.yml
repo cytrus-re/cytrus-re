@@ -20,5 +20,5 @@ jobs:
     - name: Prettify code
       uses: creyD/prettier_action@v2.2
       with:
-        prettier_options: --write **/*.{js,md}
+        prettier_options: --write **/*.{ts,md}
         commit_message: "lint: prettier fixes"
