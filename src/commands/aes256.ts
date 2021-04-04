@@ -10,7 +10,8 @@ const decrypt = (text, key) => {
   return cryptr.decrypt(text);
 };
 
-exports.run = async (client, message, args) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message, args) => {
+  // eslint-disable-line no-unused-vars
   try {
     if (args[0] != "encrypt" && args[0] != "decrypt")
       return message.channel.send({
