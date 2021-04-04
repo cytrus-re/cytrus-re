@@ -8,9 +8,14 @@ exports.run = async (client, message, args, level) => {
       if (num <= 100 && num > 1) {
         message.delete();
         message.channel.bulkDelete(num);
-      } else message.reply("You must enter a number between 2 and 100 for me to clear!");
+      } else
+        message.reply(
+          "You must enter a number between 2 and 100 for me to clear!"
+        );
     } else {
-      message.reply("You must enter a number between 2 and 100 for me to clear!");
+      message.reply(
+        "You must enter a number between 2 and 100 for me to clear!"
+      );
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
@@ -21,12 +26,12 @@ exports.conf = {
   enabled: true,
   aliases: ["clear", "c"],
   guildOnly: true,
-  permLevel: "Bot Support"
+  permLevel: "Bot Support",
 };
 
 exports.help = {
   name: "purge",
   category: "Moderation",
   description: "Purges the amount of messages you specify",
-  usage: "purge <2-100>"
+  usage: "purge <2-100>",
 };

@@ -1,6 +1,6 @@
 const Minesweeper = require("discord.js-minesweeper");
 
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     let minesweeper;
     switch (args[0]) {
@@ -79,7 +79,7 @@ exports.run = async (client, message, args, level) => {
         minesweeper = new Minesweeper();
         break;
     }
-    
+
     message.channel.send(minesweeper.start());
   } catch (err) {
     message.channel.send(client.errors.wiiError + err).catch();
@@ -90,12 +90,13 @@ exports.conf = {
   enabled: true,
   aliases: ["sweeper", "sweep"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "minesweeper",
   category: "Game",
-  description: "Returns a Minesweeper game. NOTE: Please disable auto-reveal for spoilers before playing.",
-  usage: "minesweeper <difficulty>"
+  description:
+    "Returns a Minesweeper game. NOTE: Please disable auto-reveal for spoilers before playing.",
+  usage: "minesweeper <difficulty>",
 };

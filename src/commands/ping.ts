@@ -1,12 +1,14 @@
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
-    let msg = await message.channel.send("<@"+message.author.id+">");
+    let msg = await message.channel.send("<@" + message.author.id + ">");
 
     let embed = new client.Embed("normal", {
       title: "Ping",
-      description: `Message Trip: ${msg.createdTimestamp - message.createdTimestamp}ms`
-// Websocket Heartbeat: ${Math.floor(client.pings[0])}ms
-// Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms
+      description: `Message Trip: ${
+        msg.createdTimestamp - message.createdTimestamp
+      }ms`,
+      // Websocket Heartbeat: ${Math.floor(client.pings[0])}ms
+      // Average Websocket Heartbeat: ${Math.floor(client.pings.average())}ms
     });
 
     msg.edit(embed);
@@ -19,12 +21,12 @@ exports.conf = {
   enabled: true,
   aliases: ["lag"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "ping",
   category: "General",
   description: "Returns Cytrus-RE's ping.",
-  usage: "ping"
+  usage: "ping",
 };

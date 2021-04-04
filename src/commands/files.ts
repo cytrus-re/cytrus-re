@@ -1,20 +1,19 @@
 const exec = require("child_process").exec;
-const os = require ("os");
+const os = require("os");
 
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     const execute = (command) => {
-
       message.channel.send("The files have been sent to your DMs!");
       exec(command, (err, stdout, stderr) => {
         message.author.send(`**${stdout}**\n`);
         if (err || stderr) {
           if (err) {
-            message.author.send("```"+err+"```");
+            message.author.send("```" + err + "```");
           }
 
           if (stderr) {
-            message.author.send("```"+stderr+"```");
+            message.author.send("```" + stderr + "```");
           }
 
           message.channel.send("Shell Error.");
@@ -23,11 +22,9 @@ exports.run = async (client, message, args, level) => {
     };
     if (os.platform == "win32") {
       execute("dir"); // are we windows? run this
-    }
-    else {
+    } else {
       execute("ls -a "); // ok, we're not windows, run this
-    };
-
+    }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
@@ -37,12 +34,12 @@ exports.conf = {
   enabled: true,
   aliases: ["fls", "ls", "fl"],
   guildOnly: false,
-  permLevel: "Bot Support"
+  permLevel: "Bot Support",
 };
 
 exports.help = {
   name: "files",
   category: "System",
   description: "Returns all the files for Cytrus.",
-  usage: "files"
+  usage: "files",
 };

@@ -3,7 +3,7 @@ exports.run = async (client, message, args) => {
     message.delete().catch();
     const mg = args.join(" ");
     if (message.mentions.everyone) {
-      message.channel.send(client.errors.cannotPingEveryone); 
+      message.channel.send(client.errors.cannotPingEveryone);
       return; //send error and return early if the message includes mentions.
     }
     message.channel.send(mg);
@@ -23,5 +23,5 @@ exports.help = {
   name: "say",
   category: "General",
   description: "Returns the text you provide.",
-  usage: "say <text>"
+  usage: "say <text>",
 };

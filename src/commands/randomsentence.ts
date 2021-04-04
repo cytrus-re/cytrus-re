@@ -1,6 +1,6 @@
 const sen = require("txtgen").sentence;
 
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     message.channel.send(sen());
   } catch (err) {
@@ -12,12 +12,12 @@ exports.conf = {
   enabled: true,
   aliases: ["sentence", "rsent"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "randomsentence",
   category: "General",
   description: "Returns a random sentence.",
-  usage: "randomsentence"
+  usage: "randomsentence",
 };

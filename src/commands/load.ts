@@ -1,6 +1,7 @@
 exports.run = async (client, message, args) => {
   try {
-    if (!args || args.length < 1) return message.channel.send("You must specify what command to load!");
+    if (!args || args.length < 1)
+      return message.channel.send("You must specify what command to load!");
 
     let response;
     response = client.loadCommand(args[0]);
@@ -16,12 +17,12 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ["coml", "loadc"],
-  permLevel: "Bot Moderator"
+  permLevel: "Bot Moderator",
 };
 
 exports.help = {
   name: "load",
   category: "System",
   description: "Loads a command.",
-  usage: "load [command]"
+  usage: "load [command]",
 };
