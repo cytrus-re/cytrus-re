@@ -1,6 +1,6 @@
 const joke = require("one-liner-joke").getRandomJoke;
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     message.channel.send(
       joke({ exclude_tags: ["dirty", "racist", "marriage", "sex", "death"] })
