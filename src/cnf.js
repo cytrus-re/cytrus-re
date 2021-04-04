@@ -11,7 +11,7 @@ const config = {
   "support": ["457110625110327296"], // Akisblack
   "helpers": [],
 
-  "blacklisted": [], // Blacklisted IDs (
+  "denylisted": [], // Denylisted IDs (
   "globalBan": [],
   "token": "process.env.BOT_TOKEN",
   // LINKS:
@@ -39,7 +39,7 @@ const config = {
 
   permLevels: [
     { level: 0,
-      name: "Blacklisted",
+      name: "Denylisted",
 
       check: () => true
     },
@@ -47,7 +47,7 @@ const config = {
     { level: 1,
       name: "User",
 
-      check: (message) => !config.blacklisted.includes(message.author.id) || !config.globalBan.includes(message.author.id)
+      check: (message) => !config.denylisted.includes(message.author.id) || !config.globalBan.includes(message.author.id)
     },
 
     { level: 2,
