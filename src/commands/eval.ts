@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     let code = args.join(" ");
     code = code.replace("process.env.BOT_TOKEN", client.config.token);

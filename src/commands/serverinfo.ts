@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     let embed = new Discord.MessageEmbed()
       .setTitle(message.guild.name)

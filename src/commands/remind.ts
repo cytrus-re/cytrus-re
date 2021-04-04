@@ -1,6 +1,6 @@
 const ms = require("ms");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!ms(args[0])) return message.reply("You have to give a valid time!");
     if (!args[1])

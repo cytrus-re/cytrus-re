@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     let output = "";
     client.uses.forEach((cmd) => (output += cmd + "\n"));

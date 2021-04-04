@@ -1,6 +1,6 @@
 const math = require("mathjs");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0])
       return message.channel.send("You need to give me an equation!");

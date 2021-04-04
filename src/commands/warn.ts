@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const wUser = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id);

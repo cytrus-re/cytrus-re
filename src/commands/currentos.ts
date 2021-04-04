@@ -1,7 +1,7 @@
 // Oxygemo/Rexogamer 2020
 // I don't have any rights reserved, but the MIT License is still in place. - Oxygemo (although Rexo says the same)
 const os = require("os"); // Node.JS core module, required for getting the OS
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     var rawPlat = os.platform();
     var cleanPlat = client.friendlyOS(rawPlat);

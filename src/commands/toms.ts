@@ -1,6 +1,6 @@
 const ms = require("ms");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     message.channel.send(ms(args.join(" ")));
   } catch (err) {

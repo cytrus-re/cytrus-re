@@ -1,6 +1,6 @@
 const request = require("request");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     let output = "";
     let i = 1;
