@@ -1,7 +1,7 @@
 module.exports = async (client) => {
   const statusList = [
     {
-      msg: `Cytrus-RE 1.4.0 | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`,
+      msg: `Cytrus-RE ${client.config.version}| ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`,
       type: "PLAYING",
     },
     {
@@ -9,7 +9,7 @@ module.exports = async (client) => {
       type: "WATCHING",
     },
     {
-      msg: `people try out 1.4! (${client.config.defaultSettings.prefix}changelog) | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`,
+      msg: `people try out ${client.config.version}! (${client.config.defaultSettings.prefix}changelog) | ${client.config.defaultSettings.prefix}help | Check out our ${client.config.defaultSettings.prefix}site!`,
       type: "WATCHING",
     },
     //{msg: `with async/await errors | ${client.config.defaultSettings.prefix}help | cytrus-re.github.io`, type: 'PLAYING'},
