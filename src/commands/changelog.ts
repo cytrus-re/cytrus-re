@@ -11,7 +11,7 @@ exports.run = async (client, message) => {
           {
             name: "Major changes",
             value:
-              "- The prefix has changed from `cyre.` to `c.`, making it a lot easier to type.\n- The bot has been HEAVILY cleaned up, with a switch to Typescript and extensive code rewrites.\nFinally, the team has changed. Rexo is still leading the project, Devnol has mostly retired and Odyssey has left to become an outsiide contributor. Don't worry, - nothing major will change.",
+              "- The prefix has changed from `cyre.` to `c.`, making it a lot easier to type.\n- The bot has been HEAVILY cleaned up, with a switch to Typescript and extensive code rewrites.\nFinally, the team has changed. Rexo is still leading the project, Devnol has mostly retired and Odyssey has left. Don't worry, - nothing major will change.",
           },
           {
             name: "New and updated commands!",
@@ -19,23 +19,23 @@ exports.run = async (client, message) => {
               "We didn't necessarily focus on *new* commands in 1.4, but we did combine a couple. The `aes256` commands are now arguments for `aes256`, while the hex and RGB commands are under `colourutil`. Run `c.help` for more info about these two.",
           },
           {
-            name: "More grammar fixes!",
+            name: "More grammatical fixes!",
             value:
               "At this point, there should be basically no grammatical errors. Sorry about our mess!",
           },
           {
             name: "Minor improvements",
             value:
-              "- We've switched a lot of messages to embeds, making them look a lot nicer with more info.\n- We've also generally polished both our development process and the bot, meaning releases will be more frequent and of better quality and the bot is much more stable.\n- Finally: since 1.3, we've found consistent hosting! Unfortunately, the host clears server config upon the bot restarting, so we'll find something slightly better, but the bot's uptime is basically 100%.",
+              "- We've switched a lot of messages to embeds, making them look a lot nicer with more info.\n- We've also polished our development process and the bot, meaning releases will be more frequent and of better quality + the bot will be much more stable.\n- Finally: since 1.3, we've found consistent hosting! Unfortunately, the host clears server config upon the bot restarting. However, the bot's uptime is basically 100%.",
           },
           {
             name: "Bug fixes",
             value:
-              "With the amount of bug fixes since 1.3 we couldn't even begin to list them all here but suffice to say almost all commands should be free of major bugs. (We're still working on fixing a few commands, so stay tuned!)",
+              "With the amount of bug fixes since 1.3, I couldn't even begin to list them all here but suffice to say almost all commands should be free of major bugs. (We're still working on fixing a few commands, so stay tuned!)",
           },
           {
             name: "Closing notes",
-            value: `I feel like I can only really say one thing: sorry. I truly apologise for the wait between 1.3 and this, the instability (both in regards to the bot and the team) and the mess that was TTS. However, I have hope for the future. With a refreshed server, team and code, things are looking up for Cy-RE. If you have any suggestions, bug reports or general comments for us, please [join our Discord server](${client.config.supportServer}). From the bootm of my heart, thank you so much for your support. - Rexo`,
+            value: `I feel like I can only really say one thing: sorry. I truly apologise for the wait between 1.3 and this, the general instability and the mess that was TTS. However, I have hope for the future. With a refreshed server, team and code, things are looking up for Cy-RE. If you have any suggestions, bug reports or general comments for us, please [join our Discord server](${client.config.supportServer}). From the bottom of my heart, thank you so much for your support. - Rexo`,
           },
         ],
         footer: {
