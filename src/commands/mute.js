@@ -8,30 +8,48 @@ exports.run = async (client, message, args, level) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        if (!message.guild.roles.cache.find(r => r.name == settings.muteRole)) {
-          message.guild.roles.create({
-            name: settings.muteRole || "CytrusMute",
-            color: "#eeeeee",
-            permissions: ["READ_MESSAGES"]
-          }).catch();
+        if (
+          !message.guild.roles.cache.find((r) => r.name == settings.muteRole)
+        ) {
+          message.guild.roles
+            .create({
+              name: settings.muteRole || "CytrusMute",
+              color: "#eeeeee",
+              permissions: ["READ_MESSAGES"],
+            })
+            .catch();
         }
-        
-        
-        member.roles.add(message.guild.roles.cache.find(r => r.name == settings.muteRole)).then(async () => {
-          message.reply(`**Successfully muted ${user.tag}**`);
 
-          const modLogChannel = settings.modLogChannel;
-          if (modLogChannel && message.guild.channels.cache.find(c => c.name === settings.modLogChannel)) {
-            let embed = new Discord.MessageEmbed()
-            .setTitle("User Mute")
-            .setColor("#eeeeee")
-            .setDescription(`Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`);
+        member.roles
+          .add(
+            message.guild.roles.cache.find((r) => r.name == settings.muteRole)
+          )
+          .then(async () => {
+            message.reply(`**Successfully muted ${user.tag}**`);
 
-            message.guild.channels.cache.find(c => c.name === settings.modLogChannel).send(embed).catch(console.error);
-          }
-        }).catch(err => {
-          message.reply("I wasn't to mute this user.\n" + err);
-        });
+            const modLogChannel = settings.modLogChannel;
+            if (
+              modLogChannel &&
+              message.guild.channels.cache.find(
+                (c) => c.name === settings.modLogChannel
+              )
+            ) {
+              let embed = new Discord.MessageEmbed()
+                .setTitle("User Mute")
+                .setColor("#eeeeee")
+                .setDescription(
+                  `Name: ${user.username}\nID: ${user.id}\nModerator: ${message.author.username}`
+                );
+
+              message.guild.channels.cache
+                .find((c) => c.name === settings.modLogChannel)
+                .send(embed)
+                .catch(console.error);
+            }
+          })
+          .catch((err) => {
+            message.reply("I wasn't to mute this user.\n" + err);
+          });
       } else {
         message.reply("That user isn't in this guild!");
       }
@@ -47,12 +65,12 @@ exports.conf = {
   enabled: true,
   aliases: ["m"],
   guildOnly: true,
-  permLevel: "Moderator"
+  permLevel: "Moderator",
 };
 
 exports.help = {
   name: "mute",
   category: "Moderation",
   description: "Mutes the specified user.",
-  usage: "mute @<user>"
+  usage: "mute @<user>",
 };

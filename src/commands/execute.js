@@ -1,13 +1,12 @@
 const exec = require("child_process").exec;
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     const execute = (command) => {
-
       message.channel.send("Command executed in shell!");
       exec(command, (err, stdout, stderr) => {
         message.author.send(stdout).catch("The output was too big!");
         if (stderr) {
-          message.author.send("```"+stderr+"```");
+          message.author.send("```" + stderr + "```");
 
           message.channel.send("Shell error!");
         }
@@ -24,12 +23,12 @@ exports.conf = {
   enabled: true,
   aliases: ["exec"],
   guildOnly: false,
-  permLevel: "Bot Manager"
+  permLevel: "Bot Manager",
 };
 
 exports.help = {
   name: "execute",
   category: "System",
   description: "Executes a command in the shell.",
-  usage: "execute <shell-command>"
+  usage: "execute <shell-command>",
 };

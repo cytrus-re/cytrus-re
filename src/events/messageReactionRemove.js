@@ -8,11 +8,17 @@ const Star = class {
     const settings = this.client.getSettings(message.guild.id);
     if (reaction.emoji.name !== "⭐") return;
     if (!this.client.starboard.has(message.id)) return;
-    if (!message.guild.channels.cache.find(c => c.name == settings.starboardChannel)) return;
-    
-    if (!this.client.starboard.has(message.id)) this.client.starboard.set(message.id, 0);
+    if (
+      !message.guild.channels.cache.find(
+        (c) => c.name == settings.starboardChannel
+      )
+    )
+      return;
+
+    if (!this.client.starboard.has(message.id))
+      this.client.starboard.set(message.id, 0);
     else this.client.starboard.dec(message.id);
-    
+
     let embed = this.client.Embed("normal", {
       title: "UnStar",
       thumbnail: message.author.avatarURL,
@@ -21,15 +27,18 @@ const Star = class {
       fields: [
         {
           title: "Author",
-          text: "<@" + message.author.id + ">"
+          text: "<@" + message.author.id + ">",
         },
         {
           title: "Channel",
-          text: "<#" + message.channel.id + ">"
-        }
-      ]
+          text: "<#" + message.channel.id + ">",
+        },
+      ],
     });
-    message.guild.channels.cache.find(c => c.name == settings.starboardChannel).send({embed: embed}).catch();
+    message.guild.channels.cache
+      .find((c) => c.name == settings.starboardChannel)
+      .send({ embed: embed })
+      .catch();
   }
 };
 

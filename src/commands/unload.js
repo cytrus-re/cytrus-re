@@ -1,6 +1,7 @@
 exports.run = async (client, message, args) => {
   try {
-    if (!args || args.length < 1) return message.channel.send("You must provide a command to unload!");
+    if (!args || args.length < 1)
+      return message.channel.send("You must provide a command to unload!");
 
     let response = await client.unloadCommand(args[0]);
     if (response) return message.channel.send(`Error unloading: ${response}`);
@@ -16,12 +17,12 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ["uload"],
-  permLevel: "Bot Moderator"
+  permLevel: "Bot Moderator",
 };
 
 exports.help = {
   name: "unload",
   category: "System",
   description: "Unloads a command",
-  usage: "unload [command]"
+  usage: "unload [command]",
 };

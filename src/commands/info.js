@@ -1,15 +1,16 @@
 const Discord = require("discord.js");
 const os = require("os");
 
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     var opsys = os.platform();
     var cleanOS = client.friendlyOS(opsys);
     const embed = new Discord.MessageEmbed()
-    .setColor("#eeeeee")
-    .setTitle("Cytrus-RE")
-    .setFooter("Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by Devnol, Rexowogamer, Odyssey346 and Midou.")
-    .setDescription(`Github: [Repo](${client.config.github})
+      .setColor("#eeeeee")
+      .setTitle("Cytrus-RE")
+      .setFooter(
+        "Originally made by CelestialCrafter and EnderGirlGamer. Rewritten by Devnol, Rexowogamer, Odyssey346 and Midou."
+      ).setDescription(`Github: [Repo](${client.config.github})
 Website: [Check it out](${client.config.site})
 Support Server: [Join](${client.config.supportServer})
 Issues: [Right here](${client.config.github}/issues)
@@ -25,12 +26,12 @@ exports.conf = {
   enabled: true,
   aliases: ["i"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "info",
   category: "General",
   description: "Returns info about Cytrus-RE.",
-  usage: "info"
+  usage: "info",
 };

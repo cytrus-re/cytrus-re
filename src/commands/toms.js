@@ -12,12 +12,12 @@ exports.conf = {
   enabled: true,
   aliases: ["timems"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "toms",
   category: "General",
   description: "Returns the time specified in millisecconds.",
-  usage: "toms <time (NOT IN MS)>"
+  usage: "toms <time (NOT IN MS)>",
 };
