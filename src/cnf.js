@@ -2,6 +2,7 @@ const client = require("../cybase");
 
 const config = {
   botName: "Cytrus-RE", // Name of bot. Don't change this.
+  version: "1.4.0",
   // NOTE: The IDs are sorted by the comments. So, Devnol is the first ID in "managers", and then comes... well, we don't have any other managers yet but yeah.
   owners: ["395990735934980097"], // Rexo has full power ahahahaha
   managers: ["429353559566319626"], // Devnol
