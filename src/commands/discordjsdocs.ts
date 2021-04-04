@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetcher = require("node-fetch");
 
 exports.run = async (client, message, args, level) => {
   try {
@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
     let url = `https://djsdocs.sorta.moe/v2/embed?src=stable&q=${encodeURIComponent(
       args.join(" ")
     )}`;
-    fetch(url)
+    fetcher(url)
       .then((res) => res.json())
       .then((embed) => {
         if (embed && !embed.error) {

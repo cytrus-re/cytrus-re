@@ -1,7 +1,6 @@
 const ud = require("urban-dictionary");
-const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0])
       return message.channel.send("You need to give me a word or phrase!");
@@ -29,15 +28,26 @@ exports.run = async (client, message, args, level) => {
         return message.channel.send("Aborted.");
       if (isNaN(page)) return message.channel.send(`${page} is not a number!`);
 
-      let embed = new Discord.MessageEmbed()
-        .setTitle(entries[page - 1].word)
-        .addField("**Definition**", entries[page - 1].definition)
-        .addField("**Example:**", entries[page - 1].example)
-        .setFooter(`Requested by ${message.author.tag}`)
-        .setColor("#eeeeee");
+      let urbanEmbed = {
+        color: "0xEEEEEE",
+        title: entries[page - 1].word,
+        fields: [
+          {
+            name: "Definition",
+            value: entries[page - 1].definition,
+          },
+          {
+            name: "Example",
+            value: entries[page - 1].example,
+          },
+        ],
+        footer: {
+          text: `Requested by ${message.author.tag}`,
+        },
+      };
 
       message.channel
-        .send(embed)
+        .send({ embed: urbanEmbed })
         .catch((err) =>
           message.channel.send(
             "The definition was too big or there was another error!\n\n" + err

@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => {
     if (!args[0])
       return message.channel.send("You need to supply the HEX code!");
     if (!validate(args.join(" ")))
-      return message.reply("That's not a valid HEX code!");
+      return message.channel.send("That's not a valid HEX code!");
 
     message.channel.send(
       new Discord.MessageEmbed().setColor(args[0]).setTitle("HEX visualiser")

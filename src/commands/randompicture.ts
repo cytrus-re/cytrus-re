@@ -1,22 +1,18 @@
 const Discord = require("discord.js");
+const picfetch = require("node-fetch");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
-    require("request")(
-      {
-        url: "http://www.splashbase.co/api/v1/images/random?images_only=true",
-        json: true,
-      },
-      (req, res, json) => {
-        let embed = new Discord.MessageEmbed()
-          .setTitle("Random Picture")
-          .setColor("#363942")
-          .setImage(json.url);
-
-        message.channel.send(embed);
-        console.log(`Image sent: ${json.url}`);
-      }
+    const response = await picfetch(
+      "http://www.splashbase.co/api/v1/images/random?images_only=true"
     );
+    const data = await response.json();
+    let embed = new Discord.MessageEmbed()
+      .setTitle("Random Picture")
+      .setColor("#363942")
+      .setImage(`${data.url}`);
+    message.channel.send(embed);
+    console.log(`Image sent: ${data.url}`);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
   }
