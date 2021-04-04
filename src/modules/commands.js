@@ -13,12 +13,10 @@ module.exports = (client) => {
   readdir(__dirname + "/../commands/", (err, files) => {
     // If there is an error, return the error
     if (err) return client.logger.error(err);
-
     // For each file in the file array run this function
     files.forEach((file) => {
       // If the file extension (.py, .js, .md) is not js or ts, ignore it
-      if (!file.endsWith(".js" || ".ts")) return;
-
+      if (!file.endsWith(".ts")) return; // This should be able to load both TS and JS. However, from my experience it does not. I've changed every file to be in TS, so for now, until I figure that out, it'll be TS hardcoded. -Odyssey346
       // Make the "props" variable the file object
       let props = require(`../commands/${file}`);
 
@@ -26,7 +24,7 @@ module.exports = (client) => {
       let commandName = file.split(".")[0];
 
       // Log that the command is loading
-      client.logger.info(`Loading command: ${commandName}. Command ${i}`);
+      client.logger.info(`Loading command: ${commandName}. Command ${i}, written in ${file.split(".").pop()}`);
 
       // Set the command name and the file objects
       client.commands.set(commandName, props);
