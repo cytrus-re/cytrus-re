@@ -35,8 +35,8 @@ exports.run = async (client, message) => {
           },
           {
             name: "Closing notes",
-            value: `I feel like I can only really say one thing: sorry. I truly apologise for the wait between 1.3 and this, the instability (both in regards to the bot and the team) and the mess that was TTS. However, I have hope for the future. With a refreshed server, team and code, things are looking up for Cy-RE. If you have any suggestions, bug reports or general comments for us, please [join our Discord server](${client.config.supportServer}). From the bootm of my heart, thank you so much for your support. - Rexo`
-          }
+            value: `I feel like I can only really say one thing: sorry. I truly apologise for the wait between 1.3 and this, the instability (both in regards to the bot and the team) and the mess that was TTS. However, I have hope for the future. With a refreshed server, team and code, things are looking up for Cy-RE. If you have any suggestions, bug reports or general comments for us, please [join our Discord server](${client.config.supportServer}). From the bootm of my heart, thank you so much for your support. - Rexo`,
+          },
         ],
         footer: {
           text:
