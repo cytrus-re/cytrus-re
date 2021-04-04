@@ -1,6 +1,4 @@
-const Discord = require("discord.js");
-
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     message.channel.send({
       files: ["https://cdn.discordapp.com/emojis/230989718471442432.png"],

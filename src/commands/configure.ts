@@ -44,15 +44,15 @@ exports.run = async (client, message, args, level) => {
 
       const response = await client.awaitReply(
         message,
-        "Are you sure you want to reset ${args[1]} to the default value?"
+        `Are you sure you want to reset ${args[1]} to the default value?`
       );
 
       if (["y", "yes", "confirm", "1"].includes(response.toLowerCase())) {
         client.settings.delete(message.guild.id, args[1]);
-        message.channel.send("${args[1]} was successfully reset.");
+        message.channel.send(`${args[1]} was successfully reset.`);
       } else if (["n", "no", "cancel", "0"].includes(response)) {
         message.channel.send(
-          "Your setting for `${args[1]}` remains at `${settings[args[1]]}`."
+          `Your setting for \`${args[1]}\` remains at \`${settings[args[1]]}\`.`
         );
       }
     } else if (args[0] === "get") {

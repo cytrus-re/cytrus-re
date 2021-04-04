@@ -2,8 +2,8 @@
 
 ## Supported Versions
 
-We currently don't really "version" our code, but the safest bet is to assume master is the current version (although 1.3.0 is the latest tagged version).
+The latest version on the production bot (the `prod` branch) is 1.4.0 - this is the only supported version. However, please check `master` to make sure it hasn't already been fixed - in additon, we will swiftly push security fixes.
 
 ## Reporting a Vulnerability
 
-Please report any vulnerabilities you find to Rexowogamer#1183 on Discord or send an email to help.ttsbotsnapps@gmail.com. :)
+Please report any vulnerabilities you find to Rexowogamer#1183 on Discord or [send an email to help.ttsbotsnapps@gmail.com](mailto:help.ttsbotsnapps@gmail.com). Thanks for helping us keep Cytrus-RE secure!

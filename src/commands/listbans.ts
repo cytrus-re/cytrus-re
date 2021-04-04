@@ -1,17 +1,16 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
-    let output = "";
     let i = 0;
 
     let confirm = await client.awaitReply(
       message,
-      "There may be lots of DM's. Do you still want to list the bans? (Reply with y or yes to list the bans)"
+      "There may be lots of DMs. Do you still want to list the server's bans? (Reply with y or yes to list the bans)"
     );
 
-    if (!["y", "yes"].includes(confirm)) message.reply("Ok!\nCancled.");
+    if (!["y", "yes"].includes(confirm)) message.channel.send("OK! Cancelled.");
     else {
       message.guild.fetchBans().then(async (bans) => {
-        message.channel.send("The bans are in your DM's!");
+        message.channel.send("The bans are in your DMs!");
 
         bans.forEach(async (ban) => {
           i++;
