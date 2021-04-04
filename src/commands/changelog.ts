@@ -40,7 +40,7 @@ exports.run = async (client, message) => {
         ],
         footer: {
           text:
-            "Cytrus-RE 1.4.0 was made possible by Rexowogamer#1183, Odyssey346#9848, Devnol#9366 and outside contributors. Thank you!!",
+            "Cytrus-RE 1.4.0 was made possible by Rexowogamer#1183, Odyssey346#9848, Devnol#9366 and outside contributors. Thank you!",
         },
       },
     });
