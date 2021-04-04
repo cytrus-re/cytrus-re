@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     let number = Math.floor(Math.random() * 10000000000001);
 

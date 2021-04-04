@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     message.reply("This server has " + message.guild.memberCount + " members!");
   } catch (err) {

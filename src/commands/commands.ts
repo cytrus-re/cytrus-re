@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     message.channel.send(
       "Cytrus-RE has " + client.commands.size + " commands."

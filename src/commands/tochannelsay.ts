@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0]) return message.reply("You need to give the channel name!");
     if (!args[1]) return message.reply("You need to give the text to say!");

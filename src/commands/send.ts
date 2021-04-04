@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const hook = new Discord.WebhookClient(
       process.env.LOG_WEBHOOK_ID,

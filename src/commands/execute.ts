@@ -1,5 +1,5 @@
 const exec = require("child_process").exec;
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const execute = (command) => {
       message.channel.send("Command executed in shell!");
