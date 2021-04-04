@@ -3,31 +3,44 @@ const cooled = new Discord.Collection();
 
 module.exports = async (client, message) => {
   if (message.author.bot) return;
-  if (client.config.blacklisted.includes(message.author.id)) return;
-  
+  if (client.config.denylisted.includes(message.author.id)) return;
+
   let settings;
-  
+
   if (message.guild) settings = client.getSettings(message.guild.id);
   else settings = client.config.defaultSettings;
 
   // checks if message mentions the bot, if so responds with prefix
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.channel.send(`My prefix on this guild is \`${settings.prefix}\`!`);
+    return message.channel.send(
+      `My prefix on this guild is \`${settings.prefix}\`!`
+    );
   }
-  
+
   if (message.guild) {
     if (client.tags.has(message.guild.id)) {
-      Object.keys(client.tags.get(message.guild.id)).forEach(tagid => {
+      Object.keys(client.tags.get(message.guild.id)).forEach((tagid) => {
         let tag = client.tags.get(message.guild.id)[tagid];
-        
-        if (message.content.toLowerCase() == tag.name.toLowerCase()) message.channel.send(tag.text.replace("@user", "<@" + message.author.id + ">"));
+
+        if (message.content.toLowerCase() == tag.name.toLowerCase())
+          message.channel.send(
+            tag.text.replace("@user", "<@" + message.author.id + ">")
+          );
       });
     }
   }
-  
-  if (!message.content.toLowerCase().startsWith(settings.prefix.toLowerCase() || client.config.defaultSettings.prefix.toLowerCase())) return;
-  
+
+  if (
+    !message.content
+      .toLowerCase()
+      .startsWith(
+        settings.prefix.toLowerCase() ||
+          client.config.defaultSettings.prefix.toLowerCase()
+      )
+  )
+    return;
+
   let args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
   let command = args.shift().toLowerCase();
 
@@ -46,8 +59,12 @@ module.exports = async (client, message) => {
     }, 3000); // three seconds
   }
 
-  if (!message.guild && cmd.conf.guildOnly) return message.channel.send("You need to be in a guild to use this command.");
-  if (message.guild && !message.channel.nsfw && cmd.conf.nsfwOnly) return message.channel.send(client.errors.nsfwOnly);
+  if (!message.guild && cmd.conf.guildOnly)
+    return message.channel.send(
+      "You need to be in a guild to use this command."
+    );
+  if (message.guild && !message.channel.nsfw && cmd.conf.nsfwOnly)
+    return message.channel.send(client.errors.nsfwOnly);
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
     if (settings.noPermissionNotice === "true") {
@@ -57,15 +74,20 @@ module.exports = async (client, message) => {
         fields: [
           {
             name: "Your perm levels",
-            value: `${level} (${client.config.permLevels.find(l => l.level === level).name})`
+            value: `${level} (${
+              client.config.permLevels.find((l) => l.level === level).name
+            })`,
           },
           {
             name: "Required perms for this command",
-            value: `${client.levelCache[cmd.conf.permLevel]} (${cmd.conf.permLevel})`
+            value: `${client.levelCache[cmd.conf.permLevel]} (${
+              cmd.conf.permLevel
+            })`,
           },
         ],
         footer: {
-          text: "Does this seem wrong? Join our support server (c.info) and ask a dev for help."
+          text:
+            "Does this seem wrong? Join our support server (c.info) and ask a dev for help.",
         },
       };
       return message.channel.send({ embed: permsEmbed });
@@ -79,7 +101,8 @@ module.exports = async (client, message) => {
     message.flags.push(args.shift().slice(1));
   }
 
-  if (!cmd.conf.enabled && level < 8) return message.channel.send("This command is disabled for non-devs."); //this command is disabled for non-devs
+  if (!cmd.conf.enabled && level < 8)
+    return message.channel.send("This command is disabled for non-devs."); //this command is disabled for non-devs
 
   try {
     cmd.run(client, message, args, level);

@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     message.reply("This server has " + message.guild.memberCount + " members!");
   } catch (err) {
@@ -10,12 +10,12 @@ exports.conf = {
   enabled: true,
   aliases: ["memcount", "ucount"],
   guildOnly: true,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "members",
   category: "General",
   description: "Returns the amount of members the server has.",
-  usage: "members"
+  usage: "members",
 };

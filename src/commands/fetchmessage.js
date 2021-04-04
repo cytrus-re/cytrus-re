@@ -1,24 +1,24 @@
-exports.run = async (client, message, args, level) => { 
+exports.run = async (client, message, args, level) => {
   try {
     let fetched = await message.channel.fetchMessage(args[0]);
     let afiles = [];
-    
+
     fetched.attachments.forEach((attachment) => {
       afiles.push({
         name: attachment.filename,
-        attachment: attachment.url
+        attachment: attachment.url,
       });
     });
-    
+
     let embed = new client.Embed("normal", {
       title: fetched.id,
       url: fetched.url,
       thumbnail: fetched.author.avatarURL,
       footer: "Message created by " + fetched.author.tag,
       description: fetched.content || "No Message",
-      files: afiles
+      files: afiles,
     });
-    
+
     message.channel.send(embed);
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
@@ -29,12 +29,12 @@ exports.conf = {
   enabled: true,
   aliases: ["fetm", "fetchmsg", "fmsg"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "fetchmessage",
   category: "General",
   description: "Sends the message linked to the specified message ID.",
-  usage: "fetchmessage <id>"
+  usage: "fetchmessage <id>",
 };

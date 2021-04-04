@@ -1,6 +1,6 @@
-exports.run = async (client, message) => { 
+exports.run = async (client, message) => {
   try {
-    client.fetchApplication("@me").then(app => {
+    client.fetchApplication("@me").then((app) => {
       let embed = new client.Embed("blend", {
         title: app.name,
         thumbnail: app.iconURL,
@@ -9,22 +9,22 @@ exports.run = async (client, message) => {
           {
             title: "ID",
             text: app.id,
-            inline: true
+            inline: true,
           },
           {
             title: "Public",
             text: app.botPublic,
-            inline: true
+            inline: true,
           },
           {
             title: "Created at",
-            text: app.createdAt
+            text: app.createdAt,
           },
           {
             title: "Owner",
-            text: app.owner.tag
-          }
-        ]
+            text: app.owner.tag,
+          },
+        ],
       });
 
       message.channel.send(embed);
@@ -38,12 +38,12 @@ exports.conf = {
   enabled: true,
   aliases: ["cyinf", "cyreinfo", "cyreinf"],
   guildOnly: false,
-  permLevel: "User"
+  permLevel: "User",
 };
 
 exports.help = {
   name: "cytrusinfo",
   category: "General",
   description: "Returns Cytrus-RE's OAuth2 application.",
-  usage: "cytrusinfo"
+  usage: "cytrusinfo",
 };
