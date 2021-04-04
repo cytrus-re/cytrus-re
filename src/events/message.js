@@ -3,7 +3,7 @@ const cooled = new Discord.Collection();
 
 module.exports = async (client, message) => {
   if (message.author.bot) return;
-  if (client.config.blacklisted.includes(message.author.id)) return;
+  if (client.config.denylisted.includes(message.author.id)) return;
   
   let settings;
   
