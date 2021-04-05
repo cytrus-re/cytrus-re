@@ -1,6 +1,6 @@
 exports.run = async (client, message) => { 
     try {
-      const facts = ["77% of Cytrus-RE is just commands.", "Cytrus-RE was started in 2019.", "Odyssey346 is 2nd place on the Contributor page on our GitHub."]
+      const facts = ["77% of Cytrus-RE's code is just commands.", "Cytrus-RE was started in 2019.", "Odyssey346 is 2nd place on the Contributor page on our GitHub."]
       message.channel.send(facts[Math.floor(Math.random() * facts.length)]); 
     } catch (err) {
       // This tells a user if something broke with the command, and prompts them to send the error log to a developer.
