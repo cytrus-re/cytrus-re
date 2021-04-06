@@ -9,7 +9,9 @@ exports.run = async (client, message, args) => {
       embed: {
         color: "#ff3333",
         title: "Output",
-        description: `That equation resolves to \`${math.evaluate(args.join(" "))}\`.`,
+        description: `That equation resolves to \`${math.evaluate(
+          args.join(" ")
+        )}\`.`,
       },
     });
   } catch (err) {
