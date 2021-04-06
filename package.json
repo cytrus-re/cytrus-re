@@ -62,7 +62,7 @@
   "dependencies": {
     "@cytrus-re/wikipediajs": "^1.4.7",
     "better-sqlite-pool": "^0.3.0",
-    "better-sqlite3": "^7.1.2",
+    "better-sqlite3": "^7.1.4",
     "cryptr": "^6.0.2",
     "discord.js": "^12.5.3",
     "discord.js-minesweeper": "^1.0.6",
