@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
         ) {
           message.guild.roles
             .create({
-              name: settings.muteRole || "CytrusMute",
+              name: settings.muteRole || "Cytrus-RE Mute",
               color: "#eeeeee",
               permissions: ["READ_MESSAGES"],
             })
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
             message.guild.roles.cache.find((r) => r.name == settings.muteRole)
           )
           .then(async () => {
-            message.reply(`**Successfully muted ${user.tag}**`);
+            message.channel.send(`Successfully muted ${user.tag}!`);
 
             const modLogChannel = settings.modLogChannel;
             if (

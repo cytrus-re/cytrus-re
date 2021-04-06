@@ -199,9 +199,13 @@ exports.run = async (client, message, args) => {
         break;
 
       default:
-        return message.channel.send(
-          "You need to provide a valid verb!\n see `help colourutil` for more information."
-        );
+        return message.channel.send({
+          embed: {
+            color: "#ff3333",
+            title: "Invalid option",
+            description: `You need to specify a valid action! See \`${client.config.defaultSettings.prefix}help colourutil\` for more information.`,
+          },
+        });
     }
   } catch (err) {
     message.channel.send(client.errors.genericError + err).catch();
