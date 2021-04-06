@@ -18,7 +18,7 @@ jobs:
         ref: ${{ github.head_ref }}
 
     - name: Prettify code
-      uses: creyD/prettier_action@v2.2
+      uses: creyD/prettier_action@v3.3
       with:
         prettier_options: --write **/*.{ts,md}
         commit_message: "lint: prettier fixes"
