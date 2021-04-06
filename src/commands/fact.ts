@@ -23,7 +23,7 @@ exports.run = async (client, message) => {
   exports.help = {
     name: "fact", // Name of the command
     category: "Fun", // What category this command goes to. If the category doesn't exist, Cytrus-RE will make a new category. Make sure the category name is TitleCase and properly spaced.
-    description: "Gets a random CyRE-related fact.", // Description of your command. For example, c.copypasta would have the description "Sends copypastas to current channel".
+    description: "Returns a random CyRE-related fact.",
     usage: "c.fact" // How you use the command. For example, c.copypasta would be used as "c.copypasta <name of the copypasta>.
   };
   
