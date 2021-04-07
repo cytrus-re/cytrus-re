@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-The latest version on the production bot (the `prod` branch) is 1.4.0 - this is the only supported version. However, please check `master` to make sure it hasn't already been fixed - in additon, we will swiftly push security fixes.
+The latest version on the production bot (the `prod` branch) is 1.4.1 - this is the only supported version. However, please check `master` to make sure it hasn't already been fixed - in additon, we will swiftly push security fixes.
 
 ## Reporting a Vulnerability
 
