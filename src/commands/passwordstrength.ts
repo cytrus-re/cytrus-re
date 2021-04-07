@@ -1,6 +1,6 @@
 const zxcvbn = require("zxcvbn");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (message.guild) {
       message.channel.send(

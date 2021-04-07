@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     const user = message.mentions.users.first();
     const settings = client.getSettings(message.guild.id);
@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
         ) {
           message.guild.roles
             .create({
-              name: settings.muteRole || "CytrusMute",
+              name: settings.muteRole || "Cytrus-RE Mute",
               color: "#eeeeee",
               permissions: ["READ_MESSAGES"],
             })
@@ -25,7 +25,7 @@ exports.run = async (client, message, args, level) => {
             message.guild.roles.cache.find((r) => r.name == settings.muteRole)
           )
           .then(async () => {
-            message.reply(`**Successfully muted ${user.tag}**`);
+            message.channel.send(`Successfully muted ${user.tag}!`);
 
             const modLogChannel = settings.modLogChannel;
             if (

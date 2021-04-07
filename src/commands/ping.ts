@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     let msg = await message.channel.send("<@" + message.author.id + ">");
 

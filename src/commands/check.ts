@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     let members = [];
     const settings = client.getSettings(message.guild.id);

@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, level) => {
   try {
     const friendly = client.config.permLevels.find((l) => l.level === level)
       .name;

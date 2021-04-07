@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     let fetched = await message.channel.fetchMessage(args[0]);
     let afiles = [];

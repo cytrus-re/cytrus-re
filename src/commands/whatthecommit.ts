@@ -1,6 +1,6 @@
 const request = require("request");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     request("http://whatthecommit.com/index.txt", (req, res, txt) =>
       message.channel.send("Commit Message: " + txt)

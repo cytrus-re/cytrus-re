@@ -1,6 +1,6 @@
 const fetcher = require("node-fetch");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0]) return message.channel.send(client.errors.noQueryGiven);
     let url = `https://djsdocs.sorta.moe/v2/embed?src=stable&q=${encodeURIComponent(

@@ -1,7 +1,7 @@
 const exec = require("child_process").exec;
 const os = require("os");
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     const execute = (command) => {
       message.channel.send("The files have been sent to your DMs!");

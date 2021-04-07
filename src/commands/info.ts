@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
 Website: [Check it out](${client.config.site})
 Support Server: [Join](${client.config.supportServer})
 Issues: [Right here](${client.config.github}/issues)
-Version: V1.3
+Version: V${client.config.version}
 Currently running on: ${cleanOS}`);
     message.channel.send(embed);
   } catch (err) {

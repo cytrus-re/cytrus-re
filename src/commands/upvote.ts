@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     message.channel.send(
       "Upvoting the bot on discordbotlist.com helps other people discover Cytrus-RE! Thanks for voting!\n Vote here: https://discordbotlist.com/bots/cytrus-re"

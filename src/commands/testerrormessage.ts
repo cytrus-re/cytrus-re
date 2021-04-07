@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     // This code is GARBAGE. We could make it much better if we just read the copypastas from a file and caching it
     if (args[0] == "genericError")

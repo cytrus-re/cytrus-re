@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message) => {
   try {
     if (message.member.hasPermission("CREATE_INSTANT_INVITE")) {
       message.channel

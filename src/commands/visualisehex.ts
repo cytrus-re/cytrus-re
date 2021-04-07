@@ -16,7 +16,7 @@ const validate = (color) => {
   }
 };
 
-exports.run = async (client, message, args, level) => {
+exports.run = async (client, message, args) => {
   try {
     if (!args[0])
       return message.channel.send("You need to supply the HEX code!");
