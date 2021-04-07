@@ -80,7 +80,7 @@
     "request": "^2.88.2",
     "rhyme": "^0.0.3",
     "txtgen": "^2.2.8",
-    "urban-dictionary": "^2.2.1",
+    "urban-dictionary": "^3.0.0",
     "winston": "^3.3.3",
     "ytsearcher": "^1.2.3",
     "zxcvbn": "^4.4.2"
