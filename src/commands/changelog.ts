@@ -4,10 +4,15 @@ exports.run = async (client, message) => {
       embed: {
         author: { name: client.user.username, icon_url: client.user.avatarURL },
         color: 0x1167b1,
-        title: "**V1.4.0**",
+        title: "**V1.4.1**",
         description:
           "A **lot** has changed in 1.4, and the team has almost entirely changed, so this isn't an exhaustive list.",
         fields: [
+          {
+            name: "1.4.1 changes",
+            value:
+              "- Added the `fact` command! Use this command to find out some fun facts about Cytrus-RE.\n- Added embeds to `c.math` and `c.colourutil` (when you haven't specified an action).\n- Fixed a few bugs (specifically, the version number was outdated in a few places + some code fixes).",
+          },
           {
             name: "Major changes",
             value:
@@ -40,7 +45,7 @@ exports.run = async (client, message) => {
         ],
         footer: {
           text:
-            "Cytrus-RE 1.4.0 was made possible by Rexowogamer#1183, Odyssey346#9848, Devnol#9366 and outside contributors. Thank you!",
+            "Cytrus-RE 1.4.0 & 1.4.1 was made possible by Rexowogamer#1183, Odyssey346#9848, Devnol#9366 and outside contributors. Thank you!",
         },
       },
     });
