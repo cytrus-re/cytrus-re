@@ -82,7 +82,7 @@
     "txtgen": "^2.2.8",
     "urban-dictionary": "^2.2.1",
     "winston": "^3.3.3",
-    "ytsearcher": "^1.2.3",
+    "ytsearcher": "^1.2.4",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
