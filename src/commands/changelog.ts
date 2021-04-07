@@ -10,8 +10,8 @@ exports.run = async (client, message) => {
         fields: [
           {
             name: "1.4.1 changes",
-            value: 
-              "- Added the `fact` command! Use this command to find out some fun facts about Cytrus-RE.\n- Added embeds to `c.math` and `c.colourutil` (when you haven't specified an action).\n- Fixed a few bugs (specifically, the version number was outdated in a few places + some code fixes)."
+            value:
+              "- Added the `fact` command! Use this command to find out some fun facts about Cytrus-RE.\n- Added embeds to `c.math` and `c.colourutil` (when you haven't specified an action).\n- Fixed a few bugs (specifically, the version number was outdated in a few places + some code fixes).",
           },
           {
             name: "Major changes",
